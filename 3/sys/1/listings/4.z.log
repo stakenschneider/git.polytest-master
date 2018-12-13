@@ -1,7 +1,0 @@
-PS D:\afiles\student\temp\os\Release> .\os.exe
-EXCEPTION_INT_DIVIDE_BY_ZERO: 0xc0000094
-Exception code: 0xc0000094
-Exception flags: 0x0
-Exception record: 0x00000000
-Exception address: 0x749B96C2
-Number parameters: 0

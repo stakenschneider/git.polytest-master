@@ -1,4 +1,0 @@
-PS D:\afiles\student\temp\os\Release> .\os.exe
-EXCEPTION_FLT_OVERFLOW: 0xc0000091
-Wrong float value: 1
-Successfully, number value is inf
