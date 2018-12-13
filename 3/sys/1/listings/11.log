@@ -1,0 +1,24 @@
+PS D:\afiles\student\temp\os\Release> .\os.exe 0
+Try block.
+Finally block.
+Normal termination.
+
+PS D:\afiles\student\temp\os\Release> .\os.exe 1
+Try block.
+Finally block.
+Normal termination.
+
+PS D:\afiles\student\temp\os\Release> .\os.exe 2
+Try block.
+Finally block.
+Abnormal termination.
+
+PS D:\afiles\student\temp\os\Release> .\os.exe 3
+Try block.
+Finally block.
+Abnormal termination.
+
+PS D:\afiles\student\temp\os\Release> .\os.exe 4
+Try block.
+Finally block.
+Abnormal termination.

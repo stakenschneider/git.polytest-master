@@ -1,0 +1,92 @@
+nikita@nikita-VirtualBox:~/temp$ gpg --gen-key 
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 2048
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Donald
+Email address: donald@trump.gov
+Comment: 
+You selected this USER-ID:
+    "Donald <donald@trump.gov>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+You need a Passphrase to protect your secret key.
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+gpg: key 8A882796 marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: public key of ultimately trusted key A6186B78 not found
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   2  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 2u
+pub   2048R/8A882796 2017-11-05
+      Key fingerprint = 0C4F 7BCD CA34 E401 77D8  07F4 EFB3 7A31 8A88 2796
+uid                  Donald <donald@trump.gov>
+sub   2048R/49ECD6F1 2017-11-05
+
+nikita@nikita-VirtualBox:~/temp$ gpg --list-keys
+/home/nikita/.gnupg/pubring.gpg
+-------------------------------
+pub   2048R/8A882796 2017-11-05
+uid                  Donald <donald@trump.gov>
+sub   2048R/49ECD6F1 2017-11-05
+
+nikita@nikita-VirtualBox:~/temp$ gpg --armor --export Donald
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+mQENBFn+gHEBCADR+ghOmcJeiDZk6TscxuurxEJBSFD7mPgaQHnPxxaj7iz9Z7am
+HGxBe6pNDPbzhkRrZH7eSRC3bu94351X5kKwz39h94tCp9BbLA36VZ4j2y448Wfl
+gWDrrT++cnE2xs/qcNOMB0wqd0iyPLyhcK7WP+0ZXmqoTFTZe3hY3xE6XhAYoAEB
+d1j49j+K55PinZtOJa+hF8HQxig/CBRgDYeixG57fWdxU3XcNvm1OJwEpaUjHmcw
+780pGTq2fAx9BEz5Dsmj0vPAWS5BfF5OMMA9CtTtHtK9ZNce5IIwdds6oahFgPWA
+a0UpadDnOyLNHKRleEaTqQgFEGoWOggqL/tZABEBAAG0GURvbmFsZCA8ZG9uYWxk
+QHRydW1wLmdvdj6JATgEEwECACIFAln+gHECGwMGCwkIBwMCBhUIAgkKCwQWAgMB
+Ah4BAheAAAoJEO+zejGKiCeW2hUH/RNa19AKEJyHD7RQaK7B0OnzEFKUzRyje/Gi
+FTn/4qhR0al0m3P8kz7m4GLVTnXhBLcxfjFa+N2LdijISe9WebeF6wG+WMGPoLL6
+e98okr24aZ0i2YEgocoSHM/ySz7TBXx/yVZR8vIzjHKiqjnRn9dCrVlF/jW/rYnL
+CinxUwAzb22Bz17Zt56VVJnEIGMKGcaHCMUsqxthC3Qe7h15Lt92ozlrhEQoyic5
+LzzY9BYVKOyBPU4C02+wcUMsTZuaadQhcQYE3kkvhtWQBpCI8HExmIuYKokv1czX
+CGMEM4PRGnmkdKEQFwb0ZAXo55PRhKEcoVLA7ccewEIBSGTRSAC5AQ0EWf6AcQEI
+AKWbeRA3RN3LVkUtU79CxVtFIAMvrUJ9zZFHzQuEEefeswC4bXmWHmhlAlVTJEGS
+NG1XDciIMN0qoIBvzZPMX5F4OAJg452u3T4zaaQ5R3OEm541e7b8/P/T1+iRmu3c
+hCEomLqySGkzGJTcd6s6xgUFrb1XYv9xUgBZ7sKbQDRtwDCpclYhjhOmOWjLQmor
+lnBP9O7btJOwcO/FaU7OXqmFYtyH4eF4vQph95gdw3YFHYTcf1iuZQVFu6trjDP+
+4SuXmrhtkmftKfhLPFPy/TkHTJ1H5B6ZdPLTZkL4c8lIM7byKA86tjLlKixybEvH
+fJUWPFfO/LWPxX4kV4YippkAEQEAAYkBHwQYAQIACQUCWf6AcQIbDAAKCRDvs3ox
+iognlpsDB/9ooll0kv1Vu/SHk+kPZXsi452G4duGN3h1v3yndvxmhvv+lKObZm3B
+uctxa7CoMXHZ14X1pd/yiurZfkxV3OSo6USzKXou8kuLGJ6O+qAPSkKCYgEWdUyM
+Iwhh1gD0fJ4Dr2lZG/sJ5lvqyBKsm+0t3bdTuFJHiCGF7bYI6rfl1UYgumT9VIFX
+S7ucTeUebk+P1KF5j5IRFbxZFAlrYQVrxMv5JKCuzqSM2NF+yIKrNs5e1Emd8G3Q
+o5Phwy+RW6bg3rAuDViCqjYyhzjL4GqNBUfJS1r2D3YbrVLO3djB78ytWnj+v2d5
+11u7VGYZbEafG58WsRrhWDoye7rTV/7d
+=WxVr
+-----END PGP PUBLIC KEY BLOCK-----

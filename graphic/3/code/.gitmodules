@@ -1,0 +1,12 @@
+[submodule "glm"]
+	path = glm
+	url = git@github.com:g-truc/glm.git
+[submodule "OBJ-Loader"]
+	path = OBJ-Loader
+	url = git@github.com:Bly7/OBJ-Loader.git
+[submodule "opencv"]
+	path = opencv
+	url = git@github.com:opencv/opencv.git
+[submodule "cxxopts"]
+	path = cxxopts
+	url = git@github.com:jarro2783/cxxopts.git

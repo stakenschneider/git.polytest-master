@@ -1,0 +1,19 @@
+msf > db_export output.xml
+[*] Starting export of workspace default to output.xml [ xml ]...
+[*]     >> Starting export of report
+[*]     >> Starting export of hosts
+[*]     >> Starting export of events
+[*]     >> Starting export of services
+[*]     >> Starting export of web sites
+[*]     >> Starting export of web pages
+[*]     >> Starting export of web forms
+[*]     >> Starting export of web vulns
+[*]     >> Starting export of module details
+[*]     >> Finished export of report
+[*] Finished export of workspace default to output.xml [ xml ]...
+
+
+root@kali:~# ls -l
+< ... >
+-rw-r--r-- 1 root root 6990214 Nov 10 23:41 output.xml
+

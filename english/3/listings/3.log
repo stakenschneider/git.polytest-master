@@ -1,0 +1,43 @@
+msf > info exploit/android/browser/samsung_knox_smdm_url 
+
+       Name: Samsung Galaxy KNOX Android Browser RCE
+     Module: exploit/android/browser/samsung_knox_smdm_url
+   Platform: Android
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2014-11-12
+
+Provided by:
+  Andre Moulu
+  jduck <jduck@metasploit.com>
+  joev <joev@metasploit.com>
+
+Available targets:
+  Id  Name
+  --  ----
+  0   Automatic
+
+Basic options:
+  Name         Current Setting  Required  Description
+  ----         ---------------  --------  -----------
+  APK_VERSION  1337             no        The update version to advertise to the client
+  Retries      true             no        Allow the browser to retry the module
+  SRVHOST      0.0.0.0          yes       The local host to listen on. This must be an address on the local machine or 0.0.0.0
+  SRVPORT      8080             yes       The local port to listen on.
+  SSL          false            no        Negotiate SSL for incoming connections
+  SSLCert                       no        Path to a custom SSL certificate (default is randomly generated)
+  URIPATH                       no        The URI to use for this exploit (default is random)
+
+Payload information:
+
+Description:
+  A vulnerability exists in the KNOX security component of the Samsung 
+  Galaxy firmware that allows a remote webpage to install an APK with 
+  arbitrary permissions by abusing the 'smdm://' protocol handler 
+  registered by the KNOX component. The vulnerability has been 
+  confirmed in the Samsung Galaxy S4, S5, Note 3, and Ace 4.
+
+References:
+  http://blog.quarkslab.com/abusing-samsung-knox-to-remotely-install-a-malicious-application-story-of-a-half-patched-vulnerability.html
+  OSVDB (114590)
