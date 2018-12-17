@@ -1,0 +1,14 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{\numberline {1}Laboratory work \IeC {\textnumero }1}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Work purpose}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Task}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Work Progress}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Introduction}{3}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Kleopatra frontend}{3}{subsection.1.3.2}
+\contentsline {subsubsection}{Creating a new certificate}{3}{subsection.1.3.2}
+\contentsline {subsubsection}{Encrypting}{6}{figure.caption.6}
+\contentsline {subsubsection}{Decrypting}{7}{figure.caption.8}
+\contentsline {subsection}{\numberline {1.3.3}GPG command line}{7}{subsection.1.3.3}
+\contentsline {subsubsection}{Symmetric-key encrypting}{7}{subsection.1.3.3}
+\contentsline {subsubsection}{Public-key encrypting}{8}{lstnumber.-2.13}
+\contentsline {section}{\numberline {1.4}Conclusion}{10}{section.1.4}

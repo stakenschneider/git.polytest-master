@@ -1,0 +1,24 @@
+root@masha_kali:~/temp# nmap -sV -p 65100 localhost
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-11-05 16:52 EST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000028s latency).
+Other addresses for localhost (not scanned): ::1
+
+PORT      STATE SERVICE VERSION
+65100/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port65100-TCP:V=7.60%I=7%D=11/5%Time=59FF8815%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,F,"GET\x20/\x20HTTP/1\.0\n")%r(HTTPOptions,13,"OPTIONS\x20/\x
+SF:20HTTP/1\.0\n")%r(RTSPRequest,13,"OPTIONS\x20/\x20RTSP/1\.0\n")%r(Help,
+SF:5,"HELP\n")%r(SSLSessionReq,3,"\x16\x03\n")%r(TLSSessionReq,3,"\x16\x03
+SF:\n")%r(FourOhFourRequest,32,"GET\x20/nice%20ports%2C/Tri%6Eity\.txt%2eb
+SF:ak\x20HTTP/1\.0\n")%r(LPDString,9,"\x01default\n")%r(LDAPSearchReq,3,"0
+SF:\x84\n")%r(SIPOptions,D3,"OPTIONS\x20sip:nm\x20SIP/2\.0\nVia:\x20SIP/2\
+SF:.0/TCP\x20nm;branch=foo\nFrom:\x20<sip:nm@nm>;tag=root\nTo:\x20<sip:nm2
+SF:@nm2>\nCall-ID:\x2050000\nCSeq:\x2042\x20OPTIONS\nMax-Forwards:\x2070\n
+SF:Content-Length:\x200\nContact:\x20<sip:nm@nm>\nAccept:\x20application/s
+SF:dp\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 105.15 seconds

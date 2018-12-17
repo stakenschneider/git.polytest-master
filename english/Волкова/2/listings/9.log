@@ -1,0 +1,10 @@
+root@masha_kali:~# mkdir temp
+root@masha_kali:~# cd temp/
+root@masha_kali:~/temp# touch server.cpp
+root@masha_kali:~/temp# gedit server.cpp 
+^C
+root@masha_kali:~/temp# g++ -o server -pthread server.cpp
+root@masha_kali:~/temp# ./server 
+Using default port: 65100.
+Server socket 3 created.
+Wait clients.

@@ -1,0 +1,20 @@
+masha@masha-pc:~$ sudo airodump-ng mon0
+CH  1 ][ Elapsed: 12 s ][ 2017-12-25 14:26                                    
+                                                                               
+ BSSID              PWR  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                               
+ 00:04:56:CC:5E:78   -1        0        0    0  12  -1                    <leng
+ C0:4A:00:63:B5:CC  -51       52        0    0  11  54e. WPA2 CCMP   PSK  TPLIN
+ 70:8B:CD:C2:DB:40  -68       40        1    0   3  54e  WPA2 CCMP   PSK  Famil
+ 38:2C:4A:C2:35:B4  -63       37        1    0   6  54e  WPA2 CCMP   PSK  ASUS 
+ 84:C9:B2:AB:03:FC  -82       17        0    0  13  54e  WPA2 TKIP   PSK  DIR-3
+ 14:CC:20:94:F2:64  -79       28        0    0  11  54e. WPA2 CCMP   PSK  TP-LI
+ 6C:3B:6B:DC:C0:8D  -87        9        1    0   1  54e. WPA2 CCMP   PSK  <leng
+ FA:F0:82:7E:15:0C  -91        6        0    0   3  54e. WPA2 CCMP   PSK  Inter
+ D4:76:EA:20:FD:88  -90        3        0    0  11  54e. WPA2 CCMP   PSK  Roste
+ 10:7B:EF:5D:39:0C  -91        3        2    0   9  54e  WPA2 CCMP   PSK  OxiTr
+ 00:19:5B:E1:F0:88  -91        7        0    0   6  54 . WPA2 CCMP   PSK  ander
+                                                                               
+ BSSID              STATION            PWR   Rate    Lost    Frames  Probe      
+                                                                                
+ 00:04:56:CC:5E:78  00:04:56:CC:65:65  -90    0 - 0     71       10 

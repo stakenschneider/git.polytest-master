@@ -1,0 +1,8 @@
+msf > hosts
+
+Hosts
+=====
+
+address         mac                name  os_name  os_flavor  os_sp  purpose  info  comments
+-------         ---                ----  -------  ---------  -----  -------  ----  --------
+192.168.56.101  08:00:27:7e:e4:cc        Linux                      server    

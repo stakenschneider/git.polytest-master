@@ -1,0 +1,180 @@
+\documentclass[14pt,a4paper,report]{report}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{graphicx}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\Large\bfseries} % format
+{}                % label
+{0pt}             % sep
+{\huge}           % before-code
+
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{ 
+	% Listing settings
+	inputencoding = utf8,			
+	extendedchars = \true, 
+	keepspaces = true, 			  	 % Поддержка кириллицы и пробелов в комментариях
+	language = bash,            	 	 % Язык программирования (для подсветки)
+	basicstyle = \small\sffamily, 	 % Размер и начертание шрифта для подсветки кода
+	numbers = left,               	 % Где поставить нумерацию строк (слева\справа)
+	numberstyle = \tiny,          	 % Размер шрифта для номеров строк
+	stepnumber = 1,               	 % Размер шага между двумя номерами строк
+	numbersep = 5pt,              	 % Как далеко отстоят номера строк от подсвечиваемого кода
+	backgroundcolor = \color{white}, % Цвет фона подсветки - используем \usepackage{color}
+	showspaces = false,           	 % Показывать или нет пробелы специальными отступами
+	showstringspaces = false,    	 % Показывать или нет пробелы в строках
+	showtabs = false,           	 % Показывать или нет табуляцию в строках
+	frame = single,              	 % Рисовать рамку вокруг кода
+	tabsize = 2,                  	 % Размер табуляции по умолчанию равен 2 пробелам
+	captionpos = t,             	 % Позиция заголовка вверху [t] или внизу [b] 
+	breaklines = true,           	 % Автоматически переносить строки (да\нет)
+	breakatwhitespace = false,   	 % Переносить строки только если есть пробел
+	escapeinside = {\%*}{*)}      	 % Если нужно добавить комментарии в коде
+}
+
+\begin{document}
+
+\def\contentsname{Contents}
+
+% Titlepage
+\begin{titlepage}
+	\begin{center}
+		\textsc{Peter the Great St.Petersburg Polytechnic University\\[5mm]
+			Department of Computer Systems \& Software Engineering}
+		
+		\vfill
+		
+		\textbf{Laboratory report №4\\[3mm]
+			Discipline: «Information Security»\\[3mm]
+			Theme: «802.11 WEP and WPA-PSK keys cracking program AirCrack»\\[41mm]
+		}
+	\end{center}
+	
+	\hfill
+	\begin{minipage}{.4\textwidth}
+		Made by student:\\[2mm] 
+		Volkova M.D.\\
+		Group: 13541/2\\[5mm]
+		
+		Lecturer:\\[2mm] 
+		Bogach N.V.
+	\end{minipage}
+	\vfill
+	\begin{center}
+		Saint-Petersburg\\ \the\year\ y.
+	\end{center}
+\end{titlepage}
+
+% Contents
+\tableofcontents
+\clearpage
+
+\chapter{Laboratory work №4}
+
+\section{Work purpose}
+
+Aircrack-ng is an 802.11 WEP and WPA-PSK keys cracking program that can recover keys once enough data packets have been captured.
+
+After completing this module you will be able to:
+
+\begin{enumerate}
+	\item Explore WiFi nets with a set of tools for auditing wireless networks.
+	\item Capture and analyse WiFi traffic.
+	\item Perform password-cracking attacks on WEP/WPA/WPA2 PSK.
+\end{enumerate}
+
+\section{Task}
+
+\subsubsection{Study}
+
+\begin{enumerate}
+	\item The core utilities – airmon-ng, airodump-ng, aireplay-ng, aircrack-ng;
+	\item Start a monitor mode on your wireless card;
+	\item Launch airodump, study its output and file format.
+\end{enumerate}
+
+\subsubsection{Exercises}
+
+Crack a WPA2 PSK WiFi net:
+
+\begin{enumerate}
+	\item Start monitor using airmon-ng;
+	\item Start capture and analyse WiFi traffic airdump-ng;
+	\item Use aireplay-ng to deauthenticate the wireless client (if needed);
+	\item Perform a dictionary attack.
+\end{enumerate}
+
+\clearpage
+
+\section{Work Progress}
+
+In this paper we will try to access the wi-fi network using the aircrack utility. For the experiment, we establish a wi-fi point with the following parameters:
+
+$ESSID: TPLINK$
+
+$PASSWORD: 12345678$
+
+\subsection{Start monitor using airmon-ng}
+
+Using the airmon-ng command, we can get a list of all available wireless interfaces:
+
+\lstinputlisting{listings/1.log}
+
+Only one interface was found -- \textbf{wlp2s0}. Let's start the monitor for this interface by the following command:
+
+\lstinputlisting{listings/2.log}
+
+The launched monitor \textbf{mon0} is now displayed in the list of interfaces:
+
+\lstinputlisting{listings/3.log}
+
+\subsection{Start capture and analyse WiFi traffic airdump-ng}
+
+The airodump-ng command allows us to analyze the message of wireless traffic. This command gives information about available wi-fi networks, the type of authentication, distance, channel number, amount and type of the data. Let's try to analyze information of the mon0 monitor:
+
+\lstinputlisting{listings/4.log}
+
+\subsection{Use aireplay-ng to deauthenticate the wireless client}
+
+To gain access to the wireless network, we need to intercept the handshake. This can be done by analyzing the traffic of the utility airodump-ng, in the hope of intercepting the message "WPA handshake: AA:BB:CC:DD:EE:FF". However, this process can take a long time, in order to speed up this process we will start sending messages that say that we are no longer connected to the wireless network with the help of \textbf{aireplay-ng} utility:
+
+\lstinputlisting{listings/5.log}
+
+With a parallel analysis of traffic, a handshake was found:
+
+\lstinputlisting{listings/6.log}
+
+The search results for the handshake were written to the file \textbf{WPAcrack-01.cap}.
+
+\subsection{Perform a dictionary attack}
+
+When a handshake is found, we can apply the dictionary attack. As a dictionary, take the standard with the most popular passwords:
+
+\lstinputlisting{listings/7.log}
+
+\section{Conclusion}
+
+The standard methods of hacking wireless networks using WPA-PSK are based on the search of passwords, which indicates their relative reliability. In addition, the restriction on a minimum of 8 digits makes password searching quite difficult.
+
+To protect from hackers wireless network owner should use a strong password, then such attacks will be meaningless.
+
+\end{document}

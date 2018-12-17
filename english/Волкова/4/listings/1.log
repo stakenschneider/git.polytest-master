@@ -1,0 +1,6 @@
+masha@masha-pc:~$ sudo airmon-ng 
+
+
+Interface	Chipset		Driver
+
+wlp2s0		Atheros AR9485	ath9k - [phy0]

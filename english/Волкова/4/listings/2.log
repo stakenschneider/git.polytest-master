@@ -1,0 +1,18 @@
+masha@masha-pc:~$ sudo airmon-ng start wlp2s0
+
+
+Found 4 processes that could cause trouble.
+If airodump-ng, aireplay-ng or airtun-ng stops working after
+a short period of time, you may want to kill (some of) them!
+
+PID	Name
+823	NetworkManager
+965	wpa_supplicant
+1312	avahi-daemon
+1315	avahi-daemon
+
+
+Interface	Chipset		Driver
+
+wlp2s0		Atheros AR9485	ath9k - [phy0]
+				(monitor mode enabled on mon0)

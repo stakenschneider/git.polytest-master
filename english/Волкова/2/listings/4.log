@@ -1,0 +1,37 @@
+root@masha_kali:~# nmap -sV -top-ports 5 192.168.56.101
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-11-05 14:56 EST
+Nmap scan report for 192.168.56.101
+Host is up (0.00014s latency).
+
+PORT    STATE  SERVICE VERSION
+21/tcp  open   ftp     vsftpd 2.3.4
+22/tcp  open   ssh     OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp  open   telnet  Linux telnetd
+80/tcp  open   http    Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+443/tcp closed https
+MAC Address: 08:00:27:7E:E4:CC (Oracle VirtualBox virtual NIC)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.84 seconds
+
+
+root@masha_kali:~# nmap -sV -top-ports 5 192.168.56.1
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-11-05 14:57 EST
+Nmap scan report for 192.168.56.1
+Host is up (0.00015s latency).
+
+PORT    STATE    SERVICE VERSION
+21/tcp  filtered ftp
+22/tcp  open     ssh     Microsoft Windows IoT sshd 1.100 (protocol 2.0)
+23/tcp  filtered telnet
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 0A:00:27:00:00:02 (Unknown)
+Service Info: OS: Windows 10 IoT Core; CPE: cpe:/o:microsoft:windows_10:::iot_core
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.91 seconds
+

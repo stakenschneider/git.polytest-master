@@ -1,0 +1,62 @@
+msf > db_connect -y /usr/share/metasploit-framework/config/database.yml
+[*] Rebuilding the module cache in the background...
+
+msf > db_status 
+[*] postgresql connected to msf
+
+msf > hosts
+
+Hosts
+=====
+
+address         mac                name  os_name  os_flavor  os_sp  purpose  info  comments
+-------         ---                ----  -------  ---------  -----  -------  ----  --------
+192.168.56.101  08:00:27:7e:e4:cc        Linux                      server    
+
+
+msf > services 
+
+Services
+========
+
+host            port  proto  name         state  info
+----            ----  -----  ----         -----  ----
+192.168.56.101  21    tcp    ftp          open   vsftpd 2.3.4
+192.168.56.101  22    tcp    ssh          open   OpenSSH 4.7p1 Debian 8ubuntu1 protocol 2.0
+192.168.56.101  23    tcp    telnet       open   Linux telnetd
+192.168.56.101  25    tcp    smtp         open   Postfix smtpd
+192.168.56.101  53    tcp    domain       open   ISC BIND 9.4.2
+< ... >
+
+msf > workspace
+* default
+
+msf > workspace -a mywsp
+[*] Added workspace: mywsp
+
+msf > workspace
+  default
+* mywsp
+
+
+msf > hosts
+
+Hosts
+=====
+
+address  mac  name  os_name  os_flavor  os_sp  purpose  info  comments
+-------  ---  ----  -------  ---------  -----  -------  ----  --------
+
+
+msf > services 
+
+Services
+========
+
+host  port  proto  name  state  info
+----  ----  -----  ----  -----  ----
+
+msf > workspace default
+[*] Workspace: default
+
+

@@ -1,0 +1,7 @@
+root@masha_kali:~# owasp-zap 
+Found Java version 1.8.0_144
+Available memory: 2951 MB
+Setting jvm heap size: -Xmx737m
+188 [main] INFO org.zaproxy.zap.GuiBootstrap  - OWASP ZAP 2.6.0 started 12/01/18 01:14:47
+
+< ... >

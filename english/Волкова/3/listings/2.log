@@ -1,0 +1,66 @@
+msf > search name:resolve
+[!] Module database cache not built yet, using slow search
+
+Matching Modules
+================
+
+   Name                                                Disclosure Date  Rank       Description
+   ----                                                ---------------  ----       -----------
+   exploit/windows/email/ms10_045_outlook_ref_resolve  2010-06-01       excellent  Outlook ATTACH_BY_REF_RESOLVE File Execution
+   post/multi/gather/resolve_hosts                                      normal     Multi Gather Resolve Hosts
+   post/windows/recon/resolve_ip                                        normal     Windows Recon Resolve IP
+
+msf > search platform:Android
+[!] Module database cache not built yet, using slow search
+
+Matching Modules
+================
+
+   Name                                                      Disclosure Date  Rank       Description
+   ----                                                      ---------------  ----       -----------
+   exploit/android/browser/samsung_knox_smdm_url             2014-11-12       excellent  Samsung Galaxy KNOX Android Browser RCE
+   exploit/android/browser/stagefright_mp4_tx3g_64bit        2015-08-13       normal     Android Stagefright MP4 tx3g Integer Overflow
+   exploit/android/browser/webview_addjavascriptinterface    2012-12-21       excellent  Android Browser and WebView addJavascriptInterface Code Execution
+   exploit/android/fileformat/adobe_reader_pdf_js_interface  2014-04-13       good       Adobe Reader for Android addJavascriptInterface Exploit
+   exploit/android/local/futex_requeue                       2014-05-03       excellent  Android 'Towelroot' Futex Requeue Kernel Exploit
+   exploit/android/local/put_user_vroot                      2013-09-06       excellent  Android get_user/put_user Exploit
+   exploit/multi/handler                                                      manual     Generic Payload Handler
+   exploit/multi/local/allwinner_backdoor                    2016-04-30       excellent  Allwinner 3.4 Legacy Kernel Local Privilege Escalation
+   payload/android/meterpreter/reverse_http                                   normal     Android Meterpreter, Android Reverse HTTP Stager
+   payload/android/meterpreter/reverse_https                                  normal     Android Meterpreter, Android Reverse HTTPS Stager
+   payload/android/meterpreter/reverse_tcp                                    normal     Android Meterpreter, Android Reverse TCP Stager
+
+< ... >
+
+
+msf > search type:nop
+[!] Module database cache not built yet, using slow search
+
+Matching Modules
+================
+
+   Name                 Disclosure Date  Rank    Description
+   ----                 ---------------  ----    -----------
+   nop/aarch64/simple                    normal  Simple
+   nop/armle/simple                      normal  Simple
+   nop/mipsbe/better                     normal  Better
+   nop/php/generic                       normal  PHP Nop Generator
+   nop/ppc/simple                        normal  Simple
+   nop/sparc/random                      normal  SPARC NOP Generator
+   nop/tty/generic                       normal  TTY Nop Generator
+   nop/x64/simple                        normal  Simple
+   nop/x86/opty2                         normal  Opty2
+   nop/x86/single_byte                   normal  Single Byte
+
+
+msf > search author:root
+[!] Module database cache not built yet, using slow search
+
+Matching Modules
+================
+
+   Name                                   Disclosure Date  Rank       Description
+   ----                                   ---------------  ----       -----------
+   exploit/multi/http/coldfusion_rds      2013-08-08       great      Adobe ColdFusion 9 Administrative Login Bypass
+   exploit/multi/http/oracle_reports_rce  2014-01-15       great      Oracle Forms and Reports Remote Code Execution
+   exploit/unix/webapp/zimbra_lfi         2013-12-06       excellent  Zimbra Collaboration Server LFI

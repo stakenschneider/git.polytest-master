@@ -1,0 +1,30 @@
+root@masha_kali:~# cat /usr/share/nmap/nmap-services
+tcpmux	1/tcp	0.001995	# TCP Port Service Multiplexer [rfc-1078] | TCP Port Service Multiplexer
+tcpmux	1/udp	0.001236	# TCP Port Service Multiplexer
+compressnet	2/tcp	0.000013	# Management Utility
+compressnet	2/udp	0.001845	# Management Utility
+compressnet	3/tcp	0.001242	# Compression Process
+compressnet	3/udp	0.001532	# Compression Process
+unknown	4/tcp	0.000477
+rje	5/tcp	0.000000	# Remote Job Entry
+rje	5/udp	0.000593	# Remote Job Entry
+unknown	6/tcp	0.000502
+echo	7/sctp	0.000000
+echo	7/tcp	0.004855
+echo	7/udp	0.024679
+unknown	8/tcp	0.000013
+discard	9/sctp	0.000000	# sink null
+discard	9/tcp	0.003764	# sink null
+discard	9/udp	0.015733	# sink null
+unknown	10/tcp	0.000063
+systat	11/tcp	0.000075	# Active Users
+systat	11/udp	0.000577	# Active Users
+unknown	12/tcp	0.000063
+daytime	13/tcp	0.003927
+daytime	13/udp	0.004827
+unknown	14/tcp	0.000038
+netstat	15/tcp	0.000038
+unknown	16/tcp	0.000050
+qotd	17/tcp	0.002346	# Quote of the Day
+qotd	17/udp	0.009209	# Quote of the Day
+< ... >

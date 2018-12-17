@@ -1,0 +1,17 @@
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA.gpg
+
+masha@masha-VirtualBox:~/temp$ gpg -o SECRET.DATA -d SECRET.DATA.gpg 
+
+You need a passphrase to unlock the secret key for
+user: "Donald <donald@trump.gov>"
+2048-bit RSA key, ID 49ECD6F1, created 2017-11-05 (main key ID 8A882796)
+
+gpg: encrypted with 2048-bit RSA key, ID 49ECD6F1, created 2017-11-05
+      "Donald <donald@trump.gov>"
+	  
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA  SECRET.DATA.gpg
+
+masha@masha-VirtualBox:~/temp$ cat SECRET.DATA
+! My secret file !

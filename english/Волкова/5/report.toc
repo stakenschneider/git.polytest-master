@@ -1,0 +1,22 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{\numberline {1}Laboratory work \IeC {\textnumero }5}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Work purpose}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Task}{2}{section.1.2}
+\contentsline {subsubsection}{Study}{2}{section.1.2}
+\contentsline {subsubsection}{Exercises}{2}{Item.2}
+\contentsline {section}{\numberline {1.3}Study}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Learn how to deploy SSL/TLS correctly}{3}{subsection.1.3.1}
+\contentsline {subsubsection}{Private Key and Certificate}{3}{subsection.1.3.1}
+\contentsline {subsubsection}{Configuration}{3}{subsection.1.3.1}
+\contentsline {subsubsection}{Application Design}{3}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Learn SSL security issues POODLE, HeartBleed}{3}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Exercises}{4}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Choose one domain from a list of Recent Best and one from Recent Worst at SSL Server Test study reports and explain their summary}{4}{subsection.1.4.1}
+\contentsline {subsubsection}{Example one of the best report}{4}{subsection.1.4.1}
+\contentsline {subsubsection}{Example one of the worst report}{5}{figure.caption.3}
+\contentsline {subsection}{\numberline {1.4.2}Analyse a SSL-based domain}{6}{subsection.1.4.2}
+\contentsline {subsubsection}{Explain Summary}{6}{subsection.1.4.2}
+\contentsline {subsubsection}{Explain the abbreviations in Conguration}{6}{subsection.1.4.2}
+\contentsline {subsubsection}{Comment on Protocol Details}{6}{subsection.1.4.2}
+\contentsline {subsubsection}{Conclude about SSL status}{7}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Conclusion}{7}{section.1.5}

@@ -1,0 +1,9 @@
+root@masha_kali:~# ls /usr/share/metasploit-framework/plugins
+aggregator.rb      ips_filter.rb  request.rb           thread.rb
+alias.rb           lab.rb         rssfeed.rb           token_adduser.rb
+auto_add_route.rb  msfd.rb        sample.rb            token_hunter.rb
+beholder.rb        msgrpc.rb      session_notifier.rb  wiki.rb
+db_credcollect.rb  nessus.rb      session_tagger.rb    wmap.rb
+db_tracker.rb      nexpose.rb     socket_logger.rb
+event_tester.rb    openvas.rb     sounds.rb
+ffautoregen.rb     pcap_log.rb    sqlmap.rb

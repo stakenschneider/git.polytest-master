@@ -1,0 +1,3 @@
+msf > load '/usr/share/metasploit-framework/plugins/sample.rb'
+[*] Sample plugin loaded.
+[*] Successfully loaded plugin: sample

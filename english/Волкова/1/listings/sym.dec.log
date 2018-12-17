@@ -1,0 +1,13 @@
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA.gpg
+
+masha@masha-VirtualBox:~/temp$ gpg -o SECRET.DATA -d SECRET.DATA.gpg 
+gpg: keyring `/home/masha/.gnupg/secring.gpg' created
+gpg: AES encrypted data
+gpg: encrypted with 1 passphrase
+
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA  SECRET.DATA.gpg
+
+masha@masha-VirtualBox:~/temp$ cat SECRET.DATA
+! My secret data !

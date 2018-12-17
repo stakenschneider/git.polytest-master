@@ -1,0 +1,4 @@
+msf > use 
+Usage: use module_name
+
+The use command is used to interact with a module of a given name.

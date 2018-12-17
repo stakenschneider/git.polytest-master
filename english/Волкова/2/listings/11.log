@@ -1,0 +1,8 @@
+< ... >
+
+##############################NEXT PROBE##############################
+# My TCP server.
+Probe TCP my-tcp-server-ver q|version\r\n|
+rarity 9
+ports 65100
+match echo m|^1\.0\.0$| p/My TCP Server/ v/1.0.0/

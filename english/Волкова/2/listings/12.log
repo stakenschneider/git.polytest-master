@@ -1,0 +1,18 @@
+root@masha_kali:~/temp# ./server 
+Using default port: 65100.
+Server socket 3 created.
+Wait clients.
+Client thread with socket 4 created.
+It's impossible to receive message from client or send message to client.
+Client socket 4 closed.
+Client thread with socket 5 created.
+Client message: GET / HTTP/1.0
+It's impossible to receive message from client or send message to client.
+Client socket 5 closed.
+Client thread with socket 4 created.
+Client message: OPTIONS / HTTP/1.0
+It's impossible to receive message from client or send message to client.
+Client socket 4 closed.
+Client thread with socket 5 created.
+Client message: OPTIONS / RTSP/1.0
+< ... >
