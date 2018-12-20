@@ -1,0 +1,23 @@
+root@kali:~/temp# nmap -sV -p 65100 -oX - scanme.nmap.org localhost
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Nov  5 17:03:42 2017 as: nmap -sV -p 65100 -oX - scanme.nmap.org localhost -->
+<nmaprun scanner="nmap" args="nmap -sV -p 65100 -oX - scanme.nmap.org localhost" start="1509919422" startstr="Sun Nov  5 17:03:42 2017" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="65100"/>
+<verbose level="0"/>
+<debugging level="0"/>
+Failed to resolve "scanme.nmap.org".
+<host starttime="1509919422" endtime="1509919429"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="user"/>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="65100"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="echo" product="My TCP Server" version="1.0.0" method="probed" conf="10"/></port>
+</ports>
+<times srtt="32" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1509919429" timestr="Sun Nov  5 17:03:49 2017" elapsed="6.53" summary="Nmap done at Sun Nov  5 17:03:49 2017; 1 IP address (1 host up) scanned in 6.53 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

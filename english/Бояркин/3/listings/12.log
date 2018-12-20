@@ -1,0 +1,16 @@
+msf > use auxiliary/scanner/smb/smb_enumshares
+
+msf auxiliary(smb_enumshares) > set RHOSTS 192.168.56.101
+RHOSTS => 192.168.56.101
+
+msf auxiliary(smb_enumshares) > exploit
+
+[+] 192.168.56.101:139    - print$ - (DS) Printer Drivers
+[+] 192.168.56.101:139    - tmp - (DS) oh noes!
+[+] 192.168.56.101:139    - opt - (DS) 
+[+] 192.168.56.101:139    - IPC$ - (I) IPC Service (metasploitable server (Samba 3.0.20-Debian))
+[+] 192.168.56.101:139    - ADMIN$ - (I) IPC Service (metasploitable server (Samba 3.0.20-Debian))
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+msf auxiliary(smb_enumshares) > back

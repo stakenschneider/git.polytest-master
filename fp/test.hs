@@ -1,4 +1,4 @@
-module Test1 where 
+module Test where
 
 import Prelude hiding (foldl,foldr, unfoldr)
 
@@ -57,12 +57,12 @@ contain e (h : t) | e == h = 1
                   | e /= h = contain e t
 contain _ [] = 0
 
--- повторяющиеся элементы в подсписок
+-- 1. Вар 2
+-- Поместить все последовательные повторяющиеся элементы списка в подсписки
 pack lst = unfoldr fun lst
 
 fun [] = Nothing
 fun (h : t) = Just (makeSublist h t [h], remove h t [])
-
 
 makeSublist _ [] lst = lst
 makeSublist x (h : t) lst | h == x = makeSublist x t (x : lst)
@@ -73,7 +73,8 @@ remove h (h' : t') lst | h == h' =  remove h t' lst
 remove _ [] lst = lst    
 
 
--- разбить список на 2, длина первого задаётся
+-- 2. Вар 2
+-- Разбить список на 2. Размер первого списка задан параметром
 mySplit :: [a] -> Int -> ([a], [a])
 mySplit list i = ((take i list), (drop i list))
 
@@ -106,7 +107,20 @@ isPrime' x divider
     | otherwise          = isPrime' x (divider + 1)
 
 
--- постройте спискок простых чисел в диапазоне
+
+-- 2. Вар 1
+-- Удалить каждый n-ый элемент из списка
+dropEvery :: [a] -> Int -> [a]
+dropEvery lst n = dropEvery' lst n (length lst `div` n)
+
+dropEvery' :: [a] -> Int -> Int -> [a]
+dropEvery' lst n m = if m < 0 then lst
+    else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
+
+
+
+-- 3. Вар 1
+-- Постройте всех спискок простых чисел в диапазоне
 primeList :: Integer -> Integer -> [Integer]
 primeList from to = primeList' from to []
 
@@ -117,16 +131,8 @@ primeList' from to lst
     foo = if isPrime from then lst ++ [from] else lst
 
 
--- удалить каждый n-ый элемент из списка
-dropEvery :: [a] -> Int -> [a]
-dropEvery lst n = dropEvery' lst n (length lst `div` n)
 
-dropEvery' :: [a] -> Int -> Int -> [a]
-dropEvery' lst n m = if m < 0 then lst
-    else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
-
-
--- сумма всех натуральных чисел от 1 до n
+-- Найти сумму всех натуральных чисел от 1 до n
 sumBetween :: Integer -> Integer
 sumBetween n = if n > 0
     then foldl (+) 0 [1..n]
