@@ -46,8 +46,7 @@ unfoldr f = maybe [] (\ (a, b) -> a : unfoldr f b) . f
 -- head, tail, minimum, maximum
 
 
--- Задания 
-
+-- Задания
 -- объединить повторяющиеся элементы в списке
 compress (h : t) = compress' t (h:[])
 compress' (h : t) lst = if (contain h lst == 1) then compress' t lst else compress' t (h : lst)
@@ -66,7 +65,7 @@ fun (h : t) = Just (makeSublist h t [h], remove h t [])
 
 makeSublist _ [] lst = lst
 makeSublist x (h : t) lst | h == x = makeSublist x t (x : lst)
-                          | h /= x = makeSublist x t lst
+                          | h /= x = lst
 
 remove h (h' : t') lst | h == h' =  remove h t' lst
                        | h /= h' =  remove h t' (h' : lst)
@@ -96,7 +95,7 @@ compList' from to lst
 
 -- проверка на простоту
 isPrime :: Integer -> Bool
-isPrime n= isPrime' n 2
+isPrime n = isPrime' n 2
 
 isPrime' :: Integer -> Integer -> Bool
 isPrime' x divider
@@ -111,7 +110,7 @@ isPrime' x divider
 -- 2. Вар 1
 -- Удалить каждый n-ый элемент из списка
 dropEvery :: [a] -> Int -> [a]
-dropEvery lst n = dropEvery' lst n (length lst `div` n)
+dropEvery lst n = dropEvery' lst n (length div lst  n)
 
 dropEvery' :: [a] -> Int -> Int -> [a]
 dropEvery' lst n m = if m < 0 then lst
