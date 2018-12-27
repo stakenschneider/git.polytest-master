@@ -135,10 +135,6 @@ int main(int argc, char **argv) {
 
     auto &&start_camera_position = glm::vec4(distanceX, distanceY, 0, 1);
 
-    //    cv::VideoWriter result(res_file_name, -1, FRAME_PER_SECOND, cv::Size(width, height));
-
-    //    CvLineDrawer drawer(width, height);
-//	LineDrawer drawer(width, height);
     TriangleDrawer drawer(width, height);
     drawer.mipMap = mipMap;
 
@@ -152,23 +148,13 @@ int main(int argc, char **argv) {
                 glm::vec3(0, 1, 0)
         );
 
-//		drawer.updatePipeline(std::make_unique<LineTransformationPipeline>(camera, projection, width, height));
         drawer.updatePipeline(std::make_unique<TriangleTransformationPipeline>(camera, projection, width, height));
         render(drawer, model_vertices, model_normals, model_texture_coordinates, mesh.Indices);
-//        render(drawer, model_vertices, mesh.Indices);
-
-//        double min, max;
-//        cv::minMaxLoc(drawer.zBuffer, &min, &max);
-//        cv::Mat zNorm;
-//        cv::normalize(drawer.zBuffer, zNorm, 0.0, 1.0, cv::NORM_MINMAX, CV_64F);
-//        cv::imshow("ZZZZ", zNorm);
 
         cv::imshow("Aaaa", drawer.getImage());
-        //        result.write(drawer.getImage());
         cv::waitKey(2000);
 
         angle += angle_per_frame;
     }
-    //    result.release();
     return 0;
 }
