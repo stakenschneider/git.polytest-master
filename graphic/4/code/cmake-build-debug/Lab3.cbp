@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Lab3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="render">
+				<Option output="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/render" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/OBJ-Loader/Source"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/glm"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/opencv"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cxxopts/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 render"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="render/fast">
+				<Option output="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/render" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/OBJ-Loader/Source"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/glm"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/opencv"/>
+					<Add directory="/Users/Maria/Documents/git.polytest-master/graphic/4/code/cxxopts/include"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 render/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Maria/Documents/git.polytest-master/graphic/4/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/Drawer.h">
+			<Option target="render"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/main.cpp">
+			<Option target="render"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/render.h">
+			<Option target="render"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/transformers.h">
+			<Option target="render"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/../../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/../../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/../../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/Maria/Documents/git.polytest-master/graphic/4/code/../../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

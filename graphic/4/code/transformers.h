@@ -1,6 +1,3 @@
-//
-// Created by sobol on 11/16/18.
-//
 #pragma once
 
 #include <any>

@@ -1,6 +1,3 @@
-//
-// Created by sobol on 11/15/18.
-//
 #pragma once
 
 #include "render.h"
