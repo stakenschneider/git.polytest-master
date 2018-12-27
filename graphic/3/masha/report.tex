@@ -146,6 +146,9 @@ escapeinside = {\%*}{*)} % Если нужно добавить коммента
 \clearpage
 
 \section{Ход работы}
+В дополнение к уже установленной ранее библиотеке OpenCV дополнительно была установлена библиотека GLM, предназначенная для работы с векторами и матрицами размерности до 4-х. Для работы с форматом OBJ использована библиотека TinyObj.
+
+После загрузки, установки и настройки необходимых библиотек была составлена и протестирована нижеследующая программа.
 
 \subsection{Настройка фиксированной камеры}
 В OpenGL при использовании фиксированного конвейера есть ровно две матрицы, относящихся к трансформациям точек и объектов:
@@ -178,11 +181,12 @@ camera = glm::lookAt(
 
 Эти параметры легко увидеть на следующей иллюстрации:
 
-\begin{figure}[h]
-\center{\includegraphics[width=1\linewidth]{images/perspective_volume.png}}
+\begin{figure}[h!]
+\center{\includegraphics[width=0.8\linewidth]{images/perspective_volume.png}}
 \label{ris:image}
 \end{figure}
 
+\clearpage
 \begin{lstlisting}
 projection = glm::perspective(
             glm::radians(fovy),
@@ -202,8 +206,224 @@ projection = glm::perspective(
 
 \end{itemize}
 
-\section{Вывод}
 
+
+
+
+
+\clearpage
+\section{Результаты}
+В качестве тестовой модели для проверки работоспособности программы использовалась модель чайничка, экспортированная стандартными средствами в формат OBJ.
+
+ 
+
+
+\subsection{CvLineDrawer}
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/CvLineDrawer/options.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/CvLineDrawer/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/CvLineDrawer/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/CvLineDrawer/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/CvLineDrawer/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+
+\clearpage
+\subsection{LineDrawer}
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/LineDrawer/options.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/LineDrawer/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/LineDrawer/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/LineDrawer/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/LineDrawer/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+
+\clearpage
+\subsection{TriangleDrawer}
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/1/option.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/1/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/1/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/1/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/1/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+Приведем еще несколько результатов, изменяя параметры камеры:
+
+\clearpage
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/2/options.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/2/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/2/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/2/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/2/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+
+
+\clearpage
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/5/options.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/5/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/5/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/5/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/5/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+
+\clearpage
+Параметры:
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/6/options.png}}
+\caption{Параметры}
+\label{ris:image}
+\end{figure}
+
+Результат работы: 
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/6/teapot0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/6/teapot1.png}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/6/teapot2.png}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/TriangleDrawer/6/teapot3.png}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
+
+
+
+Результатом работы стало двумерное анимированное изображение вращающегося каркаса выбранной ранее модели, которая в любой дискретный момент времени была повернута на некоторый угол вокруг мировых осей OX, OY, OZ.
+
+
+
+\clearpage
+\section{Вывод}
+В данной работе была изучена библиотека GLM и составлена программа для визуализации трехмерной модели в виде проволочного каркаса с использованием средств библиотеки OpenCV.
+
+Результаты визуализации отвечают ожиданиям при заданном смещении, повороте и масштабе модели. Для создания более полного представления наблюдателя о внешнем виде исходной модели, необходимо в дальнейшем реализовать отображение поверхностей модели, посредством треугольников, учитывая, что используемая библиотека TinyObj позволяет проводить разбиение произвольного полигона на треугольники автоматически при чтении файла модели.
 
 \clearpage
 \section{Листинг}

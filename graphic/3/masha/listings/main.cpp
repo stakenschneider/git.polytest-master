@@ -3,10 +3,12 @@
 #include <iostream>
 #include <any>
 #include <OBJ_Loader.h>
+#include <cxxopts.hpp>
+
 #include <glm/vec3.hpp>
 #include <glm/geometric.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <cxxopts.hpp>
+
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -111,12 +113,7 @@ int main(int argc, char **argv) {
 
     auto &&start_camera_position = glm::vec4(distanceX, distanceY, 0, 1);
 
-    //    cv::VideoWriter result(res_file_name, -1, FRAME_PER_SECOND, cv::Size(width, height));
-
-    //    CvLineDrawer drawer(width, height);
-//	LineDrawer drawer(width, height);
     TriangleDrawer drawer(width, height);
-
 
     for (auto i = 0; i < FRAME_COUNT; i++) {
         drawer.resetImage();
@@ -128,22 +125,13 @@ int main(int argc, char **argv) {
                 glm::vec3(0, 1, 0)
         );
 
-//		drawer.updatePipeline(std::make_unique<LineTransformationPipeline>(camera, projection, width, height));
         drawer.updatePipeline(std::make_unique<TriangleTransformationPipeline>(camera, projection, width, height));
         render(drawer, model_vertices, mesh.Indices);
 
-//        double min, max;
-//        cv::minMaxLoc(drawer.zBuffer, &min, &max);
-//        cv::Mat zNorm;
-//        cv::normalize(drawer.zBuffer, zNorm, 0.0, 1.0, cv::NORM_MINMAX, CV_64F);
-//        cv::imshow("ZZZZ", zNorm);
-
-        cv::imshow("Aaaa", drawer.getImage());
-        //        result.write(drawer.getImage());
+        cv::imshow("res", drawer.getImage());
         cv::waitKey(2000);
-
         angle += angle_per_frame;
     }
-    //    result.release();
+
     return 0;
 }
