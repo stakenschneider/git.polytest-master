@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  28 DEC 2018 02:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  28 DEC 2018 03:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -972,6 +972,9 @@ LaTeX Warning: Label `ris:image' multiply defined.
 
 LaTeX Warning: Label `ris:experimentalcorrelationsignals' multiply defined.
 
+
+LaTeX Warning: Label `ris:experimentalcorrelationsignals' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -1207,13 +1210,13 @@ Overfull \hbox (29.5883pt too wide) in paragraph at lines 223--224
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
-<images/diag.png, id=153, 289.08pt x 303.1325pt>
+<images/diag.png, id=183, 289.08pt x 303.1325pt>
 File: images/diag.png Graphic file (type png)
  <use images/diag.png>
 Package pdftex.def Info: images/diag.png used on input line 246.
 (pdftex.def)             Requested size: 174.27617pt x 182.74585pt.
 
-<images/perspective_volume.png, id=155, 803.0pt x 338.26375pt>
+<images/perspective_volume.png, id=185, 803.0pt x 338.26375pt>
 File: images/perspective_volume.png Graphic file (type png)
 
 <use images/perspective_volume.png>
@@ -1235,7 +1238,7 @@ Package babel Info: Redefining russian shorthand "~
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
-<images/diag2.png, id=169, 350.30875pt x 412.54124pt>
+<images/diag2.png, id=199, 350.30875pt x 412.54124pt>
 File: images/diag2.png Graphic file (type png)
  <use images/diag2.png>
 Package pdftex.def Info: images/diag2.png used on input line 285.
@@ -1269,429 +1272,638 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 301.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 301.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 309.
-[6]
+(babel)             in language  on input line 355.
+ [6]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 396.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 396.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 396.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 316.
- <images/CvLineDrawer/options.png, id=193, 579.66562pt x 146.04562pt>
+(babel)             in language  on input line 396.
+ [7]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 397.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 397.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 403.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 403.
+
+<images/CvLineDrawer/options.png, id=295, 579.66562pt x 146.04562pt>
 File: images/CvLineDrawer/options.png Graphic file (type png)
 
 <use images/CvLineDrawer/options.png>
-Package pdftex.def Info: images/CvLineDrawer/options.png used on input line 320
+Package pdftex.def Info: images/CvLineDrawer/options.png used on input line 407
 .
 (pdftex.def)             Requested size: 497.92325pt x 125.4519pt.
 
-<images/CvLineDrawer/teapot0.png, id=194, 803.0pt x 602.25pt>
+<images/CvLineDrawer/teapot0.png, id=296, 803.0pt x 602.25pt>
 File: images/CvLineDrawer/teapot0.png Graphic file (type png)
 
 <use images/CvLineDrawer/teapot0.png>
-Package pdftex.def Info: images/CvLineDrawer/teapot0.png used on input line 329
+Package pdftex.def Info: images/CvLineDrawer/teapot0.png used on input line 416
 .
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/CvLineDrawer/teapot1.png, id=195, 803.0pt x 602.25pt>
+<images/CvLineDrawer/teapot1.png, id=297, 803.0pt x 602.25pt>
 File: images/CvLineDrawer/teapot1.png Graphic file (type png)
 
 <use images/CvLineDrawer/teapot1.png>
-Package pdftex.def Info: images/CvLineDrawer/teapot1.png used on input line 333
+Package pdftex.def Info: images/CvLineDrawer/teapot1.png used on input line 420
 .
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/CvLineDrawer/teapot2.png, id=196, 803.0pt x 602.25pt>
+<images/CvLineDrawer/teapot2.png, id=298, 803.0pt x 602.25pt>
 File: images/CvLineDrawer/teapot2.png Graphic file (type png)
 
 <use images/CvLineDrawer/teapot2.png>
-Package pdftex.def Info: images/CvLineDrawer/teapot2.png used on input line 337
+Package pdftex.def Info: images/CvLineDrawer/teapot2.png used on input line 424
 .
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/CvLineDrawer/teapot3.png, id=197, 803.0pt x 602.25pt>
+<images/CvLineDrawer/teapot3.png, id=299, 803.0pt x 602.25pt>
 File: images/CvLineDrawer/teapot3.png Graphic file (type png)
 
 <use images/CvLineDrawer/teapot3.png>
-Package pdftex.def Info: images/CvLineDrawer/teapot3.png used on input line 341
+Package pdftex.def Info: images/CvLineDrawer/teapot3.png used on input line 428
 .
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 348.
- [7
+(babel)             in language  on input line 435.
+ [8
 
  <./images/CvLineDrawer/options.png> <./images/CvLineDrawer/teapot0.png (PNG co
 py)> <./images/CvLineDrawer/teapot1.png (PNG copy)> <./images/CvLineDrawer/teap
 ot2.png (PNG copy)> <./images/CvLineDrawer/teapot3.png (PNG copy)>]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 349.
+(babel)             in language  on input line 436.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 349.
+(babel)             in language  on input line 436.
 
-<images/LineDrawer/options.png, id=205, 579.66562pt x 146.04562pt>
+<images/LineDrawer/options.png, id=307, 579.66562pt x 146.04562pt>
 File: images/LineDrawer/options.png Graphic file (type png)
 
 <use images/LineDrawer/options.png>
-Package pdftex.def Info: images/LineDrawer/options.png used on input line 353.
+Package pdftex.def Info: images/LineDrawer/options.png used on input line 440.
 (pdftex.def)             Requested size: 497.92325pt x 125.4519pt.
 
-<images/LineDrawer/teapot0.png, id=206, 803.0pt x 602.25pt>
+<images/LineDrawer/teapot0.png, id=308, 803.0pt x 602.25pt>
 File: images/LineDrawer/teapot0.png Graphic file (type png)
 
 <use images/LineDrawer/teapot0.png>
-Package pdftex.def Info: images/LineDrawer/teapot0.png used on input line 362.
+Package pdftex.def Info: images/LineDrawer/teapot0.png used on input line 449.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/LineDrawer/teapot1.png, id=207, 803.0pt x 602.25pt>
+<images/LineDrawer/teapot1.png, id=309, 803.0pt x 602.25pt>
 File: images/LineDrawer/teapot1.png Graphic file (type png)
 
 <use images/LineDrawer/teapot1.png>
-Package pdftex.def Info: images/LineDrawer/teapot1.png used on input line 366.
+Package pdftex.def Info: images/LineDrawer/teapot1.png used on input line 453.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/LineDrawer/teapot2.png, id=208, 803.0pt x 602.25pt>
+<images/LineDrawer/teapot2.png, id=310, 803.0pt x 602.25pt>
 File: images/LineDrawer/teapot2.png Graphic file (type png)
 
 <use images/LineDrawer/teapot2.png>
-Package pdftex.def Info: images/LineDrawer/teapot2.png used on input line 370.
+Package pdftex.def Info: images/LineDrawer/teapot2.png used on input line 457.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/LineDrawer/teapot3.png, id=209, 803.0pt x 602.25pt>
+<images/LineDrawer/teapot3.png, id=311, 803.0pt x 602.25pt>
 File: images/LineDrawer/teapot3.png Graphic file (type png)
 
 <use images/LineDrawer/teapot3.png>
-Package pdftex.def Info: images/LineDrawer/teapot3.png used on input line 374.
+Package pdftex.def Info: images/LineDrawer/teapot3.png used on input line 461.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 468.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 468.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 468.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 381.
- [8
+(babel)             in language  on input line 468.
+ [9
 
  <./images/LineDrawer/options.png> <./images/LineDrawer/teapot0.png (PNG copy)>
  <./images/LineDrawer/teapot1.png (PNG copy)> <./images/LineDrawer/teapot2.png 
 (PNG copy)> <./images/LineDrawer/teapot3.png (PNG copy)>]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 382.
+(babel)             in language  on input line 469.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 382.
+(babel)             in language  on input line 469.
 
-<images/TriangleDrawer/1/option.png, id=217, 587.19376pt x 138.5175pt>
+<images/TriangleDrawer/1/option.png, id=319, 587.19376pt x 138.5175pt>
 File: images/TriangleDrawer/1/option.png Graphic file (type png)
 
 <use images/TriangleDrawer/1/option.png>
 Package pdftex.def Info: images/TriangleDrawer/1/option.png used on input line 
-386.
+473.
 (pdftex.def)             Requested size: 497.92325pt x 117.4593pt.
 
-<images/TriangleDrawer/1/teapot0.png, id=218, 803.0pt x 602.25pt>
+<images/TriangleDrawer/1/teapot0.png, id=320, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/1/teapot0.png Graphic file (type png)
 
 <use images/TriangleDrawer/1/teapot0.png>
 Package pdftex.def Info: images/TriangleDrawer/1/teapot0.png used on input line
- 395.
+ 482.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/1/teapot1.png, id=219, 803.0pt x 602.25pt>
+<images/TriangleDrawer/1/teapot1.png, id=321, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/1/teapot1.png Graphic file (type png)
 
 <use images/TriangleDrawer/1/teapot1.png>
 Package pdftex.def Info: images/TriangleDrawer/1/teapot1.png used on input line
- 399.
+ 486.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/1/teapot2.png, id=220, 803.0pt x 602.25pt>
+<images/TriangleDrawer/1/teapot2.png, id=322, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/1/teapot2.png Graphic file (type png)
 
 <use images/TriangleDrawer/1/teapot2.png>
 Package pdftex.def Info: images/TriangleDrawer/1/teapot2.png used on input line
- 403.
+ 490.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/1/teapot3.png, id=221, 803.0pt x 602.25pt>
+<images/TriangleDrawer/1/teapot3.png, id=323, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/1/teapot3.png Graphic file (type png)
 
 <use images/TriangleDrawer/1/teapot3.png>
 Package pdftex.def Info: images/TriangleDrawer/1/teapot3.png used on input line
- 407.
+ 494.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 502.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 502.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 415.
+(babel)             in language  on input line 502.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 415.
- [9
+(babel)             in language  on input line 502.
+ [10
 
  <./images/TriangleDrawer/1/option.png> <./images/TriangleDrawer/1/teapot0.png 
 (PNG copy)> <./images/TriangleDrawer/1/teapot1.png (PNG copy)> <./images/Triang
 leDrawer/1/teapot2.png (PNG copy)> <./images/TriangleDrawer/1/teapot3.png (PNG 
 copy)>]
-<images/TriangleDrawer/2/options.png, id=229, 587.94656pt x 140.77594pt>
+<images/TriangleDrawer/2/options.png, id=331, 587.94656pt x 140.77594pt>
 File: images/TriangleDrawer/2/options.png Graphic file (type png)
 
 <use images/TriangleDrawer/2/options.png>
 Package pdftex.def Info: images/TriangleDrawer/2/options.png used on input line
- 419.
+ 506.
 (pdftex.def)             Requested size: 497.92325pt x 119.22188pt.
 
-<images/TriangleDrawer/2/teapot0.png, id=230, 803.0pt x 602.25pt>
+<images/TriangleDrawer/2/teapot0.png, id=332, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/2/teapot0.png Graphic file (type png)
 
 <use images/TriangleDrawer/2/teapot0.png>
 Package pdftex.def Info: images/TriangleDrawer/2/teapot0.png used on input line
- 428.
+ 515.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/2/teapot1.png, id=231, 803.0pt x 602.25pt>
+<images/TriangleDrawer/2/teapot1.png, id=333, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/2/teapot1.png Graphic file (type png)
 
 <use images/TriangleDrawer/2/teapot1.png>
 Package pdftex.def Info: images/TriangleDrawer/2/teapot1.png used on input line
- 432.
+ 519.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/2/teapot2.png, id=232, 803.0pt x 602.25pt>
+<images/TriangleDrawer/2/teapot2.png, id=334, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/2/teapot2.png Graphic file (type png)
 
 <use images/TriangleDrawer/2/teapot2.png>
 Package pdftex.def Info: images/TriangleDrawer/2/teapot2.png used on input line
- 436.
+ 523.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/2/teapot3.png, id=233, 803.0pt x 602.25pt>
+<images/TriangleDrawer/2/teapot3.png, id=335, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/2/teapot3.png Graphic file (type png)
 
 <use images/TriangleDrawer/2/teapot3.png>
 Package pdftex.def Info: images/TriangleDrawer/2/teapot3.png used on input line
- 440.
+ 527.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 448.
+(babel)             in language  on input line 535.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 448.
+(babel)             in language  on input line 535.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 448.
+(babel)             in language  on input line 535.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 448.
- [10
+(babel)             in language  on input line 535.
+ [11
 
  <./images/TriangleDrawer/2/options.png> <./images/TriangleDrawer/2/teapot0.png
  (PNG copy)> <./images/TriangleDrawer/2/teapot1.png (PNG copy)> <./images/Trian
 gleDrawer/2/teapot2.png (PNG copy)> <./images/TriangleDrawer/2/teapot3.png (PNG
  copy)>]
-<images/TriangleDrawer/5/options.png, id=241, 595.47469pt x 137.7647pt>
+<images/TriangleDrawer/5/options.png, id=343, 595.47469pt x 137.7647pt>
 File: images/TriangleDrawer/5/options.png Graphic file (type png)
 
 <use images/TriangleDrawer/5/options.png>
 Package pdftex.def Info: images/TriangleDrawer/5/options.png used on input line
- 452.
+ 539.
 (pdftex.def)             Requested size: 497.92325pt x 115.19601pt.
 
-<images/TriangleDrawer/5/teapot0.png, id=242, 803.0pt x 602.25pt>
+<images/TriangleDrawer/5/teapot0.png, id=344, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/5/teapot0.png Graphic file (type png)
 
 <use images/TriangleDrawer/5/teapot0.png>
 Package pdftex.def Info: images/TriangleDrawer/5/teapot0.png used on input line
- 461.
+ 548.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/5/teapot1.png, id=243, 803.0pt x 602.25pt>
+<images/TriangleDrawer/5/teapot1.png, id=345, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/5/teapot1.png Graphic file (type png)
 
 <use images/TriangleDrawer/5/teapot1.png>
 Package pdftex.def Info: images/TriangleDrawer/5/teapot1.png used on input line
- 465.
+ 552.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/5/teapot2.png, id=244, 803.0pt x 602.25pt>
+<images/TriangleDrawer/5/teapot2.png, id=346, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/5/teapot2.png Graphic file (type png)
 
 <use images/TriangleDrawer/5/teapot2.png>
 Package pdftex.def Info: images/TriangleDrawer/5/teapot2.png used on input line
- 469.
+ 556.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/5/teapot3.png, id=245, 803.0pt x 602.25pt>
+<images/TriangleDrawer/5/teapot3.png, id=347, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/5/teapot3.png Graphic file (type png)
 
 <use images/TriangleDrawer/5/teapot3.png>
 Package pdftex.def Info: images/TriangleDrawer/5/teapot3.png used on input line
- 473.
+ 560.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 567.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 567.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 567.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 480.
- [11
+(babel)             in language  on input line 567.
+ [12
 
  <./images/TriangleDrawer/5/options.png> <./images/TriangleDrawer/5/teapot0.png
  (PNG copy)> <./images/TriangleDrawer/5/teapot1.png (PNG copy)> <./images/Trian
 gleDrawer/5/teapot2.png (PNG copy)> <./images/TriangleDrawer/5/teapot3.png (PNG
  copy)>]
-<images/TriangleDrawer/6/options.png, id=253, 621.82312pt x 141.52875pt>
+<images/TriangleDrawer/6/options.png, id=356, 621.82312pt x 141.52875pt>
 File: images/TriangleDrawer/6/options.png Graphic file (type png)
 
 <use images/TriangleDrawer/6/options.png>
 Package pdftex.def Info: images/TriangleDrawer/6/options.png used on input line
- 484.
+ 571.
 (pdftex.def)             Requested size: 497.92325pt x 113.32896pt.
 
-<images/TriangleDrawer/6/teapot0.png, id=254, 803.0pt x 602.25pt>
+<images/TriangleDrawer/6/teapot0.png, id=357, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/6/teapot0.png Graphic file (type png)
 
 <use images/TriangleDrawer/6/teapot0.png>
 Package pdftex.def Info: images/TriangleDrawer/6/teapot0.png used on input line
- 493.
+ 580.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/6/teapot1.png, id=255, 803.0pt x 602.25pt>
+<images/TriangleDrawer/6/teapot1.png, id=358, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/6/teapot1.png Graphic file (type png)
 
 <use images/TriangleDrawer/6/teapot1.png>
 Package pdftex.def Info: images/TriangleDrawer/6/teapot1.png used on input line
- 497.
+ 584.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/6/teapot2.png, id=256, 803.0pt x 602.25pt>
+<images/TriangleDrawer/6/teapot2.png, id=359, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/6/teapot2.png Graphic file (type png)
 
 <use images/TriangleDrawer/6/teapot2.png>
 Package pdftex.def Info: images/TriangleDrawer/6/teapot2.png used on input line
- 501.
+ 588.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 
-<images/TriangleDrawer/6/teapot3.png, id=257, 803.0pt x 602.25pt>
+<images/TriangleDrawer/6/teapot3.png, id=360, 803.0pt x 602.25pt>
 File: images/TriangleDrawer/6/teapot3.png Graphic file (type png)
 
 <use images/TriangleDrawer/6/teapot3.png>
 Package pdftex.def Info: images/TriangleDrawer/6/teapot3.png used on input line
- 505.
+ 592.
 (pdftex.def)             Requested size: 234.02452pt x 175.52103pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 517.
+(babel)             in language  on input line 598.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 517.
+(babel)             in language  on input line 598.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 517.
+(babel)             in language  on input line 598.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 517.
- [12
+(babel)             in language  on input line 598.
+ [13
 
  <./images/TriangleDrawer/6/options.png> <./images/TriangleDrawer/6/teapot0.png
  (PNG copy)> <./images/TriangleDrawer/6/teapot1.png (PNG copy)> <./images/Trian
 gleDrawer/6/teapot2.png (PNG copy)> <./images/TriangleDrawer/6/teapot3.png (PNG
  copy)>]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 518.
+(babel)             in language  on input line 599.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 518.
+(babel)             in language  on input line 599.
+
+<images/zbuff/1.jpg, id=368, 602.25pt x 476.53032pt>
+File: images/zbuff/1.jpg Graphic file (type jpg)
+ <use images/zbuff/1.jpg>
+Package pdftex.def Info: images/zbuff/1.jpg used on input line 605.
+(pdftex.def)             Requested size: 234.02452pt x 185.16985pt.
+
+<images/zbuff/2.jpg, id=369, 601.4972pt x 473.51906pt>
+File: images/zbuff/2.jpg Graphic file (type jpg)
+
+<use images/zbuff/2.jpg>
+Package pdftex.def Info: images/zbuff/2.jpg used on input line 609.
+(pdftex.def)             Requested size: 234.02452pt x 184.23093pt.
+
+<images/zbuff/3.jpg, id=370, 596.98032pt x 472.76625pt>
+File: images/zbuff/3.jpg Graphic file (type jpg)
+
+<use images/zbuff/3.jpg>
+Package pdftex.def Info: images/zbuff/3.jpg used on input line 613.
+(pdftex.def)             Requested size: 234.02452pt x 185.3303pt.
+File: images/zbuff/3.jpg Graphic file (type jpg)
+ <use images/zbuff/3.jpg>
+Package pdftex.def Info: images/zbuff/3.jpg used on input line 617.
+(pdftex.def)             Requested size: 234.02452pt x 185.3303pt.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 625.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 625.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 625.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 523.
- [13
+(babel)             in language  on input line 625.
+ [14
+
+ <./images/zbuff/1.jpg> <./images/zbuff/2.jpg> <./images/zbuff/3.jpg>]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 626.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 626.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 631.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 631.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 631.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 631.
+ [15
 
 ]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 632.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 632.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 633.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 633.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 525.
+nput line 634.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 (./listings/main.cpp
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 65.
- [14
+(babel)             in language  on input line 62.
+ [16
 
 ]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 125.
- [15])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 527.
+(babel)             in language  on input line 118.
+ [17])
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 527.
+(babel)             in language  on input line 635.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 527.
+(babel)             in language  on input line 635.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 527.
+(babel)             in language  on input line 635.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 527.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 527.
+(babel)             in language  on input line 635.
+ [18]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 636.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 636.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/Drawer.h
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 64.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 64.
+ [19
+
+])
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 638.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 638.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 638.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 638.
+ [20]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 639.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 639.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/render.h
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 66.
+ [21
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 133.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 133.
+ [22]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 196.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 196.
+ [23]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 259.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 259.
+ [24]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 321.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 321.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 321.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 321.
+ [25]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 387.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 387.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 387.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 387.
+ [26]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 453.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 453.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 453.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 453.
+ [27])
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 641.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 641.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 641.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 641.
+ [28]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 642.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 642.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/transformers.h
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 67.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 67.
+ [29
+
+]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 127.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 127.
+ [30])
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 644.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 644.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 644.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 644.
+ [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 645.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 645.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 527.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 527.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 645.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 645.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: FB84C5E38202E9B991B4A1E665DAAD9F;2962.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: BAFA3D2C728270C5B14458894E5DE921;1908
-(rerunfilecheck)             After:  393B80A8B7EFD7D34A3CCCF6DC539656;2068.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 527.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 645.
  ) 
 Here is how much of TeX's memory you used:
- 14926 strings out of 492995
- 211952 string characters out of 6132703
- 707690 words of memory out of 5000000
- 18018 multiletter control sequences out of 15000+600000
+ 16238 strings out of 492995
+ 231874 string characters out of 6132703
+ 763690 words of memory out of 5000000
+ 18478 multiletter control sequences out of 15000+600000
  15564 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,49p,821b,1468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,49p,821b,1490s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
@@ -1704,10 +1916,10 @@ texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on report.pdf (17 pages, 1392777 bytes).
+Output written on report.pdf (32 pages, 1552719 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
- 261 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1589 PDF objects out of 1728 (max. 8388607)
+ 1485 compressed objects within 15 object streams
+ 1084 named destinations out of 1200 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

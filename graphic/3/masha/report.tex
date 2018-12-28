@@ -299,8 +299,95 @@ camera_position = (rotation_matrix * start_camera_position)
 
 
 \subsection{Z-буферизация}
+Z-буферизация - это способ учёта удалённости элемента изображения. Представляет собой один из вариантов решения «проблемы видимости». Очень эффективен и практически не имеет недостатков, если реализуется аппаратно. 
+
+Формальное описание алгоритма z-буфера таково:
+\begin{enumerate}
+
+\item Заполнить буфер кадра фоновым значением интенсивности или цвета.
+\item  Заполнить z-буфер минимальным значением z.
+\item  Преобразовать каждый многоугольник в растровую форму в произвольном порядке.
+\item Для каждого Пиксел(x,y) в многоугольнике вычислить его глубину z(x,y).
+\item Сравнить глубину z(х,у) со значением Zбуфер(х,у), хранящимся в z-буфере в этой же позиции.
+\item Если z(х,у) > Zбуфер (х,у), то записать атрибут этого многоугольника (интенсивность, цвет и т. п.) в буфер кадра и заменить Zбуфер(х,у) на z(х,у). В противном случае никаких действий не производить.
+\end{enumerate}
 
 
+Поскольку у нас экран двумерный, то z-буфер тоже должен быть двумерным:
+ \begin{lstlisting}
+    cv::Mat1d zBufferDefaultValue(int height, int width) {
+        return cv::Mat::ones(height, width, CV_64F) * 100000;
+    }
+ \end{lstlisting}
+ 
+Затем в коде мы проходим по всем треугольникам и делаем вызов растеризатора, передавая ему и картинку, и z-буфер.
+
+   \begin{lstlisting}
+       void triangleBarycentric(const ExtendedTriangle &t, cv::Mat1d &zBuffer, const MipMap<8> &mipMap) {
+        auto &&bbox = t.box();
+        Coord from = bound(bbox.first);
+        Coord to = bound(bbox.second);
+        for (auto x = from.x; x <= to.x; ++x) {
+            for (auto y = from.y; y <= to.y; ++y) {
+                glm::dvec3 barycentric;
+                bool pointInTriangle = get_barycentric(t, glm::vec4(x, y, 1, 1), barycentric);
+                if (!pointInTriangle) continue;
+                glm::dvec3 zInterpolated = glm::dvec3(t.a.z, t.b.z, t.c.z) * barycentric;
+                double z = zInterpolated[0] + zInterpolated[1] + zInterpolated[2];
+                if (z < zBuffer.at<double>(y, x)) {
+                    zBuffer.at<double>(y, x) = z;
+
+                    glm::dvec3 barycentricX, barycentricY;
+                    get_barycentric(t, glm::vec4(x + 1, y, 1, 1), barycentricX);
+                    get_barycentric(t, glm::vec4(x, y + 1, 1, 1), barycentricY);
+
+                    glm::vec2 uv = interpolateTexture(t.texture, barycentric);
+                    glm::vec2 uvX = interpolateTexture(t.texture, barycentricX);
+                    glm::vec2 uvY = interpolateTexture(t.texture, barycentricY);
+
+                    glm::vec2 dx = uvX - uv;
+                    glm::vec2 dy = uvY - uv;
+
+                    float l = std::max(glm::dot(dx, dx), glm::dot(dy, dy));
+                    float d = std::max(0.0f, 0.5f * std::log2(l));
+
+                    cv::Vec3b texel = trilinearFilter(uv, d, mipMap);
+                    plot(x, y, texel);
+
+                }
+            }
+        }
+    }
+    \end{lstlisting}
+
+В этой функции мы переводим координаты в барицентрические, с помощью следующей функии:
+\begin{lstlisting}
+    bool get_barycentric(const ExtendedTriangle &t, const glm::vec4 &p, glm::dvec3 &barycentric) {
+        auto area = edgeFunction(t.a, t.b, t.c);
+        auto w0 = edgeFunction(t.b, t.c, p) / area;
+        auto w1 = edgeFunction(t.c, t.a, p) / area;
+        auto w2 = edgeFunction(t.a, t.b, p) / area;
+
+        barycentric = glm::dvec3(w0, w1, w2);
+        barycentric /= barycentric[0] + barycentric[1] + barycentric[2];
+        barycentric = glm::abs(barycentric);
+
+        return !(w0 < 0 || w1 < 0 || w2 < 0);
+    }
+    \end{lstlisting}
+    
+Все, что с отрицательным значением - отбрасываеться.
+
+\begin{lstlisting}
+        double min, max;
+        cv::minMaxLoc(drawer.zBuffer, &min, &max);
+        cv::Mat zNorm;
+        cv::normalize(drawer.zBuffer, zNorm, 0.0, 255.0, cv::NORM_MINMAX, CV_8UC1);
+       \end{lstlisting}
+
+Функция minMaxLoc находит минимальное и максимальное значения элементов и их положения. 
+
+normalize нормализует src таким образом, что минимальное значение выходного массива равно 0.0, а максимальное значение выходного массива равно 255.0. 
 
 
 
@@ -508,9 +595,30 @@ camera_position = (rotation_matrix * start_camera_position)
 \label{ris:experimentalcorrelationsignals}
 \end{figure}
 
+\clearpage
+\subsection{Z-буффер}
 
 
-Результатом работы стало двумерное анимированное изображение вращающегося каркаса выбранной ранее модели, которая в любой дискретный момент времени была повернута на некоторый угол вокруг мировых осей OX, OY, OZ.
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/zbuff/1.jpg}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/zbuff/2.jpg}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/zbuff/3.jpg}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{images/zbuff/3.jpg}} d) \\
+\end{minipage}
+\caption{Последовательно создаваемые изображения}
+\label{ris:experimentalcorrelationsignals}
+\end{figure}
 
 
 
@@ -521,7 +629,17 @@ camera_position = (rotation_matrix * start_camera_position)
 Результаты визуализации отвечают ожиданиям при заданном смещении, повороте и масштабе модели. Для создания более полного представления наблюдателя о внешнем виде исходной модели, необходимо в дальнейшем реализовать отображение поверхностей модели, посредством треугольников, учитывая, что используемая библиотека TinyObj позволяет проводить разбиение произвольного полигона на треугольники автоматически при чтении файла модели.
 
 \clearpage
-\section{Листинг}
+\section{Листинги}
+\subsection{Листинг 1. main.cpp}
 \lstinputlisting{listings/main.cpp}
-
+\clearpage
+\subsection{Листинг 2. Drawer.h}
+\lstinputlisting{listings/Drawer.h}
+\clearpage
+\subsection{Листинг 3. render.h}
+\lstinputlisting{listings/render.h}
+\clearpage
+\subsection{Листинг 4. transformers.h}
+\lstinputlisting{listings/transformers.h}
+\clearpage
 \end{document}

@@ -3,12 +3,10 @@
 #include <iostream>
 #include <any>
 #include <OBJ_Loader.h>
-#include <cxxopts.hpp>
-
 #include <glm/vec3.hpp>
 #include <glm/geometric.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
+#include <cxxopts.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -61,22 +59,39 @@ void render(Drawer &drawer, const std::vector<glm::vec3> &vertices, const std::v
     }
 }
 
+void render(Drawer &drawer,
+            const std::vector<glm::vec3> &vertices,
+            const std::vector<glm::vec3> &normals,
+            const std::vector<glm::vec2> &texture,
+            const std::vector<unsigned int> &indices
+) {
+    for (auto i = 0; i < indices.size(); i += 3) {
+        Triangle triangle(vertices[indices[i]], vertices[indices[i + 1]], vertices[indices[i + 2]]);
+        TriangleTexture tex{texture[indices[i]], texture[indices[i + 1]], texture[indices[i + 2]]};
+        TriangleNormal norm{normals[indices[i]], normals[indices[i + 1]], normals[indices[i + 2]]};
+        triangle.normal = norm;
+        triangle.texture = tex;
+        drawer.draw(triangle);
+    }
+}
 
 int main(int argc, char **argv) {
     cxxopts::Options options("Lba3", "Render teapot and maybe something else");
-    std::string default_file_path = "../teapot.obj";
-    std::string default_save_path = "../teapot.avi";
+    std::string default_file_path = "../Corvette-F3.obj";
+    std::string default_texture_path = "../SF_Corvette-F3_diffuse.jpg";
+    std::string default_save_path = "../Corvette-F3.avi";
 
     options.add_options()
             ("w,width", "Width of image", cxxopts::value<int>()->default_value("800"))
             ("h,height", "Height of image", cxxopts::value<int>()->default_value("600"))
             ("s,speed", "Camera speed", cxxopts::value<float>()->default_value("2.0"))
             ("v,fovy", "fovy", cxxopts::value<float>()->default_value("-50.0"))
-            ("dx", "Distance to model", cxxopts::value<int>()->default_value("120"))
-            ("dy", "Distance to model", cxxopts::value<int>()->default_value("100"))
+            ("dx", "Distance to model", cxxopts::value<int>()->default_value("2000"))
+            ("dy", "Distance to model", cxxopts::value<int>()->default_value("2000"))
             ("f,front", "Front cut plane", cxxopts::value<float>()->default_value("0.1"))
-            ("b,back", "Back cut plane", cxxopts::value<float>()->default_value("10000.0"))
+            ("b,back", "Back cut plane", cxxopts::value<float>()->default_value("30000.0"))
             ("i,in_file", "Input filename ", cxxopts::value<std::string>()->default_value(default_file_path))
+            ("t,texture", "Texture filename ", cxxopts::value<std::string>()->default_value(default_texture_path))
             ("o,out_file", "Output filename ", cxxopts::value<std::string>()->default_value(default_save_path));
 
 
@@ -91,6 +106,7 @@ int main(int argc, char **argv) {
     auto &&front = arguments["front"].as<float>();
     auto &&back = arguments["back"].as<float>();
     auto &&file_name = arguments["in_file"].as<std::string>();
+    auto &&texture_file_name = arguments["texture"].as<std::string>();
     auto &&res_file_name = arguments["out_file"].as<std::string>();
 
     objl::Loader loader;
@@ -98,6 +114,12 @@ int main(int argc, char **argv) {
     auto &&mesh = loader.LoadedMeshes[0];
 
     auto &&model_vertices = ToGLMVertices().applyList<objl::Vertex, glm::vec3>(mesh.Vertices);
+    auto &&model_normals = ToGLMNormals().applyList<objl::Vertex, glm::vec3>(mesh.Vertices);
+    auto &&model_texture_coordinates = ToGLMTexture().applyList<objl::Vertex, glm::vec2>(mesh.Vertices);
+    cv::Mat3b texture = cv::imread(texture_file_name);
+
+    MipMap mipMap = MipMap<8>::compute(texture);
+
     auto &&model_center = getModelCenter(model_vertices);
 
     auto &&screen_ratio = static_cast<float>(width) / static_cast<float>(height);
@@ -114,6 +136,7 @@ int main(int argc, char **argv) {
     auto &&start_camera_position = glm::vec4(distanceX, distanceY, 0, 1);
 
     TriangleDrawer drawer(width, height);
+    drawer.mipMap = mipMap;
 
     for (auto i = 0; i < FRAME_COUNT; i++) {
         drawer.resetImage();
@@ -126,12 +149,12 @@ int main(int argc, char **argv) {
         );
 
         drawer.updatePipeline(std::make_unique<TriangleTransformationPipeline>(camera, projection, width, height));
-        render(drawer, model_vertices, mesh.Indices);
+        render(drawer, model_vertices, model_normals, model_texture_coordinates, mesh.Indices);
 
-        cv::imshow("res", drawer.getImage());
+        cv::imshow("Aaaa", drawer.getImage());
         cv::waitKey(2000);
+
         angle += angle_per_frame;
     }
-
     return 0;
 }
