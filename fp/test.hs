@@ -109,14 +109,14 @@ isPrime' x divider
 
 -- 2. Вар 1
 -- Удалить каждый n-ый элемент из списка
-dropEvery :: [a] -> Int -> [a]
-dropEvery lst n = dropEvery' lst n (length div lst  n)
-
-dropEvery' :: [a] -> Int -> Int -> [a]
-dropEvery' lst n m = if m < 0 then lst
-    else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
-
-
+-- dropEvery :: [a] -> Int -> [a]
+-- dropEvery lst n = dropEvery' lst n (length div lst  n)
+--
+-- dropEvery' :: [a] -> Int -> Int -> [a]
+-- dropEvery' lst n m = if m < 0 then lst
+--     else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
+--
+--
 
 -- 3. Вар 1
 -- Постройте всех спискок простых чисел в диапазоне
@@ -128,11 +128,81 @@ primeList' from to lst
     | from == to = lst
     | otherwise  = primeList' (from + 1) to foo where
     foo = if isPrime from then lst ++ [from] else lst
+--
+--
+--
+-- -- Найти сумму всех натуральных чисел от 1 до n
+-- sumBetween :: Integer -> Integer
+-- sumBetween n = if n > 0
+--     then foldl (+) 0 [1..n]
+--     else foldl (+) 0 [n..1]
+--
+--
+-- -- Создать структуру из "true" "false" "unknown" и реализовать "и", "или" и "не равно"
+--
+-- data MyData = MyTrue | MyFalse | MyUnknown
+--
+-- (||) l r = case (l,r) of
+--     (MyTrue, _) -> MyTrue
+--     (_, MyTrue) -> MyTrue
+--     (MyFalse, MyFalse) -> MyFalse
+--     otherwise -> MyUnknown
+--
+-- (&) l r = case (l,r) of
+--     (MyTrue, MyTrue) -> MyTrue
+--     (MyFalse, _) -> MyFalse
+--     (_, MyFalse) -> MyFalse
+--     otherwise -> MyUnknown
+--
+-- (/=) l r = case (l,r) of
+--     (MyTrue, MyTrue) -> MyFalse
+--     (MyFalse, MyFalse) -> MyFalse
+--     (MyTrue, MyFalse) -> MyTrue
+--     (MyFalse, MyTrue) -> MyTrue
+--     otherwise -> MyUnknown
+--
+--
+--
+-- -- еще задача
+-- data MyData = Plus Integer | Minus Integer | Equal
+--
+-- fun12 lst = fun13 lst []
+-- -- fun12 (h:[])  = l
+-- fun13 (h:t) lst = fun14 h (take 1 t) : lst
+-- fun14 x y
+--     | a > 0 = Plus a
+--     | a < 0 = Minus a
+--     | a == 0 = Equal
+--     where a = x - y
+--
+--
+-- -- еще задача
+-- data MyData2 = Multiple Char Integer | Single Char deriving(Show)
+--
+-- fuck (h:t) = fff h t 1
+--
+-- fff x (h:t) acc
+--     | h == x = fff x t (acc + 1)
+--     | h /= x && acc > 1 = Multiple x acc : fff h t 1
+--     | h /= x && acc == 1 = Single x : fff h t 1
+--
+-- fff x [] acc
+--     | acc>0 = Multiple x acc : []
+--     | acc == 0 = Single x : []
+--
+
+-- -- функция, кот сдвигает все элементы по кругу
+-- s lst = s' lst 0
+-- s'(h:t) x = s t (x+1)
+-- -- s' _ [] = []
+--
+-- rotate lst y
+--      | y > 0 = [drop y lst] ++ [take z lst]
+--      | y < 0 = [drop z lst] ++ [take y lst]
+--      where z = s lst - y
 
 
+rotate2 lst y = if (y > 0) then let (a,b) = splitAt (length lst - y) lst in b ++ a else let (a,b) = splitAt (-y) lst in b ++ a
 
--- Найти сумму всех натуральных чисел от 1 до n
-sumBetween :: Integer -> Integer
-sumBetween n = if n > 0
-    then foldl (+) 0 [1..n]
-    else foldl (+) 0 [n..1]
+rotate3 lst y = let (a,b) = if (y > 0) then splitAt (length lst - fuck (length lst) y) lst  else splitAt (fuck (length lst) (abs y)) lst in  b ++ a
+fuck len num  = if (num > len) then fuck len (num - len)  else num

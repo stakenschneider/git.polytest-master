@@ -25,6 +25,8 @@ protected:
 };
 
 
+
+
 class LineDrawer : public Drawer {
 public:
     LineDrawer(int width, int height) : Drawer(width, height), pipeline() {}

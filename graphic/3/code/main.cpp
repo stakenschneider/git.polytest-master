@@ -17,7 +17,7 @@
 #include "transformers.h"
 
 const int FRAME_PER_SECOND = 10;
-const int FRAME_COUNT = 10000;
+const int FRAME_COUNT = 4;
 
 
 template<int index>
@@ -79,7 +79,6 @@ int main(int argc, char **argv) {
 
 
     auto &&arguments = options.parse(argc, argv);
-
     auto &&width = arguments["width"].as<int>();
     auto &&height = arguments["height"].as<int>();
     auto &&speed = arguments["speed"].as<float>();
@@ -90,6 +89,7 @@ int main(int argc, char **argv) {
     auto &&back = arguments["back"].as<float>();
     auto &&file_name = arguments["in_file"].as<std::string>();
     auto &&res_file_name = arguments["out_file"].as<std::string>();
+
 
     objl::Loader loader;
     loader.LoadFile(file_name);
@@ -111,12 +111,7 @@ int main(int argc, char **argv) {
 
     auto &&start_camera_position = glm::vec4(distanceX, distanceY, 0, 1);
 
-    //    cv::VideoWriter result(res_file_name, -1, FRAME_PER_SECOND, cv::Size(width, height));
-
-    //    CvLineDrawer drawer(width, height);
-//	LineDrawer drawer(width, height);
     TriangleDrawer drawer(width, height);
-
 
     for (auto i = 0; i < FRAME_COUNT; i++) {
         drawer.resetImage();
@@ -127,23 +122,13 @@ int main(int argc, char **argv) {
                 model_center,
                 glm::vec3(0, 1, 0)
         );
-
-//		drawer.updatePipeline(std::make_unique<LineTransformationPipeline>(camera, projection, width, height));
         drawer.updatePipeline(std::make_unique<TriangleTransformationPipeline>(camera, projection, width, height));
         render(drawer, model_vertices, mesh.Indices);
 
-//        double min, max;
-//        cv::minMaxLoc(drawer.zBuffer, &min, &max);
-//        cv::Mat zNorm;
-//        cv::normalize(drawer.zBuffer, zNorm, 0.0, 1.0, cv::NORM_MINMAX, CV_64F);
-//        cv::imshow("ZZZZ", zNorm);
-
-        cv::imshow("Aaaa", drawer.getImage());
-        //        result.write(drawer.getImage());
+        cv::imwrite("result_"+i, drawer.getImage());
         cv::waitKey(2000);
 
         angle += angle_per_frame;
     }
-    //    result.release();
     return 0;
 }

@@ -1,7 +1,3 @@
-//
-// Created by sobol on 11/14/18.
-//
-
 #pragma once
 
 #include <iostream>
@@ -16,6 +12,7 @@
 #include <glm/mat3x3.hpp>
 #include <glm/geometric.hpp>
 
+// структурка для координат
 struct Coord {
     int x, y;
 
@@ -220,6 +217,8 @@ private:
 
         int directionX = x0 < x1 ? 1 : -1;
         int directionY = y0 < y1 ? 1 : -1;
+//        Переменная error даёт нам дистанцию до идеальной прямой от нашего текущего пикселя (x, y).
+//        Каждый раз, как error превышает один пиксель, мы увеличиваем (уменьшаем) y на единицу, и на единицу же уменьшаем ошибку.
         int err = (dx > dy ? dx : -dy) / 2;
 
         for (;;) {
@@ -238,6 +237,7 @@ private:
     }
 
     inline void orderVerticesByY(Coord &v1, Coord &v2, Coord &v3) {
+//        транспонируем вектора
         if (v1.y > v2.y) {
             std::swap(v1, v2);
         }
