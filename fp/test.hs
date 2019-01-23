@@ -191,18 +191,24 @@ primeList' from to lst
 --     | acc == 0 = Single x : []
 --
 
--- -- функция, кот сдвигает все элементы по кругу
--- s lst = s' lst 0
--- s'(h:t) x = s t (x+1)
--- -- s' _ [] = []
---
--- rotate lst y
---      | y > 0 = [drop y lst] ++ [take z lst]
---      | y < 0 = [drop z lst] ++ [take y lst]
---      where z = s lst - y
-
-
+-- функция, кот сдвигает все элементы по кругу
 rotate2 lst y = if (y > 0) then let (a,b) = splitAt (length lst - y) lst in b ++ a else let (a,b) = splitAt (-y) lst in b ++ a
 
 rotate3 lst y = let (a,b) = if (y > 0) then splitAt (length lst - fuck (length lst) y) lst  else splitAt (fuck (length lst) (abs y)) lst in  b ++ a
 fuck len num  = if (num > len) then fuck len (num - len)  else num
+
+
+
+-- найти на бесконечном списке два числа дающих в сумме заданное число
+myFuncNumFuck y (h:t) = myFuncNumFuck' y t [h]
+
+myFuncNumFuck' y (h : t) r =  if (hasSum y h r) then takeSum y h r
+                           else myFuncNumFuck' y t (h : r)
+
+myFuncNumFuck' _ [] _ = error ":("
+
+hasSum y x (h:t) | x + h == y = True
+                 | otherwise = hasSum y x t
+hasSum y x [] = False
+takeSum y x (h:t) | x + h == y = (x, h)
+                  | otherwise = takeSum y x t
