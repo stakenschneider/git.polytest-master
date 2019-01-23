@@ -189,6 +189,11 @@ takeSum y x (h:t) | x + h == y = (x, h)
 
 
 -- Дан список и два числа; m, n. Необходимо заменить все элементы списка, кратные индексам m на n.
+changeEls lst m n = changeEls' lst m n 0 (length lst) []
+
+changeEls' lst m n i len res | i == len = res
+                             | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
+                             | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
 
 
 -- Дано число. Заменить в нем все нули на 5.
