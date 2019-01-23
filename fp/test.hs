@@ -190,11 +190,11 @@ takeSum y x (h:t) | x + h == y = (x, h)
 
 
 -- Дан список и два числа; m, n. Необходимо заменить все элементы списка, кратные индексам m на n.
-changeEls lst m n = changeEls' lst m n 0 (length lst) []
-
-changeEls' lst m n i len res | i == len = res
-                             | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
-                             | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
+-- changeEls lst m n = changeEls' lst m n 0 (length lst) []
+--
+-- changeEls' lst m n i len res | i == len = res
+--                              | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
+--                              | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
 
 
 -- Дано число. Заменить в нем все нули на 5.
@@ -212,11 +212,26 @@ distance x y x1 y1 = sqrt((x-x1)**2+(y-y1)**2)
 
 
 -- Дан список чисел. Вывести самую частовстречающуюся цифру (если таких несколько - сумму).
+-- -- 1 вариант
+mostFreq z = map fst $ filter (\ (a,n) -> n == max) pc
+         where pc = mostFreq' z
+               max = maximum $ map snd pc
+
+mostFreq' []     = []
+mostFreq' (x:xs) = (x,n) : (mostFreq' xxs)
+            where n   = (length xs) - (length xxs) + 1
+                  xxs = filter (/= x) xs
+
+-- -- 2 вариант
+-- import Data.List
+-- import Data.Ord
+-- mostFreq :: Integral a => [a] -> a
+-- mostFreq = head . maximumBy (comparing length) . group . sort
 
 
 -- Даны два списка. Оставить в первом только те элементы, которые есть во втором.
 intersect (h:t) lst2 = if (contains h lst2) then (intersect t lst2) ++ [h] else intersect t lst2
 
 contains x [] = False
-contains x (h:t) | h ==x = True
+contains x (h:t) | h == x = True
                  | otherwise = contains x t
