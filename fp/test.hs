@@ -192,6 +192,12 @@ takeSum y x (h:t) | x + h == y = (x, h)
 
 
 -- Дано число. Заменить в нем все нули на 5.
+convertFive a = convertFive' (show a) (length (show a)) 0 []
+convertFive' lst len i newlst = if i < len then
+    if (lst !! i) /= '0'
+    then convertFive' lst len i ('5' : newlst)
+    else convertFive' lst len i ((lst !! i) : newlst)
+    else read newlst
 
 
 -- Расчитайте расстояние между двумя точками на плоскости.
