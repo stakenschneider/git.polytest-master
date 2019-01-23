@@ -181,9 +181,10 @@ myFuncNumFuck' y (h : t) r =  if (hasSum y h r) then takeSum y h r
 
 myFuncNumFuck' _ [] _ = error ":("
 
+hasSum y x [] = False
 hasSum y x (h:t) | x + h == y = True
                  | otherwise = hasSum y x t
-hasSum y x [] = False
+
 takeSum y x (h:t) | x + h == y = (x, h)
                   | otherwise = takeSum y x t
 
@@ -198,6 +199,7 @@ changeEls' lst m n i len res | i == len = res
 
 -- Дано число. Заменить в нем все нули на 5.
 convertFive a = convertFive' (show a) (length (show a)) 0 []
+
 convertFive' lst len i newlst = if i < len then
     if (lst !! i) /= '0'
     then convertFive' lst len i ('5' : newlst)
@@ -213,3 +215,8 @@ distance x y x1 y1 = sqrt((x-x1)**2+(y-y1)**2)
 
 
 -- Даны два списка. Оставить в первом только те элементы, которые есть во втором.
+intersect (h:t) lst2 = if (contains h lst2) then (intersect t lst2) ++ [h] else intersect t lst2
+
+contains x [] = False
+contains x (h:t) | h ==x = True
+                 | otherwise = contains x t
