@@ -91,12 +91,12 @@ isPrime' x divider
 
 
 -- Удалить каждый n-ый элемент из списка
--- dropEvery :: [a] -> Int -> [a]
--- dropEvery lst n = dropEvery' lst n (length div lst  n)
---
--- dropEvery' :: [a] -> Int -> Int -> [a]
--- dropEvery' lst n m = if m < 0 then lst
---     else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
+dropEvery :: [a] -> Int -> [a]
+dropEvery lst n = dropEvery' lst n (length div lst  n)
+
+dropEvery' :: [a] -> Int -> Int -> [a]
+dropEvery' lst n m = if m < 0 then lst
+    else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
 
 
 -- Постройте всех спискок простых чисел в диапазоне
@@ -120,37 +120,37 @@ sumBetween n = if n > 0
 -- Создать структуру из "true" "false" "unknown" и реализовать "и", "или" и "не равно"
 data NewData = MyTrue | MyFalse | MyUnknown
 
--- (||) l r = case (l,r) of
---     (MyTrue, _) -> MyTrue
---     (_, MyTrue) -> MyTrue
---     (MyFalse, MyFalse) -> MyFalse
---     otherwise -> MyUnknown
---
--- (&) l r = case (l,r) of
---     (MyTrue, MyTrue) -> MyTrue
---     (MyFalse, _) -> MyFalse
---     (_, MyFalse) -> MyFalse
---     otherwise -> MyUnknown
---
--- (/=) l r = case (l,r) of
---     (MyTrue, MyTrue) -> MyFalse
---     (MyFalse, MyFalse) -> MyFalse
---     (MyTrue, MyFalse) -> MyTrue
---     (MyFalse, MyTrue) -> MyTrue
---     otherwise -> MyUnknown
+(||) l r = case (l,r) of
+    (MyTrue, _) -> MyTrue
+    (_, MyTrue) -> MyTrue
+    (MyFalse, MyFalse) -> MyFalse
+    otherwise -> MyUnknown
+
+(&) l r = case (l,r) of
+    (MyTrue, MyTrue) -> MyTrue
+    (MyFalse, _) -> MyFalse
+    (_, MyFalse) -> MyFalse
+    otherwise -> MyUnknown
+
+(/=) l r = case (l,r) of
+    (MyTrue, MyTrue) -> MyFalse
+    (MyFalse, MyFalse) -> MyFalse
+    (MyTrue, MyFalse) -> MyTrue
+    (MyFalse, MyTrue) -> MyTrue
+    otherwise -> MyUnknown
 
 
 -- Создать список вида Plus x, Minus x, Equal входной последовательности
 data MyData = Plus Integer | Minus Integer | Equal
 
--- myDataFun lst = myDataFun2 lst []
--- myDataFun (h:[])  = l
--- myDataFun2 (h:t) lst = myDataFun3 h (take 1 t) : lst
--- myDataFun3 x y
---     | a > 0 = Plus a
---     | a < 0 = Minus a
---     | a == 0 = Equal
---     where a = x - y
+myDataFun lst = myDataFun2 lst []
+myDataFun (h:[])  = l
+myDataFun2 (h:t) lst = myDataFun3 h (take 1 t) : lst
+myDataFun3 x y
+    | a > 0 = Plus a
+    | a < 0 = Minus a
+    | a == 0 = Equal
+    where a = x - y
 
 
 -- Создать список вида Multiple a x, Single a входной последовательности
@@ -190,11 +190,11 @@ takeSum y x (h:t) | x + h == y = (x, h)
 
 
 -- Дан список и два числа; m, n. Необходимо заменить все элементы списка, кратные индексам m на n.
--- changeEls lst m n = changeEls' lst m n 0 (length lst) []
---
--- changeEls' lst m n i len res | i == len = res
---                              | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
---                              | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
+changeEls lst m n = changeEls' lst m n 0 (length lst) []
+
+changeEls' lst m n i len res | i == len = res
+                             | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
+                             | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
 
 
 -- Дано число. Заменить в нем все нули на 5.
@@ -235,3 +235,40 @@ intersect (h:t) lst2 = if (contains h lst2) then (intersect t lst2) ++ [h] else 
 contains x [] = False
 contains x (h:t) | h == x = True
                  | otherwise = contains x t
+
+
+-- Дано число. Все цифры, кот не 0 заменить на m
+convertN a n = convertN' (show a) n (length (show a)) 0 []
+
+convertN' ls n len i newls = if i < len then
+    if (ls !! i) /= '0'
+    then convertN' ls n len i (n : newls)
+    else convertN' ls n len i ((ls !! i) : newls)
+    else read newls
+
+
+-- Дан список. Отсортировать по убыванию, начиная с n-ого элемента
+mySort :: [Int] -> Int -> [Int]
+mySort ls n = take n ls ++ (sortOn Down) (drop n ls)
+
+
+-- Являеться ли число сильным
+task_ x y x1 y1 = let a = x*(y1-y)-y*(x1-x)
+                      x = y1-y
+                      y = x1-x in
+                  show [y] ++ "y" ++ " + " ++ [x] ++ "x= " ++ [a]
+
+isStrong n = getSum (digs n) == n
+
+getFact ls = foldl (factorial) 0 lst
+
+getSum ls = foldl (+) 0 getFact ls
+
+factorial 0 = 1
+factorial n = n*factorial (n-1)
+
+digs 0 = []
+digs x = digs (div x 10) ++ [mod x 10]
+
+
+-- Построить уравнение прямой, проходящей через 2 точки
