@@ -272,3 +272,60 @@ digs x = digs (div x 10) ++ [mod x 10]
 
 
 -- Построить уравнение прямой, проходящей через 2 точки
+
+
+-- Удалить все элементы из первого (мб бесконечным) списка, содержащиеся во втором
+removeAll (h:t) lst = removeAll' (h:t) lst []
+
+removeAll' [] _ res = res
+removeAll' (h:t) lst res | contains h lst = removeAll' t lst res
+                         | otherwise = removeAll' t lst (h:res)
+
+contains x [] = False
+contains x (h:t) | h == x = True
+                 | otherwise contains x t
+
+-- Два списка, написать функцию разницы
+data MyData3 = Same | Different Int Int deriving(Show)
+
+diff (h:t)(h1:t1) = if (h == h1) then Same : diff t t1 else Different h h1 : diff t t1
+diff [] = []
+
+
+-- Вернуть длину наибольшей последовательности
+longestSpan lst x = longestSpan' lst x 0
+
+longestSpan' [] _ s = s
+longestSpan' (h:t) x s | x == h = if (l>s) then longestSpan' (drop l t) x l else longestSpan' (drop l t) x s where l = countX t 1 x
+
+countX [] i x = i
+countX (h:t) i x | x == h = countX (i+1) x
+                 | otherwise i
+
+
+
+-- Являеться ли число палиндромом?
+isPalindrome x = isPalidrome' show x
+
+isPalindrome' x | length x == 0 = True
+                | length x == 1 = True
+                | mod (length x) 2 ==0 = isEqualTwo (take (length x/2) x) (drop (length x/2) x)
+                | otherwise = isEqualTwo (take (length x/2) x) (drop (length x/2 + 1) x)
+
+isEqualTwo [] [] = True
+isEqualTwo (h:t) (h1:t1) | h == h1 = isEqualTwo t t1
+                         | otherwise = False
+
+-- функция f гарантированно возрастает по обоим аргументам, написать f::int->int->int и x и возвращает произвольные
+-- натуральные числа a и b, такие что f a b = x
+invertF f x | x>=0 = invertF' f x (0,0)
+            | otherwise = error "err"
+
+invertF' f x (y1,y2) | f (fst res) (snd res) == x = res
+                     | f (y1+1) 0 > x = error "err1"
+                     | otherwise invertF' f x (y1+1, 0)
+                     where res invertF' f x (y1 0)
+
+invertF'' f x (y1 y2) | f y1 y2 == x = (y1 y2)
+                      | f y1 y2 < x = invertF'' f x (y1 y2+1)
+                      | otherwise = (y1 y2)
