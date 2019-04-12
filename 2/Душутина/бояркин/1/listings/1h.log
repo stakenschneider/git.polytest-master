@@ -1,0 +1,15 @@
+nikita@nikita-VirtualBox:~/files/student/ezsem4/sys/1/listings$ ./executable &
+[1] 9431
+Process PID: 9431
+[1]+  Done                    ./executable
+nikita@nikita-VirtualBox:~/files/student/ezsem4/sys/1/listings$ tail /var/log/kern.log
+May  3 06:10:55 nikita-VirtualBox kernel: [11609.557046] raid6: sse2x2   xor()  8688 MB/s
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.625101] raid6: sse2x4   gen() 15389 MB/s
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.692700] raid6: sse2x4   xor() 10589 MB/s
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.692702] raid6: using algorithm sse2x4 gen() 15389 MB/s
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.692703] raid6: .... xor() 10589 MB/s, rmw enabled
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.692704] raid6: using ssse3x2 recovery algorithm
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.693802] xor: automatically using best checksumming function:
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.732719]    avx       : 20010.000 MB/sec
+May  3 06:10:56 nikita-VirtualBox kernel: [11609.749930] Btrfs loaded
+May  3 08:20:33 nikita-VirtualBox kernel: [19386.834543] Syscall 'sys_getpid' hooked. Result: 9431.
