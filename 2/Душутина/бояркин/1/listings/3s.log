@@ -1,0 +1,15 @@
+nikita@nikita-VirtualBox:~/files/student/ezsem4/sys/1/listings$ strace ./executable
+execve("./executable", ["./executable"], [/* 74 vars */]) = 0
+
+< ... >
+
+getcwd("/home/nikita/files/student/ezsem4/sys/1/listings", 1024) = 49
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 19), ...}) = 0
+write(1, "Current directory: /home/nikita/"..., 68Current directory: /home/nikita/files/student/ezsem4/sys/1/listings
+) = 68
+chdir("/home")                          = 0
+getcwd("/home", 1024)                   = 6
+write(1, "Current directory after chdir: /"..., 37Current directory after chdir: /home
+) = 37
+exit_group(0)                           = ?
++++ exited with 0 +++

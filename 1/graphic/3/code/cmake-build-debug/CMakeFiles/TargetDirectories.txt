@@ -1,0 +1,3 @@
+/Users/Maria/Documents/git.polytest-master/graphic/3/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Maria/Documents/git.polytest-master/graphic/3/code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Maria/Documents/git.polytest-master/graphic/3/code/cmake-build-debug/CMakeFiles/render.dir

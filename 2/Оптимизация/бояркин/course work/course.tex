@@ -1,0 +1,1206 @@
+\input{settings}
+\begin{document}
+\input{titlepage}
+%\includepdf[pages=-,pagecommand={},width=\textwidth]{task.pdf}
+\tableofcontents
+\clearpage
+
+%------------------------------------------------------------------------------
+%\input{intro}
+
+\addcontentsline{toc}{chapter}{Введение}
+\chapter*{Введение}
+В данной работе рассматриваются следующие задачи:
+\begin{enumerate}
+\item Формализация многокритериальной оптимизационной задачи, методы сведения к однокритериальной, решение с использованием Optimization Toolbox системы Matlab;
+\item Поиск оптимальной стратегии принятия решений с использованием марковских моделей;
+\item Оптимизация сетей систем массового обслуживания;
+\item Решение задачи анализа потокового графа с использованием методики GERT и алгебры потоковых графов.
+\end{enumerate}
+
+\input{part_1}
+\input{mark}
+\input{CCMO}
+\input{gert}
+
+\addcontentsline{toc}{chapter}{Заключение}
+\chapter*{Заключение}
+В работе были рассмотрены различные математические модели для решения задачи выбора оптимального решения.
+
+При анализе результатов решения многокритериальной задачи можно заметить, что аддитивная и мультипликативная свертка выдают одинаковый, наиболее оптимальный результат. Наилучший результат этих методов обусловлен наличием коэффициентов значимости. Методы, не подразумевающие введение весовых коэффициентов показывают похожий результат, который в целом хуже, чем у аддитивной и мультипликативной свертки.
+
+В процессе поиска оптимальной стратегии принятия решений с использованием марковских моделей были определены оптимальные стратегии для конкретной задачи. Линейное программирование позволяет достаточно легко и быстро находить оптимальную стратегию, однако требует некоторых предварительных преобразований и формализаций перед использованием.
+
+Как и ожидалось, при оптимизации многоканальной замкнутой ССМО алгоритм простых итераций не сходится, поэтому пришлось использовать более надежный алгоритм Ньютона. Модифицированный алгоритм Ньютона чрезвычайно чувствителен к выбору начального приближения, поэтому был использован вариант алгоритма с расчетом матрицы Якоби. Для увеличения производительности данного алгоритма можно подключить пакет MATLAB Parallel Computing Toolbox, который использует MPI для эффективного распараллеливания.
+
+В результате решения задачи анализа потокового графа можно сделать вывод, что при  заданных значениях вероятности, мат. ожидания и дисперсии для каждой дуги исходного графа достаточно легко расчитываются W-функции, которые необходимы для построения формулы Мейсона. После этого из формулы Мейсона по формулам математической статистики достаточно легко расчитывается результирующее мат. ожидание и дисперсия. Решение путем анализа потокового графа показало аналогичные результаты, что подтверждает корректность решения. Однако, метод анализа потокового графа выполняется заметно медленнее, даже на небольшом графе.
+
+Среда MATLAB действительно хорошо подходит для решения оптимизационных задач засчет множества специфичных математических библиотек и пакетов.
+
+%------------------------------------------------------------------------------
+
+%\addcontentsline{toc}{section}{Список литературы}
+%\bibliography{thesis}
+%\bibliographystyle{ugost2008}
+
+%\nocite{phill}
+%\nocite{Ren}
+
+\addcontentsline{toc}{chapter}{Список использованных источников}
+\chapter*{Список использованных источников}
+\begin{enumerate}
+\item Д. Филлипс, А. Гарсиа-Диас. Методы анализа сетей: Пер. с англ. — М.: Мир, 1984.—496 с, ил.
+\item Ren, Yu. The methodology of flowgraph models. PhD thesis, The London School of Economics and Political Science (LSE). –– 2011.
+\item Сиднев А. Г. Системный анализ. Часть 1 [Электронный ресурс] // Интранет-
+портал ИИТУ СПбПУ. 2018. URL: http://intranet.ftk.spbstu.ru/docinfo.php?InfoFtkDocumentID= 1386947 (дата обращения: 22.04.2018)
+\item Горбунов В.М. Теория принятия решений: учебное пособие. Томск: Изд-во
+Томск. политех. ун-та, 2010.
+\item Системный анализ и принятие решений: учебное пособие / Е.Н. Бендерская,
+Д.Н. Колесников, В.И. Пахомова и др.; Под ред. Д.Н. Колесникова. 2-е изд.
+СПб.: Изд-во СПбГПУ, 2001.
+\item Optimization Toolbox: описание функции FGOALATTAIN [Электронный ре-
+сурс] // MATLAB.Exponenta, центр компетенций MathWorks. URL:
+http://matlab.exponenta.ru/ optimiz/book\_4/2/fgoalattain.php (дата обращения:
+17.02.2018).
+\item Таха Х. А. Введение в исследование операций: Пер. с англ. 7-е изд. М.: Изда-тельский дом «Вильямс», 2005.
+\end{enumerate}
+
+
+%\bibliography{thesis}
+%\bibliographystyle{ugost2008}
+
+
+\clearpage
+\addcontentsline{toc}{chapter}{Приложения}
+\setcounter{section}{0}
+\section*{Приложение 1} \label{p1:1}
+\textbf{Решение задачи методом линейного программирования}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи методом линейного программирования}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F1 -> min
+mF1 = @(X) -(60 * X(1) + 300 * X(2) + 2000 * X(3));
+% -F2 -> min
+mF2 = @(X) -((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% -F5 -> min
+mF5 = @(X) -((-mF1(X)) / (X(1) + X(2) + X(3)));
+% -F6 -> min
+mF6 = @(X) -(((-mF1(X)) + (-mF2(X))) - (pF3(X) + pF4(X)));
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[x1, result1] = fmincon(mF1, S, A, B, Aeq, Beq);
+[x2, result2] = fmincon(mF2, S, A, B, Aeq, Beq);
+[x3, result3] = fmincon(pF3, S, A, B, Aeq, Beq);
+[x4, result4] = fmincon(pF4, S, A, B, Aeq, Beq);
+[x5, result5] = fmincon(mF5, S, A, B, Aeq, Beq);
+[x6, result6] = fmincon(mF6, S, A, B, Aeq, Beq);
+
+formatter = '-- F1 max --\n%s\n%s\n\n-- F2 max --\n%s\n%s\n\n-- F3 min --\n%s\n%s\n\n-- F4 min --\n%s\n%s\n\n-- F5 max --\n%s\n%s\n\n-- F6 max --\n%s\n%s\n\n';
+s1 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x1, sum(x1));
+s2 = sprintf('!F1 = %.3f, F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -result1, -mF2(x1), pF3(x1), pF4(x1), -mF5(x1), -mF6(x1));
+s3 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x2, sum(x2));
+s4 = sprintf('F1 = %.3f, !F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF1(x2), -result2, pF3(x2), pF4(x2), -mF5(x2), -mF6(x2)); 
+s5 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x3, sum(x3));
+s6 = sprintf('F1 = %.3f, F2 = %.3f, !F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF1(x3), -mF2(x3), result3, pF4(x3), -mF5(x3), -mF6(x3)); 
+s7 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x4, sum(x4));
+s8 = sprintf('F1 = %.3f, F2 = %.3f, F3 = %.3f, !F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF1(x4), -mF2(x4), pF3(x4), result4, -mF5(x4), -mF6(x4));
+s9 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x5, sum(x5));
+s10 = sprintf('F1 = %.3f, F2 = %.3f, F3 = %.3f, F4 = %.3f, !F5 = %.3f, F6 = %.3f', -mF1(x5), -mF2(x5), pF3(x5), pF4(x5), -result5, -mF6(x5)); 
+s11 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x6, sum(x6));
+s12 = sprintf('F1 = %.3f, F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, !F6 = %.3f', -mF1(x6), -mF2(x6), pF3(x6), pF4(x6), -mF5(x6), -result6);
+fprintf(formatter, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12);
+\end{lstlisting}
+
+\section*{Приложение 2} \label{p1:2}
+\textbf{Решение задачи при помощи аддитивной свертки}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи при помощи аддитивной свертки}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F1 -> min
+mF1 = @(X) -(60 * X(1) + 300 * X(2) + 2000 * X(3));
+% -F2 -> min
+mF2 = @(X) -((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% -F5 -> min
+mF5 = @(X) -((-mF1(X)) / (X(1) + X(2) + X(3)));
+% -F6 -> min
+mF6 = @(X) -(((-mF1(X)) + (-mF2(X))) - (pF3(X) + pF4(X)));
+
+cF2 = 0.15;
+rF2 = 7258.939;
+cF3 = 0.15;
+rF3 = 2660;
+cF4 = 0.05;
+rF4 = 6.613;
+cF5 = 0.05;
+rF5 = 198.485;
+cF6 = 0.6;
+rF6 = 16501.964;
+
+pFS = @(X) cF2 * (mF2(X) / rF2) + cF3 * (pF3(X) / rF3) + cF4 * (pF4(X) / rF4) + cF5 * (mF5(X) / rF5) + cF6 * (mF6(X) / rF6);
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[xS, resultS] = fmincon(pFS, S, A, B, Aeq, Beq);
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = %.3f', resultS);
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF2(xS), pF3(xS), pF4(xS), -mF5(xS), -mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', -mF2(xS) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, -mF5(xS) / rF5 * 100, -mF6(xS) / rF6 * 100);
+fprintf(formatter, s1, s2, s3, s4);
+\end{lstlisting}
+
+\section*{Приложение 3} \label{p1:3}
+\textbf{Решение задачи при помощи мультипликативной свертки}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи при помощи мультипликативной свертки}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% 1 / F1 -> min
+mF1 = @(X) 1 / (60 * X(1) + 300 * X(2) + 2000 * X(3));
+% 1 / F2 -> min
+mF2 = @(X) 1 / ((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% 1 / F5 -> min
+mF5 = @(X) 1 / ((1 / mF1(X)) / (X(1) + X(2) + X(3)));
+% 1 / F6 -> min
+mF6 = @(X) 1 / (((1 / mF1(X)) + (1 / mF2(X))) - (pF3(X) + pF4(X)));
+
+cF2 = 0.15;
+rF2 = 7258.939;
+cF3 = 0.15;
+rF3 = 2660;
+cF4 = 0.05;
+rF4 = 6.613;
+cF5 = 0.05;
+rF5 = 198.485;
+cF6 = 0.6;
+rF6 = 16501.964;
+
+pFS = @(X) nthroot(mF2(X) * rF2, 1 / cF2) * nthroot(pF3(X) / rF3, 1 / cF3) * nthroot(pF4(X) / rF4, 1 / cF4) * nthroot(mF5(X) * rF5, 1 / cF5) * nthroot(mF6(X) * rF6, 1 / cF6);
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[xS, resultS] = fmincon(pFS, S, A, B, Aeq, Beq);
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = %.3f', resultS);
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', 1 / mF2(xS), pF3(xS), pF4(xS), 1 / mF5(xS), 1 / mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', (1 / mF2(xS)) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, (1 / mF5(xS)) / rF5 * 100, (1 / mF6(xS)) / rF6 * 100);
+fprintf(formatter, s1, s2, s3, s4);
+\end{lstlisting}
+
+\section*{Приложение 4} \label{p1:4}
+\textbf{Решение задачи при помощи функции fminimax}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи при помощи функции fminimax}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% 1 / F1 -> min
+mF1 = @(X) 1 / (60 * X(1) + 300 * X(2) + 2000 * X(3));
+% 1 / F2 -> min
+mF2 = @(X) 1 / ((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% 1 / F5 -> min
+mF5 = @(X) 1 / ((1 / mF1(X)) / (X(1) + X(2) + X(3)));
+% 1 / F6 -> min
+mF6 = @(X) 1 / (((1 / mF1(X)) + (1 / mF2(X))) - (pF3(X) + pF4(X)));
+
+rF1 = 13940;
+rF2 = 7258.939;
+rF3 = 2660;
+rF4 = 6.613;
+rF5 = 198.485;
+rF6 = 16501.964;
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[xS, resultS] = fminimax(@m4f, S, A, B, Aeq, Beq);
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = (%.3f, %.3f, %.3f, %.3f, %.3f)', resultS(2:6));
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', 1 / mF2(xS), pF3(xS), pF4(xS), 1 / mF5(xS), 1 / mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', (1 / mF2(xS)) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, (1 / mF5(xS)) / rF5 * 100, (1 / mF6(xS)) / rF6 * 100);
+fprintf(formatter, s1, s2, s3, s4);
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Внутренняя функция для fminimax}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+function result = m4f(X)
+	% 1 / F1 -> min
+	mF1 = 1 / (60 * X(1) + 300 * X(2) + 2000 * X(3));
+	% 1 / F2 -> min
+	mF2 = 1 / ((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+	% F3 -> min
+	pF3 = 30 * X(1) + 100 * X(2) + 220 * X(3);
+	% F4 -> min
+	pF4 = log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+	% 1 / F5 -> min
+	mF5 = 1 / ((1 / mF1) / (X(1) + X(2) + X(3)));
+	% 1 / F6 -> min
+	mF6 = 1 / (((1 / mF1) + (1 / mF2)) - (pF3 + pF4));
+	
+	rF1 = 13940;
+	rF2 = 7258.939;
+	rF3 = 2660;
+	rF4 = 6.613;
+	rF5 = 198.485;
+	rF6 = 16501.964;
+	
+	result(1) = mF1 * rF1;
+	result(2) = mF2 * rF2;
+	result(3) = pF3 / rF3;
+	result(4) = pF4 / rF4;
+	result(5) = mF5 * rF5;
+	result(6) = mF6 * rF6;
+end
+\end{lstlisting}
+
+\section*{Приложение 5} \label{p1:5}
+\textbf{Решение задачи при помощи метода последовательных уступок}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи для критерия F7}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F7 -> min
+mF7 = @(X) -(30 * X(1) + 200 * X(2) + 1780 * X(3));
+% -F8 -> min
+mF8 = @(X) -(X(1) + 10 * X(3));
+% F9 -> min
+pF9 = @(X) X(1) + 2 * X(2);
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[x7, result7] = fmincon(mF7, S, A, B, Aeq, Beq);
+
+formatter = '-- F7 max --\n%s\n%s\n\n';
+s1 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x7, sum(x7));
+s2 = sprintf('!F7 = %.3f, F8 = %.3f, F9 = %.3f', -result7, -mF8(x7), pF9(x7)); 
+fprintf(formatter, s1, s2);
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Решение задачи для критерия F8}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F7 -> min
+mF7 = @(X) -(30 * X(1) + 200 * X(2) + 1780 * X(3));
+% -F8 -> min
+mF8 = @(X) -(X(1) + 10 * X(3));
+% F9 -> min
+pF9 = @(X) X(1) + 2 * X(2);
+
+K = 0.85
+
+rF7 = 9250;
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1;
+-30, -200, -1780];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80;
+-rF7 * K];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[x8, result8] = fmincon(mF8, S, A, B, Aeq, Beq);
+
+fprintf('%.3f >= F7 >= %.1f * %.3f\n', rF7, K, rF7);
+fprintf('%.3f >= F7 >= %.3f\n\n', rF7, rF7 * K);
+
+formatter = '-- F8 max --\n%s\n%s\n\n';
+s1 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x8, sum(x8));
+s2 = sprintf('F7 = %.3f, !F8 = %.3f, F9 = %.3f', -mF7(x8), -result8, pF9(x8)); 
+fprintf(formatter, s1, s2);
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Решение задачи для критерия F9}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F7 -> min
+mF7 = @(X) -(30 * X(1) + 200 * X(2) + 1780 * X(3));
+% -F8 -> min
+mF8 = @(X) -(X(1) + 10 * X(3));
+% F9 -> min
+pF9 = @(X) X(1) + 2 * X(2);
+
+K = 0.85
+
+rF7 = 9250;
+rF8 = 67.162;
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1;
+-30, -200, -1780;
+-1, 0, -10];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80;
+-rF7 * K;
+-rF8 * K];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[x9, result9] = fmincon(pF9, S, A, B, Aeq, Beq);
+
+fprintf('%.3f >= F7 >= %.2f * %.3f\n', rF7, K, rF7);
+fprintf('%.3f >= F7 >= %.3f\n\n', rF7, rF7 * K);
+
+fprintf('%.3f >= F8 >= %.2f * %.3f\n', rF8, K, rF8);
+fprintf('%.3f >= F8 >= %.3f\n\n', rF8, rF8 * K);
+
+formatter = '-- F9 max --\n%s\n%s\n\n';
+s1 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', x9, sum(x9));
+s2 = sprintf('F7 = %.3f, F8 = %.3f, !F9 = %.3f', -mF7(x9), -mF8(x9), result9); 
+fprintf(formatter, s1, s2);
+\end{lstlisting}
+
+\section*{Приложение 6} \label{p1:6}
+\textbf{Решение задачи при помощи метода достижения цели (fgoalattain)}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи при помощи метода достижения цели (fgoalattain)}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F1 -> min
+mF1 = @(X) -(60 * X(1) + 300 * X(2) + 2000 * X(3));
+% -F2 -> min
+mF2 = @(X) -((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% -F5 -> min
+mF5 = @(X) -((-mF1(X)) / (X(1) + X(2) + X(3)));
+% -F6 -> min
+mF6 = @(X) -(((-mF1(X)) + (-mF2(X))) - (pF3(X) + pF4(X)));
+
+rF1 = -13940;
+rF2 = -7258.939;
+rF3 = 2660;
+rF4 = 6.613;
+rF5 = -198.485;
+rF6 = -16501.964;
+
+pFS = @(X) [mF2(X), pF3(X), pF4(X), mF5(X), mF6(X)];
+
+G = [rF2, rF3, rF4, rF5, rF6];
+
+W = abs(G);
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[xS, resultS] = fgoalattain(pFS, S, G, W, A, B, Aeq, Beq);
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = (%.3f, %.3f, %.3f, %.3f, %.3f)', resultS);
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF2(xS), pF3(xS), pF4(xS), -mF5(xS), -mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', mF2(xS) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, mF5(xS) / rF5 * 100, mF6(xS) / rF6 * 100);
+fprintf(formatter, s1, s2, s3, s4);
+\end{lstlisting}
+
+\section*{Приложение 7} \label{p1:7}
+\textbf{Решение задачи при помощи введения метрики в пространстве критериев}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи при помощи введения метрики в пространстве критериев}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F1 -> min
+mF1 = @(X) -(60 * X(1) + 300 * X(2) + 2000 * X(3));
+% -F2 -> min
+mF2 = @(X) -((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% -F5 -> min
+mF5 = @(X) -((-mF1(X)) / (X(1) + X(2) + X(3)));
+% -F6 -> min
+mF6 = @(X) -(((-mF1(X)) + (-mF2(X))) - (pF3(X) + pF4(X)));
+
+rF1 = -13940;
+rF2 = -7258.939;
+rF3 = 2660;
+rF4 = 6.613;
+rF5 = -198.485;
+rF6 = -16501.964;
+
+pFS = @(X) (1 - mF2(X) / rF2) ^ 2 + (1 - pF3(X) / rF3) ^ 2 + (1 - pF4(X) / rF4) ^ 2 + (1 - mF5(X) / rF5) ^ 2 + (1 - mF6(X) / rF6) ^ 2;
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+S = [35; 15; 0.5];
+
+[xS, resultS] = fmincon(pFS, S, A, B, Aeq, Beq);
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = %.3f', resultS);
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF2(xS), pF3(xS), pF4(xS), -mF5(xS), -mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', mF2(xS) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, mF5(xS) / rF5 * 100, mF6(xS) / rF6 * 100);
+fprintf(formatter, s1, s2, s3, s4);
+\end{lstlisting}
+
+\section*{Приложение 8} \label{p1:8}
+\textbf{Решение задачи стохастического программирования}
+\begin{lstlisting}[language={matlab}, caption={Решение задачи стохастического программирования}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% -F1 -> min
+mF1 = @(X) -(60 * X(1) + 300 * X(2) + 2000 * X(3));
+% -F2 -> min
+mF2 = @(X) -((0.1 * X(1) + 10 * X(2) + 70 * sqrt(X(3))) ^ 1.5);
+% F3 -> min
+pF3 = @(X) 30 * X(1) + 100 * X(2) + 220 * X(3);
+% F4 -> min
+pF4 = @(X) log(20 * X(1) + 3 * X(2) + 0.01 * X(3));
+% -F5 -> min
+mF5 = @(X) -((-mF1(X)) / (X(1) + X(2) + X(3)));
+% -F6 -> min
+mF6 = @(X) -(((-mF1(X)) + (-mF2(X))) - (pF3(X) + pF4(X)));
+
+rF1 = -13940;
+rF2 = -7258.939;
+rF3 = 2660;
+rF4 = 6.613;
+rF5 = -198.485;
+rF6 = -16501.964;
+
+pFS = @(X) (1 - mF2(X) / rF2) ^ 2 + (1 - pF3(X) / rF3) ^ 2 + (1 - pF4(X) / rF4) ^ 2 + (1 - mF5(X) / rF5) ^ 2 + (1 - mF6(X) / rF6) ^ 2;
+
+A = [1, 0, 0;
+-1, 0, 0;
+0, 1, 0;
+0, -1, 0;
+0, 0, 1;
+0, 0, -1;
+1, 1, 1];
+
+B = [70;
+-35;
+30;
+-15;
+1;
+-0.5;
+80];
+
+Aeq = [];
+Beq = [];
+
+lb = [];
+ub = [];
+
+S = [35; 15; 0.5];
+
+O = optimoptions('fmincon', 'Display', 'none');
+
+[xS, resultS] = fmincon(pFS, S, A, B, Aeq, Beq, lb, ub, [], O);
+
+global K;
+
+Ka = icdf('Normal', 0.1 : 0.1 : 0.9, 0, 1);
+sizeK = size(Ka, 2);
+xV = zeros(3, sizeK);
+rV = zeros(3, sizeK);
+for i = 1 : 1 : sizeK
+K = Ka(i);
+fmincon(pFS, S, A, B, Aeq, Beq);
+
+[xV(:, i), rV(:, i)] = fmincon(pFS, S, A(1:6, :), B(1:6, :), Aeq, Beq, lb, ub, @m8f, O);
+end
+
+mean = (abs(mF2(xS) / rF2 - 1) + abs(pF3(xS) / rF3 - 1) + abs(pF4(xS) / rF4 - 1) + abs(mF5(xS) / rF5 - 1) + abs(mF6(xS) / rF6 - 1)) / 5 * 100;
+
+formatter = '-- FS --\n%s\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('FS = %.3f', resultS);
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xS, sum(xS));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF2(xS), pF3(xS), pF4(xS), -mF5(xS), -mF6(xS));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', mF2(xS) / rF2 * 100, pF3(xS) / rF3 * 100, pF4(xS) / rF4 * 100, mF5(xS) / rF5 * 100, mF6(xS) / rF6 * 100);
+s5 = sprintf('Mean = %.3f%%', mean);
+fprintf(formatter, s1, s2, s3, s4, s5);
+
+for i = 1 : 1 : sizeK
+mean = (abs(mF2(xV(:, i)) / rF2 - 1) + abs(pF3(xV(:, i)) / rF3 - 1) + abs(pF4(xV(:, i)) / rF4 - 1) + abs(mF5(xV(:, i)) / rF5 - 1) + abs(mF6(xV(:, i)) / rF6 - 1)) / 5 * 100;
+
+formatter = '-- %s --\n%s\n%s\n%s\n%s\n\n';
+s1 = sprintf('a = 0.%d, Ka = %.3f', i, Ka(i));
+s2 = sprintf('x1 = %.3f, x2 = %.3f, x3 = %.3f, x1 + x2 + x3 = %.3f', xV(:, i), sum(xV(:, i)));
+s3 = sprintf('F2 = %.3f, F3 = %.3f, F4 = %.3f, F5 = %.3f, F6 = %.3f', -mF2(xV(:, i)), pF3(xV(:, i)), pF4(xV(:, i)), -mF5(xV(:, i)), -mF6(xV(:, i)));
+s4 = sprintf('F2/rF2 = %.3f%%, F3/rF3 = %.3f%%, F4/rF4 = %.3f%%, F5/rF5 = %.3f%%, F6/rF6 = %.3f%%', mF2(xV(:, i)) / rF2 * 100, pF3(xV(:, i)) / rF3 * 100, pF4(xV(:, i)) / rF4 * 100, mF5(xV(:, i)) / rF5 * 100, mF6(xV(:, i)) / rF6 * 100);
+s5 = sprintf('Mean = %.3f%%', mean);
+fprintf(formatter, s1, s2, s3, s4, s5);
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Внутренняя функция для решения задачи стохастического программирования}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+function [c, ceq] = m8f(X)
+	global K;
+	
+	M1 = 1;
+	M2 = 1;
+	M3 = 1;
+	D1 = M1 / 2;
+	D2 = M2 / 2;
+	D3 = M3 / 2;
+	
+	c = M1 * X(1) + M2 * X(2) + M3 * X(3) + K * sqrt(D1 * (X(1) ^ 2) + D2 * (X(2) ^ 2) + D3 * (X(3) ^ 2)) - 80;
+	ceq = [];
+end
+\end{lstlisting}
+
+\section*{Приложение 9} \label{p2:9}
+\textbf{Поиск оптимальной стратегии при помощи линейного программирования}
+\begin{lstlisting}[language={matlab}, caption={Поиск оптимальной стратегии при помощи линейного программирования}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+f = [0 12.6 8.4 14.7 12.3];
+
+A=[];
+b=[];
+
+Aeq = [0.4 -0.9 -0.7 -0.6 -0.5;
+-0.3 0.9 0.8 -0.3 -0.4;
+-0.1 0 -0.1 0.9 0.9;
+1 1 1 1 1];
+Beq = [0; 0; 0; 1];
+
+lb = zeros(5, 1);
+ub = ones(5, 1);
+
+[w, opt] = linprog(f, A, b, Aeq, Beq, lb, ub)
+\end{lstlisting}
+
+\section*{Приложение 10} \label{p3:10}
+\textbf{Решение СМО методом простых итераций}
+\begin{lstlisting}[language={matlab}, caption={Решение СМО методом простых итераций}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+p =   [0 0.1 0.6 0.3;
+0.7 0 0.2 0.1;
+0.9 0 0 0.1;
+0.3 0.3 0.4 0];
+
+M = 4;
+N = 5;
+
+lam_1_ = 3;
+
+c = [2 2 2 2];
+a = [1 1 1 1];
+
+u = [1 1 1 1];
+
+%% Initialize w
+
+A = p' - diag(ones(1, M));
+A(4, :) = [1; 1; 1; 1];
+b = [0; 0; 0; 1];
+w = inv(A) * b;
+w = w';
+
+
+%% Initialize u
+
+for i = 1 : M
+u(i) = w(i) / (c(i) * w(1)) * lam_1_;
+end
+
+u_last = u;
+
+for iteration = 1 : 5
+	%% Find L(N)
+	[L_N, lam_1_N] = fl(u, w, c, M, N);
+	L_N_1 = fl(u, w, c, M, N - 1);
+	
+	%% Find u1
+	u(1) = lam_1_ / lam_1_N * u(1);
+	
+	%% Find u
+	for i = 2 : M
+	u(i) = u(1)  * (L_N(i) - L_N_1(i)) / (L_N(1) - L_N_1(1)) * (c(1) * a(1)) / (c(i) * a(i));
+	end
+	
+	%% Finish iteration
+	
+	% min_delta = min(abs(u - u_last));
+	
+	u_last = u;
+	
+	fprintf('Iteration #%d\nSumm u(i) = %f\nu(i) = [%f, %f, %f, %f]\n\n', iteration, sum(u), u(1), u(2), u(3), u(4));
+end
+
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Итеративная функция решения для ССМО}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+function [L, lumbda1] = fl(u, w, c, M, N)
+	P = zeros(M, N + 1, N + 1);
+	t = zeros(1, M);
+	
+	P(:, 1, 1) = 1;
+	for r = 1 : N
+		%% Step 1
+		
+		for i = 1 : M
+			t(i) = 0;
+			for n = 1 : r
+				t(i) = t(i) + n / (min(n, c(i)) * u(i)) * P(i, n, r);
+			end
+		end
+		
+		%% Step 2
+		
+		temp = 0;
+		for i = 1 : M
+		temp = temp + w(i) * t(i) / w(1);
+		end
+		
+		lumbda1 = r / temp;
+		
+		%% Step 3
+		
+		for i = 1 : M
+			for n = 1 : r
+				P(i, n + 1, r + 1) = w(i) / w(1) * lumbda1 / (min(n, c(i)) * u(i)) * P(i, n, r);
+			end
+			
+			P(i, 1, r + 1) = 1;
+			for n = 1 : r
+				P(i, 1, r + 1) = P(i, 1, r + 1) - P(i, n + 1, r + 1);
+			end
+		end
+	end
+	
+	L = t;
+end
+\end{lstlisting}
+
+\section*{Приложение 11} \label{p3:11}
+\textbf{Решение СМО методом Ньютона}
+\begin{lstlisting}[language={matlab}, caption={Решение СМО методом Ньютона}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+% delete(gcp);
+% distcomp.feature('LocalUseMpiexec', false);
+% parpool();
+
+p =   [0 0.1 0.6 0.3;
+0.7 0 0.2 0.1;
+0.9 0 0 0.1;
+0.3 0.3 0.4 0];
+
+M = 4;
+N = 5;
+
+lam_1_ = 3;
+
+c = [2 2 2 2];
+a = [1 1 1 1];
+
+%% Initialize w
+
+A = p' - diag(ones(1, M));
+A(4, :) = [1; 1; 1; 1];
+b = [0; 0; 0; 1];
+w = inv(A) * b;
+w = (1 / w(1)) * w';
+
+%% Error
+
+e = 1e-06;
+
+%% First approximation
+
+u0 = zeros(1, M);
+for i = 1 : M
+u0(i) = w(i) / (c(i) * w(1)) * lam_1_;
+end
+
+fprintf('Start Conditions\ne = %f\nw = [%.6f %.6f %.6f %.6f]\nu0 = [%.6f %.6f %.6f %.6f]\n\n', e, w, u0);
+
+%% Syms u
+
+u = sym('u', [1 M]);
+
+%% Find characteristics
+
+G = gl3(u, w, c, M, N);
+[L, Lam] = pl3(u, w, c, M, N, G);
+[pL, pLam] = pl3(u, w, c, M, N - 1, G);
+
+% [L, Lam] = fl3(u, w, c, M, N);
+% [pL, pLam] = fl3(u, w, c, M, N - 1);
+
+Function = sym(zeros(1, M));
+Function(1) = simplify(lam_1_ / Lam(1) * u(1));
+
+for i = 2 : M
+% Function(i) = simplify(Function(1) * (L(i) - pL(i)) / (L(1) - pL(1)) * (c(1) * a(1)) / (c(i) * a(i)));
+Function(i) = simplify(u(1) * (L(i) - pL(i)) / (L(1) - pL(1)) * (c(1) * a(1)) / (c(i) * a(i)));
+end
+
+%% Newton method with jacobian matrix
+
+% uCurrent = u0;
+uCurrent = [10 10 10 10];
+uPrevious = zeros(1, M);
+
+jaco = jacobian(Function - u);
+
+index = 0;
+condition = true;
+while condition
+	resf = zeros(M, 1);
+	% parfor i = 1 : M
+	for i = 1 : M
+		resf(i) = subs(Function(i) - u(i), u, uCurrent);
+	end
+	
+	rU = double(uCurrent);
+	fprintf('%d | u = [%.6f %.6f %.6f %.6f] | F(u) = [%.6f %.6f %.6f %.6f] | S = %.6f\n', index, double(uCurrent), double(resf), c * rU');
+	
+	uPrevious = uCurrent;
+	
+	resjaco = zeros(M, M);
+	% parfor i = 1 : M
+	for i = 1 : M
+		for j = 1 : M
+			resjaco(i, j) = subs(jaco(i, j), u, uPrevious);
+		end
+	end
+	
+	resf = zeros(M, 1);
+	% parfor i = 1 : M
+	for i = 1 : M
+		resf(i) = subs(Function(i) - u(i), u, uPrevious);
+	end
+	
+	uCurrent = uPrevious - (resjaco \ resf)';
+	
+	condition = false;
+	for i = 1 : M
+		condition = condition || abs(uCurrent(i) - uPrevious(i)) > e;
+	end
+	
+	index = index + 1;
+	
+	if (~condition)
+	rU = double(uCurrent);
+	fprintf('%d | u = [%.6f %.6f %.6f %.6f] | F(u) = [%.6f %.6f %.6f %.6f] | S = %.6f\n', index, double(uCurrent), double(resf), c * rU');
+	end
+end
+
+resf = zeros(M, 1);
+% parfor i = 1 : M
+for i = 1 : M
+	resf(i) = subs(Function(i) - u(i), u, uCurrent);
+end
+
+rU = double(uCurrent);
+rL = double(subs(L, u, uCurrent));
+rLam = double(subs(Lam, u, uCurrent));
+rS = c * rU';
+fprintf('\nResult\nu = [%.6f %.6f %.6f %.6f]\nF(u) = [%.6f %.6f %.6f %.6f]\nL(N) = [%.6f %.6f %.6f %.6f]\nlam(N) = [%.6f %.6f %.6f %.6f]\nS = %.6f\n', rU, double(resf), rL, rLam, rS);
+
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Расчет нормирующей константы}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+function [G] = gl3(u, w, c, M, N)
+	G = sym(zeros(M, N + 1));
+	G(:, 1) = 1;
+	
+	for k = 0 : N
+		%% Find G(1, k)
+		
+		tempMul = 1;
+		for j = 1 : k
+			tempMul = tempMul * min(j, c(1)) * u(1);
+		end
+		
+		G(1, k + 1) = (w(1) ^ k) / tempMul;
+	end
+	
+	for r = 2 : M
+		for k = 1 : N
+			%% Find G(r, k)
+			
+			tempSum = 0;
+			for h = 0 : k
+				Z = 0;
+				if (h == 0)
+					Z = 1;
+				else
+					%% Find Z(r, h)
+					tempMul = 1;
+					for j = 1 : h
+						tempMul = tempMul * min(j, c(r)) * u(r);
+					end
+			
+					Z = (w(r) ^ h) / tempMul;
+				end
+			
+				tempSum = tempSum + Z * G(r - 1, k - h + 1);
+			end
+			
+			G(r, k + 1) = tempSum;
+		end
+	end
+	
+	G = simplify(G);
+end
+\end{lstlisting}
+
+\begin{lstlisting}[language={matlab}, caption={Расчет основных характеристик СМО}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+function [L, Lam] = pl3(u, w, c, M, N, G)
+	L = sym(zeros(1, M));
+	Lam = sym(zeros(1, M));
+	
+	for i = 1 : M
+		tempSum = 0;
+		for n = 1 : N
+			Z = 0;
+			if (n == 0)
+				Z = 1;
+			else
+				%% Find Z(i, n)
+				tempMul = 1;
+				for j = 1 : n
+					tempMul = tempMul * min(j, c(i)) * u(i);
+				end
+				
+				Z = (w(i) ^ n) / tempMul;
+			end
+			
+			tempSum = tempSum + n * Z * G(M - 1, N - n + 1);
+		end
+		
+		L(i) = tempSum / G(M, N + 1);
+		Lam(i) = w(i) * G(M, N - 1 + 1) / G(M, N + 1);
+	end
+	
+	L = simplify(L);
+	Lam = simplify(Lam);
+end
+\end{lstlisting}
+
+\section*{Приложение 12} \label{p4:12}
+\textbf{Расчет статистических значений для GERT сети}
+\begin{lstlisting}[language={matlab}, caption={Расчет статистических значений для GERT сети}, label={lst:0}, basicstyle={\footnotesize\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+syms s;
+
+% W-functions
+W12 = 0.5 * exp(10*s + 8 * s^2);
+W16 = 0.5 * exp(23 * s + 312.5 * s^2);
+W22 = 0.2 * exp(13 * s + 128 * s^2);
+W26 = 0.8 * exp(11 * s + 128 * s^2);
+W35 = 1 * exp(10 * s + 40.5 * s^2);
+W41 = 0.4 * exp(37 * s + 128 * s^2);
+W43 = 0.3 * exp(12 * s + 128 * s^2);
+W46 = 0.3 * exp(12 * s + 1200.5 * s^2);
+W54 = 0.3 * exp(15 * s + 312.5  * s^2);
+W55 = 0.5 * exp(19 * s + 8 * s^2);
+W56 = 0.2 * exp(42 * s + 40.5 * s^2);
+
+% We(s)
+We = (W12 * W26 + W16 - W16 * W22 - W16 * W35 * W54 * W43 - W16 * W55 - W12 * W26 * W55 - W12 * W26 * W35 * W54 * W43 + W16 * W22 * W35 * W54 * W43 + W16 * W22 * W55) / (1 - W35 * W54 * W43 - W22 - W55 + W22 * W55 + W22 * W35 * W54 * W43);
+We = simplify(We);
+
+% We(0)
+We0 = subs(We, 's', 0);
+fprintf('We(0) = %.3f\n', double(We0));
+
+% Me(s)
+Me = We / We0;
+
+% me1
+me1 = diff(Me, 's', 1);
+me1 = subs(me1, 's', 0);
+fprintf('me1 = %.3f\n', double(me1));
+
+% me2
+me2 = diff(Me, 's', 2);
+me2 = subs(me2, 's', 0);
+fprintf('me2 = %.3f\n', double(me2));
+
+% de
+de = me2 - me1 ^ 2;
+fprintf('de = %.3f\n', double(de));
+
+\end{lstlisting}
+
+\section*{Приложение 13} \label{p4:13}
+\textbf{Расчет статистических значений при помощи анализа потокового графа}
+\begin{lstlisting}[language={matlab}, caption={Расчет статистических значений при помощи анализа потокового графа}, label={lst:0}, basicstyle={\small\ttfamily}, breaklines={true}]
+clear all;
+close all; 
+clc;
+format long g;
+
+syms s;
+syms W61;
+
+% W-functions
+W12 = 0.5 * exp(10*s + 8 * s^2);
+W16 = 0.5 * exp(23 * s + 312.5 * s^2);
+W22 = 0.2 * exp(13 * s + 128 * s^2);
+W26 = 0.8 * exp(11 * s + 128 * s^2);
+W35 = 1 * exp(10 * s + 40.5 * s^2);
+W41 = 0.4 * exp(37 * s + 128 * s^2);
+W43 = 0.3 * exp(12 * s + 128 * s^2);
+W46 = 0.3 * exp(12 * s + 1200.5 * s^2);
+W54 = 0.3 * exp(15 * s + 312.5  * s^2);
+W55 = 0.5 * exp(19 * s + 8 * s^2);
+W56 = 0.2 * exp(42 * s + 40.5 * s^2);
+
+Q = [0 W12 0 0 0 W16;
+	 0 W22 0 0 0 W26;
+  	 0 0 0 0 W35 0;
+ 	 W41 0 W43 0 0 W46;
+ 	 0 0 0 W54 W55 W56;
+	 W61 0 0 0 0 0];
+
+% Determinate A
+A = eye(size(Q, 1)) - Q';
+detA = det(A);
+dDetA = diff(detA, W61, 1);
+detA0 = subs(detA, W61, 0);
+
+% We(s)
+We = dDetA / detA0;
+We = simplify(We);
+
+% We(0)
+We0 = subs(We, 's', 0);
+fprintf('We(0) = %.3f\n', double(We0));
+
+% Me(s)
+Me = We / We0;
+
+% me1
+me1 = diff(Me, 's', 1);
+me1 = subs(me1, 's', 0);
+fprintf('me1 = %.3f\n', double(me1));
+
+% me2
+me2 = diff(Me, 's', 2);
+me2 = subs(me2, 's', 0);
+fprintf('me2 = %.3f\n', double(me2));
+
+% de
+de = me2 - me1 ^ 2;
+fprintf('de = %.3f\n', double(de));
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,411 @@
+\documentclass[14pt,a4paper,report]{report}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\Large\bfseries} % format
+{}                % label
+{0pt}             % sep
+{\huge}           % before-code
+
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{ 
+	% Listing settings
+	inputencoding = utf8,			
+	extendedchars = \true, 
+	keepspaces = true, 			  	 % Поддержка кириллицы и пробелов в комментариях
+	language = C++,            	 	 % Язык программирования (для подсветки)
+	basicstyle = \small\sffamily, 	 % Размер и начертание шрифта для подсветки кода
+	numbers = left,               	 % Где поставить нумерацию строк (слева\справа)
+	numberstyle = \tiny,          	 % Размер шрифта для номеров строк
+	stepnumber = 1,               	 % Размер шага между двумя номерами строк
+	numbersep = 5pt,              	 % Как далеко отстоят номера строк от подсвечиваемого кода
+	backgroundcolor = \color{white}, % Цвет фона подсветки - используем \usepackage{color}
+	showspaces = false,           	 % Показывать или нет пробелы специальными отступами
+	showstringspaces = false,    	 % Показывать или нет пробелы в строках
+	showtabs = false,           	 % Показывать или нет табуляцию в строках
+	frame = single,              	 % Рисовать рамку вокруг кода
+	tabsize = 2,                  	 % Размер табуляции по умолчанию равен 2 пробелам
+	captionpos = t,             	 % Позиция заголовка вверху [t] или внизу [b] 
+	breaklines = true,           	 % Автоматически переносить строки (да\нет)
+	breakatwhitespace = false,   	 % Переносить строки только если есть пробел
+	escapeinside = {\%*}{*)}      	 % Если нужно добавить комментарии в коде
+}
+
+\begin{document}
+
+\def\contentsname{Содержание}
+
+% Titlepage
+\begin{titlepage}
+	\begin{center}
+		\textsc{Санкт-Петербургский Политехнический 
+			Университет Петра Великого\\[5mm]
+			Кафедра компьютерных систем и программных технологий}
+		
+		\vfill
+		
+		\textbf{Отчёт по лабораторной работе №1\\[3mm]
+			Курс: «Проектирование ОС и компонентов»\\[3mm]
+			Тема: «Системные вызовы»\\[35mm]
+			}
+	\end{center}
+	
+	\hfill
+	\begin{minipage}{.5\textwidth}
+		Выполнил студент:\\[2mm] 
+		Бояркин Никита Сергеевич\\
+		Группа: 13541/3\\[5mm]
+		
+		Проверил:\\[2mm] 
+		Душутина Елена Владимировна
+	\end{minipage}
+	\vfill
+	\begin{center}
+		Санкт-Петербург\\ \the\year\ г.
+	\end{center}
+\end{titlepage}
+
+% Contents
+\tableofcontents
+\clearpage
+
+\chapter{Лабораторная работа №1}
+
+\section{Цель работы}
+
+Ознакомиться с системными вызовами, научиться разрабатывать перехватчики для системных вызывов и вносить изменения в ядро.
+
+\section{Программа работы}
+
+Для каждого системного вызова из индивидуального задания:
+
+\begin{itemize}
+	\item Привести описание.
+	\item Разработать программу с примером использования.
+	\item Осуществить перехват вызова черех хук.
+	\item Проанализировать исходный код вызова.
+\end{itemize}
+
+\section{Индивидуальное задание}
+
+Системные вызовы:
+
+\begin{itemize}
+	\item sys\_getpid
+	\item sys\_setpid
+	\item sys\_chdir
+	\item sys\_sysinfo
+\end{itemize}
+
+\section{Характеристики системы}
+
+\lstinputlisting{listings/0i.log}
+
+\section{Системные вызовы}
+
+% https://www.ibm.com/developerworks/ru/library/l-linux_kernel_05/index.html
+
+В конечном итоге, главная задача операционной системы — это обслуживание потребностей прикладных пользовательских процессов. И обеспечивается это обслуживание через механизм системных вызовов.
+
+В любой (в том числе и микроядерной) операционной системе системный вызов выполняется некоторой выделенной процессорной инструкцией, прерывающей последовательное выполнение команд и передающий управление коду режима супервизора. Это обычно некая команда программного прерывания, в зависимости от архитектуры процессора в разные времена это были команды с мнемониками вида: svc, emt, trap, int и им подобными \cite{cite-syscalls}
+
+\clearpage
+
+Команды прерывания для ОС, построенных на архитектуре Intel x86:
+
+\begin{table}[h!]
+	\centering
+	\bgroup
+	\def\arraystretch{1}
+	\begin{tabular}{ | m{2.2cm} | m{1.0cm} | }
+		\hline
+		OS & desc \\ \hline
+		MS-DOS & 21h \\ \hline
+		Windows & 2Eh \\ \hline
+		Linux & 80h \\ \hline
+		QNX & 21h \\ \hline
+		MINIX 3 & 21h \\
+		\hline
+	\end{tabular}
+	\egroup
+\end{table}
+
+Прикладной процесс вызывает требуемые ему службы посредством библиотечного вызова к множеству библиотек либо вида *.so (динамическое связывание), либо прикомпоновывая к себе фрагмент из библиотеки вида *.a (статическое связывание). Самые известные примеры - это стандартная библиотека языка С libc.so или libpthread.so — библиотека POSIX потоков \cite{cite-syscalls}
+
+Описания системных вызовов (в отличие от библиотечных) отнесены к секции 2 в руководствах man. Все системные вызовы далее преобразуются в вызов ядра функцией syscall(), 1-м параметром которого будет идентификатор выполняемого системного вызова, например \_\_NR\_execve.
+
+Найдем описания заданных системных вызовов в таблице векторов системных вызовов syscall\_32.tbl:
+
+\lstinputlisting{listings/0s.log}
+
+\subsection{Перехват системных вызовов}
+
+% https://github.com/milabs/kmod_hooking/
+
+Для перехвата системных вызовов воспользуемся библиотекой kmod\_hooking \cite{cite-hooking} Данная библиотека содержит набор системных функций для регистрации и снятия перехватчиков с заданных функций. Принцип работы основывается на подмене функции внутри ядра. Синтаксис перехватчика иллюстрируется следующим примером перехвата системной функции inode\_permission:
+
+\lstinputlisting{listings/hook.example.c}
+
+DECLARE\_KHOOK указывает на то, какие функции являются перехватчиками. KHOOK\_USAGE\_INC и KHOOK\_USAGE\_DEC определяют область, в которой выполняется хук. KHOOK\_ORIGIN вызывает непосредственно системный вызов с заданными аргументами.
+
+Добавление собственного кода в ядро производится с помощью модулей. Модули располагаются в директории /lib/modules/\$(uname -r). Сборка библиотеки производится при помощи следующего makefile:
+
+\lstinputlisting{listings/hook.makefile.log}
+
+Добавление нового модуля в систему производится через утилиту insmod:
+
+\lstinputlisting{listings/hook.insert.log}
+
+Удаление модуля из систему производится через утилиту rmmod:
+
+\lstinputlisting{listings/hook.remove.log}
+
+\subsection{Системный вызов sys\_getpid}
+
+Системный вызов sys\_getpid() возвращает идентификатор текущего процесса. Пользовательская функция getpid() предоставляет доступ к данному системному вызову и объявляется в заголовочном файле unistd.h.
+
+\subsubsection{Пример использования}
+
+Функция не принимает никаких аргументов и возвращает целочисленный идентификатор процесса:
+
+\lstinputlisting{listings/1.cpp}
+
+Результат выполнения программы:
+
+\lstinputlisting{listings/1.log}
+
+\subsubsection{Отслеживание системного вызова}
+
+Попробуем отследить системный вызов в предыдущей программе через утилиту strace:
+
+\lstinputlisting{listings/1s.log}
+
+После создания процесса вызывается функция getpid и выводится на экран функцией write, после чего программа завершается.
+
+\subsubsection{Перехват системного вызова}
+
+Реализуем перехват системного вызова sys\_getpid с помощью kmod\_hooking:
+
+\lstinputlisting{listings/1h.c}
+
+Данный код добавляется в linux как модуль ядра, а результат работы журналируется в файл kern.log. Убедимся в правильности работы хука:
+
+\lstinputlisting{listings/1h.log}
+
+После запуска программы в kern.log появилась запись о попытке доступа к системному вызову sys\_getpid.
+
+\subsubsection{Анализ исходного кода}
+
+Прототип системного вызова sys\_getpid находится в include/linux/syscalls.h в исходных файлах ядра linux \cite{cite-linux-syscalls}:
+
+\begin{lstlisting}
+// include/linux/syscalls.h
+
+asmlinkage long sys_getpid(void);
+\end{lstlisting}
+
+Непосредственно реализация sys\_getpid находится в kernel/sys.c в исходных файлах ядра linux \cite{cite-linux-sys}:
+
+\begin{lstlisting}
+// kernel/sys.c
+
+SYSCALL_DEFINE0(getpid)
+{
+    return task_tgid_vnr(current);
+}
+\end{lstlisting}
+
+Можно заметить, что вызыватся функция ядра task\_tgid\_vnr, которая в свою очередь вызывает \_\_task\_pid\_nr\_ns в kernel/pid.c в исходных файлах ядра linux \cite{cite-linux-pid}:
+
+\lstinputlisting{listings/1.1.c}
+
+На время работы функции блокируется чтение, проверяется наличие текущего процесса и наличие gpid, после чего вызывается функция pid\_nr\_ns:
+
+\lstinputlisting{listings/1.2.c}
+
+Если оба аргумента (структуры pid и pid\_namespace) корректны, то возвращается pid текущего процесса, в противном случае возвращается 0.
+
+\subsection{Системный вызов sys\_setpid}
+
+Такого системного вызова, очевидно, не существует, потому что идентификатор процесса задается единожды при запуске процесса.
+
+Для выделения нового pid используется функция alloc\_pid:
+
+\lstinputlisting{listings/2.1.c}
+
+Функция вызывает kmem\_cache\_alloc с аргументом в виде набора кэшированных структур для выделения памяти под структуру нового pid \cite{cite-pid-alloc}.
+
+Далее происходит инициализация полей структуры в зависимости от уровня аргумента pid\_namespace. Функция idr\_alloc\_cyclic пытается выделить новый идентификатор процесса. Если получилось, то идентификатор записывается в структуру.
+
+\subsection{Системный вызов sys\_chdir}
+
+Системный вызов sys\_chdir() задает текущий путь выполнения процесса. Пользовательская функция chdir() предоставляет доступ к данному системному вызову и объявляется в заголовочном файле unistd.h.
+
+\subsubsection{Пример использования}
+
+Для примера выведем текущий путь выполнения процесса, поменяем его функцией chdir() и выведем путь еще раз. Путь должен измениться на аргумент функции chdir():
+
+\lstinputlisting{listings/3.cpp}
+
+Результат выполнения программы:
+
+\lstinputlisting{listings/3.log}
+
+\subsubsection{Отслеживание системного вызова}
+
+Попробуем отследить системный вызов в предыдущей программе через утилиту strace:
+
+\lstinputlisting{listings/3s.log}
+
+Как и ожидалось, была вызвана цепочка системных вызовов: getcwd -> write -> chdir -> getcwd -> write, в результате которой изменилось значение путь выполнения процесса.
+
+\subsubsection{Перехват системного вызова}
+
+Реализуем перехват системного вызова sys\_chdir с помощью kmod\_hooking:
+
+\lstinputlisting{listings/3h.c}
+
+Данный код добавляется в linux как модуль ядра, а результат работы журналируется в файл kern.log. Убедимся в правильности работы хука:
+
+\lstinputlisting{listings/3h.log}
+
+После запуска программы в kern.log появилась запись о попытке доступа к системному вызову sys\_chdir.
+
+\subsubsection{Анализ исходного кода}
+
+Прототип системного вызова sys\_chdir находится в include/linux/syscalls.h в исходных файлах ядра linux \cite{cite-linux-syscalls}:
+
+\begin{lstlisting}
+// include/linux/syscalls.h
+
+asmlinkage long sys_chdir(const char __user *filename);
+\end{lstlisting}
+
+Непосредственно реализация sys\_chdir находится в kernel/sys.c в исходных файлах ядра linux \cite{cite-linux-sys}:
+
+\begin{lstlisting}
+// kernel/sys.c
+
+SYSCALL_DEFINE1(chdir, const char __user *, filename)
+{
+    return ksys_chdir(filename);
+}
+\end{lstlisting}
+
+Можно заметить, что вызыватся функция ядра ksys\_chdir в fs/open.c в исходных файлах ядра linux \cite{cite-linux-fs-open}:
+
+\lstinputlisting{listings/3.1.c}
+
+Функция проверяет наличие задаваемого пути и наличие прав на его изменение. После этого вызывается функция set\_fs\_pwd, которая непосредственно задает путь:
+
+\lstinputlisting{listings/3.2.c}
+
+\subsection{Системный вызов sys\_sysinfo}
+
+Системный вызов sys\_sysinfo() выводит системную информацию, такую как: время с момента запуска системы в секундах, количество памяти и количество свободно памяти в байтах, количество активных процессов, размер свфпа и др. Пользовательская функция sysinfo() предоставляет доступ к данному системному вызову и объявляется в заголовочном файле sys/sysinfo.h.
+
+\subsubsection{Пример использования}
+
+Для примера выведем системную информацию в удобном для чтения формате:
+
+\lstinputlisting{listings/4.cpp}
+
+Результат выполнения программы:
+
+\lstinputlisting{listings/4.log}
+
+\subsubsection{Отслеживание системного вызова}
+
+Попробуем отследить системный вызов в предыдущей программе через утилиту strace:
+
+\lstinputlisting{listings/4s.log}
+
+Как и ожидалось была получена структура sysinfo через соответствующий системный вызов.
+
+\subsubsection{Перехват системного вызова}
+
+Реализуем перехват системного вызова sys\_sysinfo с помощью kmod\_hooking:
+
+\lstinputlisting{listings/4h.c}
+
+Данный код добавляется в linux как модуль ядра, а результат работы журналируется в файл kern.log. Убедимся в правильности работы хука:
+
+\lstinputlisting{listings/4h.log}
+
+После запуска программы в kern.log появилась запись о попытке доступа к системному вызову sys\_sysinfo.
+
+\subsubsection{Анализ исходного кода}
+
+Прототип системного вызова sys\_sysinfo находится в include/linux/syscalls.h в исходных файлах ядра linux \cite{cite-linux-syscalls}:
+
+\begin{lstlisting}
+// include/linux/syscalls.h
+
+asmlinkage long sys_sysinfo(struct sysinfo __user *info);
+\end{lstlisting}
+
+Непосредственно реализация sys\_sysinfo находится в kernel/sys.c в исходных файлах ядра linux \cite{cite-linux-sys}:
+
+\begin{lstlisting}
+// kernel/sys.c
+
+SYSCALL_DEFINE1(sysinfo, struct sysinfo __user *, info)
+{
+    struct sysinfo val;
+    
+    do_sysinfo(&val);
+    
+    if (copy_to_user(info, &val, sizeof(struct sysinfo)))
+        return -EFAULT;
+    
+    return 0;
+}
+\end{lstlisting}
+
+Можно заметить, что вызывается функция ядра do\_sysinfo в kernel/sys.c в исходных файлах ядра linux \cite{cite-linux-sys}:
+
+\lstinputlisting{listings/4.1.c}
+
+В первую очередь структура обнуляется, после чего собирается информация о времени, памяти, свопе и количестве процессов через соответствующие функции get\_monolitic\_boottime, get\_averrun, si\_meminfo, si\_swapinfo. В завершении делается поправка на версии ядра 2.2.x с побитовым сдвигом полей результирующей структуры.
+
+\section{Вывод}
+
+В данной работе были изучены системные вызовы, принципы перехвата системных вызовов, а также добавление модулей в ядро ОС Linux.
+
+В ОС Linux(версия ядра v4.17-rc4) определено около 384 системных вызовов для архитектуры i386. Такое количество системных вызовов позволяет программисту получить удобный и полный доступ ко всем компонентам ОС в рамках прав доступа.
+
+Каждый системный вызов содержит элементы синхронизации там где это необходимо для корректной работы в условиях многопоточности.
+
+Каждый разработчик сообщества может улучшать исходный код системных вызовов и других частей ядра путем создания pull request в GitHub репозитории ядра Linux \cite{cite-linux}. На сегодняшний день ядро Linux разрослось до такой степени, что его изучение путем анализа кода малоэффективно.
+
+Перехват системных вызовов достаточно несложно реализуется подменой функции внутри ядра, однако, для этого необходимы права суперпользователя.
+
+\bibliography{thesis}
+\bibliographystyle{ugost2008}
+
+\end{document}
