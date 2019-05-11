@@ -1,0 +1,2 @@
+mpic++.openmpi -std=c++11 <sources>
+

@@ -1,0 +1,3 @@
+nikita@nikita-VirtualBox:~/files/student/ezsem4/sys/1/listings$ ./executable
+Current directory: /home/nikita/files/student/ezsem4/sys/1/listings
+Current directory after chdir: /home
