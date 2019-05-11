@@ -1,0 +1,5 @@
+May  9 03:47:58 ubuntu kernel: [ 7195.605496] Try to open character device /dev/chardev c 250 0'.
+May  9 03:47:58 ubuntu kernel: [ 7195.605501] Try to write (ffff88003c65c240, Hello, character device!, 50).
+May  9 03:47:58 ubuntu kernel: [ 7195.605509] Try to read character device /dev/chardev c 250 0'.
+May  9 03:47:58 ubuntu kernel: [ 7195.605510] Read 24 bytes, 26 left.
+May  9 03:47:58 ubuntu kernel: [ 7195.605513] Try to close character device /dev/chardev c 250 0'.

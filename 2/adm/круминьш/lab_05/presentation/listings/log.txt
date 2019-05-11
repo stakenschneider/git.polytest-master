@@ -1,0 +1,23 @@
+Router>
+Router>enable
+Router#show flash
+
+System flash directory:
+File  Length   Name/status
+  3   5571584  pt1000-i-mz.122-28.bin
+  2   28282    sigdef-category.xml
+  1   227537   sigdef-default.xml
+[5827403 bytes used, 58188981 available, 64016384 total]
+63488K bytes of processor board System flash (Read/Write)
+
+
+Router#copy flash tftp
+Source filename []? pt1000-i-mz.122-28.bin
+Address or name of remote host []? 192.168.120.1
+Destination filename [pt1000-i-mz.122-28.bin]? temp.file
+
+Writing pt1000-i-mz.122-28.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[OK - 5571584 bytes]
+
+5571584 bytes copied in 0.147 secs (8684467 bytes/sec)
+Router#

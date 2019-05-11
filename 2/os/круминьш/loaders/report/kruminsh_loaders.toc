@@ -1,0 +1,41 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Задание}{3}{section.1}
+\contentsline {section}{\numberline {2}Сведения о системе}{3}{section.2}
+\contentsline {section}{\numberline {3}Выполнение работы}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Анализ назначения и структуры загрузчиков}{4}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Первичный загрузчик}{4}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Вторичный загрузчик}{6}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Реализация простейшего первичного загрузчика}{7}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Алгоритм программы}{7}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Компиляция кода}{8}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Погдотовка виртуальной машины VMware}{8}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Тестирование}{8}{subsubsection.3.2.4}
+\contentsline {subsection}{\numberline {3.3}Реализация на языке C}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Реализация поиска и загрузки вторичного загрузчика}{11}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Подготовка образа}{11}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Реализация мультизагрузчика}{14}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Подготовка накопителя}{15}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Запись Ubuntu 16.04}{16}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Запись DrWeb LiveDisk 9.00}{17}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Запись мордочки}{17}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Модификация первичного загрузчика}{20}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}Тестирование}{20}{subsubsection.3.5.6}
+\contentsline {subsection}{\numberline {3.6}Первичный загрузчик ОС}{24}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Алгоритм работы}{24}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Подготовка}{24}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Тестирование}{26}{subsubsection.3.6.3}
+\contentsline {section}{Вывод}{28}{section*.30}
+\contentsline {section}{Список литературы}{29}{section*.30}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{Приложения}{30}{section*.31}

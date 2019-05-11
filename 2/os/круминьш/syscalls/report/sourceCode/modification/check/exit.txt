@@ -1,0 +1,12 @@
+psaer@ubuntu:~/Desktop/sysUtils$ sudo grep -rnw '/var/log/' -e 'exit' | tail
+[sudo] password for psaer: 
+/var/log/syslog:603:Apr 10 10:20:30 ubuntu kernel: [ 2030.094680] Modified exit system call. Code: 0
+/var/log/syslog:604:Apr 10 10:20:32 ubuntu kernel: [ 2030.207164] Modified exit system call. Code: 0
+/var/log/syslog:605:Apr 10 10:20:32 ubuntu kernel: [ 2032.802104] Modified exit system call. Code: 0
+/var/log/syslog:607:Apr 10 10:20:32 ubuntu kernel: [ 2032.809867] Modified system call from exec. File: ./exit.o
+/var/log/syslog:608:Apr 10 10:20:35 ubuntu kernel: [ 2032.810497] Modified exit system call. Code: 4096
+/var/log/syslog:613:Apr 10 10:20:35 ubuntu kernel: [ 2035.897177] Modified exit system call. Code: 0
+/var/log/syslog:614:Apr 10 10:20:36 ubuntu kernel: [ 2035.897348] Modified exit system call. Code: 0
+/var/log/syslog:617:Apr 10 10:20:36 ubuntu kernel: [ 2036.465294] Modified exit system call. Code: 0
+/var/log/syslog:618:Apr 10 10:20:43 ubuntu kernel: [ 2036.465335] Modified exit system call. Code: 0
+/var/log/auth.log:17:Apr 10 10:20:46 ubuntu sudo:    psaer : TTY=pts/4 ; PWD=/home/psaer/Desktop/sysUtils ; USER=root ; COMMAND=/bin/grep -rnw /var/log/ -e exit

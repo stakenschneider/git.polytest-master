@@ -1,0 +1,24 @@
+#define __DECLARE_TARGET_ALIAS(t)	\
+	void __attribute__((alias("khook_"#t))) khook_alias_##t(void)
+
+#define __DECLARE_TARGET_ORIGIN(t)	\
+	void notrace khook_origin_##t(void){\
+		asm volatile (			\
+			".rept 0x20\n"		\
+			".byte 0x90\n"		\
+			".endr\n"			\
+		);				\
+	}
+
+#define __DECLARE_TARGET_STRUCT(t)	\
+	khookstr_t __attribute__((unused,section(".khook"),aligned(1))) __khook_##t
+
+#define DECLARE_KHOOK(t)		\
+	__DECLARE_TARGET_ALIAS(t);		\
+	__DECLARE_TARGET_ORIGIN(t);		\
+	__DECLARE_TARGET_STRUCT(t) = {	\
+		.name = #t,			\
+		.handler = khook_alias_##t,	\
+		.origin = khook_origin_##t,	\
+		.usage = ATOMIC_INIT(0),	\
+	}

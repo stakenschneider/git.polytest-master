@@ -1,0 +1,2 @@
+psaer@ubuntu:~/Desktop/new/kmod_hooking-master$ sudo insmod hooking.ko
+psaer@ubuntu:~/Desktop/new/kmod_hooking-master$ sudo rmmod hooking 

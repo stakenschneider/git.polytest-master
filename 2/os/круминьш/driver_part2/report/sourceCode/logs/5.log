@@ -1,0 +1,12 @@
+psaer@ubuntu:/usr/src/linux-headers-4.13.0-36$ bluetoothctl
+[NEW] Controller 34:F6:4B:36:FD:43 ubuntu [default]
+[bluetooth]# version
+Custom Version 5.37
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 34:F6:4B:36:FD:43 Discovering: yes
+[NEW] Device D0:66:7B:29:49:A3 DTVBluetooth
+[DENIS] My phone is connected!
+[NEW] Device 14:F4:2A:7B:1E:D9 GT-N7100
+[bluetooth]# quit
+[DEL] Controller 34:F6:4B:36:FD:43 ubuntu [default]

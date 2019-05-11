@@ -1,0 +1,466 @@
+psaer@ubuntu:~/bluez-5.37$ ./configure 
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for C/C++ restrict keyword... __restrict
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc accepts -fPIE... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for signalfd... yes
+checking for clock_gettime in -lrt... yes
+checking for pthread_create in -lpthread... yes
+checking for dlopen in -ldl... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking linux/if_alg.h usability... yes
+checking linux/if_alg.h presence... yes
+checking for linux/if_alg.h... yes
+checking for GLIB... yes
+checking for DBUS... yes
+checking D-Bus configuration directory... /etc
+checking D-Bus system bus services dir... /usr/share/dbus-1/system-services
+checking D-Bus session bus services dir... /usr/share/dbus-1/services
+checking for UDEV... yes
+checking for udev_hwdb_new in -ludev... yes
+checking udev directory... /lib/udev
+checking for ICAL... yes
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking systemd system unit dir... /lib/systemd/system
+checking systemd user unit dir... /usr/lib/systemd/user
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/bluetoothd.8
+config.status: creating lib/bluez.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+psaer@ubuntu:~/bluez-5.37$ sudo make
+  GEN      lib/bluetooth/bluetooth.h
+  GEN      lib/bluetooth/hci.h
+  GEN      lib/bluetooth/hci_lib.h
+  GEN      lib/bluetooth/sco.h
+  GEN      lib/bluetooth/l2cap.h
+  GEN      lib/bluetooth/sdp.h
+  GEN      lib/bluetooth/sdp_lib.h
+  GEN      lib/bluetooth/rfcomm.h
+  GEN      lib/bluetooth/bnep.h
+  GEN      lib/bluetooth/cmtp.h
+  GEN      lib/bluetooth/hidp.h
+  GEN      src/builtin.h
+  GEN      obexd/src/builtin.h
+make --no-print-directory all-am
+  CC       lib/bluetooth.lo
+  CC       lib/hci.lo
+  CC       lib/sdp.lo
+  CC       lib/uuid.lo
+  CCLD     lib/libbluetooth-internal.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       gdbus/mainloop.lo
+  CC       gdbus/watch.lo
+  CC       gdbus/object.lo
+  CC       gdbus/client.lo
+  CC       gdbus/polkit.lo
+  CCLD     gdbus/libgdbus-internal.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       src/shared/queue.lo
+  CC       src/shared/util.lo
+  CC       src/shared/mgmt.lo
+  CC       src/shared/crypto.lo
+  CC       src/shared/ecc.lo
+  CC       src/shared/ringbuf.lo
+  CC       src/shared/tester.lo
+  CC       src/shared/hci.lo
+  CC       src/shared/hci-crypto.lo
+  CC       src/shared/hfp.lo
+  CC       src/shared/uhid.lo
+  CC       src/shared/pcap.lo
+  CC       src/shared/btsnoop.lo
+  CC       src/shared/ad.lo
+  CC       src/shared/att.lo
+  CC       src/shared/gatt-helpers.lo
+  CC       src/shared/gatt-client.lo
+  CC       src/shared/gatt-server.lo
+  CC       src/shared/gatt-db.lo
+  CC       src/shared/gap.lo
+  CC       src/shared/io-glib.lo
+  CC       src/shared/timeout-glib.lo
+  CCLD     src/libshared-glib.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       src/shared/io-mainloop.lo
+  CC       src/shared/timeout-mainloop.lo
+  CC       src/shared/mainloop.lo
+  CCLD     src/libshared-mainloop.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       client/main.o
+  CC       client/display.o
+  CC       client/agent.o
+  CC       client/gatt.o
+  CC       monitor/uuid.o
+  CCLD     client/bluetoothctl
+  CC       monitor/main.o
+  CC       monitor/display.o
+  CC       monitor/hcidump.o
+  CC       monitor/ellisys.o
+  CC       monitor/control.o
+  CC       monitor/packet.o
+  CC       monitor/vendor.o
+  CC       monitor/lmp.o
+  CC       monitor/crc.o
+  CC       monitor/ll.o
+  CC       monitor/l2cap.o
+  CC       monitor/sdp.o
+  CC       monitor/avctp.o
+  CC       monitor/avdtp.o
+  CC       monitor/a2dp.o
+  CC       monitor/rfcomm.o
+  CC       monitor/bnep.o
+  CC       monitor/hwdb.o
+  CC       monitor/keys.o
+  CC       monitor/analyze.o
+  CC       monitor/intel.o
+  CC       monitor/broadcom.o
+  CCLD     monitor/btmon
+  CC       tools/hciattach.o
+  CC       tools/hciattach_st.o
+  CC       tools/hciattach_ti.o
+  CC       tools/hciattach_tialt.o
+  CC       tools/hciattach_ath3k.o
+  CC       tools/hciattach_qualcomm.o
+  CC       tools/hciattach_intel.o
+  CC       tools/hciattach_bcm43xx.o
+  CCLD     tools/hciattach
+  CC       tools/hciconfig.o
+  CC       tools/csr.o
+  CCLD     tools/hciconfig
+  CC       tools/hcitool.o
+  CC       src/oui.o
+  CCLD     tools/hcitool
+  CC       tools/hcidump.o
+  CC       tools/parser/parser.o
+  CC       tools/parser/lmp.o
+  CC       tools/parser/hci.o
+  CC       tools/parser/l2cap.o
+  CC       tools/parser/amp.o
+  CC       tools/parser/smp.o
+  CC       tools/parser/att.o
+  CC       tools/parser/sdp.o
+  CC       tools/parser/rfcomm.o
+  CC       tools/parser/bnep.o
+  CC       tools/parser/cmtp.o
+  CC       tools/parser/hidp.o
+  CC       tools/parser/hcrp.o
+  CC       tools/parser/avdtp.o
+  CC       tools/parser/avctp.o
+  CC       tools/parser/avrcp.o
+  CC       tools/parser/sap.o
+  CC       tools/parser/obex.o
+  CC       tools/parser/capi.o
+  CC       tools/parser/ppp.o
+  CC       tools/parser/tcpip.o
+  CC       tools/parser/ericsson.o
+  CC       tools/parser/csr.o
+  CC       tools/parser/bpa.o
+  CCLD     tools/hcidump
+  CC       tools/rfcomm.o
+  CCLD     tools/rfcomm
+  CC       tools/rctest.o
+  CCLD     tools/rctest
+  CC       tools/l2test.o
+  CCLD     tools/l2test
+  CC       tools/l2ping.o
+  CCLD     tools/l2ping
+  CC       tools/sdptool.o
+  CC       src/sdp-xml.o
+  CCLD     tools/sdptool
+  CC       tools/ciptool.o
+  CCLD     tools/ciptool
+  CC       tools/bccmd.o
+  CC       tools/csr_hci.o
+  CC       tools/csr_usb.o
+  CC       tools/csr_h4.o
+  CC       tools/csr_3wire.o
+  CC       tools/csr_bcsp.o
+  CC       tools/ubcsp.o
+  CCLD     tools/bccmd
+  CC       tools/bluemoon.o
+  CCLD     tools/bluemoon
+  CC       tools/hex2hcd.o
+  CCLD     tools/hex2hcd
+  CC       tools/mpris-proxy.o
+  CCLD     tools/mpris-proxy
+  CC       profiles/cups/main.o
+  CC       profiles/cups/sdp.o
+  CC       profiles/cups/spp.o
+  CC       profiles/cups/hcrp.o
+  CCLD     profiles/cups/bluetooth
+  CC       plugins/bluetoothd-hostname.o
+  CC       plugins/bluetoothd-wiimote.o
+  CC       plugins/bluetoothd-autopair.o
+  CC       plugins/bluetoothd-policy.o
+  CC       profiles/audio/bluetoothd-source.o
+  CC       profiles/audio/bluetoothd-sink.o
+  CC       profiles/audio/bluetoothd-a2dp.o
+  CC       profiles/audio/bluetoothd-avdtp.o
+  CC       profiles/audio/bluetoothd-media.o
+  CC       profiles/audio/bluetoothd-transport.o
+  CC       profiles/audio/bluetoothd-control.o
+  CC       profiles/audio/bluetoothd-avctp.o
+  CC       profiles/audio/bluetoothd-avrcp.o
+  CC       profiles/audio/bluetoothd-player.o
+  CC       profiles/network/bluetoothd-manager.o
+  CC       profiles/network/bluetoothd-bnep.o
+  CC       profiles/network/bluetoothd-server.o
+  CC       profiles/network/bluetoothd-connection.o
+  CC       profiles/input/bluetoothd-manager.o
+  CC       profiles/input/bluetoothd-server.o
+  CC       profiles/input/bluetoothd-device.o
+  CC       profiles/input/bluetoothd-hog.o
+  CC       profiles/input/bluetoothd-hog-lib.o
+  CC       profiles/deviceinfo/bluetoothd-dis.o
+  CC       profiles/battery/bluetoothd-bas.o
+  CC       profiles/scanparam/bluetoothd-scpp.o
+  CC       profiles/input/bluetoothd-suspend-none.o
+  CC       profiles/gap/bluetoothd-gas.o
+  CC       profiles/scanparam/bluetoothd-scan.o
+  CC       profiles/deviceinfo/bluetoothd-deviceinfo.o
+  CC       attrib/bluetoothd-att.o
+  CC       attrib/bluetoothd-gatt.o
+  CC       attrib/bluetoothd-gattrib.o
+  CC       attrib/bluetoothd-gatt-service.o
+  CC       btio/bluetoothd-btio.o
+  CC       src/bluetoothd-main.o
+  CC       src/bluetoothd-log.o
+  CC       src/bluetoothd-backtrace.o
+  CC       src/bluetoothd-systemd.o
+  CC       src/bluetoothd-rfkill.o
+  CC       src/bluetoothd-sdpd-server.o
+  CC       src/bluetoothd-sdpd-request.o
+  CC       src/bluetoothd-sdpd-service.o
+  CC       src/bluetoothd-sdpd-database.o
+  CC       src/bluetoothd-attrib-server.o
+  CC       src/bluetoothd-gatt-database.o
+  CC       src/bluetoothd-sdp-xml.o
+  CC       src/bluetoothd-sdp-client.o
+  CC       src/bluetoothd-textfile.o
+  CC       src/bluetoothd-uuid-helper.o
+  CC       src/bluetoothd-plugin.o
+  CC       src/bluetoothd-storage.o
+  CC       src/bluetoothd-advertising.o
+  CC       src/bluetoothd-agent.o
+  CC       src/bluetoothd-error.o
+  CC       src/bluetoothd-adapter.o
+  CC       src/bluetoothd-profile.o
+  CC       src/bluetoothd-service.o
+  CC       src/bluetoothd-gatt-client.o
+  CC       src/bluetoothd-device.o
+  CC       src/bluetoothd-dbus-common.o
+  CC       src/bluetoothd-eir.o
+  GEN      src/bluetooth.service
+  CCLD     src/bluetoothd
+  CC       btio/obexd-btio.o
+  CC       gobex/obexd-gobex.o
+  CC       gobex/obexd-gobex-defs.o
+  CC       gobex/obexd-gobex-packet.o
+  CC       gobex/obexd-gobex-header.o
+  CC       gobex/obexd-gobex-transfer.o
+  CC       gobex/obexd-gobex-apparam.o
+  CC       obexd/plugins/obexd-filesystem.o
+  CC       obexd/plugins/obexd-bluetooth.o
+  CC       obexd/plugins/obexd-opp.o
+  CC       obexd/plugins/obexd-ftp.o
+  CC       obexd/plugins/obexd-irmc.o
+  CC       obexd/plugins/obexd-pbap.o
+  CC       obexd/plugins/obexd-vcard.o
+  CC       obexd/plugins/obexd-phonebook-dummy.o
+  CC       obexd/plugins/obexd-mas.o
+  CC       obexd/plugins/obexd-messages-dummy.o
+  CC       obexd/client/obexd-mns.o
+  CC       obexd/src/obexd-main.o
+  CC       obexd/src/obexd-plugin.o
+  CC       obexd/src/obexd-log.o
+  CC       obexd/src/obexd-manager.o
+  CC       obexd/src/obexd-obex.o
+  CC       obexd/src/obexd-mimetype.o
+  CC       obexd/src/obexd-service.o
+  CC       obexd/src/obexd-transport.o
+  CC       obexd/src/obexd-server.o
+  CC       obexd/client/obexd-manager.o
+  CC       obexd/client/obexd-session.o
+  CC       obexd/client/obexd-bluetooth.o
+  CC       obexd/client/obexd-sync.o
+  CC       obexd/client/obexd-pbap.o
+  CC       obexd/client/obexd-ftp.o
+  CC       obexd/client/obexd-opp.o
+  CC       obexd/client/obexd-map.o
+  CC       obexd/client/obexd-map-event.o
+  CC       obexd/client/obexd-transfer.o
+  CC       obexd/client/obexd-transport.o
+  CC       obexd/client/obexd-dbus.o
+  CC       obexd/client/obexd-driver.o
+  CCLD     obexd/src/obexd
+  CC       attrib/gatttool.o
+  CC       attrib/att.o
+  CC       attrib/gatt.o
+  CC       attrib/gattrib.o
+  CC       btio/btio.o
+  CC       attrib/interactive.o
+  CC       attrib/utils.o
+  CC       src/log.o
+  CCLD     attrib/gatttool
+  CC       tools/btmgmt.o
+  CC       src/uuid-helper.o
+  CCLD     tools/btmgmt
+  CC       gobex/gobex.o
+  CC       gobex/gobex-defs.o
+  CC       gobex/gobex-packet.o
+  CC       gobex/gobex-header.o
+  CC       gobex/gobex-transfer.o
+  CC       gobex/gobex-apparam.o
+  CC       tools/obex-client-tool.o
+  CCLD     tools/obex-client-tool
+  CC       tools/obex-server-tool.o
+  CCLD     tools/obex-server-tool
+  CC       tools/bluetooth-player.o
+  CCLD     tools/bluetooth-player
+  CC       tools/obexctl.o
+  CCLD     tools/obexctl
+  CC       tools/hid2hci.o
+  CCLD     tools/hid2hci
+  GEN      tools/97-hid2hci.rules
+  GEN      obexd/src/obex.service
+psaer@ubuntu:~/bluez-5.37$ sudo make install
+make --no-print-directory install-am
+ /bin/mkdir -p '/usr/local/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c client/bluetoothctl monitor/btmon tools/hciattach tools/hciconfig tools/hcitool tools/hcidump tools/rfcomm tools/rctest tools/l2test tools/l2ping tools/sdptool tools/ciptool tools/bccmd tools/bluemoon tools/hex2hcd tools/mpris-proxy '/usr/local/bin'
+libtool: install: /usr/bin/install -c client/bluetoothctl /usr/local/bin/bluetoothctl
+libtool: install: /usr/bin/install -c monitor/btmon /usr/local/bin/btmon
+libtool: install: /usr/bin/install -c tools/hciattach /usr/local/bin/hciattach
+libtool: install: /usr/bin/install -c tools/hciconfig /usr/local/bin/hciconfig
+libtool: install: /usr/bin/install -c tools/hcitool /usr/local/bin/hcitool
+libtool: install: /usr/bin/install -c tools/hcidump /usr/local/bin/hcidump
+libtool: install: /usr/bin/install -c tools/rfcomm /usr/local/bin/rfcomm
+libtool: install: /usr/bin/install -c tools/rctest /usr/local/bin/rctest
+libtool: install: /usr/bin/install -c tools/l2test /usr/local/bin/l2test
+libtool: install: /usr/bin/install -c tools/l2ping /usr/local/bin/l2ping
+libtool: install: /usr/bin/install -c tools/sdptool /usr/local/bin/sdptool
+libtool: install: /usr/bin/install -c tools/ciptool /usr/local/bin/ciptool
+libtool: install: /usr/bin/install -c tools/bccmd /usr/local/bin/bccmd
+libtool: install: /usr/bin/install -c tools/bluemoon /usr/local/bin/bluemoon
+libtool: install: /usr/bin/install -c tools/hex2hcd /usr/local/bin/hex2hcd
+libtool: install: /usr/bin/install -c tools/mpris-proxy /usr/local/bin/mpris-proxy
+ /bin/mkdir -p '/usr/local/libexec/bluetooth'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c src/bluetoothd obexd/src/obexd '/usr/local/libexec/bluetooth'
+libtool: install: /usr/bin/install -c src/bluetoothd /usr/local/libexec/bluetooth/bluetoothd
+libtool: install: /usr/bin/install -c obexd/src/obexd /usr/local/libexec/bluetooth/obexd
+ /bin/mkdir -p '/usr/local/lib/cups/backend'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c profiles/cups/bluetooth '/usr/local/lib/cups/backend'
+libtool: install: /usr/bin/install -c profiles/cups/bluetooth /usr/local/lib/cups/backend/bluetooth
+ /bin/mkdir -p '/etc/dbus-1/system.d'
+ /usr/bin/install -c -m 644 src/bluetooth.conf '/etc/dbus-1/system.d'
+ /bin/mkdir -p '/usr/share/dbus-1/services'
+ /usr/bin/install -c -m 644 obexd/src/org.bluez.obex.service '/usr/share/dbus-1/services'
+ /bin/mkdir -p '/usr/share/dbus-1/system-services'
+ /usr/bin/install -c -m 644 src/org.bluez.service '/usr/share/dbus-1/system-services'
+ /bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 tools/hciattach.1 tools/hciconfig.1 tools/hcitool.1 tools/hcidump.1 tools/rfcomm.1 tools/rctest.1 tools/l2ping.1 tools/sdptool.1 tools/ciptool.1 tools/bccmd.1 tools/hid2hci.1 '/usr/local/share/man/man1'
+ /bin/mkdir -p '/usr/local/share/man/man8'
+ /usr/bin/install -c -m 644 src/bluetoothd.8 '/usr/local/share/man/man8'
+ /bin/mkdir -p '/lib/udev/rules.d'
+ /usr/bin/install -c -m 644 tools/97-hid2hci.rules '/lib/udev/rules.d'
+ /bin/mkdir -p '/lib/systemd/system'
+ /usr/bin/install -c -m 644 src/bluetooth.service '/lib/systemd/system'
+ /bin/mkdir -p '/usr/lib/systemd/user'
+ /usr/bin/install -c -m 644 obexd/src/obex.service '/usr/lib/systemd/user'
+ /bin/mkdir -p '/lib/udev'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c tools/hid2hci '/lib/udev'
+libtool: install: /usr/bin/install -c tools/hid2hci /lib/udev/hid2hci

@@ -1,0 +1,109 @@
+psaer@ubuntu:~/Desktop/execve$ strace ./sys_execve.o Wolrd!
+execve("./sys_execve.o", ["./sys_execve.o", "Wolrd!"], [/* 38 vars */]) = 0
+brk(0)                                  = 0x1663000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f225e265000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=52707, ...}) = 0
+mmap(NULL, 52707, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f225e258000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\355\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1568136, ...}) = 0
+mmap(NULL, 3676200, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f225dcc6000
+mprotect(0x7f225de3e000, 2097152, PROT_NONE) = 0
+mmap(0x7f225e03e000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x178000) = 0x7f225e03e000
+mmap(0x7f225e043000, 18472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f225e043000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f225e257000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f225e256000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f225e255000
+arch_prctl(ARCH_SET_FS, 0x7f225e256700) = 0
+mprotect(0x7f225e03e000, 16384, PROT_READ) = 0
+mprotect(0x600000, 4096, PROT_READ)     = 0
+mprotect(0x7f225e267000, 4096, PROT_READ) = 0
+munmap(0x7f225e258000, 52707)           = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f225e264000
+write(1, "Hello Wolrd!\n", 13Hello Wolrd!
+)          = 13
+write(1, "0: ORBIT_SOCKETDIR=/tmp/orbit-ps"..., 360: ORBIT_SOCKETDIR=/tmp/orbit-psaer
+) = 36
+write(1, "1: SSH_AGENT_PID=1753\n", 221: SSH_AGENT_PID=1753
+) = 22
+write(1, "2: TERM=xterm\n", 142: TERM=xterm
+)         = 14
+write(1, "3: SHELL=/bin/bash\n", 193: SHELL=/bin/bash
+)    = 19
+write(1, "4: XDG_SESSION_COOKIE=e13f892485"..., 844: XDG_SESSION_COOKIE=e13f89248558a0da5d2302125ab968de-1523087918.974574-1830927549
+) = 84
+write(1, "5: WINDOWID=62923959\n", 215: WINDOWID=62923959
+)  = 21
+write(1, "6: GNOME_KEYRING_CONTROL=/tmp/ke"..., 456: GNOME_KEYRING_CONTROL=/tmp/keyring-LEXea0
+) = 45
+write(1, "7: GTK_MODULES=canberra-gtk-modu"..., 357: GTK_MODULES=canberra-gtk-module
+) = 35
+write(1, "8: USER=psaer\n", 148: USER=psaer
+)         = 14
+write(1, "9: LS_COLORS=rs=0:di=01;34:ln=01"..., 10249: LS_COLORS=rs=0:di=01;34:ln=01;36:hl=44;37:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=0) = 1024
+write(1, "0;36:*.flac=00;36:*.mid=00;36:*."..., 1640;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+) = 164
+write(1, "10: SSH_AUTH_SOCK=/tmp/keyring-L"..., 4210: SSH_AUTH_SOCK=/tmp/keyring-LEXea0/ssh
+) = 42
+write(1, "11: DEFAULTS_PATH=/usr/share/gco"..., 5411: DEFAULTS_PATH=/usr/share/gconf/gnome.default.path
+) = 54
+write(1, "12: SESSION_MANAGER=local/ubuntu"..., 8612: SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1719,unix/ubuntu:/tmp/.ICE-unix/1719
+) = 86
+write(1, "13: USERNAME=psaer\n", 1913: USERNAME=psaer
+)    = 19
+write(1, "14: XDG_CONFIG_DIRS=/etc/xdg/xdg"..., 4814: XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome:/etc/xdg
+) = 48
+write(1, "15: DESKTOP_SESSION=gnome\n", 2615: DESKTOP_SESSION=gnome
+) = 26
+write(1, "16: PATH=/usr/local/sbin:/usr/lo"..., 8116: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+) = 81
+write(1, "17: PWD=/home/psaer/Desktop/exec"..., 3517: PWD=/home/psaer/Desktop/execve
+) = 35
+write(1, "18: GDM_KEYBOARD_LAYOUT=us\n", 2718: GDM_KEYBOARD_LAYOUT=us
+) = 27
+write(1, "19: LANG=en_US.utf8\n", 2019: LANG=en_US.utf8
+)   = 20
+write(1, "20: GNOME_KEYRING_PID=1701\n", 2720: GNOME_KEYRING_PID=1701
+) = 27
+write(1, "21: MANDATORY_PATH=/usr/share/gc"..., 5721: MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path
+) = 57
+write(1, "22: GDM_LANG=en_US.utf8\n", 2422: GDM_LANG=en_US.utf8
+) = 24
+write(1, "23: GDMSESSION=gnome\n", 2123: GDMSESSION=gnome
+)  = 21
+write(1, "24: SPEECHD_PORT=7560\n", 2224: SPEECHD_PORT=7560
+) = 22
+write(1, "25: SHLVL=1\n", 1225: SHLVL=1
+)           = 12
+write(1, "26: HOME=/home/psaer\n", 2126: HOME=/home/psaer
+)  = 21
+write(1, "27: GNOME_DESKTOP_SESSION_ID=thi"..., 4827: GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+) = 48
+write(1, "28: LOGNAME=psaer\n", 1828: LOGNAME=psaer
+)     = 18
+write(1, "29: XDG_DATA_DIRS=/usr/share/gno"..., 6529: XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
+) = 65
+write(1, "30: DBUS_SESSION_BUS_ADDRESS=uni"..., 10230: DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-OvT4uv7def,guid=fedeb0a6953db91cfe6bc05d5ac87a2f
+) = 102
+write(1, "31: LESSOPEN=| /usr/bin/lesspipe"..., 3631: LESSOPEN=| /usr/bin/lesspipe %s
+) = 36
+write(1, "32: DISPLAY=:0.0\n", 1732: DISPLAY=:0.0
+)      = 17
+write(1, "33: LESSCLOSE=/usr/bin/lesspipe "..., 3833: LESSCLOSE=/usr/bin/lesspipe %s %s
+) = 38
+write(1, "34: XAUTHORITY=/var/run/gdm/auth"..., 5934: XAUTHORITY=/var/run/gdm/auth-for-psaer-VQdNnf/database
+) = 59
+write(1, "35: COLORTERM=gnome-terminal\n", 2935: COLORTERM=gnome-terminal
+) = 29
+write(1, "36: OLDPWD=/home/psaer/Desktop\n", 3136: OLDPWD=/home/psaer/Desktop
+) = 31
+write(1, "37: _=/usr/bin/strace\n", 2237: _=/usr/bin/strace
+) = 22
+exit_group(0)                           = ?

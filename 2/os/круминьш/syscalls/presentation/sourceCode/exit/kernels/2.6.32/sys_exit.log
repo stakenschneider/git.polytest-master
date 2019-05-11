@@ -1,0 +1,2 @@
+psaer@ubuntu:~/Desktop/exit$ ./sys_exit.o
+Invoking 'exit()' system call

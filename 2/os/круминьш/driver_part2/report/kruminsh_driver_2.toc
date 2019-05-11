@@ -1,0 +1,21 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Цель работы}{3}{section.1}
+\contentsline {section}{\numberline {2}Сведения о системе}{3}{section.2}
+\contentsline {section}{\numberline {3}Выполнение работы}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Обзор BlueZ}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Обзор bluetoothctl}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Модификация прикладного уровня - bluetoothctl}{7}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Модификация версии}{8}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Модификация по определению личного телефона}{9}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}Сборка модифицированного прикладного уровня}{14}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Тестирование}{14}{subsection.3.5}
+\contentsline {section}{Вывод}{16}{lstnumber.15.12}
+\contentsline {section}{Список литературы}{17}{section*.4}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}

@@ -1,0 +1,12 @@
+May  9 03:15:33 ubuntu kernel: [ 5251.389870] Try to open character device /dev/chardev c 250 0'.
+May  9 03:15:33 ubuntu kernel: [ 5251.389884] Try to write (ffff8800174b12c0, hello
+May  9 03:15:33 ubuntu kernel: [ 5251.389891] Try to close character device /dev/chardev c 250 0'.
+May  9 03:15:40 ubuntu kernel: [ 5258.156384] Try to open character device /dev/chardev c 250 0'.
+May  9 03:15:40 ubuntu kernel: [ 5258.156398] Try to read character device /dev/chardev c 250 0'.
+May  9 03:15:40 ubuntu kernel: [ 5258.156400] Read 34 bytes, 32734 left.
+May  9 03:15:40 ubuntu kernel: [ 5258.156405] Try to read character device /dev/chardev c 250 0'.
+May  9 03:15:40 ubuntu kernel: [ 5258.156406] Try to close character device /dev/chardev c 250 0'.
+May  9 03:16:05 ubuntu kernel: [ 5283.911003] Try to open character device /dev/chardev c 250 0'.
+May  9 03:16:05 ubuntu kernel: [ 5283.949311] Try to write (ffff88003c70f440, hello
+May  9 03:16:05 ubuntu kernel: [ 5283.949312] , 6).
+May  9 03:16:05 ubuntu kernel: [ 5283.949400] Try to close character device /dev/chardev c 250 0'.

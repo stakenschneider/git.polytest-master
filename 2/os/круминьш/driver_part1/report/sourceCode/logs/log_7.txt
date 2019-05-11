@@ -1,0 +1,3 @@
+psaer@ubuntu:~/Desktop/driver_1$ echo 'hello' > /dev/chardev
+psaer@ubuntu:~/Desktop/driver_1$ cat /dev/chardev
+I already told you 1 times HELLO!

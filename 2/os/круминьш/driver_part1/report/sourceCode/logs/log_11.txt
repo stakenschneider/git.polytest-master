@@ -1,0 +1,4 @@
+psaer@ubuntu:~/Desktop/driver_1$ sudo rmmod chardev.ko
+[sudo] password for psaer: 
+psaer@ubuntu:~/Desktop/driver_1$ tail /var/log/syslog --lines=1
+May  9 03:58:52 ubuntu kernel: [ 7848.985196] Removing character device /dev/chardev c 250 0'.

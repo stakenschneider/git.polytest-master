@@ -1,0 +1,9 @@
+psaer@ubuntu:~/Desktop/syscalls/fork/hook/helloWorld$ make
+make -C /lib/modules/4.13.0-38-generic/build/ M=/home/psaer/Desktop/syscalls/fork/hook/helloWorld modules
+make[1]: Entering directory '/usr/src/linux-headers-4.13.0-38-generic'
+  CC [M]  /home/psaer/Desktop/syscalls/fork/hook/helloWorld/hello.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/psaer/Desktop/syscalls/fork/hook/helloWorld/hello.mod.o
+  LD [M]  /home/psaer/Desktop/syscalls/fork/hook/helloWorld/hello.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.13.0-38-generic'

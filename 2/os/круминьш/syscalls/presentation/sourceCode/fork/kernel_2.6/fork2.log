@@ -1,0 +1,9 @@
+psaer@ubuntu:~/Desktop/fork$ gcc fork2.c -o fork2.o
+fork2.c: In function ‘main’:
+fork2.c:6: warning: incompatible implicit declaration of built-in function ‘printf’
+fork2.c:9: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘long int’
+fork2.c:11: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘long int’
+psaer@ubuntu:~/Desktop/fork$ ./fork2.o
+Invoking 'fork()' system call
+I'm parent process, my pid is 2356
+psaer@ubuntu:~/Desktop/fork$ I'm child process, my pid is 0

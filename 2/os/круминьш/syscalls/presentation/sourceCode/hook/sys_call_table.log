@@ -1,0 +1,3 @@
+psaer@ubuntu:~$ sudo grep sys_call_table /boot/System.map-$(uname -r)
+ffffffff81e00220 R sys_call_table
+ffffffff81e015e0 R ia32_sys_call_table

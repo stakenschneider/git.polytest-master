@@ -1,0 +1,11 @@
+psaer@ubuntu:~/Desktop/execve$ tail /var/log/kern.log
+Apr  8 04:31:54 ubuntu kernel: [45114.746314] [hooking] Symbol "sys_execve" found @ ffffffff81011570
+Apr  8 04:33:05 ubuntu kernel: [45117.704677] System call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hookedSystem call for execve hooked
+Apr  8 04:33:05 ubuntu kernel: [45185.028182] [hooking] Symbol "module_free" found @ ffffffff810358c0
+Apr  8 04:33:05 ubuntu kernel: [45185.028483] [hooking] Symbol "module_alloc" found @ ffffffff810358e0
+Apr  8 04:33:05 ubuntu kernel: [45185.030155] [hooking] Symbol "sort_extable" found @ ffffffff812b1b50
+Apr  8 04:33:05 ubuntu kernel: [45185.030222] [hooking] Symbol "sys_execve" found @ ffffffff81011570
+Apr  8 04:33:09 ubuntu kernel: [45189.628750] System call for execve hooked
+Apr  8 04:33:09 ubuntu kernel: [45189.628753] Executed file: /usr/bin/tail
+Apr  8 04:33:17 ubuntu kernel: [45196.874239] System call for execve hooked
+Apr  8 04:33:17 ubuntu kernel: [45196.874244] Executed file: ./sys_execve.o

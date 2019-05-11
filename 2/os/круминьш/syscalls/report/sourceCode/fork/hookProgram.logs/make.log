@@ -1,0 +1,15 @@
+psaer@ubuntu:~/Desktop/forkHook$ make
+make -C /lib/modules/2.6.32-21-generic/build M=/home/psaer/Desktop/forkHook
+make[1]: Entering directory `/usr/src/linux-headers-2.6.32-21-generic'
+  CC      /home/psaer/Desktop/forkHook/libudis86/decode.o
+  CC      /home/psaer/Desktop/forkHook/libudis86/itab.o
+  CC      /home/psaer/Desktop/forkHook/libudis86/udis86.o
+  LD      /home/psaer/Desktop/forkHook/libudis86/built-in.o
+  LD      /home/psaer/Desktop/forkHook/built-in.o
+  CC [M]  /home/psaer/Desktop/forkHook/module-init.o
+  LD [M]  /home/psaer/Desktop/forkHook/hooking.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/psaer/Desktop/forkHook/hooking.mod.o
+  LD [M]  /home/psaer/Desktop/forkHook/hooking.ko
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.32-21-generic'

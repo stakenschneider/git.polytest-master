@@ -1,0 +1,21 @@
+psaer@ubuntu:~/Desktop/syscalls/fork$ ./clone.o 
+child pid : 57385, a = 0
+child pid : 57385, a = 1
+child pid : 57385, a = 2
+child pid : 57385, a = 3
+child pid : 57385, a = 4
+child pid : 57385, a = 5
+child pid : 57385, a = 6
+child pid : 57385, a = 7
+child pid : 57385, a = 8
+child pid : 57385, a = 9
+parent pid : 57384, a = 0
+parent pid : 57384, a = 1
+parent pid : 57384, a = 2
+parent pid : 57384, a = 3
+parent pid : 57384, a = 4
+parent pid : 57384, a = 5
+parent pid : 57384, a = 6
+parent pid : 57384, a = 7
+parent pid : 57384, a = 8
+parent pid : 57384, a = 9

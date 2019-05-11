@@ -1,0 +1,11 @@
+psaer@ubuntu:~/Desktop/syscalls/fork/hook/helloWorld$ tail -f /var/log/kern.log
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   plen 24 (255.255.255.0)
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   gateway 192.168.32.2
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   server identifier 192.168.32.254
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   lease time 1800
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   nameserver '192.168.32.2'
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9248]   domain name 'localdomain'
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9249]   wins '192.168.32.2'
+Apr  6 02:23:52 ubuntu NetworkManager[894]: <info>  [1523006632.9249] dhcp4 (ens33): state changed bound -> bound
+Apr  6 02:34:59 ubuntu kernel: [33889.125736] Hello World!
+Apr  6 02:35:21 ubuntu kernel: [33910.750370] Module unloaded. Bye!

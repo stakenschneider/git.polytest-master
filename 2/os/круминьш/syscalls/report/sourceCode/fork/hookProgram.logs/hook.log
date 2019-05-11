@@ -1,0 +1,15 @@
+psaer@ubuntu:~/Desktop$ ./fork2.o
+Invoking 'fork()' system call
+I'm parent process, my pid is 4380
+psaer@ubuntu:~/Desktop$ I'm child process, my pid is 0
+psaer@ubuntu:~/Desktop$ tail /var/log/kern.log
+Apr  7 11:58:34 ubuntu kernel: [27282.741397] [hooking] khook_inode_permission(ffff88003e732fc0,00000024) [rmmod] = 0
+Apr  7 11:58:34 ubuntu kernel: [27282.741413] [hooking] khook_inode_permission(ffff88003e735b40,00000024) [rmmod]
+Apr  7 11:58:34 ubuntu kernel: [27282.741414] [hooking] khook_inode_permission(ffff88003e735b40,00000024) [rmmod] = 0
+Apr  7 11:58:34 ubuntu kernel: [27282.741633] [hooking] khook_inode_permission(ffff88003e7b11b0,00000024) [rmmod]
+Apr  7 11:58:34 ubuntu kernel: [27282.741635] [hooking] khook_inode_permission(ffff88003e7b11b0,00000024) [rmmod] = 0
+Apr  7 11:59:04 ubuntu kernel: [27312.501337] [hooking] Symbol "module_free" found @ ffffffff810358c0
+Apr  7 11:59:04 ubuntu kernel: [27312.501520] [hooking] Symbol "module_alloc" found @ ffffffff810358e0
+Apr  7 11:59:04 ubuntu kernel: [27312.503292] [hooking] Symbol "sort_extable" found @ ffffffff812b1b50
+Apr  7 11:59:04 ubuntu kernel: [27312.503559] [hooking] Symbol "sys_fork" found @ ffffffff8101afa0
+Apr  7 11:59:37 ubuntu kernel: [27346.294393] System call for fork hooked

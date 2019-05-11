@@ -1,0 +1,4 @@
+psaer@ubuntu:~/Desktop/sysUtils$ ./fork.o 
+Invoking 'fork()' system call
+I'm parent process, my pid is 2470
+I'm child process, my pid is 0

@@ -1,0 +1,8 @@
+inode_permission:
+   0xffffffff811c4530 <+0>:	nopl   0x0(%rax,%rax,1)
+   0xffffffff811c4535 <+5>:	push   %rbp
+   0xffffffff811c4536 <+6>:	test   $0x2,%sil
+   0xffffffff811c453a <+10>:	mov    0x28(%rdi),%rax
+   0xffffffff811c453e <+14>:	mov    %rsp,%rbp
+   0xffffffff811c4541 <+17>:	jne    0xffffffff811c454a <inode_permission+26>
+   0xffffffff811c4543 <+19>:	callq  0xffffffff811c4470 <__inode_permission>

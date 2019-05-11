@@ -1,0 +1,1 @@
+cmd_/home/psaer/Desktop/new/kmod_hooking-master/hooking.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-2.6.32-21-generic/scripts/module-common.lds --build-id -o /home/psaer/Desktop/new/kmod_hooking-master/hooking.ko /home/psaer/Desktop/new/kmod_hooking-master/hooking.o /home/psaer/Desktop/new/kmod_hooking-master/hooking.mod.o

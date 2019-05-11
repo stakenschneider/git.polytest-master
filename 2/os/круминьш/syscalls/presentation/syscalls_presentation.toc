@@ -1,0 +1,8 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Перехват системных вызовов}{3}{0}{1}
+\beamer@sectionintoc {2}{Системная функция fork}{7}{0}{2}
+\beamer@sectionintoc {3}{Анализ glibc}{13}{0}{3}
+\beamer@sectionintoc {4}{Системная функция execve}{28}{0}{4}
+\beamer@sectionintoc {5}{Системная функция exit}{40}{0}{5}
+\beamer@sectionintoc {6}{Модификация системных вызовов}{51}{0}{6}
+\beamer@sectionintoc {7}{Перекомпиляция ядра}{55}{0}{7}

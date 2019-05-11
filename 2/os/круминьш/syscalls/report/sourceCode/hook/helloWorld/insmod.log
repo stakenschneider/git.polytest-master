@@ -1,0 +1,71 @@
+psaer@ubuntu:~/Desktop/syscalls/fork/hook/helloWorld$ sudo insmod hello.ko 
+[sudo] password for psaer: 
+psaer@ubuntu:~/Desktop/syscalls/fork/hook/helloWorld$ lsmod
+Module                  Size  Used by
+hello                  16384  0
+iptable_filter         16384  0
+ip_tables              24576  1 iptable_filter
+x_tables               40960  2 ip_tables,iptable_filter
+vmw_vsock_vmci_transport    28672  2
+vsock                  36864  3 vmw_vsock_vmci_transport
+vmw_balloon            20480  0
+coretemp               16384  0
+snd_ens1371            28672  2
+crct10dif_pclmul       16384  0
+snd_ac97_codec        131072  1 snd_ens1371
+crc32_pclmul           16384  0
+gameport               16384  1 snd_ens1371
+ac97_bus               16384  1 snd_ac97_codec
+ghash_clmulni_intel    16384  0
+snd_pcm                98304  2 snd_ac97_codec,snd_ens1371
+pcbc                   16384  0
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            32768  2 snd_seq_midi,snd_ens1371
+aesni_intel           188416  0
+aes_x86_64             20480  1 aesni_intel
+snd_seq                65536  2 snd_seq_midi_event,snd_seq_midi
+snd_seq_device         16384  3 snd_seq,snd_rawmidi,snd_seq_midi
+snd_timer              32768  2 snd_seq,snd_pcm
+crypto_simd            16384  1 aesni_intel
+snd                    81920  11 snd_seq,snd_ac97_codec,snd_timer,snd_rawmidi,snd_ens1371,snd_seq_device,snd_pcm
+glue_helper            16384  1 aesni_intel
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+input_leds             16384  0
+joydev                 20480  0
+intel_rapl_perf        16384  0
+serio_raw              16384  0
+soundcore              16384  1 snd
+nfit                   53248  0
+shpchp                 36864  0
+i2c_piix4              24576  0
+vmw_vmci               69632  2 vmw_balloon,vmw_vsock_vmci_transport
+mac_hid                16384  0
+binfmt_misc            20480  1
+parport_pc             32768  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 lp,parport_pc,ppdev
+autofs4                40960  2
+vmw_pvscsi             24576  0
+vmxnet3                57344  0
+hid_generic            16384  0
+usbhid                 49152  0
+hid                   118784  2 hid_generic,usbhid
+vmwgfx                258048  3
+ttm                    94208  1 vmwgfx
+psmouse               147456  0
+mptspi                 24576  2
+mptscsih               40960  1 mptspi
+mptbase               102400  2 mptscsih,mptspi
+drm_kms_helper        167936  1 vmwgfx
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+ahci                   36864  0
+libahci                32768  1 ahci
+drm                   360448  6 vmwgfx,ttm,drm_kms_helper
+e1000                 143360  0
+scsi_transport_spi     32768  1 mptspi
+pata_acpi              16384  0

@@ -1,0 +1,1 @@
+sudo apt-get install build-essential gcc libncurses5-dev libssl-dev

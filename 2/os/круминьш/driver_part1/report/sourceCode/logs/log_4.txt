@@ -1,0 +1,2 @@
+psaer@ubuntu:~/Desktop/driver_1$ lsmod |grep chardev
+chardev                 3175  0 

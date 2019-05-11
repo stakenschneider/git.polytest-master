@@ -1,0 +1,3 @@
+#include <linux/stop_machine.h>
+
+int stop_machine(int (*fn)(void *), void *data, const struct cpumask *cpus)

@@ -1,0 +1,51 @@
+psaer@ubuntu:~/Desktop/syscalls/fork$ strace ./fork.o 
+execve("./fork.o", ["./fork.o"], [/* 67 vars */]) = 0
+brk(NULL)                               = 0x1c9c000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=90273, ...}) = 0
+mmap(NULL, 90273, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f7ad124b000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f7ad124a000
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f7ad0c73000
+mprotect(0x7f7ad0e33000, 2097152, PROT_NONE) = 0
+mmap(0x7f7ad1033000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f7ad1033000
+mmap(0x7f7ad1039000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f7ad1039000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f7ad1249000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f7ad1248000
+arch_prctl(ARCH_SET_FS, 0x7f7ad1249700) = 0
+mprotect(0x7f7ad1033000, 16384, PROT_READ) = 0
+mprotect(0x600000, 4096, PROT_READ)     = 0
+mprotect(0x7f7ad1262000, 4096, PROT_READ) = 0
+munmap(0x7f7ad124b000, 90273)           = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f7ad12499d0) = 58333
+ CHILD: Это процесс потомок!
+fstat(1,  CHILD: Мой PID 58333
+ CHILD: PID моего родителя 58332
+ CHILD: Выход!
+{st_mode=S_IFCHR|0620, st_rdev=makedev(136, 18), ...}) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=58333, si_uid=1000, si_status=208, si_utime=0, si_stime=0} ---
+brk(NULL)                               = 0x1c9c000
+brk(0x1cbd000)                          = 0x1cbd000
+write(1, "PARENT: \320\255\321\202\320\276 \320\277\321\200\320\276\321\206\320\265\321\201\321\201 \321\200"..., 48PARENT: Это процесс родитель!
+) = 48
+getpid()                                = 58332
+write(1, "PARENT: \320\234\320\276\320\271 PID 58332\n", 25PARENT: Мой PID 58332
+) = 25
+write(1, "PARENT: PID \320\274\320\276\320\265\320\263\320\276 \320\277\320\276\321\202\320\276\320"..., 44PARENT: PID моего потомка 58333
+) = 44
+write(1, "PARENT: \320\257 \320\266\320\264\321\203, \320\277\320\276\320\272\320\260 \320\277\320\276"..., 73PARENT: Я жду, пока потомок не вызовет exit()...
+) = 73
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 208}], 0, NULL) = 58333
+write(1, "PARENT: \320\232\320\276\320\264 \320\262\320\276\320\267\320\262\321\200\320\260\321\202\320\260 "..., 51PARENT: Код возврата потомка:208
+) = 51
+write(1, "PARENT: \320\222\321\213\321\205\320\276\320\264!\n", 20PARENT: Выход!
+) = 20
+exit_group(0)                           = ?
++++ exited with 0 +++

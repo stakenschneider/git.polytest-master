@@ -1,0 +1,2 @@
+psaer@ubuntu:~/Desktop/driver_1$ sudo rm /dev/chardev
+psaer@ubuntu:~/Desktop/driver_1$ ls /dev | grep chardev

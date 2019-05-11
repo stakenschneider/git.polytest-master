@@ -1,0 +1,4 @@
+psaer@ubuntu:~/Desktop/syscalls/fork$ ./fork2.o 
+Invoking 'fork()' system call
+I'm parent process, my pid is 7714
+I'm child process, my pid is 0

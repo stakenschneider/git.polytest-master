@@ -1,0 +1,10 @@
+psaer@ubuntu:~/Desktop/exit$ tail /var/log/kern.log
+Apr  8 04:33:30 ubuntu kernel: [45210.466832] Executed file: /usr/bin/sudo
+Apr  8 04:33:30 ubuntu kernel: [45210.470229] System call for execve hooked
+Apr  8 04:33:30 ubuntu kernel: [45210.470232] Executed file: /sbin/rmmod
+Apr  8 04:55:43 ubuntu kernel: [46542.395861] [0]: VMCI: Updating context from (ID=0xfe596972) to (ID=0xfe596972) on event (type=0).
+Apr  8 06:24:51 ubuntu kernel: [51525.368101] [hooking] Symbol "module_free" found @ ffffffff810358c0
+Apr  8 06:24:51 ubuntu kernel: [51525.368376] [hooking] Symbol "module_alloc" found @ ffffffff810358e0
+Apr  8 06:24:51 ubuntu kernel: [51525.370529] [hooking] Symbol "sort_extable" found @ ffffffff812b1b50
+Apr  8 06:24:51 ubuntu kernel: [51525.371212] [hooking] Symbol "sys_exit" found @ ffffffff8106b6d0
+Apr  8 06:24:54 ubuntu kernel: [51528.082697] System call for exit hooked

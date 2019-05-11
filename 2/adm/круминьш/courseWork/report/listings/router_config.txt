@@ -1,0 +1,11 @@
+Router> enable
+Router# conf terminal
+
+Router(config)#access-list 101 permit ip any 192.168.20.0 0.0.0.255
+Router(config)#access-list 101 permit ip 192.168.20.0 0.0.0.255 any
+/*Выход из настройки нажатием CTRL + Z*/
+Router(config)#^Z
+Router#sh access-list
+Extended IP access list 101
+    10 permit ip any 192.168.20.0 0.0.0.255
+    20 permit ip 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255

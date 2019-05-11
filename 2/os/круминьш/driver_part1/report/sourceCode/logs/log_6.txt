@@ -1,0 +1,3 @@
+psaer@ubuntu:~/Desktop/driver_1$ sudo chmod 666 /dev/chardev
+psaer@ubuntu:~/Desktop/driver_1$ ls -l /dev/chardev
+crw-rw-rw- 1 root root 250, 0 2018-05-09 02:40 /dev/chardev

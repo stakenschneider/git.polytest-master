@@ -1,0 +1,36 @@
+strace ./fork2.o
+execve("./fork2.o", ["./fork2.o"], [/* 38 vars */]) = 0
+brk(0)                                  = 0x25d2000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3dd82fb000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=52707, ...}) = 0
+mmap(NULL, 52707, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3dd82ee000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\355\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1568136, ...}) = 0
+mmap(NULL, 3676200, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3dd7d5c000
+mprotect(0x7f3dd7ed4000, 2097152, PROT_NONE) = 0
+mmap(0x7f3dd80d4000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x178000) = 0x7f3dd80d4000
+mmap(0x7f3dd80d9000, 18472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f3dd80d9000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3dd82ed000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3dd82ec000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3dd82eb000
+arch_prctl(ARCH_SET_FS, 0x7f3dd82ec700) = 0
+mprotect(0x7f3dd80d4000, 16384, PROT_READ) = 0
+mprotect(0x600000, 4096, PROT_READ)     = 0
+mprotect(0x7f3dd82fd000, 4096, PROT_READ) = 0
+munmap(0x7f3dd82ee000, 52707)           = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3dd82fa000
+write(1, "Invoking 'fork()' system call\n", 30Invoking 'fork()' system call
+) = 30
+fork()                                  = 2359
+write(1, "I'm parent process, my pid is 23"..., 35I'm parent process, my pid is 2359
+) = 35
+exit_group(35)                          = ?
+psaer@ubuntu:~/Desktop/fork$ I'm child process, my pid is 0

@@ -1,0 +1,5 @@
+psaer@ubuntu:~/Desktop/driver_1$ modinfo chardev.ko
+filename:       chardev.ko
+srcversion:     A15D07213C10C205BEB39CD
+depends:        
+vermagic:       2.6.32-21-generic SMP mod_unload modversions 

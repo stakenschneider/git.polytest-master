@@ -1,0 +1,11 @@
+psaer@ubuntu:~/Desktop/driver_1$ ls
+chardev.c   chardev.mod.c  chardev.o  modules.order   userdev.c
+chardev.ko  chardev.mod.o  Makefile   Module.symvers  userdev.o
+psaer@ubuntu:~/Desktop/driver_1$ make clean
+make -C/lib/modules/2.6.32-21-generic/build M=/home/psaer/Desktop/driver_1 clean
+make[1]: Entering directory `/usr/src/linux-headers-2.6.32-21-generic'
+  CLEAN   /home/psaer/Desktop/driver_1/.tmp_versions
+  CLEAN   /home/psaer/Desktop/driver_1/Module.symvers /home/psaer/Desktop/driver_1/modules.order
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.32-21-generic'
+psaer@ubuntu:~/Desktop/driver_1$ ls
+chardev.c  Makefile  userdev.c

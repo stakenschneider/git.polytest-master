@@ -1,0 +1,13 @@
+psaer@ubuntu:~/Desktop/driver_1$ sudo insmod chardev.ko
+[sudo] password for psaer: 
+psaer@ubuntu:~/Desktop/driver_1$ tail /var/log/syslog
+May  8 10:28:01 ubuntu kernel: [ 1405.821348] [0]: VMCI: Updating context from (ID=0xfe596972) to (ID=0xfe596972) on event (type=0).
+May  9 02:19:29 ubuntu kernel: [ 1890.047193] [0]: VMCI: Updating context from (ID=0xfe596972) to (ID=0xfe596972) on event (type=0).
+May  9 02:19:50 ubuntu kernel: [ 1911.112267] chardev: module license 'unspecified' taints kernel.
+May  9 02:19:50 ubuntu kernel: [ 1911.112289] Disabling lock debugging due to kernel taint
+May  9 02:19:50 ubuntu kernel: [ 1911.131291] I was assigned major number 250. To talk to
+May  9 02:19:50 ubuntu kernel: [ 1911.131292] the driver, create a dev file with
+May  9 02:19:50 ubuntu kernel: [ 1911.131293] 'mknod /dev/chardev c 250 0'.
+May  9 02:19:50 ubuntu kernel: [ 1911.131294] Try various minor numbers. Try to cat and echo to
+May  9 02:19:50 ubuntu kernel: [ 1911.131295] the device file.
+May  9 02:19:50 ubuntu kernel: [ 1911.131295] Remove the device file and module when done.

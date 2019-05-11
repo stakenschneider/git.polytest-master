@@ -1,0 +1,50 @@
+psaer@ubuntu:~/Desktop/fork$ strace ./fork1.o
+execve("./fork1.o", ["./fork1.o"], [/* 38 vars */]) = 0
+brk(0)                                  = 0xed3000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fab8379f000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=52707, ...}) = 0
+mmap(NULL, 52707, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fab83792000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\355\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1568136, ...}) = 0
+mmap(NULL, 3676200, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fab83200000
+mprotect(0x7fab83378000, 2097152, PROT_NONE) = 0
+mmap(0x7fab83578000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x178000) = 0x7fab83578000
+mmap(0x7fab8357d000, 18472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fab8357d000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fab83791000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fab83790000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fab8378f000
+arch_prctl(ARCH_SET_FS, 0x7fab83790700) = 0
+mprotect(0x7fab83578000, 16384, PROT_READ) = 0
+mprotect(0x600000, 4096, PROT_READ)     = 0
+mprotect(0x7fab837a1000, 4096, PROT_READ) = 0
+munmap(0x7fab83792000, 52707)           = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fab837909d0) = 2334
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fab8379e000
+write(1, "PARENT: \320\255\321\202\320\276 \320\277\321\200\320\276\321\206\320\265\321\201\321\201 \321\200"..., 48PARENT: Это процесс родитель!
+) = 48
+getpid()                                = 2333
+write(1, "PARENT: \320\234\320\276\320\271 PID 2333\n", 24PARENT: Мой PID 2333
+) = 24
+write(1, "PARENT: PID \320\274\320\276\320\265\320\263\320\276 \320\277\320\276\321\202\320\276\320"..., 43PARENT: PID моего потомка 2334
+) = 43
+write(1, "PARENT: \320\257 \320\266\320\264\321\203, \320\277\320\276\320\272\320\260 \320\277\320\276"..., 73PARENT: Я жду, пока потомок не вызовет exit()...
+) = 73
+wait4(-1,  CHILD: Это процесс потомок!
+ CHILD: Мой PID 2334
+ CHILD: PID моего родителя 2333
+ CHILD: Выход!
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2334
+--- SIGCHLD (Child exited) @ 0 (0) ---
+write(1, "PARENT: \320\232\320\276\320\264 \320\262\320\276\320\267\320\262\321\200\320\260\321\202\320\260 "..., 49PARENT: Код возврата потомка:0
+) = 49
+write(1, "PARENT: \320\222\321\213\321\205\320\276\320\264!\n", 20PARENT: Выход!
+) = 20
+exit_group(20)                          = ?

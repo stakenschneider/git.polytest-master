@@ -1,0 +1,14 @@
+psaer@ubuntu:~/Desktop/driver_1$ make
+make -C/lib/modules/2.6.32-21-generic/build M=/home/psaer/Desktop/driver_1 modules
+make[1]: Entering directory `/usr/src/linux-headers-2.6.32-21-generic'
+  CC [M]  /home/psaer/Desktop/driver_1/chardev.o
+/home/psaer/Desktop/driver_1/chardev.c:38: warning: initialization from incompatible pointer type
+/home/psaer/Desktop/driver_1/chardev.c: In function ‘device_read’:
+/home/psaer/Desktop/driver_1/chardev.c:135: warning: format ‘%d’ expects type ‘int’, but argument 3 has type ‘size_t’
+/home/psaer/Desktop/driver_1/chardev.c: In function ‘device_write’:
+/home/psaer/Desktop/driver_1/chardev.c:144: warning: format ‘%d’ expects type ‘int’, but argument 4 has type ‘size_t’
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/psaer/Desktop/driver_1/chardev.mod.o
+  LD [M]  /home/psaer/Desktop/driver_1/chardev.ko
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.32-21-generic'

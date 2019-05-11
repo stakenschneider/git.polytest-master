@@ -1,0 +1,5 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{\numberline {3}Поиск оптимальных параметров сети систем массового обслуживания}{3}
+\contentsline {section}{\numberline {3.1}Постановка задачи}{3}
+\contentsline {section}{\numberline {3.2}Решение}{3}
+\contentsline {section}{\numberline {3.3}Вывод}{11}

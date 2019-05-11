@@ -1,0 +1,11 @@
+psaer@ubuntu:~/Desktop/syscalls/fork$ ./a.out 
+PARENT: Это процесс родитель!
+PARENT: Мой PID 55714
+PARENT: PID моего потомка 55715
+PARENT: Я жду, пока потомок не вызовет exit()...
+ CHILD: Это процесс потомок!
+ CHILD: Мой PID 55715
+ CHILD: PID моего родителя 55714
+ CHILD: Выход!
+PARENT: Код возврата потомка:128
+PARENT: Выход!

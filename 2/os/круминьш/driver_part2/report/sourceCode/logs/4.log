@@ -1,0 +1,49 @@
+psaer@ubuntu:/usr/src/linux-headers-4.13.0-36$ bluetoothctl
+[NEW] Controller 34:F6:4B:36:FD:43 ubuntu [default]
+[bluetooth]# version
+Version 5.37
+[bluetooth]# help
+Available commands:
+  list                       List available controllers
+  show [ctrl]                Controller information
+  select <ctrl>              Select default controller
+  devices                    List available devices
+  paired-devices             List paired devices
+  power <on/off>             Set controller power
+  pairable <on/off>          Set controller pairable mode
+  discoverable <on/off>      Set controller discoverable mode
+  agent <on/off/capability>  Enable/disable agent with given capability
+  default-agent              Set agent as the default one
+  set-scan-filter-uuids [uuid1 uuid2 ...] Set scan filter uuids
+  set-scan-filter-rssi [rssi] Set scan filter rssi, and clears pathloss
+  set-scan-filter-pathloss [pathloss] Set scan filter pathloss, and clears rssi
+  set-scan-filter-transport [transport] Set scan filter transport
+  set-scan-filter-clear      Clears discovery filter.
+  scan <on/off>              Scan for devices
+  info [dev]                 Device information
+  pair [dev]                 Pair with device
+  trust [dev]                Trust device
+  untrust [dev]              Untrust device
+  block [dev]                Block device
+  unblock [dev]              Unblock device
+  remove <dev>               Remove device
+  connect <dev>              Connect device
+  disconnect [dev]           Disconnect device
+  list-attributes [dev]      List attributes
+  select-attribute <attribute> Select attribute
+  attribute-info [attribute] Select attribute
+  read                       Read attribute value
+  write <data=[xx xx ...]>   Write attribute value
+  notify <on/off>            Notify attribute value
+  register-profile <UUID ...> Register profile to connect
+  unregister-profile         Unregister profile
+  version                    Display version
+  quit                       Quit program
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 34:F6:4B:36:FD:43 Discovering: yes
+[NEW] Device 14:F4:2A:7B:1E:D9 GT-N7100
+[bluetooth]# devices
+Device 14:F4:2A:7B:1E:D9 GT-N7100
+[bluetooth]# quit
+[DEL] Controller 34:F6:4B:36:FD:43 ubuntu [default]

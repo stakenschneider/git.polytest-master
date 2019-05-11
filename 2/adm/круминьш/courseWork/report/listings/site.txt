@@ -1,0 +1,10 @@
+<html>
+<center><font size='+3' color='green'>Pied Piper</font></center>
+<center><font size='+1'  color='black'>Software development company</font></center>
+<center><img width="300" height="300" src="piedPiper.jpg"></center>
+<hr>Pied Piper is a global full-cycle software development company with niche expertise and a focus on the latest technologies. 
+<br><br>
+We assist any customers at any phase of business or software development — from startups at the ideation stage to mid-sized businesses and large enterprises with a focus on optimization and expansion no matter the industry they operate in.
+<br><br>
+Call now - 8-800-555-35-35
+</html>

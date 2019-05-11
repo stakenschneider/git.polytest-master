@@ -1,0 +1,2 @@
+psaer@ubuntu:~/Desktop/driver_1$ sudo mknod /dev/chardev c 250 0
+[sudo] password for psaer: 

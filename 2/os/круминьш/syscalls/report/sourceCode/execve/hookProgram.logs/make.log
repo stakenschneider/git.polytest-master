@@ -1,0 +1,11 @@
+make -C /lib/modules/2.6.32-21-generic/build M=/home/psaer/Desktop/new/kmod_hooking-master
+make[1]: Entering directory `/usr/src/linux-headers-2.6.32-21-generic'
+  CC [M]  /home/psaer/Desktop/new/kmod_hooking-master/module-init.o
+  LD [M]  /home/psaer/Desktop/new/kmod_hooking-master/hooking.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/psaer/Desktop/new/kmod_hooking-master/hooking.mod.o
+  LD [M]  /home/psaer/Desktop/new/kmod_hooking-master/hooking.ko
+make[1]: Leaving directory `/usr/src/linux-headers-2.6.32-21-generic'
+psaer@ubuntu:~/Desktop/new/kmod_hooking-master$ sudo insmod hooking.ko
+psaer@ubuntu:~/Desktop/new/kmod_hooking-master$ sudo rmmod hooking 

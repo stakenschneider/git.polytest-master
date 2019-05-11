@@ -1,0 +1,12 @@
+psaer@ubuntu:~/Desktop/fork$ gcc mainFork.c -o fork1.o
+psaer@ubuntu:~/Desktop/fork$ ./fork1.o
+PARENT: Это процесс родитель!
+PARENT: Мой PID 2330
+PARENT: PID моего потомка 2331
+PARENT: Я жду, пока потомок не вызовет exit()...
+ CHILD: Это процесс потомок!
+ CHILD: Мой PID 2331
+ CHILD: PID моего родителя 2330
+ CHILD: Выход!
+PARENT: Код возврата потомка:0
+PARENT: Выход!

@@ -1,0 +1,4 @@
+psaer@ubuntu:/usr/src/linux-headers-4.13.0-36$ sudo grep -rnw '/home/psaer/bluez-5.37' -e 'set-scan-filter-clear'
+Binary file /home/psaer/bluez-5.37/client/bluetoothctl matches
+Binary file /home/psaer/bluez-5.37/client/main.o matches
+/home/psaer/bluez-5.37/client/main.c:1716:	{ "set-scan-filter-clear", "", cmd_set_scan_filter_clear,
