@@ -1,0 +1,377 @@
+\documentclass[14pt,a4paper,report]{report}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\Large\bfseries} % format
+{}                % label
+{0pt}             % sep
+{\huge}           % before-code
+
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{ 
+	% Listing settings
+	inputencoding = utf8,			
+	extendedchars = \true, 
+	keepspaces = true, 			  	 % Поддержка кириллицы и пробелов в комментариях
+	language = Matlab,            	 	 % Язык программирования (для подсветки)
+	basicstyle = \small\sffamily, 	 % Размер и начертание шрифта для подсветки кода
+	numbers = left,               	 % Где поставить нумерацию строк (слева\справа)
+	numberstyle = \tiny,          	 % Размер шрифта для номеров строк
+	stepnumber = 1,               	 % Размер шага между двумя номерами строк
+	numbersep = 5pt,              	 % Как далеко отстоят номера строк от подсвечиваемого кода
+	backgroundcolor = \color{white}, % Цвет фона подсветки - используем \usepackage{color}
+	showspaces = false,           	 % Показывать или нет пробелы специальными отступами
+	showstringspaces = false,    	 % Показывать или нет пробелы в строках
+	showtabs = false,           	 % Показывать или нет табуляцию в строках
+	frame = single,              	 % Рисовать рамку вокруг кода
+	tabsize = 2,                  	 % Размер табуляции по умолчанию равен 2 пробелам
+	captionpos = t,             	 % Позиция заголовка вверху [t] или внизу [b] 
+	breaklines = true,           	 % Автоматически переносить строки (да\нет)
+	breakatwhitespace = false,   	 % Переносить строки только если есть пробел
+	escapeinside = {\%*}{*)}      	 % Если нужно добавить комментарии в коде
+}
+
+\begin{document}
+
+\def\contentsname{Содержание}
+
+% Titlepage
+\begin{titlepage}
+	\begin{center}
+		\textsc{Санкт-Петербургский Политехнический 
+			Университет Петра Великого\\[5mm]
+			Кафедра компьютерных систем и программных технологий}
+		
+		\vfill
+		
+		\textbf{Отчёт по лабораторной работе №4\\[3mm]
+			Курс: «Методы оптимизации и принятия решений»\\[3mm]
+			Тема: «Оптимизация сетей систем массового обслуживания»\\[35mm]
+			}
+	\end{center}
+	
+	\hfill
+	\begin{minipage}{.5\textwidth}
+		Выполнил студент:\\[2mm] 
+		Волкова Мария Дмитриевна\\
+		Группа: 13541/2\\[5mm]
+		
+		Проверил:\\[2mm] 
+		Сиднев Александр Георгиевич
+	\end{minipage}
+	\vfill
+	\begin{center}
+		Санкт-Петербург\\ \the\year\ г.
+	\end{center}
+\end{titlepage}
+
+% Contents
+\tableofcontents
+\clearpage
+
+\chapter{Лабораторная работа №4}
+
+\section{Индивидуальное задание}
+Найти
+$$ max \lambda = e_1G_M(N-1)/G_M(N) $$
+при ограниении
+$$ S =\sum_{i=1}^M c_i \mu_i^{a_i} = S^ *,\quad \mu>0$$
+
+Дано
+$$ \{S^ *, M, N, \{\textbf{p}_{ij} \}_{i=\overrightarrow{0,M}, j=\overrightarrow{0,M}} , \vec{c}=(c_1, c_2, ... , c_M) , \vec{a}=(a_1, a_2, ... , a_M) \} $$
+где 
+$M$ - число узлов;
+
+$N$ - число заявок в сети;
+
+$\vec{c}=(c_1, c_2, ... , c_M)$ - вектор, определяющи число каналов в узле;
+
+$\vec{a}=(a_1, a_2, ... , a_M)$ - вектор, определяющий коэффициенты важности узлов. Коэффициенты важности узлов ССМО входят в формулу расчета ее стоимости.
+
+$S^ *$ - стоимость сети.
+
+\subsubsection{Параметры}
+
+\begin{tabular}{ | l | l | l | l | l |}
+\hline
+$\pi=\{\textbf{p}_{ij} \}_{i=\overrightarrow{0,M}, j=\overrightarrow{0,M}}$ & N & S  & $\vec{c}$ & $\vec{a}$ \\ \hline
+
+\begin{tabular}{  l | l | l | l  }
+
+0 & 0.3 & 0.3 & 0.4 \\ \hline
+0.4 & 0 & 0.2 & 0.4 \\ \hline
+0.1 & 0.2 & 0 & 0.7 \\ \hline
+0.2 & 0.7 & 0.1 & 0 \\
+\end{tabular}
+
+ & 5 & 5 & 1 1 1 1 & 1 1 1 1 \\
+\hline
+\end{tabular}
+
+
+\section{Ход работы}
+\subsubsection{Вычисление вероятностей $w_i$}
+Для этого решаем систему уравнений:
+$$ w_i = \sum_{i=1}^M w_i*p_{ij} ,   \qquad j = i..M$$
+
+$$ \sum_{i=1}^M w_i=1$$
+
+которая в данном случае принимает вид
+$$
+\begin{cases}
+w_1= 0w_1+0.3w_2+0.3w_3+0.4w_4\\
+w_2=0.4w_1+0w_2+0.2w_3+0.4w_4\\
+w_3=0.1w_1+0.2w_2+0w_3+0.7w_4\\
+w_4=0.2w_1+0.7w_2+0.1w_3+0w_4\\
+\end{cases}
+$$
+\begin{lstlisting}[language={matlab}, caption={Cкрипт для нахождения вероятностей}, basicstyle=\ttfamily]
+w = fsolve(@wfun,[1;0;0;0]);
+    function F = wfun(w)
+        for j = 1:M
+            sum_t = 0;
+            for i = 1:M
+                sum_t = sum_t + w(i)*p(i,j);
+            end
+            F(j) = sum_t - w(j);
+        end
+        F = [F(1); F(2);F(3);F(4); sum(w) - 1];
+    end
+options = optimset('Display','iter');
+[w,fval] = fsolve(@wfun,[1;0;0;0],options)
+\end{lstlisting}
+
+После 25 обращений к функциям нули найдены:
+
+\begin{tabular}{  | l | l | l | l | l | l | l |}
+
+     \hline
+      Iteration & Func-count & Residual & First-Order optimality & Lambda & Norm of  step\\ \hline
+0 & 5 & 1.34  & 1.34          & 0.01& -\\ \hline
+1 & 10 & 5.49043e-05 & 0.00789     &   0.001     &  0.919789\\ \hline
+2 & 15 & 2.36409e-11  & 5e-06  &  0.0001    & 0.00599099 \\ \hline
+3 & 20 & 1.04197e-19 &  3.27e-10    &   1e-05   & 3.95646e-06 \\ \hline
+4 & 25 & 4.75859e-30 & 2.18e-15     &  1e-06   & 2.64023e-10 \\ \hline
+\end{tabular}
+
+Получаем:
+$$
+\begin{cases}
+w_1= 0.2064\\
+w_2=0.3170\\
+w_3=0.1572\\
+w_4=0.3194\\
+\end{cases}
+$$
+
+Значение целевой функции:
+\begin{lstlisting}[language={matlab},  basicstyle=\ttfamily]
+fval =
+
+   1.0e-14 *
+
+   -0.1804
+    0.0111
+    0.0999
+    0.0666
+   -0.0222
+\end{lstlisting}
+\subsubsection{Расчет норминирующей константы}
+
+$$ G_r(k) = \sum_{l=0}^k Z_r(l) G_{r-1}(k-l)  $$
+
+$$ Z_i(n_i) = \frac{w_i^{n_i}}{\prod\limits_{j= 1}^{n_i} u_i(j)} , \qquad
+u_i(j)= \begin{cases}
+   j u_i & {j<m_i}\\
+   m_i u_i & {j>=m_i}
+ \end{cases}  $$
+
+\begin{lstlisting}[language={matlab}, caption={Cкрипт для расчета норминирующей константы},  basicstyle=\ttfamily]
+for r = 2:1:M
+    for k = 1:1:N
+        sum = 0;
+        for l = 0:1:k
+            sum = sum + z(r, l + 1)*G(r - 1, k - l + 1);
+        end
+        G(r, k + 1) = sum;
+    end
+end
+\end{lstlisting}
+
+\subsubsection{Нахождение интенсивности на выходе 1 узла}
+
+Находим интенсивность по следующей формуле:
+
+$$  \lambda_i(N)\frac{w_i G_M (N-1)}{G_M(N)}$$
+
+\begin{lstlisting}[language={matlab}, caption={Cкрипт для нахождения интенсивности},  basicstyle=\ttfamily]
+lambda = G(M, N - 1)/G(M,N);
+\end{lstlisting}
+
+
+
+\subsubsection{Функция оптимизации}
+
+Будем оптимизировать нашу функцию с помощью функции fmincon. fmincon находит минимум для скалярной функции нескольких переменных с ограничениями начиная с начального приближения. 
+
+
+\begin{lstlisting}[language={matlab}, caption={fmincon},  basicstyle=\ttfamily]
+fun = @(x)(-findlambda(w,x));
+[my_u,fval] = fmincon(fun,w,[],[],[],[],[0;0;0;0],[],@limitation,optimset('Display','iter'))
+\end{lstlisting}
+
+со следующим нелинейным ограничением:
+
+\begin{lstlisting}[language={matlab}, caption={Ограничения},  basicstyle=\ttfamily]
+function [ctmp , ceqtmp] = limitation(x)
+ctmp = 0;
+    for i = 1:M
+        ctmp = ctmp + c(i)*x(i)^a(i);
+    end
+    ctmp = ctmp  - S;
+    ceqtmp = [];
+end
+\end{lstlisting}
+
+
+
+\subsubsection{Результаты}  
+Посмотрим на работу отпимизации:
+ 
+\begin{tabular}{  | l | l | l | l | l | l | l | }
+\hline
+Iter & Func-count & f(x) &  Feasibility & First-order optimality &  Norm of step\\ \hline
+    0 &       5  & -5.333333e-01  &  0.000e+00  &  9.110e-01 & - \\ \hline
+    1   &   10  & -1.234964e+00  &   0.000e+00   & 5.957e-01  &  6.427e-01\\ \hline
+    2  &    15 &  -2.702824e+00  &  0.000e+00   & 5.358e-01   & 1.391e+00\\ \hline
+    3    &  21 &  -2.507462e+00  &  0.000e+00 &    2.767e-01  &  1.882e-01\\ \hline
+    4   &   27 &  -2.604093e+00 &   0.000e+00  &  1.556e-01 &   8.964e-02\\ \hline
+    5  &    32 &  -2.629467e+00 &   0.000e+00 &   1.003e-01  &  3.378e-02\\ \hline
+    6  &    37 &  -2.685129e+00  &  0.000e+00  &  2.694e-02  &  5.611e-02\\ \hline
+    7   &   42 &  -2.710478e+00 &   0.000e+00  &  9.348e-04  &  2.523e-02\\ \hline
+    8  &    47 &  -2.711170e+00  &  0.000e+00 &   2.129e-04  &  8.948e-04\\ \hline
+    9  &    52  & -2.711170e+00  &  0.000e+00  &  2.000e-04  &  1.798e-04\\ \hline
+   10  &    57 &  -2.711330e+00  &  0.000e+00  &  4.004e-05  &  1.572e-04\\ \hline
+   11   &   62 &  -2.711370e+00  &  0.000e+00  &  4.023e-07  &  4.019e-05\\ \hline
+\end{tabular}
+
+После 11 итераций (62 обращений к функции) оптимизация завершается успешно. 
+   
+\begin{lstlisting}[language={matlab}, caption={Результаты}, basicstyle=\ttfamily]
+my_u =
+    1.0682
+    1.4485
+    0.9602
+    1.5231
+
+fval = -2.7114
+\end{lstlisting}
+
+\section{Вывод}
+
+В данной работе была роведена оптимизация СМО. В результате проведенной работы был написан скрипт по оптимизации одноканальной, однородной (все заявки однотипные), замкнутой (с фиксированым числом заявок) сети СМО, который также подходит для многоканальной замкнутой сети систем массового обслуживания. Для увеличения производительности данного алгоритма можно подключить пакет MATLAB Parallel Computing Toolbox, который использует MPI для эффективного распараллеливания.
+\clearpage 
+\begin{lstlisting}[language={matlab}, caption={Полный текст скрипта},  basicstyle=\ttfamily]
+function test
+clc;
+% nachal'nie znacheniya
+S = 5;
+N = 5;   % число заявок в сети
+M = 4;   % число узлов
+
+p = [0   0.3  0.3  0.4;...
+    0.4  0    0.2  0.4;...
+    0.1  0.2  0    0.7;...
+    0.2  0.7  0.1  0  ];
+
+m = [1;1;1;1];      % число каналов в i-ом узле
+c = [1 1 1 1];      % стоимостные коэффициенты
+a = [1;1;1;1];      % коэффициенты нелинейности
+
+% nakhodeniye veroyatnostey w
+w = fsolve(@wfun,[1;0;0;0]);
+    function F = wfun(w)
+        for j = 1:M
+            sum_t = 0;
+            for i = 1:M
+                sum_t = sum_t + w(i)*p(i,j);
+            end
+            F(j) = sum_t - w(j);
+        end
+        F = [F(1); F(2);F(3);F(4); sum(w) - 1];
+    end
+
+options = optimset('Display','iter');
+[w,fval] = fsolve(@wfun,[1;0;0;0],options)
+        
+% find lambda
+function [ lambda ] = findlambda(w,u)
+for i = 1:1:M
+   for n = 0:1:N
+       my = 1;
+       for j = 1:1:n
+           if (j >= m(i))
+               my = my*m(i)*u(i);
+           else my = my*j*u(i);
+           end
+       end  
+       z(i,n+1) = (w(i)^n)/my;
+   end
+end
+G(1, :) = z(1, :);
+
+for r = 2:1:M
+    for k = 1:1:N
+        sum = 0;
+        for l = 0:1:k
+            sum = sum + z(r, l + 1)*G(r - 1, k - l + 1);
+        end
+        G(r, k + 1) = sum;
+    end
+end
+ 
+lambda = 0;
+lambda = G(M, N - 1)/G(M,N);
+end
+
+% nelineynoye ogranicheniye
+function [ctmp , ceqtmp] = limitation(x)
+ctmp = 0;
+    for i = 1:M
+        ctmp = ctmp + c(i)*x(i)^a(i);
+    end
+    ctmp = ctmp  - S;
+    ceqtmp = [];
+end
+
+% optimization
+fun = @(x)(-findlambda(w,x));
+[my_u,fval] = fmincon(fun,w,[],[],[],[],[0;0;0;0],[],@limitation,optimset('Display','iter'))
+end
+\end{lstlisting}
+\end{document}

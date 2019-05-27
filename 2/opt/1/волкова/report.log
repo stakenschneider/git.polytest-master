@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  27 MAY 2019 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  21 MAY 2019 04:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,199 +1092,595 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 99.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 99.
-<images/00.jpeg, id=62, 257.46187pt x 135.50626pt>
-File: images/00.jpeg Graphic file (type jpg)
- <use images/00.jpeg>
-Package pdftex.def Info: images/00.jpeg used on input line 103.
-(pdftex.def)             Requested size: 386.19183pt x 203.25885pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
-
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 106.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 152.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 152.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 152.
  [2
 
 
- <./images/00.jpeg>]
+]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 155.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 155.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 137.
- <images/1.png, id=73, 703.87968pt x 434.37282pt>
-File: images/1.png Graphic file (type png)
- <use images/1.png>
-Package pdftex.def Info: images/1.png used on input line 143.
-(pdftex.def)             Requested size: 457.51637pt x 282.33897pt.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 167.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 167.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 212.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 179.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 179.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 179.
-
-[3
-
- <./images/1.png>]
-Overfull \hbox (40.28477pt too wide) in paragraph at lines 195--202
-[]$\OML/cmm/m/it/10 H \OT1/cmr/m/n/10 = 1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
- W[]W[]W[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 W[]W[]W[] \OMS/cmsy/m/n/10 ^^@
- \OML/cmm/m/it/10 W[]W[]W[]W[]W[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 W[]W[]W
-[][] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 W[]W[]W[]W[][] \OMS/cmsy/m/n/10 ^^@ 
-\OML/cmm/m/it/10 W[]W[]W[]W[][] \OMS/cmsy/m/n/10 ^^@
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--210
-
- []
-
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 211.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 211.
+(babel)             in language  on input line 212.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 222.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 222--222
-[][][][][][][] 
- []
-
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 222
+nput line 216.
+LaTeX Font Info:    Try loading font information for T2A+cmss on input line 216
 .
-(/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m1.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 3.
+
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 7.
+LaTeX Font Info:    No file OMScmss.fd. on input line 7.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textasteriskcentered' on input line 7.
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 58.
+[4]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
-LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 223.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 250.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 250.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 250.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 250.
- [4]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 275--275
-[][][][][][][] 
+(./listings/m1.log)
+Overfull \hbox (1.10052pt too wide) in paragraph at lines 231--231
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
  []
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-)
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 290.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 290.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 330.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 330.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 330.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 330.
- [5]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 332--332
-[][][][][][][] 
+
+Overfull \hbox (1.10052pt too wide) in paragraph at lines 231--231
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
  []
 
+
+Overfull \hbox (1.10052pt too wide) in paragraph at lines 231--231
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 244.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 244.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m2.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 8.
+
+[5]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
+(./listings/m2.log)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 386.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 386.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 386.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 386.
+(babel)             in language  on input line 264.
  [6]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 415--415
-[][][][][][][] 
- []
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 288.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 288.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m3.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 38.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 38.
+
+[7]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
+(./listings/m3.log)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 443.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 443.
+(babel)             in language  on input line 328.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m4.m
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 443.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 443.
- [7]
+(babel)             in language  on input line 1.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 443.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 443.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 447.
+(babel)             in language  on input line 1.
+ [8])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m4f.m
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 447.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
+(babel)             in language  on input line 9.
 
-(./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 447.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 447.
+[9]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m4.log)
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 380.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m5p1.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 2.
+ [10])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m5p1.log)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m5p2.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 7.
+[11]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m5p2.log)
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 476.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 476.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 476.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 476.
+ [12]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m5p3.m) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.d
+ef
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m5p3.log
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 8.
+ [13])
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 505.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 505.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m6.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 46.
+
+[14]) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m6.log)
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 539.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 539.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m7.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 6.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 6.
+ [15])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m7.log
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 5.
+[16])
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 589.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 589.
+
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--599
+[]|\T2A/cmr/m/n/10 —редн€€
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--599
+\T2A/cmr/m/n/10 раз-ни-ца
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 600--600
+[]|\T2A/cmr/m/n/10 јддитивна€
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 600--600
+[]|\T2A/cmr/m/n/10 16041.644| 
+ []
+
+
+Overfull \hbox (2.38817pt too wide) in paragraph at lines 601--601
+[]|\T2A/cmr/m/n/10 ћультиплика-
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 601--601
+[]|\T2A/cmr/m/n/10 16041.646| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 602--602
+[]|\T2A/cmr/m/n/10 12846.607| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+\T2A/cmr/m/n/10 до-ва-тель-ных
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 604--604
+[]|\T2A/cmr/m/n/10 12269.075| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--605
+[]|\T2A/cmr/m/n/10 ¬ведение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--605
+\T2A/cmr/m/n/10 мет-ри-ки в
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--605
+\T2A/cmr/m/n/10 про-стран-стве
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 605--605
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (10.5897pt too wide) in paragraph at lines 597--609
+ [][] 
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 615.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 615.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 639.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 639.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 639.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 639.
+[17] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m8.m
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 52.
+ [18])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+) (./listings/m8f.m)
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 659.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 659.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 659.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 659.
+[19] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+)
+(./listings/m8.log
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 58.
+ [20])
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (5.36827pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 x[]; Mill$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Overfull \hbox (2.54765pt too wide) in paragraph at lines 671--671
+[]|$\OML/cmm/m/it/10 F[]; Mill\OT1/cmr/m/n/10 $$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
+[]|\T2A/cmr/m/n/10 —редн€€
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
+\T2A/cmr/m/n/10 раз-ни-ца
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 672--672
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 673--673
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 674--674
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 675--675
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 676--676
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 677--677
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 678--678
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 679--679
+[]|\T2A/cmr/m/n/10 13241.479| 
+ []
+
+
+Overfull \hbox (4.35594pt too wide) in paragraph at lines 680--680
+[]|\T2A/cmr/m/n/10 11347.389| 
+ []
+
+
+Overfull \hbox (8.76332pt too wide) in paragraph at lines 669--685
+ [][] 
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 691.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 691.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 697.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 697.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 697.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 697.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 697.
+[21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 697.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 697.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 697.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 33983D0D51A5EB1DCDD2E863DE423E47;1763.
+(rerunfilecheck)             Checksum: 17305DA585A567D40966EB230870ED09;4474.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 697.
  ) 
 Here is how much of TeX's memory you used:
- 14974 strings out of 492995
- 207556 string characters out of 6132703
- 610482 words of memory out of 5000000
- 18188 multiletter control sequences out of 15000+600000
- 12296 words of font info for 30 fonts, out of 8000000 for 9000
+ 15793 strings out of 492995
+ 220877 string characters out of 6132703
+ 800482 words of memory out of 5000000
+ 18241 multiletter control sequences out of 15000+600000
+ 18281 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,15n,43p,624b,2055s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,13n,43p,703b,2020s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1295,19 +1691,21 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfit1000.pfb></usr/local/texlive/2017/tex
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (9 pages, 475659 bytes).
+ist/fonts/type1/public/cm-super/sfsi0900.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfsx0900.pfb>
+Output written on report.pdf (22 pages, 400017 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 174 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1248 PDF objects out of 1440 (max. 8388607)
+ 1192 compressed objects within 12 object streams
+ 837 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

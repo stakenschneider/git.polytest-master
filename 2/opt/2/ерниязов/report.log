@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  13 MAY 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.26)  25 MAY 2019 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,7 +1092,7 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 99.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 99.
-<images/0.png, id=57, 768.8725pt x 379.4175pt>
+<images/0.png, id=62, 768.8725pt x 379.4175pt>
 File: images/0.png Graphic file (type png)
  <use images/0.png>
 Package pdftex.def Info: images/0.png used on input line 103.
@@ -1125,7 +1125,7 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 137.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 137.
- <images/1.png, id=70, 717.43031pt x 469.00218pt>
+ <images/1.png, id=75, 717.43031pt x 469.00218pt>
 File: images/1.png Graphic file (type png)
  <use images/1.png>
 Package pdftex.def Info: images/1.png used on input line 143.
@@ -1139,42 +1139,37 @@ Package babel Info: Redefining russian shorthand "|
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 170.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
 
  []
 
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 193.
 [3
 
  <./images/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
 
  []
 
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 193.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 193.
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
+(babel)             in language  on input line 202.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 206.
+nput line 215.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 206--206
+Overfull \hbox (6.0pt too wide) in paragraph at lines 215--215
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 206
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 215
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
@@ -1183,7 +1178,7 @@ File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 207.
+(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 227.
 Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 248.
 Package babel Info: Redefining russian shorthand "~
@@ -1193,7 +1188,7 @@ Package babel Info: Redefining russian shorthand "|
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 248.
  [4]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 257--257
+Overfull \hbox (6.0pt too wide) in paragraph at lines 254--254
 [][][][][][][] 
  []
 
@@ -1201,11 +1196,11 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 257--257
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 265.
+(babel)             in language  on input line 271.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 265.
+(babel)             in language  on input line 271.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 307--307
+Overfull \hbox (6.0pt too wide) in paragraph at lines 313--313
 [][][][][][][] 
  []
 
@@ -1213,142 +1208,83 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 307--307
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 324.
  [5]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 342--342
+Overfull \hbox (6.0pt too wide) in paragraph at lines 368--368
 [][][][][][][] 
  []
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 356--356
-[][][][][][][] 
- []
-
-LaTeX Font Info:    Try loading font information for T2A+cmss on input line 356
-.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmss.fd
-File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 373.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 373.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 373.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 373.
  [6]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 409
-.
-LaTeX Font Info:    No file OMScmss.fd. on input line 409.
-
-
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 409.
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 437--437
-[][][][][][][] 
- []
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 390.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 390.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 396.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 447.
+(babel)             in language  on input line 396.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 396.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 396.
  [7]
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 463.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 463.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 469.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 469.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 469.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 469.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 469.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 469.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
 
 (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 469.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 469.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 69A25B696920872CB0D1DA2FB66D2EBA;2008
-(rerunfilecheck)             After:  3B1C5C39EFD0BD9D0783DECC4B3A7108;1763.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 469.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 396.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 33983D0D51A5EB1DCDD2E863DE423E47;1763.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
  ) 
 Here is how much of TeX's memory you used:
- 15079 strings out of 492995
- 209519 string characters out of 6132703
- 554482 words of memory out of 5000000
- 18232 multiletter control sequences out of 15000+600000
- 18095 words of font info for 44 fonts, out of 8000000 for 9000
+ 14926 strings out of 492995
+ 206835 string characters out of 6132703
+ 551482 words of memory out of 5000000
+ 18184 multiletter control sequences out of 15000+600000
+ 11986 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,13n,43p,865b,2057s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.1.2.7} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfit1000.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/cm-super/sfsi0900.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (9 pages, 671279 bytes).
+ 36i,13n,43p,902b,2057s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
+}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on report.pdf (8 pages, 593555 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
- 214 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
