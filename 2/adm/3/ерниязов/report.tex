@@ -1,0 +1,438 @@
+\documentclass[14pt,a4paper,report]{report}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\Large\bfseries} % format
+{}                % label
+{0pt}             % sep
+{\huge}           % before-code
+
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{ 
+	% Listing settings
+	inputencoding = utf8,			
+	extendedchars = \true, 
+	keepspaces = true, 			  	 % Поддержка кириллицы и пробелов в комментариях
+	language = C++,            	 	 % Язык программирования (для подсветки)
+	basicstyle = \small\sffamily, 	 % Размер и начертание шрифта для подсветки кода
+	numbers = left,               	 % Где поставить нумерацию строк (слева\справа)
+	numberstyle = \tiny,          	 % Размер шрифта для номеров строк
+	stepnumber = 1,               	 % Размер шага между двумя номерами строк
+	numbersep = 5pt,              	 % Как далеко отстоят номера строк от подсвечиваемого кода
+	backgroundcolor = \color{white}, % Цвет фона подсветки - используем \usepackage{color}
+	showspaces = false,           	 % Показывать или нет пробелы специальными отступами
+	showstringspaces = false,    	 % Показывать или нет пробелы в строках
+	showtabs = false,           	 % Показывать или нет табуляцию в строках
+	frame = single,              	 % Рисовать рамку вокруг кода
+	tabsize = 2,                  	 % Размер табуляции по умолчанию равен 2 пробелам
+	captionpos = t,             	 % Позиция заголовка вверху [t] или внизу [b] 
+	breaklines = true,           	 % Автоматически переносить строки (да\нет)
+	breakatwhitespace = false,   	 % Переносить строки только если есть пробел
+	escapeinside = {\%*}{*)}      	 % Если нужно добавить комментарии в коде
+}
+
+\begin{document}
+
+\def\contentsname{Содержание}
+
+% Titlepage
+\begin{titlepage}
+	\begin{center}
+		\textsc{Санкт-Петербургский Политехнический 
+			Университет Петра Великого\\[5mm]
+			Кафедра компьютерных систем и программных технологий}
+		
+		\vfill
+		
+		\textbf{Отчёт по лабораторной работе №3\\[3mm]
+			Курс: «Администрирование компьютерных сетей»\\[3mm]
+			Тема: «Администрирование сетевых сервисов»\\[35mm]
+			}
+	\end{center}
+	
+	\hfill
+	\begin{minipage}{.5\textwidth}
+		Выполнил студент:\\[2mm] 
+		Ерниязов Тимур Ертлеуевич\\
+		Группа: 13541/2\\[5mm]
+		
+		Проверил:\\[2mm] 
+		Малышев Игорь Алексеевич
+	\end{minipage}
+	\vfill
+	\begin{center}
+		Санкт-Петербург\\ \the\year\ г.
+	\end{center}
+\end{titlepage}
+
+% Contents
+\tableofcontents
+\clearpage
+
+\chapter{Лабораторная работа №3}
+\section{Цели работы}
+\begin{enumerate}
+\item Изучение состава и функциональных возможностей сетевых сервисов операционных систем.
+\item Разработка и настройка сервисов локальной сети.
+\item Разработка и настройка сервисов демилитаризованной зоны.
+\item Разработка и настройка сервисов пограничной зоны.
+\end{enumerate}
+
+\section{Сведения о системе}
+Работа производилась на реальной системе, со следующими характеристиками:
+
+\begin{center}
+\begin{tabular}{ c c c }
+Элемент&Значение\\  
+	
+Имя ОС&Майкрософт Windows 10 Pro (Registered Trademark)\\ 
+Версия&10.0.16299 Сборка 16299\\ 
+RAM &16,00 ГБ\\ 
+Процессор&Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz, 2496 МГц, ядер: 4, логических процессоров: 4\\ 
+\end{tabular}
+\end{center}
+
+
+Для выполнения работы использовалась \textbf{VMware Workstation 12 pro (12.5.7 build-5813279)}
+
+
+
+\section{Структура сети}
+В качестве сети для экспериментов, использовалась ККС из прошлой работы, ОС семейства Windows не использовались. Были добавлены две виртуальных машины с ОС преведенными далее.
+\begin{center}
+\begin{tabular}{ c c c }
+Название&Версия&Объем RAM\\  
+Ubuntu&16.04 amd64&1.5 GB\\ 
+Linux mint&18.3 Cinnamon 64 bit&1.5 GB\\ 
+\end{tabular}
+\end{center}
+
+Также к сетям \textbf{VMnet2} и \textbf{VMnet3} были подключены бездисковые клиенты.
+
+\begin{center}
+\begin{tabular}{ c c c c}
+Название сети&Адрес сети&Подключенные узлы&DHCP\\  	
+VMnet1&192.168.40.0&Linux mint, NetBSD, FreeBSD&-\\ 
+VMnet2&192.168.80.0&FreeBSD, NoDisk1&-\\ 
+VMnet3&192.168.120.0&FreeBSD, Ubuntu, NoDisk2&-\\ 
+VMnet4&192.168.32.0&NetBSD&+\\ 
+\end{tabular}
+\end{center}
+
+\section{DHCP и удаленная загрузка}
+В данной работе используются два DHCP сервера, на FreeBSD и на Ubuntu, для двух бездисковых клиентов из разных сетей. Также на Ubuntu будет установлен TFTP сервер для удаленной загрузки ОС.
+\subsection{Настройка DHCP на FreeBSD}
+\begin{enumerate}
+\item Переходим в каталог \textbf{/usr/ports/net/isc-dhcp3-server}
+\item Устанавливаем следующей командой:
+\begin{lstlisting}[language={}]
+make install clean
+\end{lstlisting}
+\item Вносим в файл \textbf{/etc/rc.conf} следующие строки:
+\begin{lstlisting}[language={}]
+# Включаем DHCP
+dhcpd_enable="YES"
+# Отлючаем вывод избыточной информации
+dhcpd_flags="-q" 
+# Указываем интерфейс для запуска
+dhcpd_ifaces="em1" 
+\end{lstlisting}
+\item Создаем файл \textbf{/usr/local/etc/dhcpd.conf} и вносим в него следующие изменения:
+\begin{lstlisting}[language={}]
+option domain-name "example.org"; # доменное имя
+option domain-name-servers 192.168.32.2; #DNS сервер
+default-lease-time 600; 
+max-lease-time 7200; 
+
+subnet 192.168.80.0 netmask 255.255.255.0 {
+    range 192.168.80.127 192.168.80.224;
+    option routers 192.168.80.2;
+    option root-path "192.168.120.3:/usr/tftpboot/";
+    next-server 192.168.120.3;
+    filename "gpxelinux.0";
+}
+\end{lstlisting}
+\end{enumerate}
+\subsection{Настройка DHCP на Ubuntu}
+Для начала необходимо корректно сконфигурировать сетеов адаптер для выхода в сеть "Интернет". Для этого были заданы следующие параметры:
+\begin{itemize}
+\item Адрес - 192.168.120.3;
+\item Маска - 255.255.255.0;
+\item Шлюз - 192.168.120.2;
+\item DNS сервер - 192.168.32.2.
+\end{itemize}
+После настройки адапетра переходим к основной настройке TFTP сервера.
+\begin{enumerate}
+\item Выполняем команду:
+\begin{lstlisting}[language={}]
+sudo apt-get install isc-dhcp-server
+\end{lstlisting}
+\item В файл \textbf{/etc/dhcp/dhcpd.conf} вносим следующие изменения:
+\begin{lstlisting}[language={}]
+option domain-name "example.org";
+option domain-name-servers 192.168.32.2;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+subnet 192.168.120.0 netmask 255.255.255.0 {
+    range 192.168.120.100 192.168.120.200;
+    option routers 192.168.120.2;
+    next-server 192.168.120.3;  # TFTP server address
+    filename "gpxelinux.0";   # PXE boot loader filename
+}
+\end{lstlisting}
+\item Перезапускаем DHCP-сервер
+\begin{lstlisting}[language={}]
+sudo /etc/init.d/isc-dhcp-server restart
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Настройка TFTP на Ubuntu}
+\begin{enumerate}
+\item Выполняем установку пакетов командой:
+\begin{lstlisting}[language={}]
+sudo apt-get install tftp tftpd-hpa
+\end{lstlisting}
+\item Создаем необходимые для работы директории:
+\begin{lstlisting}[language={}]
+mkdir -p /usr/tftpboot/images
+mkdir /usr/tftpboot/pxelinux.cfg
+\end{lstlisting}
+\item В файл \textbf{/etc/rc.conf} вносим изменения:
+\begin{lstlisting}[language={}]
+tftpd_enable="YES"
+tftpd_flags="-p -s /usr/tftpboot -B 1024 --ipv4"
+\end{lstlisting}
+\item Запускаем TFTP-сервер
+\begin{lstlisting}[language={}]
+service tftpd start
+\end{lstlisting}
+\item Скачиваем Syslinux версии 6.03 с сайта:
+\begin{lstlisting}[language={}]
+http://www.syslinux.org/wiki/index.php?title=The_Syslinux_Project
+\end{lstlisting}
+\item Извлекаем по пути \textbf{/usr/tftpboot} следующие файлы:
+
+\begin{itemize}
+\item chain.c32
+\item gpxelinux.0
+\item ldlinux.c32
+\item libutil.c32
+\item memdisk
+\item menu.c32
+\item reboot.c32
+\item vesamenu.c32
+\end{itemize}
+
+\item Скачиваем образ ОС, поддерживающей liveCD, например ubuntu;
+\item Разархивируем образ ОС, по пути \textbf{/usr/tftpboot/images/ubuntu/};
+\item По пути \textbf{/usr/tftpboot/pxelinux.cfg} создаем файл \textbf{default} со следующим содержимым:
+\begin{lstlisting}[language={}]
+ui menu.c32
+menu title Netboot OS
+
+LABEL ubuntu
+        kernel images/ubuntu/casper/vmlinuz.efi
+        append root=/dev/nfs boot=casper netboot=nfs nfsroot=192.168.120.3:/usr/tftpboot/images/ubuntu initrd=images/ubuntu/casper/initrd.lz 
+\end{lstlisting}
+\item Перезгружаем ОС.
+\end{enumerate}
+
+\subsection{Проверка}
+Запускаем бездисковые клиенты. При запуске вспывет меню, с выбором дальнейшей загрузки, необходимо выбрать пункт с \textbf{Ubuntu}. Далее, при успешной загрузке попадаем на рабочий стол ОС, что говорит об успешной удаленной загрузке. Дополнительно можно посмотротеть с помощью команды \textbf{ifconfig} какой адрес был выдан DHCP сервером. 
+
+При корректных настройках, адрес будет находиться в диапазоне адресов, указанных на DHCP сервере, а также клиент будет иметь возможность выхода в сеть "Интернет".
+
+\section{DNS сервисы}
+В данном разделе будут приведены примеры различных DNS серверов, в частности:
+\begin{enumerate}
+\item \textbf{Кэширующий сервер} - ищет все ответы на запросы от пользователей и запоминает их на случай повторного запроса
+\item \textbf{Первичный мастер} - читает данные зоны из локального файла и является ответственным за эту зону
+\item \textbf{Вторичный мастер} - получает данные по зоне с другого сервера имен,
+отвечающего за эту зону
+\end{enumerate}
+
+\subsection{Кэширующий сервер}
+\subsubsection{Настройка}
+Установим кэширующий DNS на Linux Mint(192.168.40.32)
+\begin{enumerate}
+\item Устанавливаем пакет \textbf{bind} командой
+\begin{lstlisting}[language={}]
+sudo apt-get install bind9
+\end{lstlisting}
+\item Внесем изменения в файл \textbf{/etc/bind/named.conf.options}:
+\begin{lstlisting}[language={}]
+options {
+  directory "/var/cache/bind";
+  forwarders {
+    8.8.8.8;
+  };
+  dnssec-validation auto;
+  auth-nxdomain no;
+  listen-on-v6 {any;};
+};
+\end{lstlisting}
+\item Перезапускаем DNS сервер
+\begin{lstlisting}[language={}]
+sudo /etc/init.d/bind9 restart
+\end{lstlisting}
+\end{enumerate}
+\subsubsection{Проверка}
+Настроим сетевой адаптер хост \textbf{192.168.120.3} на использование данного DNS сервера. В файле \textbf{/etc/NetworkManager/NetworkManager.conf} комментируем строку \textbf{dns=dnsmasq}, иначе в nslookup будет другой адрес DNS. Перезагружаем систему. Вводим команду \textbf{nslookup ya.ru}, после чего в консоль будет выведено:
+\begin{lstlisting}[language={}]
+Server:        192.168.40.32
+Address:       192.168.40.32#53
+
+Non-authoritative answer:
+Name:    ya.ru
+Address: 87.250.250.242
+\end{lstlisting}
+Как видно, DNS успешно был определен.
+
+Дополнитьно проверим кэширующую способность DNS сервера, для этого введем команду \textbf{dig google.com} два раза:
+\begin{lstlisting}[language={}]
+dig google.com
+...
+;; Query time: 31 msec
+;; SERVER: 192.168.40.32#53(192.168.40.32)
+;; WHEN: Fri Mar 23 11:55:03 PDT 2018
+;; MSG SIZE  rcvd: 346
+
+
+dig google.com
+...
+;; Query time: 0 msec
+;; SERVER: 192.168.40.32#53(192.168.40.32)
+;; WHEN: Fri Mar 23 11:55:03 PDT 2018
+;; MSG SIZE  rcvd: 346
+\end{lstlisting}
+Как видно, время запроса снизилось с 32 до 0 милисекунд, что означает о наличии кэширующей возможности у DNS сервера.
+
+\subsection{Первичный и вторичный DNS серверы}
+Первичный сервер - Linux mint \textbf{192.168.40.32}, вторичный - Ubuntu \textbf{192.168.120.3}.
+\subsubsection{Настройка первичного DNS сервера}
+В файл \textbf{/etc/bind/named.conf.local} вносим изменения:
+\begin{lstlisting}[language={}]
+zone "example.com" {
+  type master;
+  file "/etc/bind/db.example.com";
+  allow-transfer {192.168.40.0/24;192.168.80.0/24;192.168.120.0/24;};
+};
+zone "40.168.192.in-addr.arpa" {
+  type master;
+  file "/etc/bind/db.192";
+  allow-transfer {192.168.40.0/24;192.168.80.0/24;192.168.120.0/24;};
+}; 
+\end{lstlisting}
+Были созданы зоны \textbf{example.com} и обратная ей зона(для получения имени по IP)
+
+Содержимое файла \textbf{db.example.com} выглядит следующим образом:
+\begin{lstlisting}[language={}]
+;
+; BIND data file for example.com
+;
+$TTL    604800
+@   IN   SOA   example.com. root.example.com. (
+             1          ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+    IN A   192.168.40.32
+;
+@   IN  NS  ns.example.com
+@   IN  A  192.168.40.32
+@   IN  AAAA    ::1
+ns  IN  A  192.168.40.32
+\end{lstlisting}
+
+Содержимое файла \textbf{db.192} выглядит следующим образом:
+\begin{lstlisting}[language={}]
+;
+; BIND reverse data file for local 192.168.40.XXX net
+;
+$TTL    604800
+@       IN      SOA     ns.example.com. root.example.com. (
+                         1              ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.
+32      IN      PTR     ns.example.com.
+\end{lstlisting}
+В данном случае адресу 192.168.40.32 соответствует имя example.com. 
+
+\subsubsection{Настройка вторичного DNS сервера}
+\begin{enumerate}
+\item Устанавливаем пакет bind9;
+\item В файл \textbf{/etc/bind/named.conf.local} вносим изменения:
+\begin{lstlisting}[language={}]
+zone "example.com" {
+  type slave;
+  file "db.example.com";
+  masters { 192.168.40.32; };
+};        
+zone "40.168.192.in-addr.arpa" {
+  type slave;
+  file "db.192";
+  masters { 192.168.40.32; };
+};
+\end{lstlisting}
+\end{enumerate}
+Теперь данный сервер является вторичным по отношению к 192.168.40.32.
+
+\subsubsection{Проверка}
+На первичном сервере вводим команду \textbf{cat /etc/log/syslog}
+\begin{lstlisting}[language={}]
+...
+... zone example.com/IN: loaded serial 1
+... zone 40.168.192.in-addr.arpa/IN: loaded serial 1
+... zone 255.in-addr.arpa/IN: loaded serial 1
+... zone localhost/IN: loaded serial 2
+... all zones loaded
+... running
+... zone 40.168.192.in-addr.arpa/IN: sending notifies (serial 1)
+...
+\end{lstlisting}
+Как видно из части лога, зоны были успешно загружены и переданы на вторичный сервер.
+
+
+\section*{Вывод}
+В данной работе был получен опыт по настройке DHCP и TFTP серверов, что позволяет загружать по сети ОС или утилиту. 
+
+Также были применены навыки работы с различными по функциональности DNS серверами. Так был получен кэширующий DNS сервер, который существенно ускоряет обращение к сетевым ресурсам. Также были сконфигурированы первичный и вторичный DNS сервера, ответственные за домен example.com и обратную зону.
+%------------------------------------------------------------------------------
+
+%\addcontentsline{toc}{section}{Список литературы}
+%\bibliography{thesis}
+%\bibliographystyle{ugost2008}
+
+\end{document}

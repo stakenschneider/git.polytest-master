@@ -1,0 +1,168 @@
+\documentclass[14pt,a4paper,report]{report}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\Large\bfseries} % format
+{}                % label
+{0pt}             % sep
+{\huge}           % before-code
+
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{ 
+	% Listing settings
+	inputencoding = utf8,			
+	extendedchars = \true, 
+	keepspaces = true, 			  	 % Поддержка кириллицы и пробелов в комментариях
+	language = C++,            	 	 % Язык программирования (для подсветки)
+	basicstyle = \small\sffamily, 	 % Размер и начертание шрифта для подсветки кода
+	numbers = left,               	 % Где поставить нумерацию строк (слева\справа)
+	numberstyle = \tiny,          	 % Размер шрифта для номеров строк
+	stepnumber = 1,               	 % Размер шага между двумя номерами строк
+	numbersep = 5pt,              	 % Как далеко отстоят номера строк от подсвечиваемого кода
+	backgroundcolor = \color{white}, % Цвет фона подсветки - используем \usepackage{color}
+	showspaces = false,           	 % Показывать или нет пробелы специальными отступами
+	showstringspaces = false,    	 % Показывать или нет пробелы в строках
+	showtabs = false,           	 % Показывать или нет табуляцию в строках
+	frame = single,              	 % Рисовать рамку вокруг кода
+	tabsize = 2,                  	 % Размер табуляции по умолчанию равен 2 пробелам
+	captionpos = t,             	 % Позиция заголовка вверху [t] или внизу [b] 
+	breaklines = true,           	 % Автоматически переносить строки (да\нет)
+	breakatwhitespace = false,   	 % Переносить строки только если есть пробел
+	escapeinside = {\%*}{*)}      	 % Если нужно добавить комментарии в коде
+}
+
+\begin{document}
+
+\def\contentsname{Содержание}
+
+% Titlepage
+\begin{titlepage}
+	\begin{center}
+		\textsc{Санкт-Петербургский Политехнический 
+			Университет Петра Великого\\[5mm]
+			Кафедра компьютерных систем и программных технологий}
+		
+		\vfill
+		
+		\textbf{Отчёт по лабораторной работе №4\\[3mm]
+			Курс: «Администрирование компьютерных сетей»\\[3mm]
+			Тема: «Устранение уязвимостей»\\[35mm]
+			}
+	\end{center}
+	
+	\hfill
+	\begin{minipage}{.5\textwidth}
+		Выполнил студент:\\[2mm] 
+		Ерниязов Тимур Ертлеуевич\\
+		Группа: 13541/2\\[5mm]
+		
+		Проверил:\\[2mm] 
+		Малышев Игорь Алексеевич
+	\end{minipage}
+	\vfill
+	\begin{center}
+		Санкт-Петербург\\ \the\year\ г.
+	\end{center}
+\end{titlepage}
+
+% Contents
+\tableofcontents
+\clearpage
+
+\chapter{Лабораторная работа №4}
+\section{Цели работы}
+\begin{enumerate}
+\item Устранение найденных уязвимостей хостов в сети.
+\end{enumerate}
+
+\section{Выполнение работы}
+Ранее были выявлены следующие уязвимости:
+\begin{itemize}
+\item Windows XP (192.168.80.128)
+\begin{itemize}
+\item сервисом NTP открыт порт 123 по UDP;
+\item сервисом RPC Windows открыт порт 135 по TCP;
+\item сервисом NBNS открыт порт 137 по UDP;
+\item сервисом NetBIOS открыт порт 139 по TCP.
+\end{itemize}
+\item Windows 98 (192.168.120.15)
+\begin{itemize}
+\item сервисом NetBIOS-SSN открыт порт 137 по UDP;
+\item сервисом NetBIOS открыт порт 139 по TCP.
+\end{itemize}
+\end{itemize}
+
+Устранить данные уязвимости можно следующими способами:
+\begin{enumerate}
+\item установка патчей безопасности;
+\item редактирование реестра и системных настроек;
+\item настройка межсетевого экрана.
+\end{enumerate}
+В данном случае будет настроен межсетевой экран, который будет настроен на хосте с FreeBSD.\\\\
+На узле с FreeBSD, внесем следующие строчки в файл \textbf{/etc/rc.conf}:
+\begin{lstlisting}[language={}]
+firewall_enable="YES"
+firewall_type="/usr/fw_rules/ruleFile"
+\end{lstlisting}
+Первой строчкой включается межсетевой экран, а второй файл с фильтрами.\\\\
+В созданный файл \textbf{/usr/fw\_rules/ruleFile} внесем следующие строчки:
+\begin{lstlisting}[language={}]
+# Windows XP
+add deny udp from any to 192.168.80.128 123
+add deny tcp from any to 192.168.80.128 135
+add deny udp from any to 192.168.80.128 137
+add deny tcp from any to 192.168.80.128 139
+
+# Windows 98
+add deny udp from any to 192.168.120.15 137
+add deny tcp from any to 192.168.120.15 139
+
+# Allow all other packets
+add allow in
+add allow out
+\end{lstlisting}
+Данными правилами были заблокированы пакеты, которые могут использовать уязвимости. Применения првил идет сверху вниз, поэтому остальные пакеты проигнорируют правила для узлов с уязвимостями и к ним будут применены правила типа \textbf{add allow in} или \textbf{add allow out} тоесть пропуск всех исходящих и входящих пакетов.
+
+После этого, для применения правил, необходимо перезагрузить систему.\\\\
+В качестве проверки можно использовать утилиту \textbf{telnet}. 
+
+Например команда \textbf{telnet 192.168.80.128 135} успешно установит соединение с уязвимым портом до включения межсетевого экрана. После включения, как и ожидается, соединение установить не получится, что говорит о невозможности использовать данный порт как уязвимость.
+
+\section*{Вывод}
+В данной работе были рассмотрены возможности по устранению уязвимостей ОС.
+
+Наилучшим решением будет являться установка последних патчей безопасности, но это не всегда возможно. 
+
+Более оперативным и гибким решением является настройка межсетевого экрана, что и было сделано в данной работе.
+%------------------------------------------------------------------------------
+
+%\addcontentsline{toc}{section}{Список литературы}
+%\bibliography{thesis}
+%\bibliographystyle{ugost2008}
+
+\end{document}
