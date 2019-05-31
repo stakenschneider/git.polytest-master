@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.5.29)  1 JUN 2019 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.29)  30 MAY 2019 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -57,11 +57,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/babel.sty
+)
+(/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/04/03 3.29 The Babel package
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/switch.def
@@ -75,8 +72,7 @@ File: babel.def 2019/04/03 3.29 Babel common definitions
 \babel@savecnt=\count92
 \U@D=\dimen111
 
-(/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/xebabel.def
-(/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/txtbabel.def))
+(/usr/local/texlive/2019basic/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count93
 )
 \l@canadian = a dialect from \language\l@american 
@@ -107,12 +103,13 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -149,10 +146,9 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -180,12 +176,16 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count96
 Package hyperref Info: Option `unicode' set `true' on input line 3475.
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
 )
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -222,20 +222,12 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Item=\count100
 \c@Hfootnote=\count101
 )
-Package hyperref Info: Driver (autodetected): hxetex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2019basic/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
-
-(/usr/local/texlive/2019basic/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box27
-\c@Hy@AnnotLevel=\count102
-\HyField@AnnotCount=\count103
-\Fld@listcount=\count104
-\c@bookmark@seq@number=\count105
+(/usr/local/texlive/2019basic/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count102
+\c@bookmark@seq@number=\count103
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -244,24 +236,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 ) (/usr/local/texlive/2019basic/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count106
-\lst@gtempboxa=\box28
+\lst@mode=\count104
+\lst@gtempboxa=\box27
 \lst@token=\toks18
-\lst@length=\count107
+\lst@length=\count105
 \lst@currlwidth=\dimen116
-\lst@column=\count108
-\lst@pos=\count109
+\lst@column=\count106
+\lst@pos=\count107
 \lst@lostspace=\dimen117
 \lst@width=\dimen118
-\lst@newlines=\count110
-\lst@lineno=\count111
+\lst@newlines=\count108
+\lst@lineno=\count109
 \lst@maxwidth=\dimen119
 
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count112
-\lst@skipnumbers=\count113
-\lst@framebox=\box29
+\c@lstnumber=\count110
+\lst@skipnumbers=\count111
+\lst@framebox=\box28
 )
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
@@ -295,8 +287,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen125
 \caption@hangindent=\dimen126
 )
-\c@caption@flags=\count114
-\c@ContinuedFloat=\count115
+\c@caption@flags=\count112
+\c@ContinuedFloat=\count113
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
@@ -320,30 +312,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count116
+\inf@bad=\count114
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count117
-\leftroot@=\count118
+\uproot@=\count115
+\leftroot@=\count116
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count119
-\DOTSCASE@=\count120
+\classnum@=\count117
+\DOTSCASE@=\count118
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box30
-\strutbox@=\box31
+\Mathstrutbox@=\box29
+\strutbox@=\box30
 \big@size=\dimen129
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count121
-\c@MaxMatrixCols=\count122
+\macc@depth=\count119
+\c@MaxMatrixCols=\count120
 \dotsspace@=\muskip11
-\c@parentequation=\count123
-\dspbrk@lvl=\count124
+\c@parentequation=\count121
+\dspbrk@lvl=\count122
 \tag@help=\toks20
-\row@=\count125
-\column@=\count126
-\maxfields@=\count127
+\row@=\count123
+\column@=\count124
+\maxfields@=\count125
 \andhelp@=\toks21
 \eqnshift@=\dimen130
 \alignsep@=\dimen131
@@ -376,7 +368,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen136
 \Gin@req@width=\dimen137
@@ -392,23 +384,23 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen145
 \cmidrulekern=\dimen146
 \defaultaddspace=\dimen147
-\@cmidla=\count128
-\@cmidlb=\count129
+\@cmidla=\count126
+\@cmidlb=\count127
 \@aboverulesep=\dimen148
 \@belowrulesep=\dimen149
-\@thisruleclass=\count130
-\@lastruleclass=\count131
+\@thisruleclass=\count128
+\@lastruleclass=\count129
 \@thisrulewidth=\dimen150
 )
 (/usr/local/texlive/2019basic/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen151
-\ar@mcellbox=\box32
+\ar@mcellbox=\box31
 \extrarowheight=\dimen152
 \NC@list=\toks24
 \extratabsurround=\skip56
 \backup@length=\skip57
-\ar@cellbox=\box33
+\ar@cellbox=\box32
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 20.
 
@@ -428,11 +420,11 @@ l.23 \titleformat
 
  
 Here is how much of TeX's memory you used:
- 12407 strings out of 494425
- 177451 string characters out of 6164830
- 279102 words of memory out of 5000000
- 16296 multiletter control sequences out of 15000+600000
- 4008 words of font info for 16 fonts, out of 8000000 for 9000
+ 12274 strings out of 494060
+ 174998 string characters out of 6163035
+ 272116 words of memory out of 5000000
+ 15916 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  36i,0n,43p,227b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+!  ==> Fatal error occurred, no output PDF file produced!
