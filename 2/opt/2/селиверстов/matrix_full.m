@@ -42,13 +42,13 @@ disp(A1);
 det_A1 = det(A1);
 disp(det_A1);
 
-det_dw=diff(det_A1, w61);
+det_dw = diff(det_A1, w61);
 disp(det_dw);
 
 det2_A1=subs(det_A1, w61, 0);
 disp(det2_A1);
 
-We= -det_dw/det2_A1;
+We= -det_dw / det2_A1;
 disp(We);
 
 a11 = 0.4*M11; b11 = 1.6*M11;
@@ -64,20 +64,20 @@ a57 = 0.4*M57; b57 = 1.6*M57;
 a73 = 0.4*M73; b73 = 1.6*M73;
 a74 = 0.4*M74; b74 = 1.6*M74;
 
-W11 = P11*((exp(s*a11)-exp(s*b11))/((a11-b11)*s));
-W12 = P12*((exp(s*a12)-exp(s*b12))/((a12-b12)*s));
-W13 = P13*((exp(s*a13)-exp(s*b13))/((a13-b13)*s));
-W26 = P26*((exp(s*a26)-exp(s*b26))/((a26-b26)*s));
-W34 = P34*((exp(s*a34)-exp(s*b34))/((a34-b34)*s));
-W41 = P41*((exp(s*a41)-exp(s*b41))/((a41-b41)*s));
-W42 = P42*((exp(s*a42)-exp(s*b42))/((a42-b42)*s));
-W45 = P45*((exp(s*a45)-exp(s*b45))/((a45-b45)*s));
-W56 = P56*((exp(s*a56)-exp(s*b56))/((a56-b56)*s));
-W57 = P57*((exp(s*a57)-exp(s*b57))/((a57-b57)*s));
-W73 = P73*((exp(s*a73)-exp(s*b73))/((a73-b73)*s));
-W74 = P74*((exp(s*a74)-exp(s*b74))/((a74-b74)*s));
+W11 = subs(We, q11,P11*((exp(s*a11)-exp(s*b11))/((a11-b11)*s)));
+W12 = subs(We, q12,P12*((exp(s*a12)-exp(s*b12))/((a12-b12)*s)));
+W13 = subs(We, q13,P13*((exp(s*a13)-exp(s*b13))/((a13-b13)*s)));
+W26 = subs(We, q26,P26*((exp(s*a26)-exp(s*b26))/((a26-b26)*s)));
+W34 = subs(We, q34,P34*((exp(s*a34)-exp(s*b34))/((a34-b34)*s)));
+W41 = subs(We, q41,P41*((exp(s*a41)-exp(s*b41))/((a41-b41)*s)));
+W42 = subs(We, q42,P42*((exp(s*a42)-exp(s*b42))/((a42-b42)*s)));
+W45 = subs(We, q45,P45*((exp(s*a45)-exp(s*b45))/((a45-b45)*s)));
+W56 = subs(We, q56,P56*((exp(s*a56)-exp(s*b56))/((a56-b56)*s)));
+W57 = subs(We, q57,P57*((exp(s*a57)-exp(s*b57))/((a57-b57)*s)));
+W73 = subs(We, q73,P73*((exp(s*a73)-exp(s*b73))/((a73-b73)*s)));
+W74 = subs(We, q74,P74*((exp(s*a74)-exp(s*b74))/((a74-b74)*s)));
 
-We = simplify(We);
+We = simplify(We)
 We0 = limit(We, 's', 0)
 Me = We/We0;
 
