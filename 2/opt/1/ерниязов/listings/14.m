@@ -1,4 +1,4 @@
-function tim_1
+function tim_7
 clc; clearvars
 format short g;
 f1 = @(X) 0.8*X(1)+2*X(2)+5*X(3)+4*X(4)+6*X(5)+5*X(6); %->max
@@ -19,7 +19,7 @@ b = [100;-677.7;-8290.98];
 lb = [0;   0; 3;   2;   0; 0];
 ub = [100; 3; 100; 100; 5; 100];
 
-[x_3, f3_opt] = fmincon(@f3, lb, A, b, [], [], lb,ub)
-f1(x_3)
-f2(x_3)
+[x_2, f2_opt] = fmincon(f2, lb, A, b, [], [], lb,ub)
+f1(x_2)
+f3(x_2)
 end
