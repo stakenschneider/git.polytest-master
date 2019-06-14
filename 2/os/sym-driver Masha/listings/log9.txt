@@ -1,0 +1,7 @@
+osboxes@osboxes:~/Documents/study/os/listings$ ./userdev.o 
+We work with character device driver
+Character driver open
+Character driver write 50 bytes
+Character driver read 24 bytes
+Hello, character device!
+Character driver close

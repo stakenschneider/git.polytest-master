@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/study/os/listings$ sudo insmod chardev.ko
+[sudo] password for osboxes: 
+osboxes@osboxes:~/Documents/study/os/listings$

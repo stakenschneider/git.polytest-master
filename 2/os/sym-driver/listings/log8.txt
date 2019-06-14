@@ -1,0 +1,11 @@
+osboxes@osboxes:~/Documents/study/os/listings$ tail /var/log/syslog 
+May  5 20:12:46 osboxes kernel: [ 3083.997687] t
+May  5 20:12:46 osboxes kernel: [ 3083.997687] /bin/grub-script-check
+May  5 20:12:46 osboxes kernel: [ 3083.997687] bkdf2
+May  5 20:12:46 osboxes kernel: [ 3083.997687] e
+May  5 20:12:46 osboxes kernel: [ 3083.997693] Try to close character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208468] Try to open character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208476] Try to read character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208478] Read 34 bytes, 65502 left.
+May  5 20:12:56 osboxes kernel: [ 3094.208482] Try to read character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208485] Try to close character device /dev/chardev c 246 0'.

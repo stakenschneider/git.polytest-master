@@ -1,0 +1,1 @@
+osboxes@osboxes:~/Documents/syscalls/khook-master$ sudo insmod khook-demo.ko

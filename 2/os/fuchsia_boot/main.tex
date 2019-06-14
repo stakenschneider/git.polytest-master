@@ -1,0 +1,553 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[a4paper, mag=1000, left=2cm, right=2cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=cm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{color}
+\usepackage{here}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+\sloppy
+
+% Listing description
+
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\dimexpr\textwidth-1.72\fboxsep\relax}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white,margin=0pt}
+\lstset{language=C,
+	basicstyle=\footnotesize,
+	keepspaces=true,
+	tabsize=4,               
+	frame=single,                           % Single frame around code
+	rulecolor=\color{black},
+	captionpos=b,
+	showstringspaces=false,	
+	abovecaptionskip=-0.9pt,
+	xleftmargin=3.4pt,
+	xrightmargin=2.6pt,
+	breaklines=true,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{black}\hookrightarrow\space}},
+	xleftmargin=3.2pt,
+	literate={а}{{\selectfont\char224}}1
+	{~}{{\textasciitilde}}1
+	{б}{{\selectfont\char225}}1
+	{в}{{\selectfont\char226}}1
+	{г}{{\selectfont\char227}}1
+	{д}{{\selectfont\char228}}1
+	{е}{{\selectfont\char229}}1
+	{ё}{{\"e}}1
+	{ж}{{\selectfont\char230}}1
+	{з}{{\selectfont\char231}}1
+	{и}{{\selectfont\char232}}1
+	{й}{{\selectfont\char233}}1
+	{к}{{\selectfont\char234}}1
+	{л}{{\selectfont\char235}}1
+	{м}{{\selectfont\char236}}1
+	{н}{{\selectfont\char237}}1
+	{о}{{\selectfont\char238}}1
+	{п}{{\selectfont\char239}}1
+	{р}{{\selectfont\char240}}1
+	{с}{{\selectfont\char241}}1
+	{т}{{\selectfont\char242}}1
+	{у}{{\selectfont\char243}}1
+	{ф}{{\selectfont\char244}}1
+	{х}{{\selectfont\char245}}1
+	{ц}{{\selectfont\char246}}1
+	{ч}{{\selectfont\char247}}1
+	{ш}{{\selectfont\char248}}1
+	{щ}{{\selectfont\char249}}1
+	{ъ}{{\selectfont\char250}}1
+	{ы}{{\selectfont\char251}}1
+	{ь}{{\selectfont\char252}}1
+	{э}{{\selectfont\char253}}1
+	{ю}{{\selectfont\char254}}1
+	{я}{{\selectfont\char255}}1
+	{А}{{\selectfont\char192}}1
+	{Б}{{\selectfont\char193}}1
+	{В}{{\selectfont\char194}}1
+	{Г}{{\selectfont\char195}}1
+	{Д}{{\selectfont\char196}}1
+	{Е}{{\selectfont\char197}}1
+	{Ё}{{\"E}}1
+	{Ж}{{\selectfont\char198}}1
+	{З}{{\selectfont\char199}}1
+	{И}{{\selectfont\char200}}1
+	{Й}{{\selectfont\char201}}1
+	{К}{{\selectfont\char202}}1
+	{Л}{{\selectfont\char203}}1
+	{М}{{\selectfont\char204}}1
+	{Н}{{\selectfont\char205}}1
+	{О}{{\selectfont\char206}}1
+	{П}{{\selectfont\char207}}1
+	{Р}{{\selectfont\char208}}1
+	{С}{{\selectfont\char209}}1
+	{Т}{{\selectfont\char210}}1
+	{У}{{\selectfont\char211}}1
+	{Ф}{{\selectfont\char212}}1
+	{Х}{{\selectfont\char213}}1
+	{Ц}{{\selectfont\char214}}1
+	{Ч}{{\selectfont\char215}}1
+	{Ш}{{\selectfont\char216}}1
+	{Щ}{{\selectfont\char217}}1
+	{Ъ}{{\selectfont\char218}}1
+	{Ы}{{\selectfont\char219}}1
+	{Ь}{{\selectfont\char220}}1
+	{Э}{{\selectfont\char221}}1
+	{Ю}{{\selectfont\char222}}1
+	{Я}{{\selectfont\char223}}1,
+	extendedchars=true
+}
+
+\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
+\captionsetup[table]{format=hfillstart,labelsep=newline,justification=centering,skip=-10pt,textfont=bf}
+
+
+\usepackage{float}
+
+\begin{document}
+
+\input{title.tex}
+
+\input{ToC.tex}
+
+
+\section{Цель работы}
+\par Необходимо провести запуск операционной системы Fuchsia, опробовать ее функциональность и попытаться провести трассировку системных вызовов.
+
+
+\section{Ход работы}
+
+\par Операционная система Fuchsia на данный момент все еще находится в разработке и никакого стабильного релиза все еще нет. Однако, ее код находится в открытом репозитории и можно попробовать собрать ее из исходного кода и запустить.\\
+
+\subsection{Создание }
+
+\par Процедура начальной загрузки требует, чтобы у вас был установлен Go 1.6 или новее, а также Git и ваш PATH.
+
+\par Этот скрипт загрузит среду разработки, создав сначала каталоги fuchsia. \\
+
+\begin{lstlisting}[language=c caption={}]
+curl -s "https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT" | base64 --decode | bash
+\end{lstlisting}
+
+\subsection{Настройка переменных среды}
+
+\par Fuchsia использует инструмент jiri для управления git-хранилищами https://fuchsia.googlesource.com/jiri. Этот инструмент управляет набором репозиториев, указанных в манифесте.\\
+
+\par В случае успеха скрипт начальной загрузки должен напечатать сообщение, рекомендующее добавить каталог .jiri\_root / bin в вашу переменную PATH.\\
+
+\par Другим инструментом в .jiri\_root / bin является fx, который помогает конфигурировать, собирать, запускать и отлаживать Fuchsia.\\
+
+\subsection{Настройка fx workflows}
+
+Для установки fx необходимо запустить данный скрипт:
+
+\begin{lstlisting}[language=c caption={}]
+# In your fuchsia checkout:
+$ cd fuchsia
+# Add a configuration to your shell to include fx-env.sh
+$ echo "source \"$PWD/scripts/fx-env.sh\"" >> "$HOME/.$(basename "$SHELL")rc"
+# If you would like additional convenience tools from the Fuchsia scripts, also
+# optionally run the following:
+$ echo "fx-update-path" >> "$HOME/.$(basename "$SHELL")rc"
+# Restart your shell
+$ exec "$SHELL"
+\end{lstlisting}
+
+
+\subsection{Сборка исходного кода}
+
+После того, как переменные среды настроены, то можно выполнить сборку через fx:
+
+\begin{lstlisting}[language=c caption={}]
+fx set core.x64 --with //bundles:kitchen_sink
+fx build
+\end{lstlisting}
+
+\par Первая команда выбирает конфигурацию сборки, которую необходимо собрать, и сама генерирует систему сборки в выходном каталоге (например, out / x64). Фуксия может загружать пакеты по сети; здесь мы используем флаг --available, чтобы сделать доступными для загрузки необходимые пакеты. \\
+
+\par Вторая команда фактически выполняет сборку, преобразовывая исходный код в продукты сборки. Если было измненение в исходном коде, то можно сделать инкрементную сборку, повторно выполнив одну только команду fx build. fx -i build запускает наблюдателя и автоматически делает перестроение каждый раз, когда файл изменяется.
+
+\par Далее необходимо произвести загрузку на USB носитель. Для этого используется следующая команда:
+
+\begin{lstlisting}
+fx mkzedboot <usb_drive_device_path>
+\end{lstlisting}
+
+После комплиляции всех файлов проекта, в логе сборки можно прочесть инициализацию отдельных частей ядра:
+
+
+\subsection{Запуск Fuchsia}
+
+Fuchsia на данный момент может быть установлена только на следующих устройствах: 
+
+\begin{itemize}
+    \item Acer Switch Alpha 12
+    \item Intel NUC
+    \item Google Pixelbook
+\end{itemize}
+
+Поэтому запуск будет производиться через эмулирование в QEMU. Fuchsia включает в себя готовые файлы для QEMU в buildtools / qemu. \\
+Команда fx run запустит Zircon в QEMU, используя локально созданный образ диска:
+
+\begin{lstlisting}
+fx run
+\end{lstlisting}
+
+Существуют различные флаги для запуска fx для управления конфигурацией QEMU:
+
+\begin{itemize}
+    \item -m устанавливает размер памяти QEMU в МБ.
+    \item -g включает графику.
+    \item -N включает сети.
+    \item -k включает ускорение KVM в Linux
+\end{itemize}
+
+Для полной сборки fuchsia и ее запуска был написан скрипт: 
+\begin{lstlisting}
+
+#!/bin/sh
+clear
+
+# Preparing the build environment
+# https://github.com/fuchsia-mirror/manifest#prerequisites
+# https://github.com/fuchsia-mirror/magenta/blob/master/docs/getting_started.md#preparing-the-build-environment
+sudo apt-get install golang git-all curl texinfo libglib2.0-dev autoconf libtool libsdl-dev build-essential
+
+# Creating a new checkout (https://github.com/fuchsia-mirror/manifest#creating-a-new-checkout)
+curl -s https://raw.githubusercontent.com/vanadium/go.jiri/master/scripts/bootstrap_jiri | bash -s fuchsia
+cd fuchsia
+export PATH=`pwd`/.jiri_root/scripts:$PATH
+jiri import fuchsia https://fuchsia.googlesource.com/manifest
+jiri update
+
+# Building Fuchsia (https://github.com/fuchsia-mirror/manifest#building-fuchsia)
+./packages/gn/gen.py
+./buildtools/ninja -C out/debug-x86-64
+
+# Build Magenta (https://github.com/fuchsia-mirror/magenta/blob/master/docs/getting_started.md#build-magenta)
+cd magenta
+make -j32 magenta-pc-x86-64
+
+# Boot Fuchsia (https://github.com/fuchsia-mirror/manifest#building-fuchsia)
+# Updated 21 August 2016 to run with a graphical framebuffer
+./scripts/run-magenta-x86-64 -g -x ../out/debug-x86-64/user.bootfs
+\end{lstlisting}
+
+После комплиляции всех файлов проекта, в логе сборки можно прочесть инициализацию системы во время запуска:
+
+\begin{lstlisting}
+welcome to lk/MP
+
+boot args 0x1 0x80 0x0 0x0
+INIT: cpu 0, calling hook 0xffffffff801306c0 (version) at level 0x3ffff, flags 0x1
+version:
+	arch:     X86
+	platform: PC
+	target:   PC_X86
+	project:  MAGENTA_PC_X86_64
+	buildid:  _LOCAL
+INIT: cpu 0, calling hook 0xffffffff8014f26c (vm_preheap) at level 0x3ffff, flags 0x1
+initializing heap
+calling constructors
+INIT: cpu 0, calling hook 0xffffffff8014f2b4 (vm_post_ctors) at level 0x40000, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff8014f2bc (vm) at level 0x50000, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801009e0 (acpi_tables) at level 0x50001, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801047d0 (display_memtype) at level 0x50001, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff80103658 (hpet) at level 0x50002, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801037c0 (apic) at level 0x50002, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801050cc (timer) at level 0x50003, flags 0x1
+calibrate_apic_timer:231: Calibrating APIC with HPET
+initializing mp
+initializing threads
+initializing timers
+initializing ports
+INIT: cpu 0, calling hook 0xffffffff8011c810 (intel_hda_init) at level 0x60000, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801256c4 (debuglog) at level 0x6ffff, flags 0x1
+creating bootstrap completion thread
+[00000.003] K top of bootstrap2()
+[00000.003] K INIT: cpu 0, calling hook 0xffffffff80157b90 (global_prng) at level 0x70000, flags 0x1
+[00000.004] K WARNING: System has no entropy source.  It is completely unsafe to use this system for any cryptographic applications.
+[00000.004] K INIT: cpu 0, calling hook 0xffffffff801604b0 (magenta) at level 0x70000, flags 0x1
+[00000.007] K INIT: cpu 0, calling hook 0xffffffff801d7134 (dpc) at level 0x70000, flags 0x1
+[00000.011] K initializing platform
+[00000.011] K INIT: cpu 0, calling hook 0xffffffff8011eb68 (pcie_early_init) at level 0x8ffff, flags 0x1
+[00000.012] K Found 4 cpus
+[00000.013] K creating idle thread for cpu 1
+[00000.015] K creating idle thread for cpu 2
+[00000.016] K creating idle thread for cpu 3
+running final init tasks on cpu 1
+entering scheduler on cpu 1
+running final init tasks on cpu 2
+entering scheduler on cpu 2
+running final init tasks on cpu 3
+entering scheduler on cpu 3
+[00000.835] K acpi_ec_init:98: Failed to find EC: 0
+[00000.857] K initializing target
+[00000.858] K calling apps_init()
+[00000.858] K INIT: cpu 0, calling hook 0xffffffff801003a8 (pixel2_quirks) at level 0xa000a, flags 0x1
+[00000.860] K INIT: cpu 0, calling hook 0xffffffff8012f9d4 (userboot) at level 0xaffff, flags 0x1
+[00000.860] K userboot: console init
+[00000.861] K userboot: bootfs          2347008 @ 0xffffffff80242000
+[00000.861] K userboot: ramdisk       175804416 @ 0xffffff8015827000
+[00001.080] K userboot: userboot-rodata       0 @ [0x1000000,0x1002000)
+[00001.080] K userboot: userboot-code    0x2000 @ [0x1002000,0x1004000)
+[00001.080] K userboot: vdso-rodata           0 @ [0x1004000,0x1006000)
+[00001.080] K userboot: vdso-code        0x2000 @ [0x1006000,0x1007000)
+[00001.081] K userboot: entry point             @ 0x1002740
+[00001.088] U userboot: searching bootfs for "bin/devmgr"
+[00001.091] U userboot: bin/devmgr has PT_INTERP "lib/ld.so.1"
+[00001.092] U userboot: searching bootfs for "lib/ld.so.1"
+[00001.107] U Loaded at [0x1500000,0x153b000): <application>
+[00001.108] U Loaded at [0x1000000,0x10a8000): libc.so
+[00001.110] U devmgr: main()
+[00001.112] U devmgr: vfs init
+[00001.114] U devmgr: bootfs #0 contains 70 files
+[00001.114] U devmgr: bootfs #1 contains 48 files
+[00001.118] U devmgr: load drivers
+[00001.120] U devfs: vn 0x1000000a100 destroyed
+[00001.120] U console_init()
+[00001.122] U debug_reader()
+[00001.125] U devmgr: remote(0x1000000abc0) for 'devhost:pci#1:1234:1111'
+[00001.126] U devmgr: launch: devhost:pci#1:1234:1111 pci=1 0x1534090
+[00001.213] U devmgr: remote(0x1000000b800) for 'devhost:pci#2:8086:100e'
+[00001.214] U devmgr: launch: devhost:pci#2:8086:100e pci=2 0x15342d0
+[00001.223] U dlsvc: debug: Loaded at [0x1500000,0x153b000): /boot/bin/devmgr
+[00001.224] U dlsvc: debug: Loaded at [0x1000000,0x10a8000): libc.so
+[00001.230] U devhost: pci host 1
+[00001.272] U devmgr: remote(0x1000000b940) for 'devhost:pci#4:8086:2922'
+[00001.273] U devmgr: launch: devhost:pci#4:8086:2922 pci=4 0x1534318
+[00001.286] U dlsvc: debug: Loaded at [0x1500000,0x153b000): /boot/bin/devmgr
+[00001.287] U dlsvc: debug: Loaded at [0x1000000,0x10a8000): libc.so
+[00001.291] U devhost: pci host 2
+[00001.328] U i8042 device 0xab 0x41
+[00001.332] U dlsvc: debug: Loaded at [0x1500000,0x153b000): /boot/bin/devmgr
+[00001.332] U dlsvc: debug: Loaded at [0x1000000,0x10a8000): libc.so
+[00001.336] U devhost: pci host 4
+[00002.409] U i8042 device 0x00
+[00002.417] U devmgr: shell startup
+[00002.423] U devmgr: launch /boot/bin/mxsh on /dev/console
+[00002.424] U eth: using legacy irq mode
+[00002.432] U eth: mac: XX:XX:XX:XX:XX:XX
+[00002.433] U initialized vc on display bochs_vbe, width=1024 height=768 stride=1024 format=1
+[00002.441] U eth: iomem @0x10c8000 (phys b7be000)
+[00002.491] U vc: input thread started for /dev/class/input/000
+[00002.638] U devmgr: launch /boot/bin/netsvc on /dev/console
+[00002.722] U dlsvc: debug: Loaded at [0x1500000,0x1507000): /boot/bin/mxsh
+[00002.723] U dlsvc: debug: Loaded at [0x1600000,0x160d000): libmxio.so
+[00002.725] U dlsvc: debug: Loaded at [0x1700000,0x1707000): liblaunchpad.so
+[00002.726] U dlsvc: debug: Loaded at [0x1800000,0x1803000): libmagenta.so
+[00002.726] U dlsvc: debug: Loaded at [0x1000000,0x10a8000): libc.so
+\end{lstlisting}
+
+\subsection{Обзор Fuchsia}
+
+Чтобы выключить или перезагрузить Fuchsia, используйте команду dm:
+
+\begin{lstlisting}
+dm help
+dm shutdown
+\end{lstlisting}
+
+Почти все, что существует в системе Fuchsia, хранится в пакете Fuchsia. Типичный рабочий процесс разработки включает повторную сборку и передачу пакетов Fuchsia на устройство разработки или виртуальное устройство QEMU.\\
+
+\par Например, можно внести изменения в файл rolldice в файле garnet / bin / rolldice / src / main.rs. \\
+
+\par Перестройте и вставьте пакет rolldice в работающее устройство Fuchsia с помощью:
+
+\begin{lstlisting}
+fx build-push rolldice
+\end{lstlisting}
+
+Из shell на устройстве Fuchsia теперь можно запустить обновленный компонент rolldice с помощью:
+
+\begin{lstlisting}
+rolldice
+\end{lstlisting}
+
+\subsection{Запуск тестов}
+Скомпилированные тестовые двоичные файлы устанавливаются в / pkgfs / packages / и на них ссылается URI. Можно запустить тест, вызвав его в терминале. Например.
+
+\begin{lstlisting}
+run fuchsia-pkg://fuchsia.com/ledger_tests#meta/ledger_unittests.cmx
+\end{lstlisting}
+
+Если необходимо оставить Fuchsia включенной, перекомпилировать и повторно запустить тест, требуется запустить Fuchsia с включенной сетью на одном терминале, а затем на другом терминале запустить:
+
+\begin{lstlisting}
+fx run-test <имя теста> [<test args>]
+\end{lstlisting}
+
+Также командой runtests можно запустить все тесты, ниже приведен лог некоторых из них: 
+\begin{lstlisting}
+> runtests
+
+CASE bad_syscall_tests                                  [STARTED] 
+    bad_syscall_test                                    [RUNNING] [PASSED] 
+CASE bad_syscall_tests                                  [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: bad-syscall-test passed
+
+CASE mtx_tests                                          [STARTED] 
+    test_initializer                                    [RUNNING] [PASSED] 
+    test_mutexes                                        [RUNNING] [PASSED] 
+    test_try_mutexes                                    [RUNNING] [PASSED] 
+    test_static_initializer                             [RUNNING] [PASSED] 
+CASE mtx_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: c11-mutex-test passed
+
+CASE c11_thread_tests                                   [STARTED] 
+    c11_thread_test                                     [RUNNING] [PASSED] 
+CASE c11_thread_tests                                   [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: c11-thread-test passed
+
+CASE call_once_tests                                    [STARTED] 
+    call_once_main_thread_test                          [RUNNING] [PASSED] 
+    call_once_two_thread_test                           [RUNNING] [PASSED] 
+CASE call_once_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: call_once-test passed
+
+CASE cleanup_tests                                      [STARTED] 
+    cleanup_test                                        [RUNNING] [PASSED] 
+CASE cleanup_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: cleanup-test passed
+
+CASE cprng_tests                                        [STARTED] 
+    cprng_test_draw_buf_too_large                       [RUNNING] [PASSED] 
+    cprng_test_draw_bad_buf                             [RUNNING] [PASSED] 
+    cprng_test_draw_success                             [RUNNING] [PASSED] 
+    cprng_test_add_entropy_buf_too_large                [RUNNING] [PASSED] 
+    cprng_test_add_entropy_bad_buf                      [RUNNING] [PASSED] 
+CASE cprng_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: cprng-test passed
+
+CASE ctors                                              [STARTED] 
+    check_ctor                                          [RUNNING] [PASSED] 
+    check_initializer                                   [RUNNING] [PASSED] 
+CASE ctors                                              [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: ctor-test passed
+
+CASE data_pipe_tests                                    [STARTED] 
+    create_destroy_test                                 [RUNNING] [PASSED] 
+    simple_read_write                                   [RUNNING] [PASSED] 
+    loop_write_full                                     [RUNNING] [PASSED] 
+    write_read                                          [RUNNING] [PASSED] 
+    begin_write_read                                    [RUNNING] [PASSED] 
+    begin_write_read_large_request                      [RUNNING] [PASSED] 
+    loop_write_read                                     [RUNNING] [PASSED] 
+    loop_begin_write_read                               [RUNNING] [PASSED] 
+    consumer_signals_when_producer_closed               [RUNNING] [PASSED] 
+CASE data_pipe_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+\end{lstlisting}
+
+\subsection{Трассировка}
+Fuchsia запускает программу при загрузке, которая называется «crashanalyzer», которая сообщает о сбоях программы и печатает обратную трассировку вызвавшего сбой потока.
+
+\begin{lstlisting}
+[11156.652165][1048][1187][klog] INFO: devmgr: crash_analyzer_listener: analyzing exception type 0x108
+[11156.652215][1107][1121][klog] INFO: <== fatal exception: process crasher[42410] thread initial-thread[42424]
+[11156.652218][1107][1121][klog] INFO: <== fatal page fault, PC at 0x1e1888dbbbd7
+[11156.652223][1107][1121][klog] INFO:  CS:                   0 RIP:     0x1e1888dbbbd7 EFL:            0x10246 CR2:                  0
+[11156.652226][1107][1121][klog] INFO:  RAX:                  0 RBX:                0x1 RCX:     0x721ad98697c6 RDX:     0x77accb36f264
+[11156.652229][1107][1121][klog] INFO:  RSI:                  0 RDI:                  0 RBP:     0x2781c4816f90 RSP:     0x2781c4816f80
+[11156.652232][1107][1121][klog] INFO:   R8:                  0  R9:                  0 R10:                  0 R11:              0x246
+[11156.652235][1107][1121][klog] INFO:  R12:     0x773bf11dcda0 R13:     0x773bf11dcdd0 R14:               0x16 R15:         0x78050d69
+[11156.652236][1107][1121][klog] INFO:  errc:               0x6
+[11156.652237][1107][1121][klog] INFO: bottom of user stack:
+[11156.652244][1107][1121][klog] INFO: 0x00002781c4816f80: f11dcda0 0000773b 9ccd2b38 000039b2 |....;w..8+...9..|
+[11156.652248][1107][1121][klog] INFO: 0x00002781c4816f90: c4816fd0 00002781 88dbbba7 00001e18 |.o...'..........|
+[11156.652252][1107][1121][klog] INFO: 0x00002781c4816fa0: 00000008 00000000 9ccd2b38 000039b2 |........8+...9..|
+[11156.652255][1107][1121][klog] INFO: 0x00002781c4816fb0: f11dcf70 0000773b f11dcf70 0000773b |p...;w..p...;w..|
+[11156.652260][1107][1121][klog] INFO: 0x00002781c4816fc0: cb36f570 000077ac f11dcdd0 0000773b |p.6..w......;w..|
+[11156.652270][1107][1121][klog] INFO: 0x00002781c4816fd0: c4816ff0 00002781 cb2b0d0f 000077ac |.o...'....+..w..|
+[11156.652277][1107][1121][klog] INFO: 0x00002781c4816fe0: 00000054 00000000 f11dcf70 0000773b |T.......p...;w..|
+[11156.652281][1107][1121][klog] INFO: 0x00002781c4816ff0: f11dcfe0 0000773b 00000000 00000000 |....;w..........|
+[11156.652282][1107][1121][klog] INFO: arch: x86_64
+[11156.652550][1107][1121][klog] INFO: dso: id=a94c78564173530d51670b6586b1aa471e004f06 base=0x7d3506a49000 name=libfdio.so
+[11156.652553][1107][1121][klog] INFO: dso: id=a61961ba9776a67a00fb322af9ebbdcfd1ce3f62 base=0x77accb297000 name=libc.so
+[11156.652554][1107][1121][klog] INFO: dso: id=760f1e6e47d3dd8b6a19150aa47241279ec75a9c base=0x721ad9863000 name=<vDSO>
+[11156.652558][1107][1121][klog] INFO: dso: id=b18462140c6784a53736105bbf3021852eeda68c base=0x1e1888dbb000 name=app:crasher
+[11156.652637][1107][1121][klog] INFO: bt#01: pc 0x1e1888dbbbd7 sp 0x2781c4816f80 (app:crasher,0xbd7)
+[11156.652750][1107][1121][klog] INFO: bt#02: pc 0x1e1888dbbba7 sp 0x2781c4816fa0 (app:crasher,0xba7)
+[11156.652847][1107][1121][klog] INFO: bt#03: pc 0x77accb2b0d0f sp 0x2781c4816fe0 (libc.so,0x19d0f)
+[11156.652978][1107][1121][klog] INFO: bt#04: pc 0 sp 0x2781c4817000
+[11156.653027][1107][1121][klog] INFO: bt#05: end
+\end{lstlisting}
+
+Также через fx можно посмотреть системный лог fuchsia: 
+
+\begin{lstlisting}
+$ fx syslog | fx symbolize
+[11156.652165][1048][1187][klog] INFO: devmgr: crash_analyzer_listener: analyzing exception type 0x108
+... same output as "raw" backtrace ...
+start of symbolized stack:
+#01: blind_write at ../../zircon/system/uapp/crasher/crasher.c:21
+#02: main at ../../zircon/system/uapp/crasher/crasher.c:137
+#03: start_main at ../../zircon/third_party/ulib/musl/src/env/__libc_start_main.c:49
+#04: unknown, can't find pc, sp or app/library in line
+end of symbolized stack
+\end{lstlisting}
+
+
+
+\section{Вывод}
+    В ходе выполнения лабораторной работы были разобраны особенности установки Fuchsia OS в ее настоящем виде. Был разобран вариант установки Fuchsia на устройство с usb носителя, а также через эмулирование в qemu. 
+\end{document}

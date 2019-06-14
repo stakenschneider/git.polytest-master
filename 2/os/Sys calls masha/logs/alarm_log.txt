@@ -1,0 +1,6 @@
+osboxes@osboxes:~/Documents/syscalls$ gcc -o ares.o alarm_sys_call.c
+osboxes@osboxes:~/Documents/syscalls$ ./ares.o 
+before loop, time is Wed May 29 08:47:22 2019
+inside signal catcher!
+after loop, time is Wed May 29 08:47:27 2019
+the signal catcher gained control

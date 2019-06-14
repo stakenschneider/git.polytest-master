@@ -1,0 +1,69 @@
+osboxes@osboxes:~/Documents/os/khook-master$ ls -la
+total 52
+drwxrwxr-x 3 osboxes osboxes  4096 May 11 01:32 .
+drwxrwxr-x 3 osboxes osboxes  4096 May 11 01:30 ..
+-rw-rw-r-- 1 osboxes osboxes    75 Apr 30 14:33 .gitignore
+-rw-rw-r-- 1 osboxes osboxes   283 Apr 30 14:33 Kbuild
+drwxrwxr-x 3 osboxes osboxes  4096 Apr 30 14:33 khook
+-rw-rw-r-- 1 osboxes osboxes 18092 Apr 30 14:33 LICENSE
+-rw-rw-r-- 1 osboxes osboxes   964 May 11 01:25 main.c
+-rw-rw-r-- 1 osboxes osboxes   132 Apr 30 14:33 Makefile
+-rw-rw-r-- 1 osboxes osboxes  3227 Apr 30 14:33 README.md
+osboxes@osboxes:~/Documents/os/khook-master$ make
+make -C /lib/modules/3.11.0-15-generic/build M=$PWD
+make[1]: Entering directory `/usr/src/linux-headers-3.11.0-15-generic'
+  LD      /home/osboxes/Documents/os/khook-master/built-in.o
+  CC [M]  /home/osboxes/Documents/os/khook-master/main.o
+  LD [M]  /home/osboxes/Documents/os/khook-master/khook-demo.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/os/khook-master/khook-demo.mod.o
+  LD [M]  /home/osboxes/Documents/os/khook-master/khook-demo.ko
+make[1]: Leaving directory `/usr/src/linux-headers-3.11.0-15-generic'
+osboxes@osboxes:~/Documents/os/khook-master$ ls -la
+total 184
+drwxrwxr-x 4 osboxes osboxes  4096 May 11 01:33 .
+drwxrwxr-x 3 osboxes osboxes  4096 May 11 01:30 ..
+-rw-rw-r-- 1 osboxes osboxes     8 May 11 01:33 built-in.o
+-rw-rw-r-- 1 osboxes osboxes   176 May 11 01:33 .built-in.o.cmd
+-rw-rw-r-- 1 osboxes osboxes    75 Apr 30 14:33 .gitignore
+-rw-rw-r-- 1 osboxes osboxes   283 Apr 30 14:33 Kbuild
+drwxrwxr-x 3 osboxes osboxes  4096 Apr 30 14:33 khook
+-rw-rw-r-- 1 osboxes osboxes  9462 May 11 01:33 khook-demo.ko
+-rw-rw-r-- 1 osboxes osboxes   330 May 11 01:33 .khook-demo.ko.cmd
+-rw-rw-r-- 1 osboxes osboxes  1325 May 11 01:33 khook-demo.mod.c
+-rw-rw-r-- 1 osboxes osboxes  3288 May 11 01:33 khook-demo.mod.o
+-rw-rw-r-- 1 osboxes osboxes 29323 May 11 01:33 .khook-demo.mod.o.cmd
+-rw-rw-r-- 1 osboxes osboxes  7067 May 11 01:33 khook-demo.o
+-rw-rw-r-- 1 osboxes osboxes   245 May 11 01:33 .khook-demo.o.cmd
+-rw-rw-r-- 1 osboxes osboxes 18092 Apr 30 14:33 LICENSE
+-rw-rw-r-- 1 oshttps://www.overleaf.com/project/5cd36703df32210aa8ee5e05boxes osboxes   964 May 11 01:25 main.c
+-rw-rw-r-- 1 osboxes osboxes  7144 May 11 01:33 main.o
+-rw-rw-r-- 1 osboxes osboxes 37965 May 11 01:33 .main.o.cmd
+-rw-rw-r-- 1 osboxes osboxes   132 Apr 30 14:33 Makefile
+-rw-rw-r-- 1 osboxes osboxes    61 May 11 01:33 modules.order
+-rw-rw-r-- 1 osboxes osboxes     0 May 11 01:33 Module.symvers
+-rw-rw-r-- 1 osboxes osboxes  3227 Apr 30 14:33 README.md
+drwxrwxr-x 2 osboxes osboxes  4096 May 11 01:33 .tmp_versions
+
+
+osboxes@osboxes:~/Documents/os/khook-master$ sudo insmod khook-demo.ko
+
+osboxes@osboxes:~/Downloads$ gcc try_syscalls.c -o try_syscalls.o 
+osboxes@osboxes:~/Downloads$ ./try_syscalls.o 
+priority before change :0
+changed priority to :3
+
+
+osboxes@osboxes:~/Documents/os/khook-master$ sudo rmmod khook_demo 
+
+osboxes@osboxes:~/Documents/os/khook-master$ make clean
+make -C /lib/modules/3.11.0-15-generic/build M=$PWD clean
+make[1]: Entering directory `/usr/src/linux-headers-3.11.0-15-generic'
+  CLEAN   /home/osboxes/Documents/os/khook-master/.tmp_versions
+  CLEAN   /home/osboxes/Documents/os/khook-master/Module.symvers
+make[1]: Leaving directory `/usr/src/linux-headers-3.11.0-15-generic'
+
+
+
+

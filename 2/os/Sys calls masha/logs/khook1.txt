@@ -1,0 +1,11 @@
+osboxes@osboxes:~/Documents/syscalls/khook-master$ make
+make -C /lib/modules/3.11.0-15-generic/build M=$PWD
+make[1]: Entering directory `/usr/src/linux-headers-3.11.0-15-generic'
+  LD      /home/osboxes/Documents/syscalls/khook-master/built-in.o
+  CC [M]  /home/osboxes/Documents/syscalls/khook-master/main.o
+  LD [M]  /home/osboxes/Documents/syscalls/khook-master/khook-demo.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/syscalls/khook-master/khook-demo.mod.o
+  LD [M]  /home/osboxes/Documents/syscalls/khook-master/khook-demo.ko
+make[1]: Leaving directory `/usr/src/linux-headers-3.11.0-15-generic'

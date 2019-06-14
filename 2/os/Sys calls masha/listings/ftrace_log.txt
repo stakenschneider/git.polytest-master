@@ -1,0 +1,32 @@
+make -C /lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/syscall_masha/lol modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+make[2]: Warning: File `/home/osboxes/Documents/syscall_masha/lol/Makefile' has modification time 1.5e+04 s in the future
+  CC [M]  /home/osboxes/Documents/syscall_masha/lol/ftrace_hook.o
+/home/osboxes/Documents/syscall_masha/lol/ftrace_hook.c:198:14: warning: ‘duplicate_filename’ defined but not used [-Wunused-function]
+ static char *duplicate_filename(const char __user *filename)
+              ^
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+  Building modules, stage 2.
+make[2]: Warning: File `/home/osboxes/Documents/syscall_masha/lol/Makefile' has modification time 1.5e+04 s in the future
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/syscall_masha/lol/ftrace_hook.mod.o
+  LD [M]  /home/osboxes/Documents/syscall_masha/lol/ftrace_hook.ko
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'
+make: warning:  Clock skew detected.  Your build may be incomplete.
+osboxes@osboxes:~/Documents/syscall_masha/lol$ sudo insmod ftrace_demo.ko
+insmod: ERROR: could not load module ftrace_demo.ko: No such file or directory
+osboxes@osboxes:~/Documents/syscall_masha/lol$ ls
+ftrace_hook.c  ftrace_hook.c~  ftrace_hook.ko  ftrace_hook.mod.c  ftrace_hook.mod.o  ftrace_hook.o  Makefile  modules.order  Module.symvers
+osboxes@osboxes:~/Documents/syscall_masha/lol$ sudo rmmod ftrace_hook
+osboxes@osboxes:~/Documents/syscall_masha/lol$ sudo insmod ftrace_hook.ko
+osboxes@osboxes:~/Documents/syscall_masha/lol$ cd ..
+osboxes@osboxes:~/Documents/syscall_masha$ ./chmodres.o
+chmod result 0 
+osboxes@osboxes:~/Documents/syscall_masha$ ./chownres.o
+original owner was 1000 and group was 1000
+after chown(), owner is 1000 and group is 1000
+osboxes@osboxes:~/Documents/syscall_masha$ tail /var/log/syslog
+May 29 11:52:25 osboxes kernel: [12690.288633] ftrace_hook: module loaded
+May 29 11:53:09 osboxes kernel: [12734.399951] ftrace_hook: chmod() hooked!
+May 29 11:53:20 osboxes kernel: [12745.667818] ftrace_hook: chown() hooked

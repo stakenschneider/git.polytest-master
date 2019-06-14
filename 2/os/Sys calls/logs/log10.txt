@@ -1,0 +1,4 @@
+mikhailme@ubuntu-desktop:~/Documents/study/os$ gcc try_syscalls.c -o try_syscalls.o
+mikhailme@ubuntu-desktop:~/Documents/study/os$ ./try_syscalls.o 
+priority before change :0
+changed priority to :3

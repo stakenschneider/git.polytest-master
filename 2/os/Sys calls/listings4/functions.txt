@@ -1,0 +1,21 @@
+static asmlinkage long fh_sys_getpriority(int which, int who)
+{
+	long ret;
+	
+	printk("getpriority hooked by mikhailme\n");
+	
+	ret = real_sys_getpriority(which, who);
+	
+	return ret;
+}
+
+static asmlinkage long fh_sys_setpriority(int which, int who, int niceval)
+{
+	long ret;
+	
+	printk("setpriority hooked by mikhailme\n");
+	
+	ret = real_sys_setpriority(which, who, niceval);
+	
+	return ret;
+}

@@ -1,0 +1,7 @@
+osboxes@osboxes:~/Downloads$ tail /var/log/syslog 
+....
+May 11 01:33:28 osboxes kernel: [  872.211608] module loaded by mikhailme
+May 11 01:33:59 osboxes kernel: [  903.179746] getpriority hooked by mikhailme
+May 11 01:33:59 osboxes kernel: [  903.179773] setpriority hooked by mikhailme
+May 11 01:33:59 osboxes kernel: [  903.181003] getpriority hooked by mikhailme
+May 11 01:34:10 osboxes kernel: [  914.776534] module unloaded by mikhailme

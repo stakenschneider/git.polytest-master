@@ -1,0 +1,3 @@
+static asmlinkage long (*real_sys_getpriority)(int which, int who);
+
+static asmlinkage long (*real_sys_setpriority)(int which, int who, int niceval);

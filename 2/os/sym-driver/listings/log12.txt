@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/study/os/listings$ sudo rm /dev/chardev 
+osboxes@osboxes:~/Documents/study/os/listings$ ls /dev | grep chardev
+osboxes@osboxes:~/Documents/study/os/listings$ 

@@ -1,0 +1,11 @@
+osboxes@osboxes:~/Documents/study/os/listings$ tail /var/log/syslog 
+May  5 19:33:09 osboxes kernel: [  706.786723] chardev: loading out-of-tree module taints kernel.
+May  5 19:33:09 osboxes kernel: [  706.786727] chardev: module license 'unspecified' taints kernel.
+May  5 19:33:09 osboxes kernel: [  706.786728] Disabling lock debugging due to kernel taint
+May  5 19:33:09 osboxes kernel: [  706.786749] chardev: module verification failed: signature and/or required key missing - tainting kernel
+May  5 19:33:09 osboxes kernel: [  706.788595] I was assigned major number 246. To talk to
+May  5 19:33:09 osboxes kernel: [  706.788597] the driver, create a dev file with
+May  5 19:33:09 osboxes kernel: [  706.788598] 'mknod /dev/chardev c 246 0'.
+May  5 19:33:09 osboxes kernel: [  706.788599] Try various minor numbers. Try to cat and echo to
+May  5 19:33:09 osboxes kernel: [  706.788600] the device file.
+May  5 19:33:09 osboxes kernel: [  706.788600] Remove the device file and module when done.

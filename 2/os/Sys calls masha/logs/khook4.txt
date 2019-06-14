@@ -1,0 +1,5 @@
+osboxes@osboxes:~/Documents/syscalls$ tail /var/log/syslog
+May 29 10:12:04 osboxes kernel: [ 6669.698343] module loaded by lorismelik
+May 29 10:12:31 osboxes kernel: [ 6696.249120] alarm_syscall hooked by lorismelik
+May 29 10:12:41 osboxes kernel: [ 6706.536621] time_syscall hooked by lorismelik
+May 29 10:10:56 osboxes kernel: [ 6601.458029] module unloaded by lorismelik

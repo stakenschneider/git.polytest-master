@@ -1,0 +1,23 @@
+osboxes@osboxes:~/Documents/syscalls/lol$ uname -r
+4.4.0-142-generic
+
+osboxes@osboxes:~/Documents/syscalls/lol$ make
+make -C /lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/syscalls/lol modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+  CC [M]  /home/osboxes/Documents/syscalls/lol/ftrace_hook.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/syscalls/lol/ftrace_hook.mod.o
+  LD [M]  /home/osboxes/Documents/syscalls/lol/ftrace_hook.ko
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'
+osboxes@osboxes:~/Documents/syscalls/lol/ $ sudo insmod ftrace_hook.ko
+
+
+osboxes@osboxes:~/Documents/syscalls/lol $ cd ..
+osboxes@osboxes:~/Documents/syscalls/lol/ $ sudo rmmod ftrace_hook
+osboxes@osboxes:~/Documents/syscalls/lol/ $ make clean 
+make -C /lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/syscalls/lol/  clean
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+  CLEAN   /home/osboxes/Documents/syscalls/lol/ /.tmp_versions
+  CLEAN   /home/osboxes/Documents/syscalls/lol/ /Module.symvers
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'

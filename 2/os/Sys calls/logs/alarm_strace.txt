@@ -1,0 +1,54 @@
+osboxes@osboxes:~/Documents/syscalls$ strace ./ares.o
+execve("./ares.o", ["./ares.o"], [/* 61 vars */]) = 0
+brk(0)                                  = 0xeae000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=79012, ...}) = 0
+mmap(NULL, 79012, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbe48665000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P \2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1857312, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbe48664000
+mmap(NULL, 3965632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbe4808e000
+mprotect(0x7fbe4824c000, 2097152, PROT_NONE) = 0
+mmap(0x7fbe4844c000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1be000) = 0x7fbe4844c000
+mmap(0x7fbe48452000, 17088, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbe48452000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbe48662000
+arch_prctl(ARCH_SET_FS, 0x7fbe48662740) = 0
+mprotect(0x7fbe4844c000, 16384, PROT_READ) = 0
+mprotect(0x600000, 4096, PROT_READ)     = 0
+mprotect(0x7fbe48679000, 4096, PROT_READ) = 0
+munmap(0x7fbe48665000, 79012)           = 0
+rt_sigaction(SIGALRM, {0x4006ed, [], SA_RESTORER, 0x7fbe480c4cb0}, NULL, 8) = 0
+alarm(5)                                = 0
+brk(0)                                  = 0xeae000
+brk(0xecf000)                           = 0xecf000
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbe48678000
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0\0\0\0"..., 4096) = 3519
+lseek(3, -2252, SEEK_CUR)               = 1267
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 2252
+close(3)                                = 0
+munmap(0x7fbe48678000, 4096)            = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbe48678000
+write(1, "before loop, time is Wed May 29 "..., 46before loop, time is Wed May 29 08:54:05 2019
+) = 46
+--- SIGALRM {si_signo=SIGALRM, si_code=SI_KERNEL} ---
+write(1, "inside signal catcher!\n", 23inside signal catcher!
+) = 23
+rt_sigreturn()                          = 0
+stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3519, ...}) = 0
+write(1, "after loop, time is Wed May 29 0"..., 45after loop, time is Wed May 29 08:54:10 2019
+) = 45
+write(1, "the signal catcher gained contro"..., 34the signal catcher gained control
+) = 34
+exit_group(34)                          = ?
++++ exited with 34 +++
+

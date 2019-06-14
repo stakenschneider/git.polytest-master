@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/syscall_masha$ ./chownres.o
+original owner was 1000 and group was 1000
+after chown(), owner is 1000 and group is 1000

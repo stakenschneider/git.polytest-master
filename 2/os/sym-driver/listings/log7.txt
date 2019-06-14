@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/study/os/listings$ echo 'hello' > /dev/chardev
+osboxes@osboxes:~/Documents/study/os/listings$ cat /dev/chardev
+I already told you 1 times HELLO!

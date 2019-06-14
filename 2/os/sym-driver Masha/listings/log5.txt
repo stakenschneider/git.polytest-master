@@ -1,0 +1,2 @@
+osboxes@osboxes:~/Documents/study/os/listings$ lsmod | grep chardev
+chardev                16384  0 

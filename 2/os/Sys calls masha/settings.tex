@@ -1,0 +1,46 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[a4paper, mag=1000, left=2cm, right=2cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings} 
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = black
+}
+
+\DeclareCaptionFont{white}{\color{white}} 
+
+\sloppy
+
+% Listing description
+\usepackage{listings} 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\renewcommand{\lstlistingname}{Листинг}
+\lstset{
+	frame=single, % adds a frame around the code
+	rulesepcolor=\color{gray},
+	rulecolor=\color{black},
+	breaklines=true,
+	xleftmargin=2em,
+	extendedchars={true},
+	inputencoding={utf8},
+	basicstyle={\ttfamily \scriptsize},
+	keywordstyle={\rmfamily \bfseries},
+	commentstyle={\rmfamily \itshape},
+	tabsize={2},
+	numbers={left},
+	frame={single},
+	showstringspaces={false}
+}
+
+\usepackage{float}

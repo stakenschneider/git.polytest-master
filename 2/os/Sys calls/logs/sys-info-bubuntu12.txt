@@ -1,0 +1,16 @@
+osboxes@osboxes:~/Downloads$ cat /proc/version
+Linux version 3.11.0-15-generic (buildd@allspice) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #25~precise1-Ubuntu SMP Thu Jan 30 17:39:31 UTC 2014
+osboxes@osboxes:~/Downloads$ gcc --version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+osboxes@osboxes:~/Downloads$ uname -a
+Linux osboxes 3.11.0-15-generic #25~precise1-Ubuntu SMP Thu Jan 30 17:39:31 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+osboxes@osboxes:~/Downloads$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.4 LTS
+Release:	12.04
+Codename:	precise

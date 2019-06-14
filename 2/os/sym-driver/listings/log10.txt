@@ -1,0 +1,11 @@
+osboxes@osboxes:~/Documents/study/os/listings$ tail /var/log/syslog 
+May  5 20:12:56 osboxes kernel: [ 3094.208476] Try to read character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208478] Read 34 bytes, 65502 left.
+May  5 20:12:56 osboxes kernel: [ 3094.208482] Try to read character device /dev/chardev c 246 0'.
+May  5 20:12:56 osboxes kernel: [ 3094.208485] Try to close character device /dev/chardev c 246 0'.
+May  5 20:17:01 osboxes CRON[5306]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+May  5 20:17:06 osboxes kernel: [ 3344.288398] Try to open character device /dev/chardev c 246 0'.
+May  5 20:17:06 osboxes kernel: [ 3344.288405] Try to write (ffff8800a8475c00, Hello, character device!, 50).
+May  5 20:17:06 osboxes kernel: [ 3344.288414] Try to read character device /dev/chardev c 246 0'.
+May  5 20:17:06 osboxes kernel: [ 3344.288415] Read 24 bytes, 26 left.
+May  5 20:17:06 osboxes kernel: [ 3344.288419] Try to close character device /dev/chardev c 246 0'.

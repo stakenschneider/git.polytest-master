@@ -1,0 +1,21 @@
+osboxes@osboxes:~/Documents/study/os/listings$ make
+make -C/lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/study/os/listings modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+  CC [M]  /home/osboxes/Documents/study/os/listings/chardev.o
+/home/osboxes/Documents/study/os/listings/chardev.c:38:2: warning: initialization from incompatible pointer type [enabled by default]
+  .write = device_write,
+  ^
+/home/osboxes/Documents/study/os/listings/chardev.c:38:2: warning: (near initialization for ‘fops.write’) [enabled by default]
+/home/osboxes/Documents/study/os/listings/chardev.c: In function ‘device_read’:
+/home/osboxes/Documents/study/os/listings/chardev.c:135:2: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ [-Wformat=]
+  printk("Read %d bytes, %d left.\n", bytes_read, length);
+  ^
+/home/osboxes/Documents/study/os/listings/chardev.c: In function ‘device_write’:
+/home/osboxes/Documents/study/os/listings/chardev.c:144:2: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ [-Wformat=]
+  printk("Try to write (%p, %s, %d).\n", filp, buffer, length);
+  ^
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/study/os/listings/chardev.mod.o
+  LD [M]  /home/osboxes/Documents/study/os/listings/chardev.ko
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'

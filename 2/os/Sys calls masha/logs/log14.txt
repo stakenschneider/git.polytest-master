@@ -1,0 +1,11 @@
+
+
+osboxes@osboxes:~/Documents/study/os/sys-calls/listings$ make
+make -C /lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/study/os/sys-calls/listings modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+  CC [M]  /home/osboxes/Documents/study/os/sys-calls/listings/ftrace_hook.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/study/os/sys-calls/listings/ftrace_hook.mod.o
+  LD [M]  /home/osboxes/Documents/study/os/sys-calls/listings/ftrace_hook.ko
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'

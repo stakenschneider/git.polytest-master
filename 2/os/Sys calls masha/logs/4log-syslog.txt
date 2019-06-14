@@ -1,0 +1,6 @@
+osboxes@osboxes:~$ tail /var/log/syslog
+...
+May 29 10:08:24 osboxes kernel: [ 5789.787434] module loaded by  lorismelik
+May 29 10:08:43 osboxes kernel: [ 5808.849791] alarm() hooked!
+May 29 10:08:43 osboxes kernel: [ 5808.849811] time() hooked!
+May 29 10:09:06 osboxes kernel: [ 5831.204206] module unloaded by  lorismelik

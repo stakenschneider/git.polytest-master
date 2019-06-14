@@ -1,0 +1,10 @@
+osboxes@osboxes:~/Documents/syscalls$ sudo rmmod khook-demo
+osboxes@osboxes:~/Documents/syscalls$ make clean
+make: *** No rule to make target `clean'.  Stop.
+osboxes@osboxes:~/Documents/syscalls$ cd khook-master/
+osboxes@osboxes:~/Documents/syscalls/khook-master$ make clean
+make -C /lib/modules/3.11.0-15-generic/build M=$PWD clean
+make[1]: Entering directory `/usr/src/linux-headers-3.11.0-15-generic'
+  CLEAN   /home/osboxes/Documents/syscalls/khook-master/.tmp_versions
+  CLEAN   /home/osboxes/Documents/syscalls/khook-master/Module.symvers
+make[1]: Leaving directory `/usr/src/linux-headers-3.11.0-15-generic'

@@ -1,0 +1,8 @@
+osboxes@osboxes:~/Documents/syscalls/khook-master$ cd ..
+osboxes@osboxes:~/Documents/syscalls$ ./ares.o
+before loop, time is Wed May 29 10:12:31 2019
+inside signal catcher!
+after loop, time is Wed May 29 10:12:36 2019
+the signal catcher gained control
+osboxes@osboxes:~/Documents/syscalls$ ./tres.o
+Time in seconds 1559139161 

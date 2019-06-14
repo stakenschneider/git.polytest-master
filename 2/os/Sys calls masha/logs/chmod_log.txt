@@ -1,0 +1,15 @@
+osboxes@osboxes:~/Documents/syscall_masha$ gcc -o chmodres.o chmod_sys_call.c
+osboxes@osboxes:~/Documents/syscall_masha$ ./chmodres.o
+chmod result 0 
+osboxes@osboxes:~/Documents/syscall_masha$ ls -la
+total 40
+drwxrwxr-x 4 osboxes osboxes 4096 May 29 11:26 .
+drwxr-xr-x 4 osboxes osboxes 4096 May 29 11:18 ..
+-rwxrwxr-x 1 osboxes osboxes 8996 May 29 11:26 chmodres.o
+-rw-rw-r-- 1 osboxes osboxes  524 May 29 11:26 chmod_sys_call.c
+-rw-rw-r-- 1 osboxes osboxes  524 May 29 11:25 chmod_sys_call.c~
+-rw-rw-r-- 1 osboxes osboxes  165 May 29 10:09 chown_sys_call.c
+drwxrwxr-x 3 osboxes osboxes 4096 May 29 10:13 khook-master
+drwxrwxr-x 3 osboxes osboxes 4096 May 29 11:16 lol
+-------r-x 1 osboxes osboxes    0 May 29 11:21 test
+

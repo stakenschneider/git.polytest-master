@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/syscalls$ ./tres.o
+Time in seconds 1559138951 
+

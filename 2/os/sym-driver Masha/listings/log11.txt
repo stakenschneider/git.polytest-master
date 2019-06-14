@@ -1,0 +1,3 @@
+osboxes@osboxes:~/Documents/study/os/listings$ sudo rmmod chardev.ko
+osboxes@osboxes:~/Documents/study/os/listings$ tail /var/log/syslog  --lines=1
+May  5 20:00:22 osboxes kernel: [ 2339.803012] Removing character device /dev/chardev c 246 0'.

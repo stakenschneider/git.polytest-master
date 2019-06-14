@@ -1,0 +1,12 @@
+osboxes@osboxes:~/Documents/study/os/listings$ ls
+chardev.c   chardev.ko     chardev.mod.o  Makefile   modules.order   userdev.c
+chardev.c~  chardev.mod.c  chardev.o      Makefile~  Module.symvers  userdev.o
+osboxes@osboxes:~/Documents/study/os/listings$ make clean
+make -C/lib/modules/4.4.0-142-generic/build M=/home/osboxes/Documents/study/os/listings clean
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-142-generic'
+  CLEAN   /home/osboxes/Documents/study/os/listings/.tmp_versions
+  CLEAN   /home/osboxes/Documents/study/os/listings/Module.symvers
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-142-generic'
+osboxes@osboxes:~/Documents/study/os/listings$ ls
+chardev.c  chardev.c~  Makefile  Makefile~  userdev.c
+osboxes@osboxes:~/Documents/study/os/listings$ 

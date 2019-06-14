@@ -1,0 +1,6 @@
+osboxes@osboxes:~/Documents/study/os/listings$ modinfo chardev.ko
+filename:       /home/osboxes/Documents/study/os/listings/chardev.ko
+srcversion:     A15D07213C10C205BEB39CD
+depends:        
+retpoline:      Y
+vermagic:       4.4.0-142-generic SMP mod_unload modversions retpoline

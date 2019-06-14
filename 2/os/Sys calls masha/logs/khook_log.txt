@@ -1,0 +1,26 @@
+
+osboxes@osboxes:~/Documents/syscall_masha/khook-master$ make
+make -C /lib/modules/3.11.0-15-generic/build M=$PWD
+make[1]: Entering directory `/usr/src/linux-headers-3.11.0-15-generic'
+  LD      /home/osboxes/Documents/syscall_masha/khook-master/built-in.o
+  CC [M]  /home/osboxes/Documents/syscall_masha/khook-master/main.o
+  LD [M]  /home/osboxes/Documents/syscall_masha/khook-master/khook-demo.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/osboxes/Documents/syscall_masha/khook-master/khook-demo.mod.o
+  LD [M]  /home/osboxes/Documents/syscall_masha/khook-master/khook-demo.ko
+make[1]: Leaving directory `/usr/src/linux-headers-3.11.0-15-generic'
+osboxes@osboxes:~/Documents/syscall_masha/khook-master$ sudo insmod khook-demo.ko
+[sudo] password for osboxes: 
+osboxes@osboxes:~/Documents/syscall_masha/khook-master$ cd ..
+osboxes@osboxes:~/Documents/syscall_masha$ ./chmodres.o
+chmod result 0 
+osboxes@osboxes:~/Documents/syscall_masha$ ./chownres.o
+original owner was 1000 and group was 1000
+after chown(), owner is 1000 and group is 1000
+osboxes@osboxes:~/Documents/syscall_masha$ tail /var/log/syslog
+May 29 11:41:07 osboxes kernel: [12012.237699] module loaded by masha
+May 29 11:41:39 osboxes kernel: [12044.173562] chmod_syscall hooked by masha
+May 29 11:42:13 osboxes kernel: [12078.587985] chown_syscall hooked by masha
+osboxes@osboxes:~/Documents/syscall_masha$ 
+

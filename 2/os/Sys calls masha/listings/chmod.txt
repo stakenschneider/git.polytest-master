@@ -1,0 +1,4 @@
+SYSCALL_DEFINE2(chmod, const char __user *, filename, umode_t, mode)
+{
+	return do_fchmodat(AT_FDCWD, filename, mode);
+}
