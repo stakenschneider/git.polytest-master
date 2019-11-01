@@ -89,10 +89,25 @@ isPrime' x divider
     | mod x divider == 0 = False
     | otherwise          = isPrime' x (divider + 1)
 
-
+-- Найти из списка все натуральные
+natural lst = natural' lst []
+natural' (h:t) lst
+    | t == [] = lst
+    | otherwise  = natural' t foo where
+    foo = if isPrime h == False then lst else lst ++ [h]
+isPrime n = isPrime' n 2
+isPrime' x divider
+    | x < 0              = error "error: less zero"
+    | x == 0 || x == 1   = False
+    | x == divider       = True
+    | mod x divider == 0 = False
+    | otherwise          = isPrime' x (divider + 1)
+    
+    
+    
 -- Удалить каждый n-ый элемент из списка
 dropEvery :: [a] -> Int -> [a]
-dropEvery lst n = dropEvery' lst n (length div lst  n)
+dropEvery lst n = dropEvery' lst n (length  lst `div` n)
 
 dropEvery' :: [a] -> Int -> Int -> [a]
 dropEvery' lst n m = if m < 0 then lst
@@ -190,11 +205,11 @@ takeSum y x (h:t) | x + h == y = (x, h)
 
 
 -- Дан список и два числа; m, n. Необходимо заменить все элементы списка, кратные индексам m на n.
-changeEls lst m n = changeEls' lst m n 0 (length lst) []
+changeEls lst m n = changeEls' (reverse lst) m n 0 []                            
 
-changeEls' lst m n i len res | i == len = res
-                             | mod i n == 0 = changeEls' lst m n (i+1) len (n : res)
-                             | otherwise = changeEls' lst m n (i+1) ((lst !! i) : res)
+changeEls' lst m n i  res | i == length lst =  res
+                          | mod (i+1) m == 0  = changeEls' lst m n (i + 1)  res ++  [n]
+                          | otherwise     = changeEls' lst m n (i + 1)  res ++  [lst!!i]
 
 
 -- Дано число. Заменить в нем все нули на 5.
