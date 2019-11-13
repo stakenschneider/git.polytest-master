@@ -344,3 +344,21 @@ invertF' f x (y1,y2) | f (fst res) (snd res) == x = res
 invertF'' f x (y1 y2) | f y1 y2 == x = (y1 y2)
                       | f y1 y2 < x = invertF'' f x (y1 y2+1)
                       | otherwise = (y1 y2)
+
+-- проверка скобок
+isCorrect [] [] = "Success"
+isCorrect s  [] = show . fst . last $ s
+isCorrect s (e@(i, c) : l)
+  | c `elem` "([{" = isCorrect (e : s) l
+  | c `elem` ")]}" = case s of
+    []            -> show i
+    ((_, t) : s') -> if Just t == lookup c [(')', '('), (']', '['), ('}', '{')]
+                     then isCorrect s' l
+                     else show i
+  | otherwise      = isCorrect s l
+
+main = isCorrect [] . zip [1 ..] <$> getLine >>= putStrLn
+
+-- 4 массива. такое a из as, b из bs ... что (a*b)/(c*d) -> max
+
+-- realize show 4 value without deriving
