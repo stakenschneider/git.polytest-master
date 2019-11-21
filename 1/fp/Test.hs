@@ -359,6 +359,14 @@ isCorrect s (e@(i, c) : l)
 
 main = isCorrect [] . zip [1 ..] <$> getLine >>= putStrLn
 
+-- стек с поддержкой максимума
+main = getContents >>= process [] . map words . tail . lines
+    where process _  []                 = return ()
+          process [] (["push", n] : xs) = process [read n :: Int] xs
+          process st (["push", n] : xs) = process (max (head st) (read n) : st) xs
+          process st (["pop"    ] : xs) = process (tail st) xs
+          process st (["max"    ] : xs) = print (head st) >> process st xs
+
 -- 4 массива. такое a из as, b из bs ... что (a*b)/(c*d) -> max
 
 -- realize show 4 value without deriving
