@@ -366,6 +366,15 @@ main = getContents >>= process [] . map words . tail . lines
           process st (["push", n] : xs) = process (max (head st) (read n) : st) xs
           process st (["pop"    ] : xs) = process (tail st) xs
           process st (["max"    ] : xs) = print (head st) >> process st xs
+          
+-- phonebook hashmap
+-- import Data.Map.Strict
+run m ("add" : k : v : ws) = run (insert k v m) ws
+run m ("del" : k : ws) = run (delete k m) ws
+run m (_ : k : ws) = putStrLn (findWithDefault "not found" k m) >> run m ws
+run _ _ = return ()
+main = getContents >>= run empty . tail . words
+
 
 -- 4 массива. такое a из as, b из bs ... что (a*b)/(c*d) -> max
 
