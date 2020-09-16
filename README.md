@@ -25,3 +25,7 @@
   * **distributed software** - Программное обеспечение распределенных вычислительных систем (Стручков)
   * **highload** -  Высоконагруженные вычисления (Технополис)
   * **hybrid comsys** - Проектирование реконфигурируемых гибридных вычислительных систем (Антонов)
+
+
+
+![Image alt](https://github.com/stakenschneider/git.polytest-master/blob/master/image.jpg)
