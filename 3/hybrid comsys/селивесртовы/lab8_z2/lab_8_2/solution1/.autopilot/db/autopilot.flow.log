@@ -1,0 +1,1469 @@
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 02:48:27 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.488 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.138 sec.
+Command         ap_source done; 0.138 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.174 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.761 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.786 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.377 sec.
+Command ap_source done; error code: 1; 1.177 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 02:56:45 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.48 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.135 sec.
+Command         ap_source done; 0.135 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.172 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.751 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.767 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.179 sec.
+Command ap_source done; error code: 1; 0.952 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:13:31 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.496 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.136 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.174 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.773 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.806 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.234 sec.
+Command ap_source done; error code: 1; 1.045 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:17:36 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.501 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.135 sec.
+Command         ap_source done; 0.136 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.173 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.771 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.795 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.123 sec.
+Command ap_source done; error code: 1; 0.923 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:18:32 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.513 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.137 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.173 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.782 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.801 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.141 sec.
+Command ap_source done; error code: 1; 0.947 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:21:32 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.507 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.137 sec.
+Command         ap_source done; 0.137 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.173 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.774 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.798 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.151 sec.
+Command ap_source done; error code: 1; 0.954 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:22:01 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.502 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.134 sec.
+Command         ap_source done; 0.135 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.171 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.768 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.789 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.153 sec.
+Command ap_source done; error code: 1; 0.946 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:33:17 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.508 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.137 sec.
+Command         ap_source done; 0.138 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.175 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.777 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.806 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.213 sec.
+Command ap_source done; error code: 1; 1.024 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:34:28 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.508 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.137 sec.
+Command         ap_source done; 0.138 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.184 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.782 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.8 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.144 sec.
+Command ap_source done; error code: 1; 0.949 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:37:53 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.507 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.136 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.173 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.77 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.788 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.163 sec.
+Command ap_source done; error code: 1; 0.955 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:38:52 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.509 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.136 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.185 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.784 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.801 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.135 sec.
+Command ap_source done; error code: 1; 0.94 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:40:15 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.518 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.136 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.18 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.786 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.803 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.143 sec.
+Command ap_source done; error code: 1; 0.95 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:45:09 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.538 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.135 sec.
+Command         ap_source done; 0.135 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.172 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.807 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.824 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.147 sec.
+Command ap_source done; error code: 1; 0.976 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab_8_1/solution1 opened at Sat Jan 04 03:47:17 +0300 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 0.1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+Execute     set_part xa7a12tcsg325-1Q 
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data single -quiet 
+Command       ap_part_info done; 0.5 sec.
+Execute       ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute       add_library xilinx/artix7/artix7:xa7a12t:-csg325:-1Q 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a12t 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.136 sec.
+Command         ap_source done; 0.137 sec.
+Execute         ap_part_info -data single -name xa7a12t-csg325-1Q 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data resources 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute         ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.174 sec.
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+Execute       ap_part_info -name xa7a12t-csg325-1Q -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.769 sec.
+Execute     ap_part_info -data single -name xa7a12tcsg325-1Q 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data resources 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -resource {SLICE 3650} {LUT 8000} {FF 16000} {DSP48E 40} {BRAM 40} {URAM 0} 
+Execute     ap_part_info -name xa7a12tcsg325-1Q -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.795 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/lab8_11t.h 
+Execute     is_encrypted C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+Execute     is_xip C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab8_1/foo_b.h 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.126 sec.
+Command ap_source done; error code: 1; 0.928 sec.
+Execute cleanup_all 

@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution2/sim/verilog/foo.autotb.v,1572964792,systemVerilog,,,,apatb_foo_top,D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution2/sim/verilog/foo.v,1572964687,systemVerilog,,,,foo,D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

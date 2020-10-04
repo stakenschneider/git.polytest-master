@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct 21 22:38:57 2019
+# Process ID: 7952
+# Current directory: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/webtalk.log
+# Journal file: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace

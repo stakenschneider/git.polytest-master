@@ -1,0 +1,163 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+WARNING: [COSIM-73] Bus port 'd' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+   Build using "C:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_foo.cpp
+   Compiling (apcc) lab6_22main.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 02:01:13 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lab6_22test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 02:01:17 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+ERROR: [COSIM-361] C TB post check failed, nonzero return value '1'.
+Expected   Actual
+--------   ------
+res[0]: 0 == d[0]: 0
+res[1]: 1 == d[1]: 1
+res[2]: 3 == d[2]: 3
+res[3]: 6 == d[3]: 6
+------Pass!------
+
+C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado\lab6_2_2\solution1\sim\verilog>set PATH= 
+
+C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado\lab6_2_2\solution1\sim\verilog>call C:/Xilinx/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s foo -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s foo -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/AESL_autobus_d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobus_d
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/foo.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_foo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/foo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module foo
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.foo
+Compiling module xil_defaultlib.fifo(DEPTH=32'b0100000,WIDTH=32'...
+Compiling module xil_defaultlib.fifo(DEPTH=32'b0100000,WIDTH=32'...
+Compiling module xil_defaultlib.AESL_autobus_d
+Compiling module xil_defaultlib.apatb_foo_top
+Compiling module work.glbl
+Built simulation snapshot foo
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/xsim.dir/foo/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jan  3 02:01:29 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 112.254 ; gain = 23.809
+INFO: [Common 17-206] Exiting Webtalk at Fri Jan  3 02:01:29 2020...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/foo/xsim_script.tcl
+# xsim {foo} -autoloadwcfg -tclbatch {foo.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source foo.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set d_group [add_wave_group d(bus) -into $cinoutgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/d_size -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_dataout -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_datain -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_address -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_rsp_read -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_rsp_empty_n -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_write -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_full_n -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_din -into $d_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_start -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_done -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_idle -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_foo_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/LENGTH_d -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_d_group [add_wave_group d(bus) -into $tbcinoutgroup]
+## add_wave /apatb_foo_top/d_size -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_dataout -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_datain -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_address -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_rsp_read -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_rsp_empty_n -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_write -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_full_n -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_din -into $tb_d_group -radix hex
+## save_wave_config foo.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+WARNING: burst read address          1 >= bus depth:          1
+WARNING: burst read address          2 >= bus depth:          1
+WARNING: burst read address          3 >= bus depth:          1
+WARNING: burst write address          1 >= bus depth:          1
+WARNING: burst write address          2 >= bus depth:          1
+WARNING: burst write address          3 >= bus depth:          1
+// RTL Simulation : 1 / 1 [100.00%] @ "285000"
+////////////////////////////////////////////////////////////////////////////////////
+WARNING: burst read address          1 >= bus depth:          1
+WARNING: burst read address          2 >= bus depth:          1
+WARNING: burst read address          3 >= bus depth:          1
+$finish called at time : 325 ns : File "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/foo.autotb.v" Line 255
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jan  3 02:01:39 2020...
+Expected   Actual
+--------   ------
+res[0]: 0 == d[0]: 0
+res[1]: 1 == d[1]: 1
+res[2]: 3 == d[2]: 2
+res[3]: 6 == d[3]: 3
+------Fail!------
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

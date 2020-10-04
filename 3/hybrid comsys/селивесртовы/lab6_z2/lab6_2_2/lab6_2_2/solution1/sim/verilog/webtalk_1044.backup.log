@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  3 02:01:24 2020
+# Process ID: 1044
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/webtalk.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/xsim.dir/foo/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jan  3 02:01:29 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 112.254 ; gain = 23.809
+INFO: [Common 17-206] Exiting Webtalk at Fri Jan  3 02:01:29 2020...

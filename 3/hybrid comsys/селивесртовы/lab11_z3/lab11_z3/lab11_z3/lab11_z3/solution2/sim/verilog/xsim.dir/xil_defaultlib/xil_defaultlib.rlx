@@ -1,0 +1,8 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/AESL_automem_d_in.v,1577012356,systemVerilog,,,,AESL_automem_d_in,C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/AESL_automem_d_out.v,1577012356,systemVerilog,,,,AESL_automem_d_out,C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/foo.autotb.v,1577012356,systemVerilog,,,,apatb_foo_top,C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/foo.v,1577012272,systemVerilog,,,,foo,C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

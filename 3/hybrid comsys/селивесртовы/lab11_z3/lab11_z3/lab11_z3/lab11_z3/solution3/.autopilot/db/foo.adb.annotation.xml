@@ -1,0 +1,8 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="lab11_z2/foo.c" linenumber="7" name="exitcond" contextFuncName="foo" moduleName="foo" rtlName="exitcond_fu_71_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\Julia\YandexDisk\6\Antonov_labs\lab11_2"><\/item>
+<item  id="12" filename="lab11_z2/foo.c" linenumber="7" name="i_1" contextFuncName="foo" moduleName="foo" rtlName="i_1_fu_77_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\Julia\YandexDisk\6\Antonov_labs\lab11_2"><\/item>
+<item  id="16" filename="lab11_z2/foo.c" linenumber="9" name="tmp" contextFuncName="foo" moduleName="foo" rtlName="tmp_fu_83_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Julia\YandexDisk\6\Antonov_labs\lab11_2"><\/item>
+<item  id="19" filename="lab11_z2/foo.c" linenumber="10" name="t_r" contextFuncName="foo" moduleName="foo" rtlName="t_r_fu_88_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="21" fileDirectory="C:\Users\Julia\YandexDisk\6\Antonov_labs\lab11_2"><\/item>
+<\/annotationInfo>
+</annotationInfo>

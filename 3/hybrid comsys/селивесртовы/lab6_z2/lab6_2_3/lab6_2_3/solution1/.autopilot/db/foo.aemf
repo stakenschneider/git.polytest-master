@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1578008365345">
+  <ports id="1" name="d" type="PortType" originalName="d" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>readreq</dataInputObjs>
+    <dataInputObjs>read</dataInputObjs>
+    <dataInputObjs>writereq</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataOutputObjs>readreq</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>writereq</dataOutputObjs>
+    <dataOutputObjs>write</dataOutputObjs>
+  </ports>
+  <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="35" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="38" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="39" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="40" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="41" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="44" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="47" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="49" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="52" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="53" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="54" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="55" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="56" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="57" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="58" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="60" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="61" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="62" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="65" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="67" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="70" source_obj="//@ports.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="71" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="72" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="108" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5"/>
+  <edges id="109" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="111" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="113" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-32" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-52" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-65" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-70" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.0"/>
+  <blocks id="8" name="block_8" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_14</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_rd_req" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" bitwidth="1" opcode="readreq" nodeLatency="1" m_display="0" m_delay="9.9" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>d</dataInputObjs>
+      <dataOutputObjs>d</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="_ln7" lineNumber="7" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.66" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="7" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <controlInputObjs>block_14</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="14" name="block_14" type="BlockType">
+    <controlInputObjs>block_8</controlInputObjs>
+    <controlInputObjs>burstWrDataBB</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_29</controlOutputObjs>
+    <controlOutputObjs>block_21</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_0" originalName="i" bitwidth="3" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>block_8</controlInputObjs>
+      <controlInputObjs>burstWrDataBB</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="icmp_ln7" lineNumber="7" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." rtlName="icmp_ln7_fu_65_p2" contextFuncName="foo" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.18" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="7" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i" lineNumber="7" originalName="i" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." rtlName="i_fu_71_p2" contextFuncName="foo" bitwidth="3" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.68" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="7" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln7" lineNumber="7" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="7" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_21</controlInputObjs>
+      <controlInputObjs>block_29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="21" name="block_21" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>burstWrReqBB</controlOutputObjs>
+    <controlOutputObjs>burstWrDataBB</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="d_read" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="read" nodeLabel="2.0" m_display="0" m_delay="9.9" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>d</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>d</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="acc_load" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln8" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." rtlName="add_ln8_fu_87_p2" contextFuncName="foo" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.7" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="acc_write_ln8" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="store" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>add</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="icmp_ln9" lineNumber="9" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." rtlName="icmp_ln9_fu_77_p2" contextFuncName="foo" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.18" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="9" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln9" lineNumber="9" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="9" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>burstWrDataBB</controlInputObjs>
+      <controlInputObjs>burstWrReqBB</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="24" name="burstWrReqBB" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>burstWrDataBB</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_wr_req" lineNumber="8" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" bitwidth="1" opcode="writereq" nodeLabel="4.0" m_display="0" m_delay="9.9" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="8" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>d</dataInputObjs>
+      <dataOutputObjs>d</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln0" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <controlInputObjs>burstWrDataBB</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>8</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="27" name="burstWrDataBB" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlInputObjs>burstWrReqBB</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_14</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="d_write_ln9" lineNumber="9" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="write" nodeLabel="4.0" m_display="0" m_delay="9.9" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="9" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <dataInputObjs>d</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>d</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln7" lineNumber="7" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="7" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+      <controlInputObjs>block_14</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="29" name="block_29" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln12" lineNumber="12" fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" fileDirectory=".." contextFuncName="foo" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c" linenumber="12" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado" functionName="foo"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_3/lab6_23main.c">
+      <validLinenumbers>12</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="d_read_reg_106">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln9_reg_111">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln8_reg_115">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_101">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_54">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_0_phi_fu_58">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_fu_87">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_71">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_fu_65">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln9_fu_77">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln8_store_fu_92">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="acc_load_load_fu_83">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_38">
+    <nodeIds>6</nodeIds>
+    <nodeIds>22</nodeIds>
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="d_read_read_fu_46">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioPorts name="d">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>6</nodeIds>
+    </contents>
+    <contents name="write">
+      <nodeIds>25</nodeIds>
+    </contents>
+    <contents name="writereq">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="2"/>
+      <operations id="7" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="foo" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="14" mMaxLatency="14">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="4" mMaxTripCount="4" mMinLatency="12" mMaxLatency="12" mType="1">
+      <basicBlocks>14</basicBlocks>
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>24</basicBlocks>
+      <basicBlocks>27</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

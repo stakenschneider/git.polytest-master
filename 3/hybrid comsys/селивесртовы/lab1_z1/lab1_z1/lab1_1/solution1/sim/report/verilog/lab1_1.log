@@ -1,0 +1,3 @@
+ERROR: [COSIM-366] Cannot delete directory  'sim/verilog': it is being used by another program. Please close the program and try again.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

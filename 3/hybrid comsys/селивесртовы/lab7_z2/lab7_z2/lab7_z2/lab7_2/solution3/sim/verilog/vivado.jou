@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct 22 20:42:45 2019
+# Process ID: 8156
+# Current directory: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution3/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution3/sim/verilog/vivado.log
+# Journal file: D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution3/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution3/sim/verilog/foo.wcfg
+save_wave_config {D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution3/sim/verilog/foo.wcfg}
+close_sim

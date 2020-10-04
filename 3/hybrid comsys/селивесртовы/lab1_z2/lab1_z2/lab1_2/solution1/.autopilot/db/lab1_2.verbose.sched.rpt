@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'lab1_2'
+================================================================
+* Date:           Thu Nov 21 15:57:18 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab1_2
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   6.00|     5.690|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   19|   19|   19|   19|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   18|   18|         6|          -|          -|     3|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.11>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %in_r) nounwind, !map !7"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %a) nounwind, !map !13"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %b) nounwind, !map !19"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %c) nounwind, !map !23"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i32]* %out_r) nounwind, !map !27"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @lab1_2_str) nounwind"   --->   Operation 13 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%c_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %c) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:1]   --->   Operation 14 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%b_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %b) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:1]   --->   Operation 15 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%a_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %a) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:1]   --->   Operation 16 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%sext_ln5 = sext i8 %a_read to i32" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 17 'sext' 'sext_ln5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln5_1 = sext i8 %b_read to i9" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 18 'sext' 'sext_ln5_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln3 = sext i8 %c_read to i9" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 19 'sext' 'sext_ln3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.11ns)   --->   "%add_ln5 = add i9 %sext_ln5_1, %sext_ln3" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 20 'add' 'add_ln5' <Predicate = true> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln5_2 = sext i9 %add_ln5 to i32" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 21 'sext' 'sext_ln5_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.66ns)   --->   "br label %1" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 22 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%i_0 = phi i2 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 23 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.93ns)   --->   "%icmp_ln3 = icmp eq i2 %i_0, -1" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 24 'icmp' 'icmp_ln3' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"   --->   Operation 25 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.58ns)   --->   "%i = add i2 %i_0, 1" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 26 'add' 'i' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %icmp_ln3, label %3, label %2" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 27 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln4 = zext i2 %i_0 to i64" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4]   --->   Operation 28 'zext' 'zext_ln4' <Predicate = (!icmp_ln3)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%in_addr = getelementptr [3 x i32]* %in_r, i64 0, i64 %zext_ln4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4]   --->   Operation 29 'getelementptr' 'in_addr' <Predicate = (!icmp_ln3)> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (2.15ns)   --->   "%x = load i32* %in_addr, align 4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4]   --->   Operation 30 'load' 'x' <Predicate = (!icmp_ln3)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "ret void" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:8]   --->   Operation 31 'ret' <Predicate = (icmp_ln3)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 32 [1/2] (2.15ns)   --->   "%x = load i32* %in_addr, align 4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4]   --->   Operation 32 'load' 'x' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+
+State 4 <SV = 3> <Delay = 5.69>
+ST_4 : Operation 33 [3/3] (5.69ns)   --->   "%mul_ln5 = mul nsw i32 %x, %sext_ln5" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 33 'mul' 'mul_ln5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.69>
+ST_5 : Operation 34 [2/3] (5.69ns)   --->   "%mul_ln5 = mul nsw i32 %x, %sext_ln5" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 34 'mul' 'mul_ln5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.69>
+ST_6 : Operation 35 [1/3] (5.69ns)   --->   "%mul_ln5 = mul nsw i32 %x, %sext_ln5" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 35 'mul' 'mul_ln5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.85>
+ST_7 : Operation 36 [1/1] (2.70ns)   --->   "%y = add i32 %sext_ln5_2, %mul_ln5" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5]   --->   Operation 36 'add' 'y' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [3 x i32]* %out_r, i64 0, i64 %zext_ln4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:6]   --->   Operation 37 'getelementptr' 'out_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (2.15ns)   --->   "store i32 %y, i32* %out_addr, align 4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:6]   --->   Operation 38 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3> <RAM>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "br label %1" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3]   --->   Operation 39 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 2.12ns
+The critical path consists of the following:
+	wire read on port 'c' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:1) [12]  (0 ns)
+	'add' operation ('add_ln5', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5) [18]  (2.12 ns)
+
+ <State 2>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:3) [22]  (0 ns)
+	'getelementptr' operation ('in_addr', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4) [29]  (0 ns)
+	'load' operation ('x', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4) on array 'in_r' [30]  (2.15 ns)
+
+ <State 3>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('x', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:4) on array 'in_r' [30]  (2.15 ns)
+
+ <State 4>: 5.69ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln5', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5) [31]  (5.69 ns)
+
+ <State 5>: 5.69ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln5', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5) [31]  (5.69 ns)
+
+ <State 6>: 5.69ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln5', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5) [31]  (5.69 ns)
+
+ <State 7>: 4.85ns
+The critical path consists of the following:
+	'add' operation ('y', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5) [32]  (2.7 ns)
+	'store' operation ('store_ln6', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:6) of variable 'y', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_1/lab1_2.c:5 on array 'out_r' [34]  (2.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

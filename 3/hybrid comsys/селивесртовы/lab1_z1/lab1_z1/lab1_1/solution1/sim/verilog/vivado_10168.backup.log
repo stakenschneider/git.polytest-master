@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Oct  6 18:19:16 2019
+# Process ID: 10168
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_1/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_1/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_1/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+# open_wave_database lab1_1.wdb
+open_wave_config C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_1/solution1/sim/verilog/lab1_1.wcfg

@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  3 00:35:47 2020
+# Process ID: 6688
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/foo/xsim_script.tcl}
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/foo/xsim_script.tcl
+# xsim {foo} -autoloadwcfg -tclbatch {foo.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source foo.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set d_group [add_wave_group d(bus) -into $cinoutgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/d_size -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_dataout -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_datain -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_address -into $d_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_rsp_read -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_rsp_empty_n -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_write -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_full_n -into $d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/d_req_din -into $d_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_start -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_done -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_idle -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_foo_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/LENGTH_d -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_d_group [add_wave_group d(bus) -into $tbcinoutgroup]
+## add_wave /apatb_foo_top/d_size -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_dataout -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_datain -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_address -into $tb_d_group -radix hex
+## add_wave /apatb_foo_top/d_rsp_read -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_rsp_empty_n -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_write -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_full_n -into $tb_d_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/d_req_din -into $tb_d_group -radix hex
+## save_wave_config foo.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "185000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 225 ns : File "C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2/solution1/sim/verilog/foo.autotb.v" Line 255
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jan  3 00:35:56 2020...

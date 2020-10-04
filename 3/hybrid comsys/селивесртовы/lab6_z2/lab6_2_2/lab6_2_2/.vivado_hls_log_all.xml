@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:40.156+0300"/>
+        <logs message="ERROR: [COSIM 212-361] C TB post check failed, nonzero return value '1'." projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:40.140+0300"/>
+      </simLog>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <simLog>
+        <logs message="WARNING: burst read address          3 >= bus depth:          1&#xD;&#xA;$finish called at time : 325 ns : File &quot;C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_2/solution1/sim/verilog/foo.autotb.v&quot; Line 255&#xD;&#xA;## quit" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:39.708+0300" type="Warning"/>
+        <logs message="WARNING: burst read address          2 >= bus depth:          1" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.166+0300" type="Warning"/>
+        <logs message="WARNING: burst read address          1 >= bus depth:          1" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.162+0300" type="Warning"/>
+        <logs message="WARNING: burst write address          3 >= bus depth:          1&#xD;&#xA;// RTL Simulation : 1 / 1 [100.00%] @ &quot;285000&quot;&#xD;&#xA;////////////////////////////////////////////////////////////////////////////////////" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.156+0300" type="Warning"/>
+        <logs message="WARNING: burst write address          2 >= bus depth:          1" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.152+0300" type="Warning"/>
+        <logs message="WARNING: burst write address          1 >= bus depth:          1" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.147+0300" type="Warning"/>
+        <logs message="WARNING: burst read address          3 >= bus depth:          1" projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:01:32.140+0300" type="Warning"/>
+      </simLog>
+      <packageLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:03:01.728+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab6_2_2" solutionName="solution1" date="2020-01-03T02:03:01.016+0300" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

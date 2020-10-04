@@ -1,0 +1,412 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.453 ; gain = 82.844
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.453 ; gain = 82.844
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.453 ; gain = 82.844
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-22] ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:3) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 1 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 177.262 ; gain = 83.645
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 177.262 ; gain = 83.645
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 177.262 ; gain = 83.645
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-22] ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:7: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:3) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 1 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.906 ; gain = 84.254
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.906 ; gain = 84.254
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.906 ; gain = 84.254
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-22] ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:4) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 1 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.516 ; gain = 82.930
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.516 ; gain = 82.930
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.516 ; gain = 82.930
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-22] ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8: memory copy is not supported unless used on bus interface possible cause(s): non-static/non-constant local array with initialization).
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:4) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 1 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:4) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [XFORM 203-102] Automatically partitioning small array 'buf1' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:5) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'buf1' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:5) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'foo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.3 seconds; current allocated memory: 91.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.031 seconds; current allocated memory: 91.530 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'foo/d' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'foo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_address' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_size' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'foo'.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 91.635 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 176.129 ; gain = 83.441
+INFO: [VHDL 208-304] Generating VHDL RTL for foo.
+INFO: [VLOG 209-307] Generating Verilog RTL for foo.
+INFO: [HLS 200-112] Total elapsed time: 9.176 seconds; peak allocated memory: 91.635 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'foo' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:4) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [XFORM 203-102] Automatically partitioning small array 'buf1' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:5) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'buf1' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:5) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'foo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.254 seconds; current allocated memory: 91.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.027 seconds; current allocated memory: 91.498 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'foo/d' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'foo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_address' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'foo/d_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'foo/d_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'foo/d_size' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'foo'.
+INFO: [HLS 200-111]  Elapsed time: 0.059 seconds; current allocated memory: 91.635 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 176.609 ; gain = 83.000
+INFO: [VHDL 208-304] Generating VHDL RTL for foo.
+INFO: [VLOG 209-307] Generating Verilog RTL for foo.
+INFO: [HLS 200-112] Total elapsed time: 9.08 seconds; peak allocated memory: 91.635 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'.
+INFO: [HLS 200-10] Setting target device to 'xa7a12t-csg325-1Q'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo'
+================================================================
+* Date:           Fri Jan  3 05:05:06 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab6_2_4
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.000|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      -|     -|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|     -|    -|
+|Register         |        -|      -|      1|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|      1|     0|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|   ~0  |     0|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------+-----+-----+------------+--------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs |      foo     | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs |      foo     | return value |
+|ap_start       |  in |    1| ap_ctrl_hs |      foo     | return value |
+|ap_done        | out |    1| ap_ctrl_hs |      foo     | return value |
+|ap_idle        | out |    1| ap_ctrl_hs |      foo     | return value |
+|ap_ready       | out |    1| ap_ctrl_hs |      foo     | return value |
+|d_req_din      | out |    1|   ap_bus   |       d      |    pointer   |
+|d_req_full_n   |  in |    1|   ap_bus   |       d      |    pointer   |
+|d_req_write    | out |    1|   ap_bus   |       d      |    pointer   |
+|d_rsp_empty_n  |  in |    1|   ap_bus   |       d      |    pointer   |
+|d_rsp_read     | out |    1|   ap_bus   |       d      |    pointer   |
+|d_address      | out |   32|   ap_bus   |       d      |    pointer   |
+|d_datain       |  in |   32|   ap_bus   |       d      |    pointer   |
+|d_dataout      | out |   32|   ap_bus   |       d      |    pointer   |
+|d_size         | out |   32|   ap_bus   |       d      |    pointer   |
++---------------+-----+-----+------------+--------------+--------------+
+

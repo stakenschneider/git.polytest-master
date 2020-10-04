@@ -1,0 +1,48 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Фёдор' on host 'kampukter' (Windows NT_amd64 version 6.2) on Wed Dec 25 22:47:20 +0300 2019
+INFO: [HLS 200-10] In directory 'C:/Users/fedor/Desktop/ANTOSHA/lab11_2'
+INFO: [HLS 200-10] Opening project 'C:/Users/fedor/Desktop/ANTOSHA/lab11_2/lab11_z2'.
+INFO: [HLS 200-10] Adding design file 'lab11_z2/foo.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'test.c' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/fedor/Desktop/ANTOSHA/lab11_2/lab11_z2/solution2'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.1ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [HLS 200-10] Analyzing design file 'lab11_z2/foo.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 100.895 ; gain = 45.184
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 100.895 ; gain = 45.184
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.145 ; gain = 46.434
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.398 ; gain = 46.688
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 123.957 ; gain = 68.246
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 123.957 ; gain = 68.246
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'foo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-71] Latency directive discarded for region foo since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.025 seconds; current allocated memory: 74.448 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.107 seconds; current allocated memory: 74.556 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'foo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'foo/d_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'foo/d_out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'foo' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'foo'.
+INFO: [HLS 200-111]  Elapsed time: 0.079 seconds; current allocated memory: 74.787 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 123.957 ; gain = 68.246
+INFO: [SYSC 207-301] Generating SystemC RTL for foo.
+INFO: [VHDL 208-304] Generating VHDL RTL for foo.
+INFO: [VLOG 209-307] Generating Verilog RTL for foo.
+INFO: [HLS 200-112] Total elapsed time: 7.056 seconds; peak allocated memory: 74.787 MB.

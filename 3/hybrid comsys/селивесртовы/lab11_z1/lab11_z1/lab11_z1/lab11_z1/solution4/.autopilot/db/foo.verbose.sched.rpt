@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo'
+================================================================
+* Date:           Wed Dec 25 23:13:46 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        lab11_z1
+* Solution:       solution4
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.006|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   18|   18|   18|   18|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Add     |   17|   17|         4|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (!exitcond_1)
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([17 x i32]* %a) nounwind, !map !7"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([17 x i32]* %b) nounwind, !map !13"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([17 x i32]* %c) nounwind, !map !17"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @foo_str) nounwind"   --->   Operation 9 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.66ns)   --->   "br label %1" [foo.c:5]   --->   Operation 10 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i = phi i5 [ 0, %0 ], [ %i_1_3, %2 ]" [foo.c:5]   --->   Operation 11 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%tmp = zext i5 %i to i64" [foo.c:7]   --->   Operation 12 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%b_addr = getelementptr [17 x i32]* %b, i64 0, i64 %tmp" [foo.c:7]   --->   Operation 13 'getelementptr' 'b_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (2.15ns)   --->   "%b_load = load i32* %b_addr, align 4" [foo.c:7]   --->   Operation 14 'load' 'b_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%c_addr = getelementptr [17 x i32]* %c, i64 0, i64 %tmp" [foo.c:7]   --->   Operation 15 'getelementptr' 'c_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (2.15ns)   --->   "%c_load = load i32* %c_addr, align 4" [foo.c:7]   --->   Operation 16 'load' 'c_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+
+State 3 <SV = 2> <Delay = 7.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str) nounwind" [foo.c:6]   --->   Operation 17 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/2] (2.15ns)   --->   "%b_load = load i32* %b_addr, align 4" [foo.c:7]   --->   Operation 18 'load' 'b_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_3 : Operation 19 [1/2] (2.15ns)   --->   "%c_load = load i32* %c_addr, align 4" [foo.c:7]   --->   Operation 19 'load' 'c_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_3 : Operation 20 [1/1] (2.70ns)   --->   "%tmp_1 = add nsw i32 %c_load, %b_load" [foo.c:7]   --->   Operation 20 'add' 'tmp_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%a_addr = getelementptr [17 x i32]* %a, i64 0, i64 %tmp" [foo.c:7]   --->   Operation 21 'getelementptr' 'a_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (2.15ns)   --->   "store i32 %tmp_1, i32* %a_addr, align 4" [foo.c:7]   --->   Operation 22 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%i_1_s = or i5 %i, 1" [foo.c:5]   --->   Operation 23 'or' 'i_1_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.44ns)   --->   "%exitcond_1 = icmp eq i5 %i_1_s, -15" [foo.c:5]   --->   Operation 24 'icmp' 'exitcond_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 25 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %exitcond_1, label %3, label %2" [foo.c:5]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_s = zext i5 %i_1_s to i64" [foo.c:7]   --->   Operation 27 'zext' 'tmp_s' <Predicate = (!exitcond_1)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%b_addr_1 = getelementptr [17 x i32]* %b, i64 0, i64 %tmp_s" [foo.c:7]   --->   Operation 28 'getelementptr' 'b_addr_1' <Predicate = (!exitcond_1)> <Delay = 0.00>
+ST_3 : Operation 29 [2/2] (2.15ns)   --->   "%b_load_1 = load i32* %b_addr_1, align 4" [foo.c:7]   --->   Operation 29 'load' 'b_load_1' <Predicate = (!exitcond_1)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%c_addr_1 = getelementptr [17 x i32]* %c, i64 0, i64 %tmp_s" [foo.c:7]   --->   Operation 30 'getelementptr' 'c_addr_1' <Predicate = (!exitcond_1)> <Delay = 0.00>
+ST_3 : Operation 31 [2/2] (2.15ns)   --->   "%c_load_1 = load i32* %c_addr_1, align 4" [foo.c:7]   --->   Operation 31 'load' 'c_load_1' <Predicate = (!exitcond_1)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_4 = trunc i5 %i to i4" [foo.c:6]   --->   Operation 32 'trunc' 'tmp_4' <Predicate = (!exitcond_1)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.86ns)   --->   "%i_1_3 = add i5 4, %i" [foo.c:5]   --->   Operation 33 'add' 'i_1_3' <Predicate = (!exitcond_1)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "ret void" [foo.c:9]   --->   Operation 34 'ret' <Predicate = (exitcond_1)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.00>
+ST_4 : Operation 35 [1/2] (2.15ns)   --->   "%b_load_1 = load i32* %b_addr_1, align 4" [foo.c:7]   --->   Operation 35 'load' 'b_load_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 36 [1/2] (2.15ns)   --->   "%c_load_1 = load i32* %c_addr_1, align 4" [foo.c:7]   --->   Operation 36 'load' 'c_load_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 37 [1/1] (2.70ns)   --->   "%tmp_1_1 = add nsw i32 %c_load_1, %b_load_1" [foo.c:7]   --->   Operation 37 'add' 'tmp_1_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%a_addr_1 = getelementptr [17 x i32]* %a, i64 0, i64 %tmp_s" [foo.c:7]   --->   Operation 38 'getelementptr' 'a_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (2.15ns)   --->   "store i32 %tmp_1_1, i32* %a_addr_1, align 4" [foo.c:7]   --->   Operation 39 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%i_1_1 = or i4 %tmp_4, 2" [foo.c:5]   --->   Operation 40 'or' 'i_1_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_2 = zext i4 %i_1_1 to i64" [foo.c:7]   --->   Operation 41 'zext' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%b_addr_2 = getelementptr [17 x i32]* %b, i64 0, i64 %tmp_2" [foo.c:7]   --->   Operation 42 'getelementptr' 'b_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [2/2] (2.15ns)   --->   "%b_load_2 = load i32* %b_addr_2, align 4" [foo.c:7]   --->   Operation 43 'load' 'b_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%c_addr_2 = getelementptr [17 x i32]* %c, i64 0, i64 %tmp_2" [foo.c:7]   --->   Operation 44 'getelementptr' 'c_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [2/2] (2.15ns)   --->   "%c_load_2 = load i32* %c_addr_2, align 4" [foo.c:7]   --->   Operation 45 'load' 'c_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%i_1_2 = or i4 %tmp_4, 3" [foo.c:5]   --->   Operation 46 'or' 'i_1_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_3 = zext i4 %i_1_2 to i64" [foo.c:7]   --->   Operation 47 'zext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%b_addr_3 = getelementptr [17 x i32]* %b, i64 0, i64 %tmp_3" [foo.c:7]   --->   Operation 48 'getelementptr' 'b_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [2/2] (2.15ns)   --->   "%b_load_3 = load i32* %b_addr_3, align 4" [foo.c:7]   --->   Operation 49 'load' 'b_load_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%c_addr_3 = getelementptr [17 x i32]* %c, i64 0, i64 %tmp_3" [foo.c:7]   --->   Operation 50 'getelementptr' 'c_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [2/2] (2.15ns)   --->   "%c_load_3 = load i32* %c_addr_3, align 4" [foo.c:7]   --->   Operation 51 'load' 'c_load_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+
+State 5 <SV = 4> <Delay = 7.00>
+ST_5 : Operation 52 [1/2] (2.15ns)   --->   "%b_load_2 = load i32* %b_addr_2, align 4" [foo.c:7]   --->   Operation 52 'load' 'b_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 53 [1/2] (2.15ns)   --->   "%c_load_2 = load i32* %c_addr_2, align 4" [foo.c:7]   --->   Operation 53 'load' 'c_load_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 54 [1/1] (2.70ns)   --->   "%tmp_1_2 = add nsw i32 %c_load_2, %b_load_2" [foo.c:7]   --->   Operation 54 'add' 'tmp_1_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%a_addr_2 = getelementptr [17 x i32]* %a, i64 0, i64 %tmp_2" [foo.c:7]   --->   Operation 55 'getelementptr' 'a_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (2.15ns)   --->   "store i32 %tmp_1_2, i32* %a_addr_2, align 4" [foo.c:7]   --->   Operation 56 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 57 [1/2] (2.15ns)   --->   "%b_load_3 = load i32* %b_addr_3, align 4" [foo.c:7]   --->   Operation 57 'load' 'b_load_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 58 [1/2] (2.15ns)   --->   "%c_load_3 = load i32* %c_addr_3, align 4" [foo.c:7]   --->   Operation 58 'load' 'c_load_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 59 [1/1] (2.70ns)   --->   "%tmp_1_3 = add nsw i32 %c_load_3, %b_load_3" [foo.c:7]   --->   Operation 59 'add' 'tmp_1_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%a_addr_3 = getelementptr [17 x i32]* %a, i64 0, i64 %tmp_3" [foo.c:7]   --->   Operation 60 'getelementptr' 'a_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (2.15ns)   --->   "store i32 %tmp_1_3, i32* %a_addr_3, align 4" [foo.c:7]   --->   Operation 61 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 17> <RAM>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "br label %1" [foo.c:5]   --->   Operation 62 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i', foo.c:5) with incoming values : ('i_1_3', foo.c:5) [10]  (1.66 ns)
+
+ <State 2>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('i', foo.c:5) with incoming values : ('i_1_3', foo.c:5) [10]  (0 ns)
+	'getelementptr' operation ('b_addr', foo.c:7) [13]  (0 ns)
+	'load' operation ('b_load', foo.c:7) on array 'b' [14]  (2.15 ns)
+
+ <State 3>: 7.01ns
+The critical path consists of the following:
+	'load' operation ('b_load', foo.c:7) on array 'b' [14]  (2.15 ns)
+	'add' operation ('tmp_1', foo.c:7) [17]  (2.7 ns)
+	'store' operation (foo.c:7) of variable 'tmp_1', foo.c:7 on array 'a' [19]  (2.15 ns)
+
+ <State 4>: 7.01ns
+The critical path consists of the following:
+	'load' operation ('b_load_1', foo.c:7) on array 'b' [27]  (2.15 ns)
+	'add' operation ('tmp_1_1', foo.c:7) [30]  (2.7 ns)
+	'store' operation (foo.c:7) of variable 'tmp_1_1', foo.c:7 on array 'a' [32]  (2.15 ns)
+
+ <State 5>: 7.01ns
+The critical path consists of the following:
+	'load' operation ('b_load_2', foo.c:7) on array 'b' [37]  (2.15 ns)
+	'add' operation ('tmp_1_2', foo.c:7) [40]  (2.7 ns)
+	'store' operation (foo.c:7) of variable 'tmp_1_2', foo.c:7 on array 'a' [42]  (2.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

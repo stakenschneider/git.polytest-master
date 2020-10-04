@@ -1,0 +1,129 @@
+<stg><name>foo</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+burst.rd.end.preheader:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %d) nounwind, !map !7
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+burst.rd.end.preheader:1  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @foo_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln0"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+burst.rd.end.preheader:2  call void (...)* @_ssdm_op_SpecInterface(i32* %d, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln5"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0">
+<![CDATA[
+burst.rd.end.preheader:3  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln16"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="6" name="d" dir="0" iftype="4">
+<core>NULL</core><StgValue><ssdm name="d"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="8" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="7" toId="2">
+</dataflow>
+<dataflow id="9" from="d" to="specbitsmap_ln0" fromId="6" toId="2">
+</dataflow>
+<dataflow id="11" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln0" fromId="10" toId="3">
+</dataflow>
+<dataflow id="13" from="foo_str" to="spectopmodule_ln0" fromId="12" toId="3">
+</dataflow>
+<dataflow id="15" from="_ssdm_op_SpecInterface" to="specinterface_ln5" fromId="14" toId="4">
+</dataflow>
+<dataflow id="16" from="d" to="specinterface_ln5" fromId="6" toId="4">
+</dataflow>
+<dataflow id="18" from="p_str" to="specinterface_ln5" fromId="17" toId="4">
+</dataflow>
+<dataflow id="20" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="21" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="23" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+<dataflow id="24" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="25" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="26" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+<dataflow id="27" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+<dataflow id="28" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+<dataflow id="29" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="30" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="31" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="32" from="StgValue_19" to="specinterface_ln5" fromId="19" toId="4">
+</dataflow>
+<dataflow id="33" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+<dataflow id="34" from="p_str1" to="specinterface_ln5" fromId="22" toId="4">
+</dataflow>
+</dataflows>
+
+
+</stg>

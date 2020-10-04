@@ -1,0 +1,25 @@
+   Build using "C:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_foo.cpp
+   Compiling (apcc) lab6_24main.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 05:07:00 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:1:
+C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+ memcpy (buf1,d,4*sizeof(int));
+ ^
+C:/Users/Yaroslav/Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lab6_24test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 05:07:04 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

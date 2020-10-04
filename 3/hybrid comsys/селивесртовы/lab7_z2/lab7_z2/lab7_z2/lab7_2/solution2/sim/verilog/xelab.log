@@ -1,0 +1,29 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s foo -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/AESL_automem_in1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_in1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/AESL_automem_in2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_in2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/AESL_automem_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_out_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/foo.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_foo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution2/sim/verilog/foo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module foo
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.foo
+Compiling module xil_defaultlib.AESL_automem_in1
+Compiling module xil_defaultlib.AESL_automem_in2
+Compiling module xil_defaultlib.AESL_automem_out_r
+Compiling module xil_defaultlib.apatb_foo_top
+Compiling module work.glbl
+Built simulation snapshot foo

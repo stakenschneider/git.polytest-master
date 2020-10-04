@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lab4_1.c" path="C:\Users\Yaroslav\Desktop\SPBGPU_Mag\Antonov\plis\lectask\lab4_z1\source\lab4_1.c"/>
+  </source>
+  <testbench>
+    <originFiles name="lab4_1_test.c" path="C:\Users\Yaroslav\Desktop\SPBGPU_Mag\Antonov\plis\lectask\lab4_z1\source\lab4_1_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

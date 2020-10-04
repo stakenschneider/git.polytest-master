@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="foo.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_foo_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="586442442fs"></ZoomEndTime>
+      <Cursor1Time time="325000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">d(bus)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_size" type="array">
+               <obj_property name="ElementShortName">d_size[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_size[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_dataout" type="array">
+               <obj_property name="ElementShortName">d_dataout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_dataout[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_datain" type="array">
+               <obj_property name="ElementShortName">d_datain[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_datain[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_address" type="array">
+               <obj_property name="ElementShortName">d_address[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_address[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_rsp_read" type="logic">
+               <obj_property name="ElementShortName">d_rsp_read</obj_property>
+               <obj_property name="ObjectShortName">d_rsp_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_rsp_empty_n" type="logic">
+               <obj_property name="ElementShortName">d_rsp_empty_n</obj_property>
+               <obj_property name="ObjectShortName">d_rsp_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_req_write" type="logic">
+               <obj_property name="ElementShortName">d_req_write</obj_property>
+               <obj_property name="ObjectShortName">d_req_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_req_full_n" type="logic">
+               <obj_property name="ElementShortName">d_req_full_n</obj_property>
+               <obj_property name="ObjectShortName">d_req_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/d_req_din" type="logic">
+               <obj_property name="ElementShortName">d_req_din</obj_property>
+               <obj_property name="ObjectShortName">d_req_din</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group13" type="group">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group18" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_rst" type="logic">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group20" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/apatb_foo_top/AESL_inst_foo/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group22" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group23" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group24" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_foo_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group25" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_foo_top/LENGTH_d" type="array">
+               <obj_property name="ElementShortName">LENGTH_d[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_d[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group30" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group31" type="group">
+            <obj_property name="label">d(bus)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_foo_top/d_size" type="array">
+               <obj_property name="ElementShortName">d_size[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_size[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_dataout" type="array">
+               <obj_property name="ElementShortName">d_dataout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_dataout[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_datain" type="array">
+               <obj_property name="ElementShortName">d_datain[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_datain[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_address" type="array">
+               <obj_property name="ElementShortName">d_address[31:0]</obj_property>
+               <obj_property name="ObjectShortName">d_address[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_rsp_read" type="logic">
+               <obj_property name="ElementShortName">d_rsp_read</obj_property>
+               <obj_property name="ObjectShortName">d_rsp_read</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_rsp_empty_n" type="logic">
+               <obj_property name="ElementShortName">d_rsp_empty_n</obj_property>
+               <obj_property name="ObjectShortName">d_rsp_empty_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_req_write" type="logic">
+               <obj_property name="ElementShortName">d_req_write</obj_property>
+               <obj_property name="ObjectShortName">d_req_write</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_req_full_n" type="logic">
+               <obj_property name="ElementShortName">d_req_full_n</obj_property>
+               <obj_property name="ObjectShortName">d_req_full_n</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_foo_top/d_req_din" type="logic">
+               <obj_property name="ElementShortName">d_req_din</obj_property>
+               <obj_property name="ObjectShortName">d_req_din</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

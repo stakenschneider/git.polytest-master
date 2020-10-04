@@ -1,0 +1,5 @@
+sv work "glbl.v"
+sv xil_defaultlib "lab4_1.autotb.v"
+sv xil_defaultlib "lab4_1.v"
+sv xil_defaultlib "lab4_1_mul_32s_32bkb.v"
+

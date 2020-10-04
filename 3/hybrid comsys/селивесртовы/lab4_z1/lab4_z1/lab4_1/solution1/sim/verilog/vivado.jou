@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jan  2 18:33:25 2020
+# Process ID: 5208
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab4_1/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab4_1/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab4_1/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab4_1/solution1/sim/verilog/lab4_1.wcfg
+save_wave_config {C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab4_1/solution1/sim/verilog/lab4_1.wcfg}
+close_sim

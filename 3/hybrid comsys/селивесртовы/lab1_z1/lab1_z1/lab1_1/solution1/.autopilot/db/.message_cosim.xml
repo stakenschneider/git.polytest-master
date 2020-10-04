@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="ERROR" prefix="[COSIM 212-366]" key="COSIM_TCL_366_1237" tag="" content="Cannot delete directory  &apos;sim/verilog&apos;: it is being used by another program. Please close the program and try again."/>
+	<Message severity="ERROR" prefix="[COSIM 212-5]" key="COSIM_TCL_5_1075" tag="" content="*** C/RTL co-simulation file generation failed. ***"/>
+	<Message severity="ERROR" prefix="[COSIM 212-4]" key="COSIM_TCL_4_1074" tag="" content="*** C/RTL co-simulation finished: FAIL ***"/>
+</Messages>

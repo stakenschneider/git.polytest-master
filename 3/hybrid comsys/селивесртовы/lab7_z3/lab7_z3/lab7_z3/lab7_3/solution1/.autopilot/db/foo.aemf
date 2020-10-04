@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1572961341366">
+  <ports id="1" name="in1" type="PortType" originalName="in1" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in2" type="PortType" originalName="in2" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="out_data" type="PortType" originalName="out_data" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="32" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="34" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="37" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="40" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="41" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="42" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="43" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="46" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="49" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="50" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="52" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="54" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="55" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="56" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="57" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="58" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="61" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.2"/>
+  <edges id="62" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="84" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <blocks id="13" name="block_13" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_19</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="in2_read" lineNumber="1" originalName="in2" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="1" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>in2</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="in1_read" lineNumber="1" originalName="in1" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="1" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>in1</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="add_ln6" lineNumber="6" fileName="source/lab7_z3.c" fileDirectory=".." rtlName="add_ln6_fu_67_p2" contextFuncName="foo" bitwidth="32" opcode="add" m_display="0" m_delay="2.7" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="6" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln5" lineNumber="5" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="br" m_display="0" m_delay="1.66" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="5" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <controlInputObjs>block_19</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="source/lab7_z3.c">
+      <validLinenumbers>1</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>5</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="19" name="block_19" type="BlockType">
+    <controlInputObjs>block_13</controlInputObjs>
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_29</controlOutputObjs>
+    <controlOutputObjs>block_25</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_0" originalName="i" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_13</controlInputObjs>
+      <controlInputObjs>block_25</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln5" lineNumber="5" fileName="source/lab7_z3.c" fileDirectory=".." rtlName="icmp_ln5_fu_73_p2" contextFuncName="foo" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.44" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="5" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i" lineNumber="5" originalName="i" fileName="source/lab7_z3.c" fileDirectory=".." rtlName="i_fu_79_p2" contextFuncName="foo" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.77" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="5" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln5" lineNumber="5" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="5" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_25</controlInputObjs>
+      <controlInputObjs>block_29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="source/lab7_z3.c">
+      <validLinenumbers>5</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="25" name="block_25" type="BlockType">
+    <controlInputObjs>block_19</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_19</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="accum_load_1" lineNumber="6" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="6" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add_ln6_1" lineNumber="6" fileName="source/lab7_z3.c" fileDirectory=".." rtlName="add_ln6_1_fu_85_p2" contextFuncName="foo" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.7" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="6" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="accum_write_ln6" lineNumber="6" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="store" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="6" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>add</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln5" lineNumber="5" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="5" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <controlInputObjs>block_19</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="source/lab7_z3.c">
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>5</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="29" name="block_29" type="BlockType">
+    <controlInputObjs>block_19</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="accum_load" lineNumber="8" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="8" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="out_data_write_ln8" lineNumber="8" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="8" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln9" lineNumber="9" fileName="source/lab7_z3.c" fileDirectory=".." contextFuncName="foo" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/lab7_z3.c" linenumber="9" fileDirectory="D:\Program_Files\projects\hls\lab7_z3" functionName="foo"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="source/lab7_z3.c">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="add_ln6_reg_96">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_51">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_104">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_fu_79">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_55">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln6_fu_67">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln6_1_fu_85">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln5_fu_73">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln6_store_fu_90">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln8_write_fu_44">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_62">
+    <nodeIds>21</nodeIds>
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in1_read_read_fu_38">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in2_read_read_fu_32">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioPorts name="in1">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in2">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_data">
+    <contents name="write">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="foo" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="11" mMaxLatency="11">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>13</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="L1" mII="-1" mDepth="-1" mMinTripCount="10" mMaxTripCount="10" mMinLatency="10" mMaxLatency="10" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>25</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

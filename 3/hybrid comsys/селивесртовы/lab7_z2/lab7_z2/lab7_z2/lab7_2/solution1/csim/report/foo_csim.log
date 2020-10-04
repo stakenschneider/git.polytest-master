@@ -1,0 +1,118 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../source/lab7_z2_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Mon Oct 21 22:21:37 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../source/lab7_z2.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Mon Oct 21 22:21:47 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+0 + 0 == Out 0 == Exp 0
+1 + 0 == Out 1 == Exp 1
+2 + 0 == Out 2 == Exp 2
+3 + 0 == Out 3 == Exp 3
+4 + 0 == Out 4 == Exp 4
+5 + 0 == Out 5 == Exp 5
+6 + 0 == Out 6 == Exp 6
+7 + 0 == Out 7 == Exp 7
+8 + 0 == Out 8 == Exp 8
+9 + 0 == Out 9 == Exp 9
+1 + 10 == Out 11 == Exp 11
+2 + 10 == Out 12 == Exp 12
+3 + 10 == Out 13 == Exp 13
+4 + 10 == Out 14 == Exp 14
+5 + 10 == Out 15 == Exp 15
+6 + 10 == Out 16 == Exp 16
+7 + 10 == Out 17 == Exp 17
+8 + 10 == Out 18 == Exp 18
+9 + 10 == Out 19 == Exp 19
+10 + 10 == Out 20 == Exp 20
+2 + 20 == Out 22 == Exp 22
+3 + 20 == Out 23 == Exp 23
+4 + 20 == Out 24 == Exp 24
+5 + 20 == Out 25 == Exp 25
+6 + 20 == Out 26 == Exp 26
+7 + 20 == Out 27 == Exp 27
+8 + 20 == Out 28 == Exp 28
+9 + 20 == Out 29 == Exp 29
+10 + 20 == Out 30 == Exp 30
+11 + 20 == Out 31 == Exp 31
+3 + 30 == Out 33 == Exp 33
+4 + 30 == Out 34 == Exp 34
+5 + 30 == Out 35 == Exp 35
+6 + 30 == Out 36 == Exp 36
+7 + 30 == Out 37 == Exp 37
+8 + 30 == Out 38 == Exp 38
+9 + 30 == Out 39 == Exp 39
+10 + 30 == Out 40 == Exp 40
+11 + 30 == Out 41 == Exp 41
+12 + 30 == Out 42 == Exp 42
+4 + 40 == Out 44 == Exp 44
+5 + 40 == Out 45 == Exp 45
+6 + 40 == Out 46 == Exp 46
+7 + 40 == Out 47 == Exp 47
+8 + 40 == Out 48 == Exp 48
+9 + 40 == Out 49 == Exp 49
+10 + 40 == Out 50 == Exp 50
+11 + 40 == Out 51 == Exp 51
+12 + 40 == Out 52 == Exp 52
+13 + 40 == Out 53 == Exp 53
+5 + 50 == Out 55 == Exp 55
+6 + 50 == Out 56 == Exp 56
+7 + 50 == Out 57 == Exp 57
+8 + 50 == Out 58 == Exp 58
+9 + 50 == Out 59 == Exp 59
+10 + 50 == Out 60 == Exp 60
+11 + 50 == Out 61 == Exp 61
+12 + 50 == Out 62 == Exp 62
+13 + 50 == Out 63 == Exp 63
+14 + 50 == Out 64 == Exp 64
+6 + 60 == Out 66 == Exp 66
+7 + 60 == Out 67 == Exp 67
+8 + 60 == Out 68 == Exp 68
+9 + 60 == Out 69 == Exp 69
+10 + 60 == Out 70 == Exp 70
+11 + 60 == Out 71 == Exp 71
+12 + 60 == Out 72 == Exp 72
+13 + 60 == Out 73 == Exp 73
+14 + 60 == Out 74 == Exp 74
+15 + 60 == Out 75 == Exp 75
+7 + 70 == Out 77 == Exp 77
+8 + 70 == Out 78 == Exp 78
+9 + 70 == Out 79 == Exp 79
+10 + 70 == Out 80 == Exp 80
+11 + 70 == Out 81 == Exp 81
+12 + 70 == Out 82 == Exp 82
+13 + 70 == Out 83 == Exp 83
+14 + 70 == Out 84 == Exp 84
+15 + 70 == Out 85 == Exp 85
+16 + 70 == Out 86 == Exp 86
+8 + 80 == Out 88 == Exp 88
+9 + 80 == Out 89 == Exp 89
+10 + 80 == Out 90 == Exp 90
+11 + 80 == Out 91 == Exp 91
+12 + 80 == Out 92 == Exp 92
+13 + 80 == Out 93 == Exp 93
+14 + 80 == Out 94 == Exp 94
+15 + 80 == Out 95 == Exp 95
+16 + 80 == Out 96 == Exp 96
+17 + 80 == Out 97 == Exp 97
+9 + 90 == Out 99 == Exp 99
+10 + 90 == Out 100 == Exp 100
+11 + 90 == Out 101 == Exp 101
+12 + 90 == Out 102 == Exp 102
+13 + 90 == Out 103 == Exp 103
+14 + 90 == Out 104 == Exp 104
+15 + 90 == Out 105 == Exp 105
+16 + 90 == Out 106 == Exp 106
+17 + 90 == Out 107 == Exp 107
+18 + 90 == Out 108 == Exp 108
+-------Test Pass-------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

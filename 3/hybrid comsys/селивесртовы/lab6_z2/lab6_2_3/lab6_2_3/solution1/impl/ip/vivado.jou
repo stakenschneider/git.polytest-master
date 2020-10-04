@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  3 02:50:52 2020
+# Process ID: 7296
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_3/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_3/solution1/impl/ip/vivado.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_3/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

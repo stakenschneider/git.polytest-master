@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'dct_2d'" level="0">
+<item name = "Date">Tue Nov  5 19:32:41 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">dct_prj</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160t-fbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.00, 5.790, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">762, 762, 762, 762, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_dct_1d2_fu_227">dct_1d2, 37, 37, 37, 37, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Row_DCT_Loop">312, 312, 39, -, -, 8, no</column>
+<column name="- Xpose_Row_Outer_Loop_Xpose_Row_Inner_Loop">66, 66, 4, 1, 1, 64, yes</column>
+<column name="- Col_DCT_Loop">312, 312, 39, -, -, 8, no</column>
+<column name="- Xpose_Col_Outer_Loop_Xpose_Col_Inner_Loop">66, 66, 4, 1, 1, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

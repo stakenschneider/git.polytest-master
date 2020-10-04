@@ -1,0 +1,4 @@
+sv work "glbl.v"
+sv xil_defaultlib "foo.autotb.v"
+sv xil_defaultlib "foo.v"
+

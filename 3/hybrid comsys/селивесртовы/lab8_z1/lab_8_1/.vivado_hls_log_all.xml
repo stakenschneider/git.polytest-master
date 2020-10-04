@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:47:18.414+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:45:10.069+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:40:16.502+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:38:53.226+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:37:54.167+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:34:29.008+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:33:18.610+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:22:02.169+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:21:33.561+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:18:33.702+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:17:37.886+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:13:32.454+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:56:46.795+0300"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:48:29.146+0300"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:47:18.207+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:47:17.507+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:45:09.837+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:45:09.107+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:40:16.310+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:40:15.562+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:38:53.014+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:38:52.300+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:37:53.969+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:37:53.221+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:34:28.788+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:34:28.074+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:33:18.298+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:33:17.588+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:22:01.941+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:22:01.245+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:21:33.326+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:21:32.623+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:18:33.485+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:18:32.800+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:17:37.675+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:17:36.975+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:13:32.141+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T03:13:31.438+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:56:46.528+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:56:45.852+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:48:28.685+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab_8_1" solutionName="solution1" date="2020-01-04T02:48:28.020+0300" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov  5 16:55:22 2019
+# Process ID: 7320
+# Current directory: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/foo/xsim_script.tcl}
+# Log file: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog/xsim.log
+# Journal file: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/foo/xsim_script.tcl
+source foo.tcl

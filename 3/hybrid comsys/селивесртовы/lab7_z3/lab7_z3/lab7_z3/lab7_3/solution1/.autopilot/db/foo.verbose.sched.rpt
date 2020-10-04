@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo'
+================================================================
+* Date:           Tue Nov  5 16:42:21 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab7_3
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.702|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   11|   11|   11|   11|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- L1      |   10|   10|         1|          -|          -|    10|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.70>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %in1) nounwind, !map !7"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %in2) nounwind, !map !13"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_data) nounwind, !map !17"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @foo_str) nounwind"   --->   Operation 6 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%in2_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %in2) nounwind" [source/lab7_z3.c:1]   --->   Operation 7 'read' 'in2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%in1_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %in1) nounwind" [source/lab7_z3.c:1]   --->   Operation 8 'read' 'in1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (2.70ns)   --->   "%add_ln6 = add i32 %in2_read, %in1_read" [source/lab7_z3.c:6]   --->   Operation 9 'add' 'add_ln6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (1.66ns)   --->   "br label %1" [source/lab7_z3.c:5]   --->   Operation 10 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.70>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 11 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.44ns)   --->   "%icmp_ln5 = icmp eq i4 %i_0, -6" [source/lab7_z3.c:5]   --->   Operation 12 'icmp' 'icmp_ln5' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.77ns)   --->   "%i = add i4 %i_0, 1" [source/lab7_z3.c:5]   --->   Operation 14 'add' 'i' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln5, label %3, label %2" [source/lab7_z3.c:5]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([3 x i8]* @p_str) nounwind" [source/lab7_z3.c:5]   --->   Operation 16 'specloopname' <Predicate = (!icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%accum_load_1 = load i32* @accum, align 4" [source/lab7_z3.c:6]   --->   Operation 17 'load' 'accum_load_1' <Predicate = (!icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (2.70ns)   --->   "%add_ln6_1 = add i32 %add_ln6, %accum_load_1" [source/lab7_z3.c:6]   --->   Operation 18 'add' 'add_ln6_1' <Predicate = (!icmp_ln5)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "store i32 %add_ln6_1, i32* @accum, align 4" [source/lab7_z3.c:6]   --->   Operation 19 'store' <Predicate = (!icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "br label %1" [source/lab7_z3.c:5]   --->   Operation 20 'br' <Predicate = (!icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%accum_load = load i32* @accum, align 4" [source/lab7_z3.c:8]   --->   Operation 21 'load' 'accum_load' <Predicate = (icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %out_data, i32 %accum_load) nounwind" [source/lab7_z3.c:8]   --->   Operation 22 'write' <Predicate = (icmp_ln5)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "ret void" [source/lab7_z3.c:9]   --->   Operation 23 'ret' <Predicate = (icmp_ln5)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 2.7ns
+The critical path consists of the following:
+	wire read on port 'in2' (source/lab7_z3.c:1) [9]  (0 ns)
+	'add' operation ('add_ln6', source/lab7_z3.c:6) [11]  (2.7 ns)
+
+ <State 2>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('accum_load_1', source/lab7_z3.c:6) on static variable 'accum' [21]  (0 ns)
+	'add' operation ('add_ln6_1', source/lab7_z3.c:6) [22]  (2.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

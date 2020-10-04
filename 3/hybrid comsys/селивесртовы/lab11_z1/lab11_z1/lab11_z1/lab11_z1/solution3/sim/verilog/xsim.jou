@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun May  5 13:28:55 2019
+# Process ID: 1908
+# Current directory: C:/Users/boris/OneDrive/WorkingDirectory/2018-2019/VivadoHLSLabs/spring/lab11_z1/source/lab11_z1/solution3/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/foo/xsim_script.tcl}
+# Log file: C:/Users/boris/OneDrive/WorkingDirectory/2018-2019/VivadoHLSLabs/spring/lab11_z1/source/lab11_z1/solution3/sim/verilog/xsim.log
+# Journal file: C:/Users/boris/OneDrive/WorkingDirectory/2018-2019/VivadoHLSLabs/spring/lab11_z1/source/lab11_z1/solution3/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/foo/xsim_script.tcl
+source foo.tcl

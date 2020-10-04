@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../source/lab7_z3_test.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Tue Oct 22 22:23:11 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../source/lab7_z3.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Tue Oct 22 22:23:17 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Out 100 == Exp 100
+-------Test Pass-------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

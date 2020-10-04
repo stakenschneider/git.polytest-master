@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov  5 16:58:50 2019
+# Process ID: 8072
+# Current directory: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog/vivado.log
+# Journal file: D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program_Files/Xilinx/Vivado/2019.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 619.750 ; gain = 40.035
+# open_wave_database foo.wdb
+open_wave_config D:/Program_Files/projects/hls/lab7_z3/lab7_3/solution1/sim/verilog/foo.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 17:02:44 2019...

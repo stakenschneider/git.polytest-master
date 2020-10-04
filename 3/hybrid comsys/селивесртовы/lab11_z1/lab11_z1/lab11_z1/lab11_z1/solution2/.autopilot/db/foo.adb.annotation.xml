@@ -1,0 +1,20 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="12" filename="foo.c" linenumber="7" name="tmp_1" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="19" filename="foo.c" linenumber="7" name="tmp_1_1" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="26" filename="foo.c" linenumber="7" name="tmp_1_2" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="33" filename="foo.c" linenumber="7" name="tmp_1_3" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="40" filename="foo.c" linenumber="7" name="tmp_1_4" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="47" filename="foo.c" linenumber="7" name="tmp_1_5" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="54" filename="foo.c" linenumber="7" name="tmp_1_6" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="61" filename="foo.c" linenumber="7" name="tmp_1_7" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="68" filename="foo.c" linenumber="7" name="tmp_1_8" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="75" filename="foo.c" linenumber="7" name="tmp_1_9" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="82" filename="foo.c" linenumber="7" name="tmp_1_s" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="89" filename="foo.c" linenumber="7" name="tmp_1_10" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="96" filename="foo.c" linenumber="7" name="tmp_1_11" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="103" filename="foo.c" linenumber="7" name="tmp_1_12" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="110" filename="foo.c" linenumber="7" name="tmp_1_13" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="117" filename="foo.c" linenumber="7" name="tmp_1_14" contextFuncName="foo" moduleName="foo" rtlName="a_d1" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

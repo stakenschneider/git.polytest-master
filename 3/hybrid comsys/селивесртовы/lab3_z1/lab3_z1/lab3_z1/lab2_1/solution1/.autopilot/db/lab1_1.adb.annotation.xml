@@ -1,0 +1,10 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="17" filename="source/lab3_1.c" linenumber="3" name="mul_ln3" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="lab1_1_mac_muladdbkb_U1" latency="2" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<item  id="18" filename="source/lab3_1.c" linenumber="3" name="sext_ln3_2" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="sext_ln3_2_fu_50_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<item  id="19" filename="source/lab3_1.c" linenumber="3" name="sext_ln3_3" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="sext_ln3_3_fu_54_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<item  id="20" filename="source/lab3_1.c" linenumber="3" name="add_ln3" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="add_ln3_fu_58_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="16" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<item  id="22" filename="source/lab3_1.c" linenumber="3" name="y" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="lab1_1_mac_muladdbkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<item  id="23" filename="source/lab3_1.c" linenumber="3" name="sext_ln3_5" contextFuncName="lab1_1" moduleName="lab1_1" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab3_z1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

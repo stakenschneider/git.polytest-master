@@ -1,0 +1,26 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s foo -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/AESL_automem_d_in.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_d_in
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/AESL_automem_d_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_d_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/foo.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_foo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_2/lab11_z2/solution2/sim/verilog/foo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module foo
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.foo
+Compiling module xil_defaultlib.AESL_automem_d_in
+Compiling module xil_defaultlib.AESL_automem_d_out
+Compiling module xil_defaultlib.apatb_foo_top
+Compiling module work.glbl
+Built simulation snapshot foo

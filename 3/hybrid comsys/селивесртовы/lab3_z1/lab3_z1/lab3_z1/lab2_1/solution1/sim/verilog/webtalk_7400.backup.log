@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct  1 12:56:06 2019
+# Process ID: 7400
+# Current directory: D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog/xsim.dir/lab1_1/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog/webtalk.log
+# Journal file: D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog/xsim.dir/lab1_1/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Program_Files/projects/hls/lab3_z1/lab2_1/solution1/sim/verilog/xsim.dir/lab1_1/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct  1 12:56:23 2019. For additional details about this file, please refer to the WebTalk help file at D:/Program_Files/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 94.609 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct  1 12:56:23 2019...

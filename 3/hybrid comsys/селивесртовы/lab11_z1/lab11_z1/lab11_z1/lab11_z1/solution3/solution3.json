@@ -1,0 +1,22 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "foo",
+          "label": "Add",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [
+              {
+                "name": "skip_exit_check",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "factor",
+                "value": "4"
+              }
+            ]
+          }
+        }]
+    }]}

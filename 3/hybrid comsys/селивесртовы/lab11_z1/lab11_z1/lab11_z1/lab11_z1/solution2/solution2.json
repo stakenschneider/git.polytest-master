@@ -1,0 +1,9 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "foo",
+          "label": "Add",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        }]
+    }]}

@@ -1,0 +1,17 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="11" filename="source/lab7_z2.c" linenumber="3" name="icmp_ln3" contextFuncName="foo" moduleName="foo" rtlName="icmp_ln3_fu_103_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="13" filename="source/lab7_z2.c" linenumber="3" name="i" contextFuncName="foo" moduleName="foo" rtlName="i_fu_109_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="18" filename="source/lab7_z2.c" linenumber="5" name="tmp_1" contextFuncName="foo" moduleName="foo" rtlName="tmp_1_fu_115_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="19" filename="source/lab7_z2.c" linenumber="5" name="zext_ln5" contextFuncName="foo" moduleName="foo" rtlName="zext_ln5_fu_123_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="20" filename="source/lab7_z2.c" linenumber="5" name="tmp_2" contextFuncName="foo" moduleName="foo" rtlName="tmp_2_fu_127_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="21" filename="source/lab7_z2.c" linenumber="5" name="zext_ln5_1" contextFuncName="foo" moduleName="foo" rtlName="zext_ln5_1_fu_135_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="22" filename="source/lab7_z2.c" linenumber="5" name="add_ln5_1" contextFuncName="foo" moduleName="foo" rtlName="add_ln5_1_fu_139_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="26" filename="source/lab7_z2.c" linenumber="4" name="icmp_ln4" contextFuncName="foo" moduleName="foo" rtlName="icmp_ln4_fu_145_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="28" filename="source/lab7_z2.c" linenumber="4" name="j" contextFuncName="foo" moduleName="foo" rtlName="j_fu_151_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="32" filename="source/lab7_z2.c" linenumber="5" name="zext_ln5_2" contextFuncName="foo" moduleName="foo" rtlName="zext_ln5_2_fu_157_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="33" filename="source/lab7_z2.c" linenumber="5" name="add_ln5_2" contextFuncName="foo" moduleName="foo" rtlName="add_ln5_2_fu_161_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="34" filename="source/lab7_z2.c" linenumber="5" name="zext_ln5_3" contextFuncName="foo" moduleName="foo" rtlName="zext_ln5_3_fu_166_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<item  id="40" filename="source/lab7_z2.c" linenumber="5" name="add_ln5" contextFuncName="foo" moduleName="foo" rtlName="out_r_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="D:\Program_Files\projects\hls\lab7_z2"><\/item>
+<\/annotationInfo>
+</annotationInfo>

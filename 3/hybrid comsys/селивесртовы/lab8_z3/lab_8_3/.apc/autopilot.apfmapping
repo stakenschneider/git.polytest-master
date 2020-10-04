@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="foo_b.h" path="C:\Users\Yaroslav\Desktop\SPBGPU_Mag\Antonov\lab8_1\foo_b.h"/>
+  </source>
+  <testbench>
+    <originFiles name="lab8_11t.h" path="C:\Users\Yaroslav\Desktop\SPBGPU_Mag\Antonov\lab8_1\lab8_11t.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

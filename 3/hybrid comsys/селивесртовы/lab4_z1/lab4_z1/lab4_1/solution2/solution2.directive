@@ -1,0 +1,35 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="lab4_1" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_hs" value="" positionalBoolean="mode"/>
+                <option name="port" value="a" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="lab4_1" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ack" value="" positionalBoolean="mode"/>
+                <option name="port" value="b" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="lab4_1" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_hs" value="" positionalBoolean="mode"/>
+                <option name="port" value="c" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="lab4_1" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_vld" value="" positionalBoolean="mode"/>
+                <option name="port" value="d" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="lab4_1" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ack" value="" positionalBoolean="mode"/>
+                <option name="port" value="p_y" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

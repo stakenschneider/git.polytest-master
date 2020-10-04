@@ -1,0 +1,159 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'foo'" level="0">
+<item name = "Date">Thu Dec 26 00:40:41 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">lab11_z1</item>
+<item name = "Solution">solution3</item>
+<item name = "Product family">aartix7</item>
+<item name = "Target device">xa7a12tcsg325-1q</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">0.10</item>
+<item name = "Estimated clock period (ns)">7.006</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">13, 13, 13, 13, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Add">12, 12, 3, -, -, 4, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 137</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 126</column>
+<column name="Register">-, -, 31, -</column>
+<specialColumn name="Available">40, 40, 16000, 8000</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="a_d0">+, 0, 0, 39, 32, 32</column>
+<column name="a_d1">+, 0, 0, 39, 32, 32</column>
+<column name="i_1_3_fu_210_p2">+, 0, 0, 15, 3, 5</column>
+<column name="exitcond_fu_182_p2">icmp, 0, 0, 11, 5, 6</column>
+<column name="i_1_1_fu_216_p2">or, 0, 0, 11, 4, 2</column>
+<column name="i_1_2_fu_227_p2">or, 0, 0, 11, 4, 2</column>
+<column name="i_1_s_fu_198_p2">or, 0, 0, 11, 4, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_address0">15, 3, 4, 12</column>
+<column name="a_address1">15, 3, 4, 12</column>
+<column name="ap_NS_fsm">27, 5, 1, 5</column>
+<column name="b_address0">15, 3, 4, 12</column>
+<column name="b_address1">15, 3, 4, 12</column>
+<column name="c_address0">15, 3, 4, 12</column>
+<column name="c_address1">15, 3, 4, 12</column>
+<column name="i_reg_157">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="i_1_3_reg_277">5, 0, 5, 0</column>
+<column name="i_reg_157">5, 0, 5, 0</column>
+<column name="tmp_2_reg_282">3, 0, 64, 61</column>
+<column name="tmp_3_reg_297">2, 0, 64, 62</column>
+<column name="tmp_4_reg_256">4, 0, 4, 0</column>
+<column name="tmp_reg_241">5, 0, 64, 59</column>
+<column name="tmp_s_reg_262">3, 0, 64, 61</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, foo, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, foo, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, foo, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, foo, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, foo, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, foo, return value</column>
+<column name="a_address0">out, 4, ap_memory, a, array</column>
+<column name="a_ce0">out, 1, ap_memory, a, array</column>
+<column name="a_we0">out, 1, ap_memory, a, array</column>
+<column name="a_d0">out, 32, ap_memory, a, array</column>
+<column name="a_address1">out, 4, ap_memory, a, array</column>
+<column name="a_ce1">out, 1, ap_memory, a, array</column>
+<column name="a_we1">out, 1, ap_memory, a, array</column>
+<column name="a_d1">out, 32, ap_memory, a, array</column>
+<column name="b_address0">out, 4, ap_memory, b, array</column>
+<column name="b_ce0">out, 1, ap_memory, b, array</column>
+<column name="b_q0">in, 32, ap_memory, b, array</column>
+<column name="b_address1">out, 4, ap_memory, b, array</column>
+<column name="b_ce1">out, 1, ap_memory, b, array</column>
+<column name="b_q1">in, 32, ap_memory, b, array</column>
+<column name="c_address0">out, 4, ap_memory, c, array</column>
+<column name="c_ce0">out, 1, ap_memory, c, array</column>
+<column name="c_q0">in, 32, ap_memory, c, array</column>
+<column name="c_address1">out, 4, ap_memory, c, array</column>
+<column name="c_ce1">out, 1, ap_memory, c, array</column>
+<column name="c_q1">in, 32, ap_memory, c, array</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">7.01</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'b_load', foo.c:7">load, 2.15, 2.15, -, -, -, -, -, -, &apos;b&apos;, -, -, -, -</column>
+<column name="'tmp_1', foo.c:7">add, 2.70, 4.85, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="foo.c:7">store, 2.15, 7.01, &apos;tmp_1&apos;, foo.c:7, -, -, -, -, -, &apos;a&apos;, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

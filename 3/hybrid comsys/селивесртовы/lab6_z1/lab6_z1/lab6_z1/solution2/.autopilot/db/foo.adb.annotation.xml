@@ -1,0 +1,9 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="9" filename="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z1/lab6_1_main.c" linenumber="8" name="icmp_ln8" contextFuncName="foo" moduleName="foo" rtlName="icmp_ln8_fu_70_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado"><\/item>
+<item  id="11" filename="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z1/lab6_1_main.c" linenumber="9" name="i" contextFuncName="foo" moduleName="foo" rtlName="i_fu_76_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado"><\/item>
+<item  id="14" filename="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z1/lab6_1_main.c" linenumber="9" name="zext_ln9" contextFuncName="foo" moduleName="foo" rtlName="zext_ln9_fu_107_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado"><\/item>
+<item  id="15" filename="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z1/lab6_1_main.c" linenumber="9" name="zext_ln9_1" contextFuncName="foo" moduleName="foo" rtlName="zext_ln9_1_fu_82_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado"><\/item>
+<item  id="20" filename="../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z1/lab6_1_main.c" linenumber="9" name="add_ln9_1" contextFuncName="foo" moduleName="foo" rtlName="add_ln9_1_fu_96_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\Yaroslav\AppData\Roaming\Xilinx\Vivado"><\/item>
+<\/annotationInfo>
+</annotationInfo>

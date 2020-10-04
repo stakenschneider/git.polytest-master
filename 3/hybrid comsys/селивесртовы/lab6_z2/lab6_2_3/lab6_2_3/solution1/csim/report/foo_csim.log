@@ -1,0 +1,12 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+Expected   Actual
+--------   ------
+res[0]: 0 == d[0]: 0
+res[1]: 1 == d[1]: 1
+res[2]: 3 == d[2]: 3
+res[3]: 6 == d[3]: 6
+------Pass!------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

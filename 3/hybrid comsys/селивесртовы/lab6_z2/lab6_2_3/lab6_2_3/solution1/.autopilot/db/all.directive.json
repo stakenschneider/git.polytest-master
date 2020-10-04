@@ -1,0 +1,23 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "foo",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_bus",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "d",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }]
+    }]}

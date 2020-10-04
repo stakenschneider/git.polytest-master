@@ -1,0 +1,4 @@
+                             latency        interval
+transaction       0:              13              14
+transaction       1:              13              14
+transaction       2:              13               x

@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Julia' on host 'desktop-8jfh4ep' (Windows NT_amd64 version 6.2) on Sun Dec 22 13:10:40 +0300 2019
+INFO: [HLS 200-10] In directory 'C:/Users/Julia/YandexDisk/6/Antonov_labs/lab11_1/lab11_z1/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+make: *** No rule to make target '../../../foo.c', needed by 'obj/foo.o'.  Stop.
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

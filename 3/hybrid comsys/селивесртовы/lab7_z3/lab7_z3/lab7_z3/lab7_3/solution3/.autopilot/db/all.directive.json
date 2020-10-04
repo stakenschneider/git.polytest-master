@@ -1,0 +1,16 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "foo",
+          "label": "L1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        }]
+    }]}

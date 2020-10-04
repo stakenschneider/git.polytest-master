@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vivado HLS Report for 'foo'
+================================================================
+* Date:           Fri Jan  3 00:34:45 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab6_2
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.900|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|    4|    4|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 9.90>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%d_addr = getelementptr inbounds i32* %d, i64 undef" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 6 'getelementptr' 'd_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (9.90ns)   --->   "%d_load_req = call i1 @_ssdm_op_ReadReq.ap_bus.i32P(i32* %d_addr, i32 1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 7 'readreq' 'd_load_req' <Predicate = true> <Delay = 9.90> <Core = "PLB46M">   --->   Core 1 'PLB46M' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq'>
+
+State 2 <SV = 1> <Delay = 9.90>
+ST_2 : Operation 8 [1/2] (9.90ns)   --->   "%d_load_req = call i1 @_ssdm_op_ReadReq.ap_bus.i32P(i32* %d_addr, i32 1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 8 'readreq' 'd_load_req' <Predicate = true> <Delay = 9.90> <Core = "PLB46M">   --->   Core 1 'PLB46M' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq'>
+
+State 3 <SV = 2> <Delay = 9.90>
+ST_3 : Operation 9 [1/1] (9.90ns)   --->   "%d_addr_read = call i32 @_ssdm_op_Read.ap_bus.i32P(i32* %d_addr) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 9 'read' 'd_addr_read' <Predicate = true> <Delay = 9.90> <Core = "PLB46M">   --->   Core 1 'PLB46M' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq'>
+
+State 4 <SV = 3> <Delay = 2.70>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%acc_load = load i32* @acc, align 4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 10 'load' 'acc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (2.70ns)   --->   "%add_ln8 = add nsw i32 %acc_load, %d_addr_read" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 11 'add' 'add_ln8' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "store i32 %add_ln8, i32* @acc, align 4" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8]   --->   Operation 12 'store' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 9.90>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %d) nounwind, !map !7"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @foo_str) nounwind"   --->   Operation 14 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %d, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:5]   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (9.90ns)   --->   "%d_addr_req = call i1 @_ssdm_op_WriteReq.ap_bus.i32P(i32* %d_addr, i32 1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:9]   --->   Operation 16 'writereq' 'd_addr_req' <Predicate = true> <Delay = 9.90> <Core = "PLB46M">   --->   Core 1 'PLB46M' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq'>
+ST_5 : Operation 17 [1/1] (9.90ns)   --->   "call void @_ssdm_op_Write.ap_bus.i32P(i32* %d_addr, i32 %add_ln8) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:9]   --->   Operation 17 'write' <Predicate = true> <Delay = 9.90> <Core = "PLB46M">   --->   Core 1 'PLB46M' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq'>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "ret void" [../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:11]   --->   Operation 18 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 9.9ns
+The critical path consists of the following:
+	'getelementptr' operation ('d_addr', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) [6]  (0 ns)
+	bus request on port 'd' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) [7]  (9.9 ns)
+
+ <State 2>: 9.9ns
+The critical path consists of the following:
+	bus request on port 'd' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) [7]  (9.9 ns)
+
+ <State 3>: 9.9ns
+The critical path consists of the following:
+	bus read on port 'd' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) [8]  (9.9 ns)
+
+ <State 4>: 2.7ns
+The critical path consists of the following:
+	'load' operation ('acc_load', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) on static variable 'acc' [9]  (0 ns)
+	'add' operation ('add_ln8', ../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:8) [10]  (2.7 ns)
+
+ <State 5>: 9.9ns
+The critical path consists of the following:
+	bus request on port 'd' (../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2/lab6_2_main.c:9) [12]  (9.9 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

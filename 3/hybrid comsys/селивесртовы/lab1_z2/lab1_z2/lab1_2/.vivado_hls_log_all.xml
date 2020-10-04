@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_2/solution1/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab1_2/solution1/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="lab1_2" solutionName="solution1" date="2019-11-21T16:00:15.570+0300"/>
+        <logs message="ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***" projectName="lab1_2" solutionName="solution1" date="2019-11-21T16:00:15.272+0300"/>
+        <logs message="ERROR: [COSIM 212-366] Cannot delete directory  'sim/tv': it is being used by another program. Please close the program and try again.&#xD;&#xA;error deleting &quot;sim/tv&quot;: file already exists" projectName="lab1_2" solutionName="solution1" date="2019-11-21T16:00:15.267+0300"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lab1_2/out' to 'lab1_2/out_r' to avoid the conflict with HDL keywords or other object names." projectName="lab1_2" solutionName="solution1" date="2019-11-21T15:57:18.235+0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lab1_2/in' to 'lab1_2/in_r' to avoid the conflict with HDL keywords or other object names." projectName="lab1_2" solutionName="solution1" date="2019-11-21T15:57:18.223+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution1" date="2019-11-21T15:57:11.970+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution1" date="2019-11-21T15:57:11.294+0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lab1_2/out' to 'lab1_2/out_r' to avoid the conflict with HDL keywords or other object names." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:36:28.780+0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lab1_2/in' to 'lab1_2/in_r' to avoid the conflict with HDL keywords or other object names." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:36:28.774+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:36:22.095+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:36:21.346+0300" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution1" date="2019-11-21T16:00:14.885+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution1" date="2019-11-21T16:00:14.219+0300" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:43:18.686+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:43:17.994+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:38:27.635+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T13:38:26.985+0300" type="Warning"/>
+      </packageLog>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/aartix7/aartix7'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T15:53:30.335+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/aartix7/aartix7.lib'." projectName="lab1_2" solutionName="solution2" date="2019-11-21T15:53:29.642+0300" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

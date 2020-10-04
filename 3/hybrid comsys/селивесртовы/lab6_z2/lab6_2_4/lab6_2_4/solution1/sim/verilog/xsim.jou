@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  3 05:07:18 2020
+# Process ID: 9164
+# Current directory: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/foo/xsim_script.tcl}
+# Log file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/foo/xsim_script.tcl
+source foo.tcl

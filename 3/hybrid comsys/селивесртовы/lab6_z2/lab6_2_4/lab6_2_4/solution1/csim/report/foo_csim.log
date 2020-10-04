@@ -1,0 +1,34 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 04:48:53 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Yaroslav' on host 'svytoslavpc' (Windows NT_amd64 version 6.1) on Fri Jan 03 04:48:58 +0300 2020
+INFO: [HLS 200-10] In directory 'C:/Users/Yaroslav/AppData/Roaming/Xilinx/Vivado/lab6_2_4/solution1/csim/build'
+../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+        memcpy (buf1,d,4*sizeof(int));
+        ^
+../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long long)'
+        memcpy (buf1,d,4*sizeof(int));
+        ^
+../../../../../../../../Desktop/SPBGPU_Mag/Antonov/lab_6/lab6_z2_4/lab6_24main.c:8:2: note: please include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Expected   Actual
+--------   ------
+res[0]: 0 == d[0]: 0
+res[1]: 1 == d[1]: 1
+res[2]: 2 == d[2]: 2
+res[3]: 3 == d[3]: 3
+------Pass!------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

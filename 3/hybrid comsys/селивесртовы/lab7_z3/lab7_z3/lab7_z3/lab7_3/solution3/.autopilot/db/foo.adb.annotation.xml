@@ -1,0 +1,8 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="27" filename="source/lab7_z3.c" linenumber="5" name="add_ln5" contextFuncName="foo" moduleName="foo" rtlName="add_ln5_fu_158_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="D:\Program_Files\projects\hls\lab7_z3"><\/item>
+<item  id="28" filename="source/lab7_z3.c" linenumber="5" name="add_ln5_1" contextFuncName="foo" moduleName="foo" rtlName="out_data" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Program_Files\projects\hls\lab7_z3"><\/item>
+<item  id="31" filename="source/lab7_z3.c" linenumber="4" name="i" contextFuncName="foo" moduleName="foo" rtlName="i_fu_177_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="D:\Program_Files\projects\hls\lab7_z3"><\/item>
+<item  id="32" filename="source/lab7_z3.c" linenumber="4" name="icmp_ln4" contextFuncName="foo" moduleName="foo" rtlName="icmp_ln4_fu_183_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="D:\Program_Files\projects\hls\lab7_z3"><\/item>
+<\/annotationInfo>
+</annotationInfo>

@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vivado HLS Report for 'lab4_1'
+================================================================
+* Date:           Thu Jan  2 18:50:59 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab4_1
+* Solution:       solution2
+* Product family: artix7
+* Target device:  xa7a12t-csg325-1Q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   6.00|     5.690|        0.10|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.69>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%b_read = call i32 @_ssdm_op_Read.ap_ack.i32(i32 %b) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:1]   --->   Operation 5 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%a_read = call i32 @_ssdm_op_Read.ap_hs.i32(i32 %a) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:1]   --->   Operation 6 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [3/3] (5.69ns)   --->   "%mul_ln3 = mul nsw i32 %b_read, %a_read" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3]   --->   Operation 7 'mul' 'mul_ln3' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%c_read = call i32 @_ssdm_op_Read.ap_hs.i32P(i32* %c) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3]   --->   Operation 8 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%d_read = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %d) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:4]   --->   Operation 9 'read' 'd_read' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.69>
+ST_2 : Operation 10 [2/3] (5.69ns)   --->   "%mul_ln3 = mul nsw i32 %b_read, %a_read" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3]   --->   Operation 10 'mul' 'mul_ln3' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.69>
+ST_3 : Operation 11 [1/3] (5.69ns)   --->   "%mul_ln3 = mul nsw i32 %b_read, %a_read" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3]   --->   Operation 11 'mul' 'mul_ln3' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.70>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %a) nounwind, !map !7"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %b) nounwind, !map !13"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %c) nounwind, !map !17"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %d) nounwind, !map !23"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_y) nounwind, !map !27"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !31"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @lab4_1_str) nounwind"   --->   Operation 18 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %b, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:2]   --->   Operation 19 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %p_y, [7 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:2]   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %a, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:2]   --->   Operation 21 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %c, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:2]   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %d, [7 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:2]   --->   Operation 23 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (2.70ns)   --->   "%y = add nsw i32 %c_read, %mul_ln3" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3]   --->   Operation 24 'add' 'y' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 25 [1/1] (2.70ns)   --->   "%add_ln4 = add nsw i32 %d_read, %mul_ln3" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:4]   --->   Operation 25 'add' 'add_ln4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_ack.i32P(i32* %p_y, i32 %add_ln4) nounwind" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:4]   --->   Operation 26 'write' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "ret i32 %y" [../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:5]   --->   Operation 27 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6ns, clock uncertainty: 0.1ns.
+
+ <State 1>: 5.69ns
+The critical path consists of the following:
+	wire read on port 'b' (../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:1) [13]  (0 ns)
+	'mul' operation ('mul_ln3', ../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3) [20]  (5.69 ns)
+
+ <State 2>: 5.69ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln3', ../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3) [20]  (5.69 ns)
+
+ <State 3>: 5.69ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln3', ../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3) [20]  (5.69 ns)
+
+ <State 4>: 2.7ns
+The critical path consists of the following:
+	'add' operation ('y', ../../../../Desktop/SPBGPU_Mag/Antonov/plis/lectask/lab4_z1/source/lab4_1.c:3) [22]  (2.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

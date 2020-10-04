@@ -1,0 +1,8 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="11" filename="foo.c" linenumber="5" name="exitcond" contextFuncName="foo" moduleName="foo" rtlName="exitcond_fu_78_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="13" filename="foo.c" linenumber="5" name="i_1" contextFuncName="foo" moduleName="foo" rtlName="i_1_fu_84_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="17" filename="foo.c" linenumber="7" name="tmp" contextFuncName="foo" moduleName="foo" rtlName="tmp_fu_90_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<item  id="22" filename="foo.c" linenumber="7" name="tmp_1" contextFuncName="foo" moduleName="foo" rtlName="a_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\fedor\Desktop\ANTOSHA\lab11_1"><\/item>
+<\/annotationInfo>
+</annotationInfo>

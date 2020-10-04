@@ -1,0 +1,352 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Program_Files/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_foo.cpp
+   Compiling (apcc) lab7_z2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Mon Oct 21 22:37:50 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lab7_z2_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Леонид' on host 'леонид-пк' (Windows NT_amd64 version 6.1) on Mon Oct 21 22:37:54 +0300 2019
+INFO: [HLS 200-10] In directory 'D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+0 + 0 == Out 0 == Exp 0
+1 + 0 == Out 1 == Exp 1
+2 + 0 == Out 2 == Exp 2
+3 + 0 == Out 3 == Exp 3
+4 + 0 == Out 4 == Exp 4
+5 + 0 == Out 5 == Exp 5
+6 + 0 == Out 6 == Exp 6
+7 + 0 == Out 7 == Exp 7
+8 + 0 == Out 8 == Exp 8
+9 + 0 == Out 9 == Exp 9
+1 + 10 == Out 11 == Exp 11
+2 + 10 == Out 12 == Exp 12
+3 + 10 == Out 13 == Exp 13
+4 + 10 == Out 14 == Exp 14
+5 + 10 == Out 15 == Exp 15
+6 + 10 == Out 16 == Exp 16
+7 + 10 == Out 17 == Exp 17
+8 + 10 == Out 18 == Exp 18
+9 + 10 == Out 19 == Exp 19
+10 + 10 == Out 20 == Exp 20
+2 + 20 == Out 22 == Exp 22
+3 + 20 == Out 23 == Exp 23
+4 + 20 == Out 24 == Exp 24
+5 + 20 == Out 25 == Exp 25
+6 + 20 == Out 26 == Exp 26
+7 + 20 == Out 27 == Exp 27
+8 + 20 == Out 28 == Exp 28
+9 + 20 == Out 29 == Exp 29
+10 + 20 == Out 30 == Exp 30
+11 + 20 == Out 31 == Exp 31
+3 + 30 == Out 33 == Exp 33
+4 + 30 == Out 34 == Exp 34
+5 + 30 == Out 35 == Exp 35
+6 + 30 == Out 36 == Exp 36
+7 + 30 == Out 37 == Exp 37
+8 + 30 == Out 38 == Exp 38
+9 + 30 == Out 39 == Exp 39
+10 + 30 == Out 40 == Exp 40
+11 + 30 == Out 41 == Exp 41
+12 + 30 == Out 42 == Exp 42
+4 + 40 == Out 44 == Exp 44
+5 + 40 == Out 45 == Exp 45
+6 + 40 == Out 46 == Exp 46
+7 + 40 == Out 47 == Exp 47
+8 + 40 == Out 48 == Exp 48
+9 + 40 == Out 49 == Exp 49
+10 + 40 == Out 50 == Exp 50
+11 + 40 == Out 51 == Exp 51
+12 + 40 == Out 52 == Exp 52
+13 + 40 == Out 53 == Exp 53
+5 + 50 == Out 55 == Exp 55
+6 + 50 == Out 56 == Exp 56
+7 + 50 == Out 57 == Exp 57
+8 + 50 == Out 58 == Exp 58
+9 + 50 == Out 59 == Exp 59
+10 + 50 == Out 60 == Exp 60
+11 + 50 == Out 61 == Exp 61
+12 + 50 == Out 62 == Exp 62
+13 + 50 == Out 63 == Exp 63
+14 + 50 == Out 64 == Exp 64
+6 + 60 == Out 66 == Exp 66
+7 + 60 == Out 67 == Exp 67
+8 + 60 == Out 68 == Exp 68
+9 + 60 == Out 69 == Exp 69
+10 + 60 == Out 70 == Exp 70
+11 + 60 == Out 71 == Exp 71
+12 + 60 == Out 72 == Exp 72
+13 + 60 == Out 73 == Exp 73
+14 + 60 == Out 74 == Exp 74
+15 + 60 == Out 75 == Exp 75
+7 + 70 == Out 77 == Exp 77
+8 + 70 == Out 78 == Exp 78
+9 + 70 == Out 79 == Exp 79
+10 + 70 == Out 80 == Exp 80
+11 + 70 == Out 81 == Exp 81
+12 + 70 == Out 82 == Exp 82
+13 + 70 == Out 83 == Exp 83
+14 + 70 == Out 84 == Exp 84
+15 + 70 == Out 85 == Exp 85
+16 + 70 == Out 86 == Exp 86
+8 + 80 == Out 88 == Exp 88
+9 + 80 == Out 89 == Exp 89
+10 + 80 == Out 90 == Exp 90
+11 + 80 == Out 91 == Exp 91
+12 + 80 == Out 92 == Exp 92
+13 + 80 == Out 93 == Exp 93
+14 + 80 == Out 94 == Exp 94
+15 + 80 == Out 95 == Exp 95
+16 + 80 == Out 96 == Exp 96
+17 + 80 == Out 97 == Exp 97
+9 + 90 == Out 99 == Exp 99
+10 + 90 == Out 100 == Exp 100
+11 + 90 == Out 101 == Exp 101
+12 + 90 == Out 102 == Exp 102
+13 + 90 == Out 103 == Exp 103
+14 + 90 == Out 104 == Exp 104
+15 + 90 == Out 105 == Exp 105
+16 + 90 == Out 106 == Exp 106
+17 + 90 == Out 107 == Exp 107
+18 + 90 == Out 108 == Exp 108
+-------Test Pass-------
+
+D:\Program_Files\projects\hls\lab7_z2\lab7_2\solution1\sim\verilog>set PATH= 
+
+D:\Program_Files\projects\hls\lab7_z2\lab7_2\solution1\sim\verilog>call D:/Program_Files/Xilinx/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s foo -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program_Files/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_foo_top glbl -prj foo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Program_Files/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s foo -debug wave 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/AESL_automem_in1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_in1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/AESL_automem_in2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_in2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/AESL_automem_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_out_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/foo.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_foo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/foo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module foo
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.foo
+Compiling module xil_defaultlib.AESL_automem_in1
+Compiling module xil_defaultlib.AESL_automem_in2
+Compiling module xil_defaultlib.AESL_automem_out_r
+Compiling module xil_defaultlib.apatb_foo_top
+Compiling module work.glbl
+Built simulation snapshot foo
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/xsim.dir/foo/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/xsim.dir/foo/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Oct 21 22:38:35 2019. For additional details about this file, please refer to the WebTalk help file at D:/Program_Files/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 93.523 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 21 22:38:35 2019...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/foo/xsim_script.tcl
+# xsim {foo} -autoloadwcfg -tclbatch {foo.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source foo.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set out_group [add_wave_group out(memory) -into $coutputgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/out_r_d0 -into $out_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/out_r_we0 -into $out_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/out_r_ce0 -into $out_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/out_r_address0 -into $out_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set in2_group [add_wave_group in2(memory) -into $cinputgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/in2_q0 -into $in2_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/in2_ce0 -into $in2_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/in2_address0 -into $in2_group -radix hex
+## set in1_group [add_wave_group in1(memory) -into $cinputgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/in1_q0 -into $in1_group -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/in1_ce0 -into $in1_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/AESL_inst_foo/in1_address0 -into $in1_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_start -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_done -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_idle -into $blocksiggroup
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_foo_top/AESL_inst_foo/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_foo_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_foo_top/LENGTH_in1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_foo_top/LENGTH_in2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_foo_top/LENGTH_out_r -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_out_group [add_wave_group out(memory) -into $tbcoutputgroup]
+## add_wave /apatb_foo_top/out_r_d0 -into $tb_out_group -radix hex
+## add_wave /apatb_foo_top/out_r_we0 -into $tb_out_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/out_r_ce0 -into $tb_out_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/out_r_address0 -into $tb_out_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_in2_group [add_wave_group in2(memory) -into $tbcinputgroup]
+## add_wave /apatb_foo_top/in2_q0 -into $tb_in2_group -radix hex
+## add_wave /apatb_foo_top/in2_ce0 -into $tb_in2_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/in2_address0 -into $tb_in2_group -radix hex
+## set tb_in1_group [add_wave_group in1(memory) -into $tbcinputgroup]
+## add_wave /apatb_foo_top/in1_q0 -into $tb_in1_group -radix hex
+## add_wave /apatb_foo_top/in1_ce0 -into $tb_in1_group -color #ffff00 -radix hex
+## add_wave /apatb_foo_top/in1_address0 -into $tb_in1_group -radix hex
+## save_wave_config foo.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2355000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2395 ns : File "D:/Program_Files/projects/hls/lab7_z2/lab7_2/solution1/sim/verilog/foo.autotb.v" Line 316
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 21 22:39:14 2019...
+0 + 0 == Out 0 == Exp 0
+1 + 0 == Out 1 == Exp 1
+2 + 0 == Out 2 == Exp 2
+3 + 0 == Out 3 == Exp 3
+4 + 0 == Out 4 == Exp 4
+5 + 0 == Out 5 == Exp 5
+6 + 0 == Out 6 == Exp 6
+7 + 0 == Out 7 == Exp 7
+8 + 0 == Out 8 == Exp 8
+9 + 0 == Out 9 == Exp 9
+1 + 10 == Out 11 == Exp 11
+2 + 10 == Out 12 == Exp 12
+3 + 10 == Out 13 == Exp 13
+4 + 10 == Out 14 == Exp 14
+5 + 10 == Out 15 == Exp 15
+6 + 10 == Out 16 == Exp 16
+7 + 10 == Out 17 == Exp 17
+8 + 10 == Out 18 == Exp 18
+9 + 10 == Out 19 == Exp 19
+10 + 10 == Out 20 == Exp 20
+2 + 20 == Out 22 == Exp 22
+3 + 20 == Out 23 == Exp 23
+4 + 20 == Out 24 == Exp 24
+5 + 20 == Out 25 == Exp 25
+6 + 20 == Out 26 == Exp 26
+7 + 20 == Out 27 == Exp 27
+8 + 20 == Out 28 == Exp 28
+9 + 20 == Out 29 == Exp 29
+10 + 20 == Out 30 == Exp 30
+11 + 20 == Out 31 == Exp 31
+3 + 30 == Out 33 == Exp 33
+4 + 30 == Out 34 == Exp 34
+5 + 30 == Out 35 == Exp 35
+6 + 30 == Out 36 == Exp 36
+7 + 30 == Out 37 == Exp 37
+8 + 30 == Out 38 == Exp 38
+9 + 30 == Out 39 == Exp 39
+10 + 30 == Out 40 == Exp 40
+11 + 30 == Out 41 == Exp 41
+12 + 30 == Out 42 == Exp 42
+4 + 40 == Out 44 == Exp 44
+5 + 40 == Out 45 == Exp 45
+6 + 40 == Out 46 == Exp 46
+7 + 40 == Out 47 == Exp 47
+8 + 40 == Out 48 == Exp 48
+9 + 40 == Out 49 == Exp 49
+10 + 40 == Out 50 == Exp 50
+11 + 40 == Out 51 == Exp 51
+12 + 40 == Out 52 == Exp 52
+13 + 40 == Out 53 == Exp 53
+5 + 50 == Out 55 == Exp 55
+6 + 50 == Out 56 == Exp 56
+7 + 50 == Out 57 == Exp 57
+8 + 50 == Out 58 == Exp 58
+9 + 50 == Out 59 == Exp 59
+10 + 50 == Out 60 == Exp 60
+11 + 50 == Out 61 == Exp 61
+12 + 50 == Out 62 == Exp 62
+13 + 50 == Out 63 == Exp 63
+14 + 50 == Out 64 == Exp 64
+6 + 60 == Out 66 == Exp 66
+7 + 60 == Out 67 == Exp 67
+8 + 60 == Out 68 == Exp 68
+9 + 60 == Out 69 == Exp 69
+10 + 60 == Out 70 == Exp 70
+11 + 60 == Out 71 == Exp 71
+12 + 60 == Out 72 == Exp 72
+13 + 60 == Out 73 == Exp 73
+14 + 60 == Out 74 == Exp 74
+15 + 60 == Out 75 == Exp 75
+7 + 70 == Out 77 == Exp 77
+8 + 70 == Out 78 == Exp 78
+9 + 70 == Out 79 == Exp 79
+10 + 70 == Out 80 == Exp 80
+11 + 70 == Out 81 == Exp 81
+12 + 70 == Out 82 == Exp 82
+13 + 70 == Out 83 == Exp 83
+14 + 70 == Out 84 == Exp 84
+15 + 70 == Out 85 == Exp 85
+16 + 70 == Out 86 == Exp 86
+8 + 80 == Out 88 == Exp 88
+9 + 80 == Out 89 == Exp 89
+10 + 80 == Out 90 == Exp 90
+11 + 80 == Out 91 == Exp 91
+12 + 80 == Out 92 == Exp 92
+13 + 80 == Out 93 == Exp 93
+14 + 80 == Out 94 == Exp 94
+15 + 80 == Out 95 == Exp 95
+16 + 80 == Out 96 == Exp 96
+17 + 80 == Out 97 == Exp 97
+9 + 90 == Out 99 == Exp 99
+10 + 90 == Out 100 == Exp 100
+11 + 90 == Out 101 == Exp 101
+12 + 90 == Out 102 == Exp 102
+13 + 90 == Out 103 == Exp 103
+14 + 90 == Out 104 == Exp 104
+15 + 90 == Out 105 == Exp 105
+16 + 90 == Out 106 == Exp 106
+17 + 90 == Out 107 == Exp 107
+18 + 90 == Out 108 == Exp 108
+-------Test Pass-------
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
