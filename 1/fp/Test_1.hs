@@ -33,24 +33,44 @@ build g = g (:) []
 splitAt                :: Int -> [a] -> ([a],[a])
 splitAt n xs           =  (take n xs, drop n xs)
 
--- new_element : xs -- 5 : [1..3] = [5,1,2,3]
+-- map reverse ["abc","cda","1234"]
+-- ["cba","adc","4321"]
+-- map :: (a -> b) -> [a] -> [b]
 
--- map my_function xs -- map (+1) [1..3] = [2,3.4]
---Input: map reverse ["abc","cda","1234"]
---Output: ["cba","adc","4321"]
+-- drop 2 [1..5]
+-- [3,4,5]
+-- drop :: Int -> [a] -> [a]
 
--- drop n xs -- drop 2 [1..5] = [3,4,5]
 
--- take n xs -- take 2 [1..5] = [1,2]
+-- take 2 [1..5]
+-- [1,2]
+-- take :: Int -> [a] -> [a]
 
--- lst !! n -- [0..10] !! 5 = 5
+-- [0..10] !! 5
+-- 5
+-- (!!) :: [a] -> Int -> a
 
--- filter foo xs -- filter (\x -> x>3) [1..5] = [4,5]
+-- filter (\x -> x>3) [1..5]
+-- [4,5]
+-- filter :: (a -> Bool) -> [a] -> [a]
 
--- elem el lst -- elem 58 [1..100] = True
+-- elem 58 [1..100]
+-- True
+-- elem :: (Foldable t, Eq a) => a -> t a -> Bool
 
--- ls1 ++ ls2 -- [1..2] ++ [3,4] = [1,2,3,4]
+-- 1 : [2,3,4]
+-- [1,2,3,4]
+-- (:) :: a -> [a] -> [a]
 
--- length lst -- length [0..10] = 11
+-- [1..2] ++ [3,4]
+-- [1,2,3,4]
+-- (++) :: [a] -> [a] -> [a]
 
--- reverse lst -- reverse [1..3] = [3,2,1]
+-- length [0..9]
+-- 10
+-- length :: Foldable t => t a -> Int
+
+-- reverse [1..3]
+-- [3,2,1]
+--reverse :: [a] -> [a]
+
