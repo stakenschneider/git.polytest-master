@@ -57,3 +57,13 @@ data MyData3 = Same | Different Int Int deriving(Show)
 diff (h:t)(h1:t1) = if (h == h1) then Same : diff t t1 else Different h h1 : diff t t1
 diff [] = []
 
+
+--Реализуйте тип данных, позволяющий задавать команды управления лентой вида "Влево на определённое число шагов",
+-- "Вправо на определённое число шагов", "Запись". Реализуйте функцию, которая принимает на вход список
+-- команд и начальную позицию и возвращает список позиций, на которых происходила запись.
+data MyData = MLeft Int | MRight Int | MWrite;
+foo [] x = []
+foo (h:t) x = case h of
+                  MLeft y -> foo t (x-y)
+                  MRight y -> foo t (x+y)
+                  MWrite -> x : (foo t x)

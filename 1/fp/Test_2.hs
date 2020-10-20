@@ -1,5 +1,7 @@
 module Test_2 where
 
+import Data.Map (fromListWith)
+
 -- список функций и число и весь список применяется к числу
 foo :: [t -> t] -> t -> t
 foo (h:t) v = (foo t ( h v))
@@ -185,12 +187,57 @@ removeAll' (h:t) lst res | contains h lst = removeAll' t lst res
                          | otherwise = removeAll' t lst (h:res)
 
 
--- Являеться ли число палиндромом?
+-- Является ли число палиндромом?
 isPalindrome :: Eq a => [a] -> Bool
 isPalindrome list = reverse list == list
 
 
+-- Реализуйте функцию grokBy, которая принимает на вход список Lst и функцию F и каждому возможному
+-- значению результата применения F к элементам Lst ставит в соответствие список элементов Lst,
+-- приводящих к этому результату. Результат следует представить в виде списка пар.
+--import Data.Function (on)
+--import Data.List (sortBy, groupBy)
+--import Data.Ord (comparing)
+--group :: (Eq a, Ord a) => [(a, b)] -> [(a, [b])]
+--group = map ((\l -> (fst . head $ l, map snd l)) . groupBy ((==) `on` fst) . sortBy (comparing fst))
+grokBy f l =  fromListWith (++) [(k, [v]) | (k, v) <- map ( \x -> (,) (f x) x) l]
 
+
+--Даны три натуральных числа, x, y и z. Необходимо найти такие два натуральных числа
+-- x1 : x1 <= x
+-- y1 : y1 <= y,
+-- что их произведение равно z.
+r x y z  | x >= z = (z , 0)
+         | y >= z = (0 , z)
+         | x > y = if z - x <= y then (,) x (z - x) else c
+         | x < y = if z - y <= x then (,) (z - y) y else c
+          where c = undefined
+
+
+--Дана пара отсортированных списков чисел xs и ys. Необходимо вернуть отсортированный список, образованный
+-- объединением xs и ys. Функцию sort использовать нельзя.
+g l [] = l
+g [] l = l
+g (x:xs) (y:ys) | x < y = x : g xs (y:ys)
+                | otherwise = y : g (x:xs) (ys)
+
+
+--Написать функцию, которая принимает на вход функцию f и число n и возвращает список чисел [f(n), f(n + 1),
+-- f(n + 2), f(n + 3)...]
+k f n = f n : k f ( n + 1 )
+
+
+--Дан список чисел. Необходимо посчитать число чётных и нечётных чисел в этом списке.
+fo l = foldr (\x (a,b) -> if ((mod) x 2 == 0) then (a+1, b) else (a,b+1)) (0,0) l
+
+
+--Дан список чисел, число n и функция f :: Int -> Int -> Int. Необходимо найти любую такую пару чисел (a,b)
+-- в списке, что f a b равно n.
+ff (h:t) f n = case ff' h t f n of
+                    Nothing -> ff t f n
+                    Just x -> x
+ff' _ [] _ _ = Nothing
+ff' h1 (h:t) f n  = if (f h1 h == n || f h h1 == n) then Just (h1, h) else ff' h1 t f n
 
 
 
