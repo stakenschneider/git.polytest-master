@@ -4,187 +4,138 @@ import Data.Map (fromListWith)
 
 -- список функций и число и весь список применяется к числу
 foo :: [t -> t] -> t -> t
-foo (h:t) v = (foo t ( h v))
+foo (h:t) v = foo t $ h v
 foo [] v = v
 
--- Объединить повторяющиеся элементы в списке
-compress (h : t) = compress' t (h:[])
+-- Удалить все повторяющиеся элементы в списке
+compress [] = []
+compress (h : t) | contain h t = compress t
+                 | otherwise = h : (compress t )
 
-compress' (h : t) lst = if (contain h lst == 1) then compress' t lst else compress' t (h : lst)
-compress' [] lst = lst
-
-contain e (h : t) | e == h = 1
+contain _ [] = False
+contain e (h : t) | e == h = True
                   | e /= h = contain e t
-contain _ [] = 0
 
 
 -- Поместить все последовательные повторяющиеся элементы списка в подсписки
+pack :: Eq a => [a] -> [[a]]
 pack lst = unfoldr fun lst
-
 unfoldr f = maybe [] (\ (a, b) -> a : unfoldr f b) . f
 
+fun :: Eq a => [a] -> Maybe ([a], [a])
 fun [] = Nothing
 fun (h : t) = Just (makeSublist h t [h], remove h t [])
 
+makeSublist :: Eq a => a -> [a] -> [a] -> [a]
 makeSublist _ [] lst = lst
 makeSublist x (h : t) lst | h == x = makeSublist x t (x : lst)
                           | h /= x = lst
 
+remove :: Eq a => a -> [a] -> [a] -> [a]
+remove _ [] lst = lst
 remove h (h' : t') lst | h == h' =  remove h t' lst
                        | h /= h' =  remove h t' (h' : lst)
-remove _ [] lst = lst
 
 
 -- Разбить список на 2. Размер первого списка задан параметром
 mySplit :: [a] -> Int -> ([a], [a])
 mySplit list i = ((take i list), (drop i list))
+-- or
+--mySplit lst n = splitAt n lst
 
-mySplit' :: [a] -> Int -> ([a], [a])
-mySplit' lst n = splitAt n lst
 
-
--- Список от до - только из составных чисел
+-- Список от и до - только из составных чисел.
 compList :: Integer -> Integer -> [Integer]
-compList from to = compList' from to []
-
-compList' :: Integer -> Integer -> [Integer] -> [Integer]
-compList' from to lst
-    | from == to = lst
-    | otherwise  = compList' (from +1) to foo where
-    foo = if isPrime from then lst else lst ++ [from]
+compList from to | isPrime from  = from : compList (from + 1) to
+                 | from == to = []
+                 | otherwise = compList (from + 1) to
 
 isPrime :: Integer -> Bool
-isPrime n = isPrime' n 2
-
-isPrime' :: Integer -> Integer -> Bool
-isPrime' x divider
-    | x < 0              = error "error: less zero"
-    | x == 0 || x == 1   = True
-    | x == divider       = True
-    | mod x divider == 0 = False
-    | otherwise          = isPrime' x (divider + 1)
+isPrime n | n < 0  = error("Less zero")
+          | n == 1 = False
+          | n == 2 = True
+          | (length [x | x <- [2 .. n-1], mod n x == 0]) > 0 = False
+          | otherwise = True
 
 
 -- Найти из списка все натуральные
-natural lst = natural' lst []
-natural' (h:t) lst
-    | t == [] = lst
-    | otherwise  = natural' t foo where
-    foo = if isPrime h == False then lst else lst ++ [h]
+natural :: [Integer] -> [Integer]
+natural (h:t) | t == [] = []
+              | isPrime h = h : natural t
+              | otherwise  = natural t
 
 
 -- Удалить каждый n-ый элемент из списка
 dropEvery :: [a] -> Int -> [a]
-dropEvery lst n = dropEvery' lst n (length  lst `div` n)
-
-dropEvery' :: [a] -> Int -> Int -> [a]
-dropEvery' lst n m = if m < 0 then lst
-    else (take (n-1) lst) ++ dropEvery' (drop n lst) n (m - 1)
+dropEvery l 1 = []
+dropEvery l n = let dropEvery' :: [a] -> Int -> Int -> [a]
+                    dropEvery' [] n k = []
+                    dropEvery' (h:t) n k = if (k == n) then dropEvery' t n 1 else h : dropEvery' t n (k+1)
+                in dropEvery' l n 1
 
 
 -- Постройте всех спискок простых чисел в диапазоне
 primeList :: Integer -> Integer -> [Integer]
-primeList from to = primeList' from to []
-
-primeList' :: Integer -> Integer -> [Integer] -> [Integer]
-primeList' from to lst
-    | from == to = lst
-    | otherwise  = primeList' (from + 1) to foo where
-    foo = if isPrime from then lst ++ [from] else lst
+primeList from to = let primeList' :: Integer -> Integer -> [Integer] -> [Integer]
+                        primeList' from to lst | from == to = lst
+                                               | otherwise  = primeList' (from + 1) to foo
+                                               where foo = if isPrime from then lst ++ [from] else lst
+                     in primeList' from to []
 
 
 -- Найти сумму всех натуральных чисел от 1 до n
 sumBetween :: Integer -> Integer
-sumBetween n = if n > 0
-    then foldl (+) 0 [1..n]
-    else foldl (+) 0 [n..1]
+sumBetween n | n > 0 = foldl (+) 0 [1..n]
+             | otherwise = foldl (+) 0 [n..1]
 
 
 -- Функция, кот сдвигает все элементы по кругу
-rotate3 lst y = let (a,b) = if (y > 0) then splitAt (length lst - fuck (length lst) y) lst  else splitAt (fuck (length lst) (abs y)) lst in  b ++ a
-fuck len num  = if (num > len) then fuck len (num - len)  else num
+rotate :: [a] -> Int -> [a]
+rotate l y = let (a,b) = if y > 0 then splitAt (length l - f (length l) y) l else splitAt (f (length l) (abs y)) l
+                  where f len num = if (num > len) then f len (num - len) else num
+             in  b ++ a
 
 
 -- Найти на бесконечном списке два числа дающих в сумме заданное число
-myFuncNumFuck y (h:t) = myFuncNumFuck' y t [h]
+sumOfTwo :: (Eq a, Num a) => a -> [a] -> (a, a)
+sumOfTwo y (h:t) = sumOfTwo' y t [h]
 
-myFuncNumFuck' y (h : t) r =  if (hasSum y h r) then takeSum y h r
-                           else myFuncNumFuck' y t (h : r)
+sumOfTwo' :: (Eq a, Num a) => a -> [a] -> [a] -> (a, a)
+sumOfTwo' _ [] _ = error "Такой суммы нет"
+sumOfTwo' y (h : t) r =  let hasSum y x [] = False
+                             hasSum y x (h:t) | x + h == y = True
+                                              | otherwise = hasSum y x t
 
-myFuncNumFuck' _ [] _ = error ":("
-
-hasSum y x [] = False
-hasSum y x (h:t) | x + h == y = True
-                 | otherwise = hasSum y x t
-
-takeSum y x (h:t) | x + h == y = (x, h)
-                  | otherwise = takeSum y x t
-
-
--- Дан список и два числа; m, n. Необходимо заменить все элементы списка, кратные индексам m на n.
-changeEls lst m n = changeEls' (reverse lst) m n 0 []
-
-changeEls' lst m n i  res | i == length lst =  res
-                          | mod (i+1) m == 0  = changeEls' lst m n (i + 1)  res ++  [n]
-                          | otherwise     = changeEls' lst m n (i + 1)  res ++  [lst!!i]
+                             takeSum y x (h:t) | x + h == y = (x, h)
+                                               | otherwise = takeSum y x t
+                         in if (hasSum y h r) then takeSum y h r else sumOfTwo' y t (h : r)
 
 
--- Дано число. Заменить в нем все нули на 5.
-convertFive a = convertFive' (show a) (length (show a)) 0 []
-
-convertFive' lst len i newlst = if i < len then
-    if (lst !! i) /= '0'
-    then convertFive' lst len i ('5' : newlst)
-    else convertFive' lst len i ((lst !! i) : newlst)
-    else read newlst
+-- Дан список и два числа: m и n. Необходимо заменить все элементы списка, кратные индексам m на n.
+changeEls :: Integral a1 => [a2] -> a1 -> a2 -> [a2]
+changeEls lst m n = let changeEls' [] _ _ _ = []
+                        changeEls' (h:t) m n i | mod i m == 0  = n : changeEls' t m n (i + 1)
+                                               | otherwise     = h : changeEls' t m n (i + 1)
+                    in changeEls' lst m n 1
 
 
--- Расчитайте расстояние между двумя точками на плоскости.
-distance x y x1 y1 = sqrt((x-x1)**2+(y-y1)**2)
-
-
--- Дан список чисел. Вывести самую часто встречающуюся цифру (если таких несколько - сумму).
--- -- 1 вариант
-mostFreq z = map fst $ filter (\ (a,n) -> n == max) pc
-         where pc = mostFreq' z
-               max = maximum $ map snd pc
-
-mostFreq' []     = []
-mostFreq' (x:xs) = (x,n) : (mostFreq' xxs)
-            where n   = (length xs) - (length xxs) + 1
-                  xxs = filter (/= x) xs
-
--- -- 2 вариант
--- import Data.List
--- import Data.Ord
--- mostFreq :: Integral a => [a] -> a
--- mostFreq = head . maximumBy (comparing length) . group . sort
+-- Рассчитайте расстояние между двумя точками на плоскости.
+distance :: Floating a => a -> a -> a -> a -> a
+distance x y x1 y1 = sqrt $ (x - x1)^2 + (y - y1)^2
 
 
 -- Даны два списка. Оставить в первом только те элементы, которые есть во втором.
-intersect (h:t) lst2 = if (contains h lst2) then (intersect t lst2) ++ [h] else intersect t lst2
-
-contains x [] = False
-contains x (h:t) | h == x = True
-                 | otherwise = contains x t
-
-
--- Дано число. Все цифры, кот не 0 заменить на m
-convertN a n = convertN' (show a) n (length (show a)) 0 []
-
-convertN' ls n len i newls = if i < len then
-    if (ls !! i) /= '0'
-    then convertN' ls n len i (n : newls)
-    else convertN' ls n len i ((ls !! i) : newls)
-    else read newls
+intersect :: Eq a => [a] -> [a] -> [a]
+intersect [] _ = []
+intersect (h:t) l | contain h l = h : (intersect t l)
+                  | otherwise = intersect t l
 
 
--- Удалить все элементы из первого (мб бесконечным) списка, содержащиеся во втором
-removeAll (h:t) lst = removeAll' (h:t) lst []
-
-removeAll' [] _ res = res
-removeAll' (h:t) lst res | contains h lst = removeAll' t lst res
-                         | otherwise = removeAll' t lst (h:res)
+-- Удалить все элементы из первого списка (может быть бесконечным), содержащиеся во втором.
+removeAll :: Eq a => [a] -> [a] -> [a]
+removeAll [] _ = []
+removeAll (h:t) lst  | contain h lst = removeAll t lst
+                     | otherwise = h : removeAll t lst
 
 
 -- Является ли число палиндромом?
@@ -195,40 +146,43 @@ isPalindrome list = reverse list == list
 -- Реализуйте функцию grokBy, которая принимает на вход список Lst и функцию F и каждому возможному
 -- значению результата применения F к элементам Lst ставит в соответствие список элементов Lst,
 -- приводящих к этому результату. Результат следует представить в виде списка пар.
+--grokBy :: (a -> k) -> [a] -> [(k, [a])]
+grokBy f l =  fromListWith (++) [(k, [v]) | (k, v) <- map ( \x -> (,) (f x) x) l]
+-- or
 --import Data.Function (on)
 --import Data.List (sortBy, groupBy)
 --import Data.Ord (comparing)
 --group :: (Eq a, Ord a) => [(a, b)] -> [(a, [b])]
 --group = map ((\l -> (fst . head $ l, map snd l)) . groupBy ((==) `on` fst) . sortBy (comparing fst))
-grokBy f l =  fromListWith (++) [(k, [v]) | (k, v) <- map ( \x -> (,) (f x) x) l]
 
 
 --Даны три натуральных числа, x, y и z. Необходимо найти такие два натуральных числа
 -- x1 : x1 <= x
--- y1 : y1 <= y,
--- что их произведение равно z.
+-- y1 : y1 <= y, что их произведение равно z.
 r x y z  | x >= z = (z , 0)
          | y >= z = (0 , z)
          | x > y = if z - x <= y then (,) x (z - x) else c
          | x < y = if z - y <= x then (,) (z - y) y else c
-          where c = undefined
+         where c = undefined
 
 
 --Дана пара отсортированных списков чисел xs и ys. Необходимо вернуть отсортированный список, образованный
 -- объединением xs и ys. Функцию sort использовать нельзя.
+g :: Ord a => [a] -> [a] -> [a]
 g l [] = l
 g [] l = l
 g (x:xs) (y:ys) | x < y = x : g xs (y:ys)
-                | otherwise = y : g (x:xs) (ys)
+                | otherwise = y : g (x:xs) ys
 
 
---Написать функцию, которая принимает на вход функцию f и число n и возвращает список чисел [f(n), f(n + 1),
--- f(n + 2), f(n + 3)...]
+--Написать функцию, которая принимает на вход функцию f и число n и возвращает список чисел [f(n), f(n + 1), ...]
+k :: Num t => (t -> a) -> t -> [a]
 k f n = f n : k f ( n + 1 )
 
 
 --Дан список чисел. Необходимо посчитать число чётных и нечётных чисел в этом списке.
-fo l = foldr (\x (a,b) -> if ((mod) x 2 == 0) then (a+1, b) else (a,b+1)) (0,0) l
+fo :: (Foldable t, Integral a1, Num a2, Num a3) => t a1 -> (a2, a3)
+fo = foldr (\x ((,) a b) -> if odd x then (a + 1, b) else (a , b + 1)) (0 , 0)
 
 
 --Дан список чисел, число n и функция f :: Int -> Int -> Int. Необходимо найти любую такую пару чисел (a,b)
@@ -240,4 +194,19 @@ ff' _ [] _ _ = Nothing
 ff' h1 (h:t) f n  = if (f h1 h == n || f h h1 == n) then Just (h1, h) else ff' h1 t f n
 
 
+-- Функция для определения первой позиции вхождения заданного элемента в список.
+task :: [Int] -> Int -> Int
+task (x:xs) e
+    | x == e    = 0
+    | xs == [] = error("Not exist")
+    | otherwise = 1 + task xs e
 
+
+-- Определить, является ли указанное число элементом списка.
+task1 :: [Int] -> Int -> Bool
+task1 (x:xs) e
+    | x == e    = True
+    | xs == []  = False
+    | otherwise     = False || task1 xs e
+-- or
+-- task1 x = elem x

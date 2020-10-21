@@ -1,5 +1,6 @@
 module Test_4 where
 
+-- Объеденить все повторяющиеся элементы в списке
 --Дан список чисел и функция f :: Int -> Int -> Int. Необходимо найти такую пару чисел (a,b) в списке, что f a b максимально.
 --Даны два списка чисел, a и b. Нужно посчитать произведение всех попарных сумм элементов из a и b.
 -- Дано число n и функция f :: a -> a. Необходимо вернуть функцию, которая применяет f к своему аргументу n раз.
@@ -70,4 +71,35 @@ run m (_ : k : ws) = putStrLn (findWithDefault "not found" k m) >> run m ws
 run _ _ = return ()
 main = getContents >>= run empty . tail . words
 
+-- Дано число. Заменить в нем все нули на 5.
+convertFive a = convertFive' (show a) (length (show a)) 0 []
 
+convertFive' lst len i newlst = if i < len then
+    if (lst !! i) /= '0'
+    then convertFive' lst len i ('5' : newlst)
+    else convertFive' lst len i ((lst !! i) : newlst)
+    else read newlst
+
+-- Дано число. Все цифры, кот не 0 заменить на m
+convertN a n = convertN' (show a) n (length (show a)) 0 []
+
+convertN' ls n len i newls = if i < len then
+    if (ls !! i) /= '0'
+    then convertN' ls n len i (n : newls)
+    else convertN' ls n len i ((ls !! i) : newls)
+    else read newls
+
+-- Дан список чисел. Вывести самую часто встречающуюся цифру (если таких несколько - сумму).
+mostFreq z = map fst $ filter (\ (a,n) -> n == max) pc
+         where pc = mostFreq' z
+               max = maximum $ map snd pc
+
+mostFreq' []     = []
+mostFreq' (x:xs) = (x,n) : (mostFreq' xxs)
+            where n   = (length xs) - (length xxs) + 1
+                  xxs = filter (/= x) xs
+-- or
+-- import Data.List
+-- import Data.Ord
+-- mostFreq :: Integral a => [a] -> a
+-- mostFreq = head . maximumBy (comparing length) . group . sort
